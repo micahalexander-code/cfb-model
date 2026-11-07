@@ -19,6 +19,7 @@ from urllib.parse import parse_qs, urlparse
 
 import run
 import sagarin
+import snapshot
 from model import TEASER_POINTS, Game, evaluate
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -69,6 +70,24 @@ def slate_json(day: str, teaser: float, refresh: bool) -> dict:
     }
 
 
+def history_json() -> dict:
+    """Frozen history plus today's/yesterday's finals the scheduled snapshot
+    hasn't recorded yet (marked provisional until it does)."""
+    rows = snapshot.load_history()
+    seen = {h["game_id"] for h in rows}
+    pending = []
+    try:
+        r = ratings()
+        for day in snapshot.default_days():
+            s = run.build(day, snapshot.TEASER, r)
+            if snapshot.dates_ok(s):
+                pending += [dict(x, provisional=True) for x in snapshot.finished_rows(s, None)
+                            if x["game_id"] not in seen]
+    except Exception as e:  # history still works if ESPN is down
+        print("history: live finals unavailable:", e, flush=True)
+    return {"games": rows + pending}
+
+
 class Handler(BaseHTTPRequestHandler):
     def _send(self, code, body, ctype="application/json"):
         data = body if isinstance(body, bytes) else json.dumps(body).encode()
@@ -92,9 +111,7 @@ class Handler(BaseHTTPRequestHandler):
             if method == "GET" and path == "/api/slate":
                 return self._send(200, slate_json(day, teaser, q.get("refresh") == "1"))
             if method == "GET" and path == "/api/history":
-                hist = os.path.join(HERE, "history.json")
-                rows = json.load(open(hist)) if os.path.exists(hist) else []
-                return self._send(200, {"games": rows})
+                return self._send(200, history_json())
             if method == "GET" and path == "/api/teams":
                 r = ratings()
                 return self._send(200, {"as_of": r.as_of, "hfa": r.home_advantage, "teams": [

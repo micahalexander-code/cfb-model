@@ -23,7 +23,12 @@ import run
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 HISTORY = os.path.join(HERE, "history.json")
+LOCKED = os.path.join(HERE, "locked.json")
 TEASER = 3.0
+# Save a game's line once kickoff is this close (or it has started), so the
+# saved line is effectively the closing line without a commit on every move.
+LOCK_WINDOW = timedelta(minutes=90)
+KEEP_LOCKED = timedelta(days=10)
 
 MONTHS = {m: i for i, m in enumerate(
     ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST",
@@ -48,6 +53,11 @@ def ratings_through(as_of: str, game_date: date) -> Optional[date]:
     return d
 
 
+def default_days() -> List[str]:
+    t = eastern_today()
+    return [(t - timedelta(days=1)).strftime("%Y%m%d"), t.strftime("%Y%m%d")]
+
+
 def load_history() -> List[dict]:
     if not os.path.exists(HISTORY):
         return []
@@ -55,8 +65,68 @@ def load_history() -> List[dict]:
         return json.load(f)
 
 
+def _kickoff(iso: str) -> Optional[datetime]:
+    try:
+        return datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def lock_lines(slate, locked: dict, now: datetime) -> bool:
+    """Save the DK line for games about to start or in progress. True if changed."""
+    changed = False
+    for l, p in slate.picks:
+        if l.completed or l.line_source == "saved":
+            continue
+        k = _kickoff(l.kickoff)
+        if l.state == "pre" and (not k or k - now > LOCK_WINDOW):
+            continue
+        entry = {"date": slate.day, "kickoff": l.kickoff, "away": p.game.away, "home": p.game.home,
+                 "dk_home_spread": l.home_spread, "dk_home_ml": l.home_ml, "dk_away_ml": l.away_ml}
+        if locked.get(l.game_id) != entry:
+            locked[l.game_id] = entry
+            changed = True
+    return changed
+
+
+def dates_ok(slate) -> bool:
+    """False when Sagarin's ratings already include this slate's results."""
+    game_date = datetime.strptime(slate.day, "%Y%m%d").date()
+    through = ratings_through(slate.ratings.as_of, game_date)
+    return not (through and through >= game_date)
+
+
+def finished_rows(slate, recorded_at: str) -> List[dict]:
+    """History records for every finished game on the slate that has a line."""
+    rows = []
+    for l, p in slate.picks:
+        if not l.completed:
+            continue
+        g = p.game
+        rows.append({
+            "game_id": l.game_id, "date": slate.day, "kickoff": l.kickoff, "recorded_at": recorded_at,
+            "sagarin_as_of": slate.ratings.as_of, "hfa": g.hfa,
+            "away": g.away, "home": g.home, "neutral": g.neutral,
+            "away_rating": g.away_rating, "home_rating": g.home_rating,
+            "dk_home_spread": g.dk_home_spread, "dk_home_ml": g.dk_home_ml,
+            "dk_away_ml": g.dk_away_ml, "line_source": l.line_source,
+            "projected": p.projected, "edge": p.edge, "action": p.action,
+            "side": p.side, "line": p.line, "odds": p.odds,
+            "teaser_points": TEASER, "teaser_line": p.teaser_line, "flags": p.flags,
+            "away_score": l.away_score, "home_score": l.home_score,
+            "result": p.result, "teaser_result": p.teaser_result,
+        })
+    return rows
+
+
 def snapshot(days: List[str]) -> int:
     history = load_history()
+    locked = {}
+    if os.path.exists(LOCKED):
+        with open(LOCKED) as f:
+            locked = json.load(f)
+    now_dt = datetime.now(timezone.utc)
+    locked_changed = False
     seen = {h["game_id"] for h in history}
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     added = 0
@@ -64,43 +134,33 @@ def snapshot(days: List[str]) -> int:
     for day in days:
         slate = run.build(day, TEASER, ratings)
         ratings = slate.ratings
-        game_date = datetime.strptime(day, "%Y%m%d").date()
-        through = ratings_through(ratings.as_of, game_date)
-        if through and through >= game_date:
+        locked_changed |= lock_lines(slate, locked, now_dt)
+        if not dates_ok(slate):
             print(f"{day}: skipped, Sagarin ratings ({ratings.as_of}) already include this date")
             continue
-        for l, p in slate.picks:
-            if not l.completed or l.game_id in seen:
-                continue
-            g = p.game
-            history.append({
-                "game_id": l.game_id, "date": day, "kickoff": l.kickoff, "recorded_at": now,
-                "sagarin_as_of": ratings.as_of, "hfa": g.hfa,
-                "away": g.away, "home": g.home, "neutral": g.neutral,
-                "away_rating": g.away_rating, "home_rating": g.home_rating,
-                "dk_home_spread": g.dk_home_spread, "dk_home_ml": g.dk_home_ml,
-                "dk_away_ml": g.dk_away_ml, "line_source": l.line_source,
-                "projected": p.projected, "edge": p.edge, "action": p.action,
-                "side": p.side, "line": p.line, "odds": p.odds,
-                "teaser_points": TEASER, "teaser_line": p.teaser_line, "flags": p.flags,
-                "away_score": l.away_score, "home_score": l.home_score,
-                "result": p.result, "teaser_result": p.teaser_result,
-            })
-            seen.add(l.game_id)
-            added += 1
+        for row in finished_rows(slate, now):
+            if row["game_id"] not in seen:
+                history.append(row)
+                seen.add(row["game_id"])
+                added += 1
     if added:
         history.sort(key=lambda h: (h["date"], h["kickoff"], h["game_id"]))
         with open(HISTORY, "w") as f:
             json.dump(history, f, indent=1)
             f.write("\n")
-    print(f"Added {added} finished game(s); history now has {len(history)}")
+    # Forget saved lines for old games (finished ones live in history.json).
+    for gid in [g for g, e in locked.items()
+                if (_kickoff(e.get("kickoff", "")) or now_dt) < now_dt - KEEP_LOCKED]:
+        del locked[gid]
+        locked_changed = True
+    if locked_changed or not os.path.exists(LOCKED):
+        with open(LOCKED, "w") as f:
+            json.dump(locked, f, indent=1, sort_keys=True)
+            f.write("\n")
+    print(f"Added {added} finished game(s); history now has {len(history)}; "
+          f"{len(locked)} saved line(s)")
     return added
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        days = sys.argv[1:]
-    else:
-        t = eastern_today()
-        days = [(t - timedelta(days=1)).strftime("%Y%m%d"), t.strftime("%Y%m%d")]
-    snapshot(days)
+    snapshot(sys.argv[1:] or default_days())

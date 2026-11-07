@@ -6,6 +6,7 @@ scores. The scoreboard drops the line once a game kicks off; for those games
 we read the DraftKings CLOSING line from ESPN's per-game summary feed.
 """
 import json
+import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
@@ -19,9 +20,13 @@ DK_PROVIDER = "draft kings"
 
 LINE_CURRENT = "current"   # pregame line from the scoreboard
 LINE_CLOSING = "closing"   # closing line from the game summary (live/final games)
+LINE_SAVED = "saved"       # line our scheduled snapshot saved before ESPN dropped it
 
 # Closing lines for finished games never change; keep them for the process lifetime.
 _closing_cache: Dict[str, dict] = {}
+# Last DraftKings odds seen for each game (pregame or closing). If ESPN later
+# fails to return a line, the game keeps the one we already saw.
+_seen: Dict[str, dict] = {}
 
 
 @dataclass
@@ -95,10 +100,15 @@ def _apply_odds(l: Line, dk: dict, source: str) -> None:
 def _closing_odds(game_id: str, completed: bool) -> Optional[dict]:
     if game_id in _closing_cache:
         return _closing_cache[game_id]
-    try:
-        dk = _dk(_get(SUMMARY.format(id=game_id)).get("pickcenter"))
-    except Exception:
-        return None
+    dk = None
+    for attempt in range(3):  # ESPN occasionally errors or omits pickcenter; retry
+        try:
+            dk = _dk(_get(SUMMARY.format(id=game_id)).get("pickcenter"))
+        except Exception:
+            dk = None
+        if dk:
+            break
+        time.sleep(0.5 * (attempt + 1))
     if dk and completed:
         _closing_cache[game_id] = dk
     return dk
@@ -127,6 +137,8 @@ def parse(data: dict) -> List[Line]:
         dk = _dk(comp.get("odds"))
         if dk:
             _apply_odds(l, dk, LINE_CURRENT)
+            if l.home_spread is not None:
+                _seen[l.game_id] = dk
         lines.append(l)
     return lines
 
@@ -141,6 +153,11 @@ def fill_closing_lines(lines: List[Line]) -> None:
     for l, dk in zip(todo, results):
         if dk:
             _apply_odds(l, dk, LINE_CLOSING)
+            if l.home_spread is not None:
+                _seen[l.game_id] = dk
+        if l.home_spread is None and l.game_id in _seen:
+            # Summary feed failed this time; reuse the last line we saw.
+            _apply_odds(l, _seen[l.game_id], LINE_CLOSING)
 
 
 def load(dates: Optional[str] = None) -> List[Line]:

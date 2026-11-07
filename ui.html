@@ -111,7 +111,7 @@
   <h2>Excluded: neutral site <span class="n" id="n-neutral"></span></h2>
   <div id="neutral"></div>
 
-  <h2>No DraftKings line <span class="n" id="n-noline"></span><span class="note">ESPN has no DraftKings line for these</span></h2>
+  <h2>No DraftKings line <span class="n" id="n-noline"></span><span class="note">ESPN never posted a DraftKings line for these, so no pick was made</span></h2>
   <div id="noline"></div>
 
   <div id="unmatched"></div>
@@ -371,7 +371,8 @@ function renderHistory(rows) {
     { label: "Teased", render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)} ${res(g.teaser_result)}` },
     { label: "Edge", num: true, render: g => g.action === "SPREAD" ? Math.abs(g.edge).toFixed(2) : "" },
     { label: "DK close (home)", num: true, render: g => line(g.dk_home_spread) },
-    { label: "", render: g => g.flags.includes("DISAGREE") ? `<span class="flag warn">DISAGREE</span>` : "" },
+    { label: "", render: g => (g.flags.includes("DISAGREE") ? `<span class="flag warn">DISAGREE</span> ` : "")
+        + (g.provisional ? `<span class="tag" title="Shown from the live slate; locks in at the next scheduled snapshot">not locked yet</span>` : "") },
   ], sorted);
 }
 
@@ -385,7 +386,10 @@ document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
 $("c-go").onclick = runCalc;
 // While any game is live, re-pull every 2 minutes so finals get graded.
 setInterval(() => {
-  if (slate && slate.games.some(g => g.state === "in")) loadSlate();
+  if (slate && slate.games.some(g => g.state === "in")) {
+    loadSlate();
+    if (!$("tab-history").hidden) loadHistory();
+  }
 }, 120000);
 $("r-filter").oninput = renderRatings;
 loadSlate();

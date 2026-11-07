@@ -9,6 +9,7 @@ picks/YYYYMMDD.csv (one snapshot per run, so line moves are preserved).
 Run before kickoff: ESPN removes lines once a game starts.
 """
 import csv
+import json
 import os
 import sys
 from dataclasses import dataclass, field
@@ -31,6 +32,41 @@ CSV_FIELDS = [
 ]
 
 
+# Lines the scheduled snapshot already saved (locked.json for games that hadn't
+# finished, history.json for finished ones). Used when ESPN no longer returns a
+# line for a game that has started, so a finished game never loses its pick.
+LOCKED = os.path.join(HERE, "locked.json")
+HISTORY = os.path.join(HERE, "history.json")
+
+
+def _read(path):
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return None
+
+
+def saved_lines() -> dict:
+    out = dict(_read(LOCKED) or {})
+    for h in _read(HISTORY) or []:
+        out[h["game_id"]] = {k: h.get(k) for k in ("dk_home_spread", "dk_home_ml", "dk_away_ml")}
+    return out
+
+
+def fill_saved_lines(lines: List[odds.Line]) -> None:
+    missing = [l for l in lines if l.home_spread is None and l.state in ("in", "post")]
+    if not missing:
+        return
+    saved = saved_lines()
+    for l in missing:
+        s = saved.get(l.game_id)
+        if s and s.get("dk_home_spread") is not None:
+            l.home_spread = s["dk_home_spread"]
+            l.home_ml, l.away_ml = s.get("dk_home_ml"), s.get("dk_away_ml")
+            l.line_source = odds.LINE_SAVED
+
+
 @dataclass
 class Slate:
     day: str
@@ -44,7 +80,9 @@ def build(day: str, teaser_points: float = TEASER_POINTS,
           ratings: Optional[sagarin.SagarinRatings] = None) -> Slate:
     ratings = ratings or sagarin.load()
     slate = Slate(day=day, ratings=ratings)
-    for l in odds.load(day):
+    lines = odds.load(day)
+    fill_saved_lines(lines)
+    for l in lines:
         h = names.to_sagarin(l.home, ratings.teams)
         a = names.to_sagarin(l.away, ratings.teams)
         if not h or not a:
