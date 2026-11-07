@@ -136,6 +136,10 @@ def snapshot(days: List[str]) -> int:
         slate = run.build(day, TEASER, ratings)
         ratings = slate.ratings
         locked_changed |= lock_lines(slate, locked, now_dt)
+        finals = sum(1 for l, _ in slate.picks if l.completed)
+        print(f"{day}: {len(slate.picks)} games with lines ({finals} final), "
+              f"{len(slate.no_line)} without a line, sources "
+              f"{sorted({str(l.line_source) for l, _ in slate.picks})}")
         if not dates_ok(slate):
             print(f"{day}: skipped, Sagarin ratings ({ratings.as_of}) already include this date")
             continue
