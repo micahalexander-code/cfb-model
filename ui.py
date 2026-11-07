@@ -21,12 +21,13 @@ import sagarin
 from model import TEASER_POINTS, Game, evaluate
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-# Hosts like Render set PORT; locally we default to 8765.
 PORT = int(os.environ.get("PORT", 8765))
-HOST = "0.0.0.0" if "PORT" in os.environ else "127.0.0.1"
-# Saving to CSV is a local-only feature: public hosts have throwaway disks,
-# and visitors shouldn't be able to write files. Set ALLOW_SAVE=1 to force on.
-ALLOW_SAVE = os.environ.get("ALLOW_SAVE", "0" if "PORT" in os.environ else "1") == "1"
+# Render sets RENDER=true on its servers. Set PUBLIC=1 for any other host.
+PUBLIC = bool(os.environ.get("RENDER") or os.environ.get("PUBLIC"))
+HOST = "0.0.0.0" if PUBLIC else "127.0.0.1"
+# Saving to CSV is local-only: public hosts have throwaway disks, and
+# visitors shouldn't be able to write files.
+ALLOW_SAVE = not PUBLIC
 _cache = {"at": 0.0, "ratings": None}
 
 
