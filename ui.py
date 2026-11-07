@@ -6,6 +6,7 @@ Endpoints:
   GET  /                         the page (ui.html)
   GET  /api/slate?date=&teaser=  evaluate a slate
   GET  /api/teams                Sagarin ratings + HFA
+  GET  /api/history              frozen results from history.json (see snapshot.py)
   GET  /api/matchup?home=&away=&spread=&neutral=&teaser=   one-off calculator
   POST /api/save?date=&teaser=   append the slate to picks/YYYYMMDD.csv
 """
@@ -90,6 +91,10 @@ class Handler(BaseHTTPRequestHandler):
                     return self._send(200, f.read(), "text/html; charset=utf-8")
             if method == "GET" and path == "/api/slate":
                 return self._send(200, slate_json(day, teaser, q.get("refresh") == "1"))
+            if method == "GET" and path == "/api/history":
+                hist = os.path.join(HERE, "history.json")
+                rows = json.load(open(hist)) if os.path.exists(hist) else []
+                return self._send(200, {"games": rows})
             if method == "GET" and path == "/api/teams":
                 r = ratings()
                 return self._send(200, {"as_of": r.as_of, "hfa": r.home_advantage, "teams": [

@@ -53,6 +53,10 @@
   .res.WIN { color: var(--pos); } .res.LOSS { color: var(--bad); } .res.PUSH { color: var(--muted); }
   .live { color: var(--warn); font-weight: 600; }
   .tag { font-size: 11px; color: var(--muted); }
+  .tabs { display: flex; gap: 4px; margin: 14px 0 0; border-bottom: 1px solid var(--line); }
+  .tab { border: none; border-bottom: 2px solid transparent; border-radius: 0; background: none;
+         padding: 8px 12px; color: var(--muted); font-weight: 600; }
+  .tab.active { color: var(--fg); border-bottom-color: var(--fg); }
   .calc { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; align-items: end; }
   .result { margin-top: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; }
   .result .big { font-size: 18px; font-weight: 700; }
@@ -64,6 +68,22 @@
   <h1>CFB Model</h1>
   <div class="meta" id="meta">Sagarin vs DraftKings</div>
 
+  <nav class="tabs">
+    <button class="tab active" data-tab="slate">Slate</button>
+    <button class="tab" data-tab="history">History</button>
+  </nav>
+
+  <div id="tab-history" hidden>
+    <p class="muted">Each finished game is recorded once, with the ratings, DraftKings closing line and pick as they
+      stood at the final whistle. Recorded games never change, even after Sagarin's weekly update. Teaser points fixed at 3.</p>
+    <div class="summary" id="h-summary"></div>
+    <h2>By edge size <span class="note">spread picks, excluding caution games</span></h2>
+    <div id="h-buckets"></div>
+    <h2>Games <span class="n" id="h-n"></span><span class="note">newest first</span></h2>
+    <div id="h-games"></div>
+  </div>
+
+  <div id="tab-slate">
   <div class="controls">
     <label>Date <input type="date" id="date"></label>
     <label>Teaser points <input type="number" id="teaser" value="3" step="0.5" min="0"></label>
@@ -113,6 +133,7 @@
     <input id="r-filter" placeholder="Filter teams" style="margin-bottom:8px; width:220px">
     <div id="ratings" class="scroll"></div>
   </details>
+  </div>
 </main>
 
 <script>
@@ -296,6 +317,71 @@ $("save").onclick = async () => {
   try { const r = await api(`/api/save?date=${ymd()}&teaser=${$("teaser").value || 3}`, { method: "POST" });
         setStatus(`Saved ${r.rows} rows to ${r.path}`); } catch (e) { setStatus(e.message, true); }
 };
+// ---- History tab ----
+function tally(rows, key) {
+  const n = r => rows.filter(g => g[key] === r).length;
+  const w = n("WIN"), l = n("LOSS"), p = n("PUSH");
+  const rec = w + l + p ? `${w}–${l}${p ? `–${p}` : ""}` : "—";
+  const pct = w + l ? `${Math.round(100 * w / (w + l))}%` : "";
+  return { rec, pct };
+}
+
+async function loadHistory() {
+  try {
+    const h = await api("/api/history");
+    renderHistory(h.games);
+  } catch (e) { $("h-games").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+}
+
+function renderHistory(rows) {
+  const spread = rows.filter(g => g.action === "SPREAD" && !g.flags.includes("DISAGREE"));
+  const caution = rows.filter(g => g.action === "SPREAD" && g.flags.includes("DISAGREE"));
+  const ml = rows.filter(g => g.action === "MONEYLINE");
+  const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:13px">${t.pct}</span></b>${label}</div>`;
+  $("h-summary").innerHTML = `<div><b>${rows.length}</b>Games recorded</div>` +
+    tile("Spread", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
+    tile("Moneyline", tally(ml, "result")) + tile("Caution", tally(caution, "result")) +
+    `<div><b>${rows.filter(g => g.action === "SKIP" || g.action === "EXCLUDED").length}</b>Skipped / excluded</div>`;
+
+  const buckets = [[0, 1], [1, 2], [2, 3], [3, Infinity]].map(([lo, hi]) => {
+    const b = spread.filter(g => Math.abs(g.edge) >= lo && Math.abs(g.edge) < hi);
+    return { label: hi === Infinity ? `${lo}+` : `${lo}–${hi}`, n: b.length,
+             s: tally(b, "result"), t: tally(b, "teaser_result") };
+  });
+  $("h-buckets").innerHTML = table([
+    { label: "Edge", render: b => b.label },
+    { label: "Picks", num: true, render: b => b.n },
+    { label: "Spread", num: true, render: b => `${b.s.rec} <span class="muted">${b.s.pct}</span>` },
+    { label: "Teaser legs", num: true, render: b => `${b.t.rec} <span class="muted">${b.t.pct}</span>` },
+  ], buckets);
+
+  const sorted = [...rows].sort((a, b) => (b.kickoff || "").localeCompare(a.kickoff || ""));
+  $("h-n").textContent = rows.length;
+  const day = g => new Date(g.kickoff).toLocaleDateString([], { month: "short", day: "numeric", weekday: "short" });
+  $("h-games").innerHTML = table([
+    { label: "Date", render: g => `<span class="muted">${day(g)}</span>` },
+    gameCol,
+    { label: "Final", render: g => score(g) },
+    { label: "Pick", render: g =>
+        g.action === "SPREAD" ? `<span class="pick">${esc(g.side)} ${line(g.line)}</span>`
+      : g.action === "MONEYLINE" ? `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>`
+      : g.action === "EXCLUDED" ? `<span class="muted">Neutral, excluded</span>`
+      : g.flags.includes("PRICED_IN") ? `<span class="muted">Skip, priced in</span>` : `<span class="muted">No edge</span>` },
+    { label: "Result", render: g => res(g.result) },
+    { label: "Teased", render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)} ${res(g.teaser_result)}` },
+    { label: "Edge", num: true, render: g => g.action === "SPREAD" ? Math.abs(g.edge).toFixed(2) : "" },
+    { label: "DK close (home)", num: true, render: g => line(g.dk_home_spread) },
+    { label: "", render: g => g.flags.includes("DISAGREE") ? `<span class="flag warn">DISAGREE</span>` : "" },
+  ], sorted);
+}
+
+document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === b));
+  $("tab-slate").hidden = b.dataset.tab !== "slate";
+  $("tab-history").hidden = b.dataset.tab !== "history";
+  if (b.dataset.tab === "history") loadHistory();
+});
+
 $("c-go").onclick = runCalc;
 // While any game is live, re-pull every 2 minutes so finals get graded.
 setInterval(() => {

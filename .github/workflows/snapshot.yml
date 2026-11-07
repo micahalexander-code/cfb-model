@@ -1,0 +1,38 @@
+# Every 30 minutes: record newly finished games into history.json.
+# A commit only happens when something new was added; Render then redeploys
+# the site with the updated history.
+name: Snapshot results
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Record finished games
+        run: python3 snapshot.py
+      - name: Commit if history changed
+        run: |
+          if git diff --quiet -- history.json && git ls-files --error-unmatch history.json >/dev/null 2>&1; then
+            echo "No new finished games"; exit 0
+          fi
+          git config user.name "cfb-model-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add history.json
+          git commit -m "History: record finished games"
+          git pull --rebase
+          git push
