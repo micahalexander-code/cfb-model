@@ -1,1 +1,272 @@
-{}
+{
+ "401856740": {
+  "away": "Alabama",
+  "date": "20261107",
+  "dk_away_ml": 180,
+  "dk_home_ml": -218,
+  "dk_home_spread": -6.0,
+  "home": "LSU",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401856741": {
+  "away": "Georgia",
+  "date": "20261107",
+  "dk_away_ml": -175,
+  "dk_home_ml": 145,
+  "dk_home_spread": 3.5,
+  "home": "Mississippi",
+  "kickoff": "2026-11-08T00:30Z"
+ },
+ "401856742": {
+  "away": "Vanderbilt",
+  "date": "20261107",
+  "dk_away_ml": 124,
+  "dk_home_ml": -148,
+  "dk_home_spread": -3.0,
+  "home": "Mississippi State",
+  "kickoff": "2026-11-07T21:15Z"
+ },
+ "401856744": {
+  "away": "Texas A&M",
+  "date": "20261107",
+  "dk_away_ml": 205,
+  "dk_home_ml": -250,
+  "dk_home_spread": -6.5,
+  "home": "South Carolina",
+  "kickoff": "2026-11-07T20:00Z"
+ },
+ "401856745": {
+  "away": "Kentucky",
+  "date": "20261107",
+  "dk_away_ml": 170,
+  "dk_home_ml": -205,
+  "dk_home_spread": -6.5,
+  "home": "Tennessee",
+  "kickoff": "2026-11-07T23:15Z"
+ },
+ "401856850": {
+  "away": "Central Florida(UCF)",
+  "date": "20261107",
+  "dk_away_ml": 185,
+  "dk_home_ml": -225,
+  "dk_home_spread": -6.0,
+  "home": "Kansas",
+  "kickoff": "2026-11-07T20:45Z"
+ },
+ "401856851": {
+  "away": "Cincinnati",
+  "date": "20261107",
+  "dk_away_ml": 300,
+  "dk_home_ml": -380,
+  "dk_home_spread": -10.0,
+  "home": "Houston",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401856852": {
+  "away": "Colorado",
+  "date": "20261107",
+  "dk_away_ml": 136,
+  "dk_home_ml": -162,
+  "dk_home_spread": -3.0,
+  "home": "Arizona State",
+  "kickoff": "2026-11-08T00:30Z"
+ },
+ "401858287": {
+  "away": "Louisville",
+  "date": "20261107",
+  "dk_away_ml": -650,
+  "dk_home_ml": 470,
+  "dk_home_spread": 14.5,
+  "home": "Georgia Tech",
+  "kickoff": "2026-11-08T00:30Z"
+ },
+ "401858290": {
+  "away": "Merrimack",
+  "date": "20261107",
+  "dk_away_ml": null,
+  "dk_home_ml": null,
+  "dk_home_spread": -46.5,
+  "home": "Wake Forest",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401858291": {
+  "away": "Miami-Florida",
+  "date": "20261107",
+  "dk_away_ml": 225,
+  "dk_home_ml": -278,
+  "dk_home_spread": -7.0,
+  "home": "Notre Dame",
+  "kickoff": "2026-11-08T00:30Z"
+ },
+ "401858511": {
+  "away": "Michigan State",
+  "date": "20261107",
+  "dk_away_ml": 440,
+  "dk_home_ml": -600,
+  "dk_home_spread": -14.0,
+  "home": "Michigan",
+  "kickoff": "2026-11-08T00:30Z"
+ },
+ "401858513": {
+  "away": "Iowa",
+  "date": "20261107",
+  "dk_away_ml": -162,
+  "dk_home_ml": 136,
+  "dk_home_spread": 3.0,
+  "home": "Northwestern",
+  "kickoff": "2026-11-08T00:30Z"
+ },
+ "401858514": {
+  "away": "Oregon",
+  "date": "20261107",
+  "dk_away_ml": 260,
+  "dk_home_ml": -325,
+  "dk_home_spread": -7.5,
+  "home": "Ohio State",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401858516": {
+  "away": "Penn State",
+  "date": "20261107",
+  "dk_away_ml": 114,
+  "dk_home_ml": -135,
+  "dk_home_spread": -2.5,
+  "home": "Washington",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401858517": {
+  "away": "Rutgers",
+  "date": "20261107",
+  "dk_away_ml": 700,
+  "dk_home_ml": -1100,
+  "dk_home_spread": -19.5,
+  "home": "Wisconsin",
+  "kickoff": "2026-11-07T21:15Z"
+ },
+ "401860911": {
+  "away": "Boise State",
+  "date": "20261107",
+  "dk_away_ml": -850,
+  "dk_home_ml": 575,
+  "dk_home_spread": 15.5,
+  "home": "Colorado State",
+  "kickoff": "2026-11-07T23:00Z"
+ },
+ "401862819": {
+  "away": "Charlotte",
+  "date": "20261107",
+  "dk_away_ml": 250,
+  "dk_home_ml": -310,
+  "dk_home_spread": -7.5,
+  "home": "UAB",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401862820": {
+  "away": "Temple",
+  "date": "20261107",
+  "dk_away_ml": 245,
+  "dk_home_ml": -305,
+  "dk_home_spread": -8.5,
+  "home": "Navy",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401862821": {
+  "away": "Rice",
+  "date": "20261107",
+  "dk_away_ml": 500,
+  "dk_home_ml": -700,
+  "dk_home_spread": -14.5,
+  "home": "North Texas",
+  "kickoff": "2026-11-07T21:00Z"
+ },
+ "401862823": {
+  "away": "Air Force",
+  "date": "20261107",
+  "dk_away_ml": 154,
+  "dk_home_ml": -185,
+  "dk_home_spread": -4.0,
+  "home": "Army West Point",
+  "kickoff": "2026-11-08T00:30Z"
+ },
+ "401864534": {
+  "away": "Northern Illinois",
+  "date": "20261107",
+  "dk_away_ml": 340,
+  "dk_home_ml": -440,
+  "dk_home_spread": -11.5,
+  "home": "San Jose State",
+  "kickoff": "2026-11-07T21:00Z"
+ },
+ "401869936": {
+  "away": "LouisianaMonroe(ULM)",
+  "date": "20261107",
+  "dk_away_ml": 490,
+  "dk_home_ml": -675,
+  "dk_home_spread": -14.5,
+  "home": "Arkansas State",
+  "kickoff": "2026-11-07T20:00Z"
+ },
+ "401869951": {
+  "away": "Marshall",
+  "date": "20261107",
+  "dk_away_ml": 230,
+  "dk_home_ml": -285,
+  "dk_home_spread": -7.0,
+  "home": "Georgia Southern",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401869968": {
+  "away": "South Alabama",
+  "date": "20261107",
+  "dk_away_ml": 230,
+  "dk_home_ml": -285,
+  "dk_home_spread": -7.0,
+  "home": "Louisiana-Lafayette",
+  "kickoff": "2026-11-07T22:00Z"
+ },
+ "401871073": {
+  "away": "Delaware",
+  "date": "20261107",
+  "dk_away_ml": -118,
+  "dk_home_ml": -102,
+  "dk_home_spread": 1.5,
+  "home": "Kennesaw State",
+  "kickoff": "2026-11-07T20:00Z"
+ },
+ "401871074": {
+  "away": "Missouri State",
+  "date": "20261107",
+  "dk_away_ml": 170,
+  "dk_home_ml": -205,
+  "dk_home_spread": -4.5,
+  "home": "Fla. International",
+  "kickoff": "2026-11-07T21:00Z"
+ },
+ "401871075": {
+  "away": "Sam Houston State",
+  "date": "20261107",
+  "dk_away_ml": 550,
+  "dk_home_ml": -800,
+  "dk_home_spread": -16.5,
+  "home": "Jacksonville State",
+  "kickoff": "2026-11-08T00:00Z"
+ },
+ "401871076": {
+  "away": "Western Kentucky",
+  "date": "20261107",
+  "dk_away_ml": -130,
+  "dk_home_ml": 110,
+  "dk_home_spread": 1.5,
+  "home": "Middle Tennessee",
+  "kickoff": "2026-11-07T20:30Z"
+ },
+ "401871098": {
+  "away": "Louisiana Tech",
+  "date": "20261107",
+  "dk_away_ml": -258,
+  "dk_home_ml": 210,
+  "dk_home_spread": 7.0,
+  "home": "Troy",
+  "kickoff": "2026-11-07T21:00Z"
+ }
+}
