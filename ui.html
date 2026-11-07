@@ -173,6 +173,9 @@
   </div>
   <div class="status" id="status"></div>
 
+  <h2 id="w-title">Week aggregates</h2>
+  <div class="summary" id="w-summary"></div>
+  <h2 id="d-title">Today's slate</h2>
   <div class="summary" id="summary"></div>
 
   <div class="livebar" id="livebar">
@@ -250,7 +253,26 @@ async function api(path, opts) {
   return j;
 }
 
+// Week totals: every finished game Tuesday-Saturday of the selected date's week.
+async function loadWeek() {
+  try {
+    const w = await api(`/api/week?date=${ymd()}`);
+    const md = d => new Date(d.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"))
+      .toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
+    $("w-title").innerHTML = `Week ${w.week ?? "?"} Aggregates <span class="note">${md(w.start)} – ${md(w.end)} · finished games only · teaser 3</span>`;
+    const rows = w.games;
+    const spread = rows.filter(g => g.action === "SPREAD" && !g.flags.includes("DISAGREE"));
+    const caution = rows.filter(g => g.action === "SPREAD" && g.flags.includes("DISAGREE"));
+    const ml = rows.filter(g => g.action === "MONEYLINE");
+    const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>${label}</div>`;
+    $("w-summary").innerHTML = `<div><b>${rows.length}</b>Games final</div>` +
+      tile("Spread record", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
+      tile("Moneyline record", tally(ml, "result")) + tile("Caution record", tally(caution, "result"));
+  } catch (e) { $("w-summary").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+}
+
 async function loadSlate(refresh = false) {
+  loadWeek();
   setStatus("Loading…");
   try {
     slate = await api(`/api/slate?date=${ymd()}&teaser=${$("teaser").value || 3}${refresh ? "&refresh=1" : ""}`);
@@ -332,23 +354,15 @@ function render() {
   const skip = s.games.filter(g => g.action === "SKIP" && g.flags.length);
   const neutral = s.games.filter(g => g.action === "EXCLUDED");
 
-  // Record across finished games only: W-L, plus pushes when there are any.
-  const record = (rows, key) => {
-    const n = r => rows.filter(g => g[key] === r).length;
-    const w = n("WIN"), l = n("LOSS"), p = n("PUSH");
-    return w + l + p ? `${w}–${l}${p ? `–${p}` : ""}` : "—";
-  };
   const finished = s.games.filter(g => g.state === "post").length;
+  const dayName = new Date(ymd().replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00")).toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" });
+  $("d-title").innerHTML = `${esc(dayName)} slate`;
   $("summary").innerHTML = [
     ["Games with lines", s.games.length],
     ["Final", finished],
     ["Spread picks", spreadAll.length - dis.length],
     ["Edge ≥ 3", spreadAll.filter(g => g.absEdge >= 3 && !g.flags.includes("DISAGREE")).length],
     ["Moneyline", ml.length], ["Caution", dis.length], ["Skipped", skip.length],
-    ["Spread record", record(spreadAll.filter(g => !g.flags.includes("DISAGREE")), "result")],
-    ["Teaser legs", record(spreadAll.filter(g => !g.flags.includes("DISAGREE")), "teaser_result")],
-    ["Moneyline record", record(ml, "result")],
-    ["Caution record", record(dis, "result")],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
 
   const pickCol = { label: "Pick", key: "side", render: g => `<span class="pick">${esc(g.side)} ${line(g.line)}</span>` };

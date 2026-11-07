@@ -72,7 +72,23 @@ def _get(url: str) -> dict:
 
 
 def fetch_json(dates: str) -> dict:
-    return _get(SCOREBOARD.format(dates=dates))
+    data = _get(SCOREBOARD.format(dates=dates))
+    if (data.get("week") or {}).get("number"):
+        _weeks[dates] = data["week"]["number"]
+    return data
+
+
+_weeks: Dict[str, int] = {}
+
+
+def week_number(day: str) -> Optional[int]:
+    """ESPN's college football week for a date (YYYYMMDD)."""
+    if day not in _weeks:
+        try:
+            fetch_json(day)
+        except Exception:
+            return None
+    return _weeks.get(day)
 
 
 def _dk(odds_list) -> Optional[dict]:

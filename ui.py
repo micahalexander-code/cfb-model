@@ -13,10 +13,11 @@ Endpoints:
 import json
 import os
 import time
-from datetime import date
+from datetime import date, datetime, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
+import odds
 import run
 import sagarin
 import snapshot
@@ -72,6 +73,40 @@ def slate_json(day: str, teaser: float, refresh: bool) -> dict:
     }
 
 
+_past_slates = {}  # day -> Slate, for days before today (every game final)
+
+
+def week_window(day: str):
+    """Tuesday..Saturday of the CFB week containing `day`. Sunday/Monday belong
+    to the week that just ended."""
+    d = datetime.strptime(day, "%Y%m%d").date()
+    tue = d - timedelta(days=(d.weekday() - 1) % 7)
+    return [(tue + timedelta(days=i)).strftime("%Y%m%d") for i in range(5)]
+
+
+def week_json(day: str) -> dict:
+    """Every finished game Tue-Sat of the week: frozen history first, then
+    finals the snapshot hasn't recorded yet (same rules as the History tab)."""
+    days = week_window(day)
+    today = snapshot.eastern_today().strftime("%Y%m%d")
+    rows = [h for h in snapshot.load_history() if h["date"] in days]
+    seen = {h["game_id"] for h in rows}
+    r = ratings()
+    for d in days:
+        if d > today:
+            break
+        s = _past_slates.get(d)
+        if s is None or s.ratings.as_of != r.as_of:
+            s = run.build(d, snapshot.TEASER, r)
+            if d < today:
+                _past_slates[d] = s
+        if snapshot.dates_ok(s):
+            rows += [dict(x, provisional=True) for x in snapshot.finished_rows(s, None)
+                     if x["game_id"] not in seen]
+    return {"week": odds.week_number(days[0]) or odds.week_number(day),
+            "start": days[0], "end": days[-1], "games": rows}
+
+
 def history_json() -> dict:
     """Frozen history plus today's/yesterday's finals the scheduled snapshot
     hasn't recorded yet (marked provisional until it does)."""
@@ -112,6 +147,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self._send(200, f.read(), "text/html; charset=utf-8")
             if method == "GET" and path == "/api/slate":
                 return self._send(200, slate_json(day, teaser, q.get("refresh") == "1"))
+            if method == "GET" and path == "/api/week":
+                return self._send(200, week_json(day))
             if method == "GET" and path == "/api/history":
                 return self._send(200, history_json())
             if method == "GET" and path == "/api/teams":
