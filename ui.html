@@ -86,6 +86,8 @@
          padding: 1px 7px; border-radius: 6px; }
   .res.WIN { color: #fff; background: var(--pos); box-shadow: 0 0 10px color-mix(in srgb, var(--pos) 45%, transparent); }
   .res.LOSS { color: #fff; background: var(--bad); }
+  .rpair { display: inline-grid; grid-template-columns: 48px 48px; align-items: center; }
+  .rpair > span { text-align: center; }
   .res.PUSH { color: var(--fg); background: var(--line); }
   .live { color: var(--live); font-weight: 700; text-shadow: 0 0 10px color-mix(in srgb, var(--live) 45%, transparent); }
   .tag { font-size: 11px; color: var(--muted); }
@@ -303,7 +305,12 @@ const kickCol = { label: "Kickoff / score", key: "kickoff", render: g => rankDot
   : g.state === "in" ? `<span class="live">Live ${score(g)}</span>`
   : `<span class="muted">${kick(g.kickoff)}</span>`) };
 const res = r => r ? `<span class="res ${r}">${r === "WIN" ? "W" : r === "LOSS" ? "L" : "P"}</span>` : "";
-const resultCol = { label: "Result", key: "result", render: g => res(g.result) || (g.state === "in" ? `<span class="tag">in play</span>` : "") };
+// Spread and teaser results side by side; fixed slots keep the icons lined up.
+const resPair = g => `<span class="rpair"><span>${res(g.result)}</span><span>${res(g.teaser_result)}</span></span>`;
+const resPairHead = `<span class="rpair"><span>Spread</span><span>Teaser</span></span>`;
+const resultCol = { label: resPairHead, key: "result", render: g =>
+  g.state === "in" ? `<span class="tag">in play</span>` : resPair(g) };
+const mlResultCol = { label: "Result", key: "result", render: g => res(g.result) || (g.state === "in" ? `<span class="tag">in play</span>` : "") };
 const ratCol  = { label: "Ratings (A / H)", num: true, render: g => `${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}` };
 // Both shown as the HOME team's spread, sportsbook style (home favored = minus).
 const projCol = { label: "Model line (home)", key: "projected", num: true, render: g => g.projected === 0 ? "PK" : sgn(-g.projected, 2) };
@@ -366,11 +373,11 @@ function render() {
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
 
   const pickCol = { label: "Pick", key: "side", render: g => `<span class="pick">${esc(g.side)} ${line(g.line)}</span>` };
-  const teaseCol = { label: `Teased ${s.teaser}`, render: g => `${esc(g.side)} ${line(g.teaser_line)} ${res(g.teaser_result)}` };
+  const teaseCol = { label: `Teased ${s.teaser}`, render: g => `${esc(g.side)} ${line(g.teaser_line)}` };
 
   $("n-ml").textContent = ml.length;
   $("ml").innerHTML = table([kickCol, gameCol,
-    { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, resultCol,
+    { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, mlResultCol,
     projCol, dkCol, ratCol], ml, false, liveCls);
 
   $("n-dis").textContent = dis.length;
@@ -504,8 +511,8 @@ function renderHistory(rows) {
       : g.action === "MONEYLINE" ? `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>`
       : g.action === "EXCLUDED" ? `<span class="muted">Neutral, excluded</span>`
       : g.flags.includes("PRICED_IN") ? `<span class="muted">Skip, priced in</span>` : `<span class="muted">No edge</span>` },
-    { label: "Result", render: g => res(g.result) },
-    { label: "Teased", render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)} ${res(g.teaser_result)}` },
+    { label: resPairHead, render: g => g.teaser_line == null ? res(g.result) : resPair(g) },
+    { label: "Teased", render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)}` },
     { label: "Edge", num: true, render: g => g.action === "SPREAD" ? Math.abs(g.edge).toFixed(2) : "" },
     { label: "DK close (home)", num: true, render: g => line(g.dk_home_spread) },
     { label: "", render: g => (g.flags.includes("DISAGREE") ? `<span class="flag warn">DISAGREE</span> ` : "")
