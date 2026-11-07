@@ -8,10 +8,13 @@
   :root {
     --bg: #ffffff; --fg: #1a1a1a; --muted: #6b6b6b; --line: #e4e4e4;
     --soft: #f6f6f6; --pos: #1d6b3a; --warn: #9a5b00; --bad: #a12b2b;
+    /* Live cover colors (row backgrounds) */
+    --c-nosweat: #8fd19e; --c-cover: #dcf3e1; --c-close: #fbefb5; --c-dead: #f6c9c9;
   }
   @media (prefers-color-scheme: dark) {
     :root { --bg: #151515; --fg: #e8e8e8; --muted: #9a9a9a; --line: #2c2c2c;
-            --soft: #1e1e1e; --pos: #6fcf8f; --warn: #e0a64a; --bad: #e07a7a; }
+            --soft: #1e1e1e; --pos: #6fcf8f; --warn: #e0a64a; --bad: #e07a7a;
+            --c-nosweat: #1f5f33; --c-cover: #1d3a26; --c-close: #4a4115; --c-dead: #5a2323; }
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--fg);
@@ -60,6 +63,19 @@
   .calc { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; align-items: end; }
   .result { margin-top: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; }
   .result .big { font-size: 18px; font-weight: 700; }
+  tr.c-nosweat td { background: var(--c-nosweat); }
+  tr.c-cover td   { background: var(--c-cover); }
+  tr.c-close td   { background: var(--c-close); }
+  tr.c-dead td    { background: var(--c-dead); }
+  td:first-child { padding-left: 6px; }
+  .livebar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 14px; font-size: 13px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .seg button { border: none; border-radius: 0; border-right: 1px solid var(--line); padding: 4px 10px; }
+  .seg button:last-child { border-right: none; }
+  .seg button.on { background: var(--fg); color: var(--bg); }
+  .key { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); }
+  .key i { width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--line); display: inline-block; }
+  .livebar.off .key { display: none; }
   details summary { cursor: pointer; font-weight: 600; margin: 28px 0 8px; }
 </style>
 </head>
@@ -95,6 +111,19 @@
   <div class="status" id="status"></div>
 
   <div class="summary" id="summary"></div>
+
+  <div class="livebar" id="livebar">
+    <span class="muted">Live colors</span>
+    <span class="seg" id="colorMode">
+      <button data-mode="spread">Closing spread</button>
+      <button data-mode="teaser">Teaser</button>
+      <button data-mode="off">Off</button>
+    </span>
+    <span class="key"><i style="background:var(--c-nosweat)"></i>No Sweat <span class="tag">covering by 14+</span></span>
+    <span class="key"><i style="background:var(--c-cover)"></i>Covering</span>
+    <span class="key"><i style="background:var(--c-close)"></i>Close Game <span class="tag">within 8</span></span>
+    <span class="key"><i style="background:var(--c-dead)"></i>Dead <span class="tag">down more than 8</span></span>
+  </div>
 
   <h2>Home moneyline <span class="n" id="n-ml"></span><span class="note">home advantage pushes projection through 0</span></h2>
   <div id="ml"></div>
@@ -169,13 +198,13 @@ async function loadSlate(refresh = false) {
   } catch (e) { setStatus(e.message, true); }
 }
 
-function table(cols, rows, sortable = false) {
+function table(cols, rows, sortable = false, rowCls = null) {
   if (!rows.length) return `<div class="empty">None</div>`;
   const head = cols.map(c => {
     const arrow = sortable && c.key === sortKey ? (sortDir < 0 ? " ↓" : " ↑") : "";
     return `<th class="${c.num ? "num" : ""}${sortable && c.key ? " sort" : ""}" data-key="${c.key || ""}">${c.label}${arrow}</th>`;
   }).join("");
-  const body = rows.map(r => `<tr>${cols.map(c => `<td class="${c.num ? "num" : ""}">${c.render(r)}</td>`).join("")}</tr>`).join("");
+  const body = rows.map(r => `<tr class="${rowCls ? rowCls(r) : ""}">${cols.map(c => `<td class="${c.num ? "num" : ""}">${c.render(r)}</td>`).join("")}</tr>`).join("");
   return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
 }
 
@@ -195,6 +224,33 @@ const dkCol   = { label: "DK line (home)", num: true, render: g =>
   line(g.dk_home_spread) + (g.line_source === "closing" ? ` <span class="tag">close</span>` : "") };
 const edgeCol = { label: "Edge", key: "absEdge", num: true,
                   render: g => `<span class="${Math.abs(g.edge) >= 3 ? "strong" : ""}">${Math.abs(g.edge).toFixed(2)}</span>` };
+
+// ---- Live cover colors ----
+// How far our pick is past the number right now: positive = covering.
+// Spread picks use the closing line or the teased line; moneyline picks use 0
+// (just winning) in both views since they aren't teased.
+let colorMode = "spread";
+try { colorMode = localStorage.getItem("colorMode") || "spread"; } catch (e) {}
+function coverBy(g) {
+  if (g.state !== "in" || g.home_score == null || !g.side) return null;
+  const margin = g.side === g.home ? g.home_score - g.away_score : g.away_score - g.home_score;
+  if (g.action === "MONEYLINE") return margin;
+  if (g.action !== "SPREAD") return null;
+  return margin + (colorMode === "teaser" ? g.teaser_line : g.line);
+}
+function liveCls(g) {
+  if (colorMode === "off") return "";
+  const m = coverBy(g);
+  if (m == null) return "";
+  return m >= 14 ? "c-nosweat" : m > 0 ? "c-cover" : m >= -8 ? "c-close" : "c-dead";
+}
+function setColorMode(m) {
+  colorMode = m;
+  try { localStorage.setItem("colorMode", m); } catch (e) {}
+  document.querySelectorAll("#colorMode button").forEach(b => b.classList.toggle("on", b.dataset.mode === m));
+  $("livebar").classList.toggle("off", m === "off");
+  if (slate) render();
+}
 
 function render() {
   const s = slate, minEdge = parseFloat($("minEdge").value) || 0;
@@ -236,14 +292,14 @@ function render() {
   $("n-ml").textContent = ml.length;
   $("ml").innerHTML = table([kickCol, gameCol,
     { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, resultCol,
-    projCol, dkCol, ratCol], ml);
+    projCol, dkCol, ratCol], ml, false, liveCls);
 
   $("n-dis").textContent = dis.length;
   $("dis").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol,
-    { label: "", render: () => `<span class="flag warn">DISAGREE</span>` }], dis);
+    { label: "", render: () => `<span class="flag warn">DISAGREE</span>` }], dis, false, liveCls);
 
   $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
-  $("spread").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol], spread, true);
+  $("spread").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol], spread, true, liveCls);
   $("spread").querySelectorAll("th.sort").forEach(th => th.onclick = () => {
     const k = th.dataset.key;
     if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = k === "absEdge" || k === "projected" ? -1 : 1; }
@@ -308,6 +364,8 @@ async function runCalc() {
 }
 
 $("date").value = new Date().toLocaleDateString("en-CA");
+document.querySelectorAll("#colorMode button").forEach(b => b.onclick = () => setColorMode(b.dataset.mode));
+setColorMode(colorMode);
 $("load").onclick = () => loadSlate();
 $("refresh").onclick = () => loadSlate(true);
 $("teaser").onchange = () => loadSlate();
