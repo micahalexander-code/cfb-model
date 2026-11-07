@@ -115,6 +115,7 @@ def finished_rows(slate, recorded_at: str) -> List[dict]:
             "teaser_points": TEASER, "teaser_line": p.teaser_line, "flags": p.flags,
             "away_score": l.away_score, "home_score": l.home_score,
             "result": p.result, "teaser_result": p.teaser_result,
+            "home_rank": l.home_rank, "away_rank": l.away_rank,
         })
     return rows
 

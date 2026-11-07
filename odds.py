@@ -47,6 +47,8 @@ class Line:
     home_ml: Optional[int]
     away_ml: Optional[int]
     line_source: Optional[str] = None
+    home_rank: Optional[int] = None  # AP Top 25 rank (ESPN curatedRank), None if unranked
+    away_rank: Optional[int] = None
 
 
 def _int(v) -> Optional[int]:
@@ -114,6 +116,11 @@ def _closing_odds(game_id: str, completed: bool) -> Optional[dict]:
     return dk
 
 
+def _rank(c: dict) -> Optional[int]:
+    r = _int((c.get("curatedRank") or {}).get("current"))
+    return r if r and r <= 25 else None
+
+
 def parse(data: dict) -> List[Line]:
     lines = []
     for ev in data.get("events", []):
@@ -133,6 +140,7 @@ def parse(data: dict) -> List[Line]:
             away_score=_int(by_side["away"].get("score")) if st.get("state") != "pre" else None,
             home_spread=None, home_spread_odds=None, away_spread_odds=None,
             home_ml=None, away_ml=None,
+            home_rank=_rank(by_side["home"]), away_rank=_rank(by_side["away"]),
         )
         dk = _dk(comp.get("odds"))
         if dk:

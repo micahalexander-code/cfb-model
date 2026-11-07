@@ -68,6 +68,8 @@
   tr.c-close td   { background: var(--c-close); }
   tr.c-dead td    { background: var(--c-dead); }
   td:first-child { padding-left: 6px; }
+  .rk { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+  .rk.on { background: var(--bad); }
   .livebar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 14px; font-size: 13px; }
   .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
   .seg button { border: none; border-radius: 0; border-right: 1px solid var(--line); padding: 4px 10px; }
@@ -211,10 +213,12 @@ function table(cols, rows, sortable = false, rowCls = null) {
 const gameCol = { label: "Game", key: "game", render: g => `${esc(g.away)} <span class="muted">@</span> ${esc(g.home)}` };
 // Kickoff time before the game, live score during it, final score after.
 const score = g => `${g.away_score}–${g.home_score}`;
-const kickCol = { label: "Kickoff / score", key: "kickoff", render: g =>
+const rankDot = g => `<span class="rk${g.home_rank || g.away_rank ? " on" : ""}"${g.home_rank || g.away_rank
+  ? ` title="Ranked: ${[g.away_rank && `#${g.away_rank} ${esc(g.away)}`, g.home_rank && `#${g.home_rank} ${esc(g.home)}`].filter(Boolean).join(", ")}"` : ""}></span>`;
+const kickCol = { label: "Kickoff / score", key: "kickoff", render: g => rankDot(g) + (
   g.state === "post" ? `Final ${score(g)}`
   : g.state === "in" ? `<span class="live">Live ${score(g)}</span>`
-  : `<span class="muted">${kick(g.kickoff)}</span>` };
+  : `<span class="muted">${kick(g.kickoff)}</span>`) };
 const res = r => r ? `<span class="res ${r}">${r === "WIN" ? "W" : r === "LOSS" ? "L" : "P"}</span>` : "";
 const resultCol = { label: "Result", key: "result", render: g => res(g.result) || (g.state === "in" ? `<span class="tag">in play</span>` : "") };
 const ratCol  = { label: "Ratings (A / H)", num: true, render: g => `${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}` };
@@ -417,7 +421,7 @@ function renderHistory(rows) {
   $("h-n").textContent = rows.length;
   const day = g => new Date(g.kickoff).toLocaleDateString([], { month: "short", day: "numeric", weekday: "short" });
   $("h-games").innerHTML = table([
-    { label: "Date", render: g => `<span class="muted">${day(g)}</span>` },
+    { label: "Date", render: g => rankDot(g) + `<span class="muted">${day(g)}</span>` },
     gameCol,
     { label: "Final", render: g => score(g) },
     { label: "Pick", render: g =>
