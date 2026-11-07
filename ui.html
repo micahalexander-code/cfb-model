@@ -49,6 +49,10 @@
   .flag.warn { color: var(--warn); } .flag.bad { color: var(--bad); }
   .muted { color: var(--muted); }
   .empty { color: var(--muted); font-style: italic; padding: 6px 0; }
+  .res { font-weight: 700; }
+  .res.WIN { color: var(--pos); } .res.LOSS { color: var(--bad); } .res.PUSH { color: var(--muted); }
+  .live { color: var(--warn); font-weight: 600; }
+  .tag { font-size: 11px; color: var(--muted); }
   .calc { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; align-items: end; }
   .result { margin-top: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; }
   .result .big { font-size: 18px; font-weight: 700; }
@@ -87,7 +91,7 @@
   <h2>Excluded: neutral site <span class="n" id="n-neutral"></span></h2>
   <div id="neutral"></div>
 
-  <h2>No DraftKings line <span class="n" id="n-noline"></span><span class="note">usually already kicked off</span></h2>
+  <h2>No DraftKings line <span class="n" id="n-noline"></span><span class="note">ESPN has no DraftKings line for these</span></h2>
   <div id="noline"></div>
 
   <div id="unmatched"></div>
@@ -155,11 +159,19 @@ function table(cols, rows, sortable = false) {
 }
 
 const gameCol = { label: "Game", key: "game", render: g => `${esc(g.away)} <span class="muted">@</span> ${esc(g.home)}` };
-const kickCol = { label: "Kickoff", key: "kickoff", render: g => `<span class="muted">${kick(g.kickoff)}</span>` };
+// Kickoff time before the game, live score during it, final score after.
+const score = g => `${g.away_score}–${g.home_score}`;
+const kickCol = { label: "Kickoff / score", key: "kickoff", render: g =>
+  g.state === "post" ? `Final ${score(g)}`
+  : g.state === "in" ? `<span class="live">Live ${score(g)}</span>`
+  : `<span class="muted">${kick(g.kickoff)}</span>` };
+const res = r => r ? `<span class="res ${r}">${r === "WIN" ? "W" : r === "LOSS" ? "L" : "P"}</span>` : "";
+const resultCol = { label: "Result", key: "result", render: g => res(g.result) || (g.state === "in" ? `<span class="tag">in play</span>` : "") };
 const ratCol  = { label: "Ratings (A / H)", num: true, render: g => `${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}` };
 // Both shown as the HOME team's spread, sportsbook style (home favored = minus).
 const projCol = { label: "Model line (home)", key: "projected", num: true, render: g => g.projected === 0 ? "PK" : sgn(-g.projected, 2) };
-const dkCol   = { label: "DK line (home)", num: true, render: g => line(g.dk_home_spread) };
+const dkCol   = { label: "DK line (home)", num: true, render: g =>
+  line(g.dk_home_spread) + (g.line_source === "closing" ? ` <span class="tag">close</span>` : "") };
 const edgeCol = { label: "Edge", key: "absEdge", num: true,
                   render: g => `<span class="${Math.abs(g.edge) >= 3 ? "strong" : ""}">${Math.abs(g.edge).toFixed(2)}</span>` };
 
@@ -178,26 +190,39 @@ function render() {
   const skip = s.games.filter(g => g.action === "SKIP" && g.flags.length);
   const neutral = s.games.filter(g => g.action === "EXCLUDED");
 
+  // Record across finished games only: W-L, plus pushes when there are any.
+  const record = (rows, key) => {
+    const n = r => rows.filter(g => g[key] === r).length;
+    const w = n("WIN"), l = n("LOSS"), p = n("PUSH");
+    return w + l + p ? `${w}–${l}${p ? `–${p}` : ""}` : "—";
+  };
+  const finished = s.games.filter(g => g.state === "post").length;
   $("summary").innerHTML = [
     ["Games with lines", s.games.length],
+    ["Final", finished],
     ["Spread picks", spreadAll.length - dis.length],
     ["Edge ≥ 3", spreadAll.filter(g => g.absEdge >= 3 && !g.flags.includes("DISAGREE")).length],
-    ["Moneyline", ml.length], ["Caution", dis.length], ["Skipped", skip.length], ["No line", s.no_line.length],
+    ["Moneyline", ml.length], ["Caution", dis.length], ["Skipped", skip.length],
+    ["Spread record", record(spreadAll.filter(g => !g.flags.includes("DISAGREE")), "result")],
+    ["Teaser legs", record(spreadAll.filter(g => !g.flags.includes("DISAGREE")), "teaser_result")],
+    ["Moneyline record", record(ml, "result")],
+    ["Caution record", record(dis, "result")],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
 
   const pickCol = { label: "Pick", key: "side", render: g => `<span class="pick">${esc(g.side)} ${line(g.line)}</span>` };
-  const teaseCol = { label: `Teased ${s.teaser}`, render: g => `${esc(g.side)} ${line(g.teaser_line)}` };
+  const teaseCol = { label: `Teased ${s.teaser}`, render: g => `${esc(g.side)} ${line(g.teaser_line)} ${res(g.teaser_result)}` };
 
   $("n-ml").textContent = ml.length;
-  $("ml").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol,
-    { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }], ml);
+  $("ml").innerHTML = table([kickCol, gameCol,
+    { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, resultCol,
+    projCol, dkCol, ratCol], ml);
 
   $("n-dis").textContent = dis.length;
-  $("dis").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol, edgeCol, pickCol, teaseCol,
+  $("dis").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol,
     { label: "", render: () => `<span class="flag warn">DISAGREE</span>` }], dis);
 
   $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
-  $("spread").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol, edgeCol, pickCol, teaseCol], spread, true);
+  $("spread").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol], spread, true);
   $("spread").querySelectorAll("th.sort").forEach(th => th.onclick = () => {
     const k = th.dataset.key;
     if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = k === "absEdge" || k === "projected" ? -1 : 1; }
@@ -212,8 +237,7 @@ function render() {
   $("neutral").innerHTML = table([kickCol, gameCol, ratCol, dkCol], neutral);
 
   $("n-noline").textContent = s.no_line.length;
-  $("noline").innerHTML = table([kickCol, gameCol,
-    { label: "Status", render: g => `<span class="muted">${esc(g.status.replace("STATUS_", "").replace("_", " ").toLowerCase())}</span>` }], s.no_line);
+  $("noline").innerHTML = table([kickCol, gameCol], s.no_line);
 
   $("unmatched").innerHTML = s.unmatched.length
     ? `<h2>Unmatched team names</h2><div class="muted">Add to names.py: ${s.unmatched.map(esc).join(", ")}</div>` : "";
@@ -273,6 +297,10 @@ $("save").onclick = async () => {
         setStatus(`Saved ${r.rows} rows to ${r.path}`); } catch (e) { setStatus(e.message, true); }
 };
 $("c-go").onclick = runCalc;
+// While any game is live, re-pull every 2 minutes so finals get graded.
+setInterval(() => {
+  if (slate && slate.games.some(g => g.state === "in")) loadSlate();
+}, 120000);
 $("r-filter").oninput = renderRatings;
 loadSlate();
 loadTeams();

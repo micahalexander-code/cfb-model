@@ -19,7 +19,7 @@ import names
 import odds
 import sagarin
 from model import (ACTION_EXCLUDED, ACTION_ML, ACTION_SKIP, ACTION_SPREAD,
-                   FLAG_DISAGREE, TEASER_POINTS, Game, Pick, evaluate)
+                   FLAG_DISAGREE, TEASER_POINTS, Game, Pick, evaluate, grade)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -27,6 +27,7 @@ CSV_FIELDS = [
     "run_at", "sagarin_as_of", "game_id", "kickoff", "away", "home", "neutral",
     "away_rating", "home_rating", "hfa", "dk_home_spread", "dk_home_ml", "dk_away_ml",
     "projected_home", "edge", "action", "side", "line", "odds", "teaser_line", "flags",
+    "line_source", "state", "away_score", "home_score", "result", "teaser_result",
 ]
 
 
@@ -56,7 +57,10 @@ def build(day: str, teaser_points: float = TEASER_POINTS,
                  home_rating=ratings.teams[h].rating, away_rating=ratings.teams[a].rating,
                  dk_home_spread=l.home_spread, hfa=ratings.home_advantage,
                  neutral=l.neutral, dk_home_ml=l.home_ml, dk_away_ml=l.away_ml)
-        slate.picks.append((l, evaluate(g, teaser_points)))
+        p = evaluate(g, teaser_points)
+        if l.completed and l.home_score is not None and l.away_score is not None:
+            grade(p, l.home_score, l.away_score)
+        slate.picks.append((l, p))
     slate.unmatched = sorted(set(slate.unmatched))
     return slate
 
@@ -65,6 +69,11 @@ def save_csv(slate: Slate) -> str:
     run_at = datetime.now().isoformat(timespec="seconds")
     os.makedirs(os.path.join(HERE, "picks"), exist_ok=True)
     path = os.path.join(HERE, "picks", f"{slate.day}.csv")
+    if os.path.exists(path):
+        with open(path) as f:
+            if f.readline().strip() != ",".join(CSV_FIELDS):
+                # Columns changed since this file was started; keep it aside.
+                os.replace(path, path.replace(".csv", f".old-{datetime.now():%H%M%S}.csv"))
     new = not os.path.exists(path)
     with open(path, "a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=CSV_FIELDS)
@@ -80,6 +89,9 @@ def save_csv(slate: Slate) -> str:
                 "projected_home": p.projected, "edge": p.edge, "action": p.action,
                 "side": p.side, "line": p.line, "odds": p.odds, "teaser_line": p.teaser_line,
                 "flags": "|".join(p.flags),
+                "line_source": l.line_source, "state": l.state,
+                "away_score": l.away_score, "home_score": l.home_score,
+                "result": p.result, "teaser_result": p.teaser_result,
             })
     return path
 

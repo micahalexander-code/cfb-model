@@ -1,6 +1,7 @@
 """Run: python3 test_model.py"""
 from model import (ACTION_EXCLUDED, ACTION_ML, ACTION_SKIP, ACTION_SPREAD,
-                   FLAG_DISAGREE, FLAG_PRICED_IN, Game, evaluate)
+                   FLAG_DISAGREE, FLAG_PRICED_IN, LOSS, PUSH, WIN, Game,
+                   evaluate, grade)
 
 HFA = 2.74
 
@@ -38,6 +39,25 @@ def test_disagreement_is_flagged():
     # Home rated higher, model home +7.74, but DK makes home a 1-pt dog.
     p = evaluate(g("Home", "Away", 85, 80, 1))
     assert p.action == ACTION_SPREAD and p.side == "Home" and FLAG_DISAGREE in p.flags
+
+
+def test_grading_spread_and_teaser():
+    # Utah -4 (teased -1). Utah wins by 3: spread loses, teaser wins.
+    p = grade(evaluate(g("Utah", "BYU", 87.19, 82.49, -4)), home_score=24, away_score=21)
+    assert (p.result, p.teaser_result) == (LOSS, WIN)
+    # Utah wins by 4: push on the spread.
+    p = grade(evaluate(g("Utah", "BYU", 87.19, 82.49, -4)), 28, 24)
+    assert (p.result, p.teaser_result) == (PUSH, WIN)
+    # Away underdog +10, loses by 12: loss straight, teased +13 wins.
+    p = grade(evaluate(g("Home", "Away", 85, 80, -10)), 32, 20)
+    assert (p.result, p.teaser_result) == (LOSS, WIN)
+
+
+def test_grading_moneyline_and_skip():
+    p = grade(evaluate(g("Home", "Away", 79, 80, 2.5, dk_home_ml=120)), 20, 17)
+    assert p.result == WIN and p.teaser_result is None
+    p = grade(evaluate(g("Home", "Away", 79, 80, -1)), 20, 17)
+    assert p.result is None
 
 
 def test_neutral_excluded():

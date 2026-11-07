@@ -60,6 +60,8 @@ class Pick:
     odds: Optional[int] = None     # moneyline odds when action is ML
     teaser_line: Optional[float] = None
     flags: List[str] = field(default_factory=list)
+    result: Optional[str] = None          # WIN / LOSS / PUSH once the game is final
+    teaser_result: Optional[str] = None   # per-leg teaser result (spread picks only)
 
     def describe(self) -> str:
         g = self.game
@@ -74,6 +76,26 @@ class Pick:
             bet = self.action
         flags = f"  [{', '.join(self.flags)}]" if self.flags else ""
         return f"{head}: {bet}{flags}\n    {nums}"
+
+
+WIN, LOSS, PUSH = "WIN", "LOSS", "PUSH"
+
+
+def _cover(margin_plus_line: float) -> str:
+    return WIN if margin_plus_line > 0 else LOSS if margin_plus_line < 0 else PUSH
+
+
+def grade(p: "Pick", home_score: int, away_score: int) -> "Pick":
+    """Fill in result fields from a FINAL score. Skips/exclusions stay ungraded."""
+    if p.side is None:
+        return p
+    side_margin = (home_score - away_score) * (1 if p.side == p.game.home else -1)
+    if p.action == ACTION_SPREAD:
+        p.result = _cover(side_margin + p.line)
+        p.teaser_result = _cover(side_margin + p.teaser_line)
+    elif p.action == ACTION_ML:
+        p.result = _cover(side_margin)
+    return p
 
 
 def _sign(x: float) -> int:

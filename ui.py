@@ -46,9 +46,12 @@ def pick_json(p, line=None) -> dict:
         "dk_home_spread": g.dk_home_spread, "dk_home_ml": g.dk_home_ml, "dk_away_ml": g.dk_away_ml,
         "projected": p.projected, "edge": p.edge, "action": p.action, "side": p.side,
         "line": p.line, "odds": p.odds, "teaser_line": p.teaser_line, "flags": p.flags,
+        "result": p.result, "teaser_result": p.teaser_result,
     }
     if line is not None:
-        d.update(kickoff=line.kickoff, status=line.status)
+        d.update(kickoff=line.kickoff, status=line.status, state=line.state,
+                 completed=line.completed, home_score=line.home_score,
+                 away_score=line.away_score, line_source=line.line_source)
     return d
 
 
@@ -57,7 +60,9 @@ def slate_json(day: str, teaser: float, refresh: bool) -> dict:
     return {
         "date": day, "as_of": s.ratings.as_of, "hfa": s.ratings.home_advantage, "teaser": teaser,
         "games": [pick_json(p, l) for l, p in s.picks],
-        "no_line": [{"home": l.home, "away": l.away, "kickoff": l.kickoff, "status": l.status} for l in s.no_line],
+        "no_line": [{"home": l.home, "away": l.away, "kickoff": l.kickoff, "status": l.status,
+                     "state": l.state, "home_score": l.home_score, "away_score": l.away_score}
+                    for l in s.no_line],
         "unmatched": s.unmatched,
         "can_save": ALLOW_SAVE,
     }
