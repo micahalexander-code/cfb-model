@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CFB Model</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #6b6b6b; --line: #e4e4e4;
+    --soft: #f6f6f6; --pos: #1d6b3a; --warn: #9a5b00; --bad: #a12b2b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #151515; --fg: #e8e8e8; --muted: #9a9a9a; --line: #2c2c2c;
+            --soft: #1e1e1e; --pos: #6fcf8f; --warn: #e0a64a; --bad: #e07a7a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+  h1 { font-size: 20px; margin: 0 0 2px; }
+  h2 { font-size: 15px; margin: 28px 0 8px; display: flex; gap: 8px; align-items: baseline; }
+  h2 .n { color: var(--muted); font-weight: normal; }
+  h2 .note { color: var(--muted); font-weight: normal; font-size: 13px; }
+  .meta { color: var(--muted); }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: end; margin: 16px 0 4px;
+              padding: 12px; background: var(--soft); border: 1px solid var(--line); border-radius: 6px; }
+  label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--muted); }
+  label.inline { flex-direction: row; align-items: center; gap: 6px; }
+  input, select, button { font: inherit; color: var(--fg); background: var(--bg);
+                          border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; }
+  input[type=number] { width: 80px; }
+  button { cursor: pointer; }
+  button.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  .status { color: var(--muted); font-size: 13px; min-height: 18px; margin-top: 6px; }
+  .status.err { color: var(--bad); }
+  .summary { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 14px; }
+  .summary div b { font-size: 18px; display: block; }
+  .summary div { color: var(--muted); font-size: 12px; }
+  .summary div b { color: var(--fg); }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; cursor: default; }
+  th.sort { cursor: pointer; }
+  td.num, th.num { text-align: right; padding-right: 14px; }
+  .pick { font-weight: 600; }
+  .strong { font-weight: 700; color: var(--pos); }
+  .flag { font-size: 11px; font-weight: 600; padding: 1px 6px; border-radius: 3px; border: 1px solid currentColor; }
+  .flag.warn { color: var(--warn); } .flag.bad { color: var(--bad); }
+  .muted { color: var(--muted); }
+  .empty { color: var(--muted); font-style: italic; padding: 6px 0; }
+  .calc { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; align-items: end; }
+  .result { margin-top: 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; }
+  .result .big { font-size: 18px; font-weight: 700; }
+  details summary { cursor: pointer; font-weight: 600; margin: 28px 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>CFB Model</h1>
+  <div class="meta" id="meta">Sagarin vs DraftKings</div>
+
+  <div class="controls">
+    <label>Date <input type="date" id="date"></label>
+    <label>Teaser points <input type="number" id="teaser" value="3" step="0.5" min="0"></label>
+    <label>Min edge to show <input type="number" id="minEdge" value="0" step="0.5" min="0"></label>
+    <button class="primary" id="load">Load slate</button>
+    <button id="refresh" title="Re-download Sagarin ratings too">Refresh ratings</button>
+    <button id="save" title="Append this slate to picks/YYYYMMDD.csv">Save to CSV</button>
+  </div>
+  <div class="status" id="status"></div>
+
+  <div class="summary" id="summary"></div>
+
+  <h2>Home moneyline <span class="n" id="n-ml"></span><span class="note">home advantage pushes projection through 0</span></h2>
+  <div id="ml"></div>
+
+  <h2>Caution: model and book disagree <span class="n" id="n-dis"></span><span class="note">higher risk</span></h2>
+  <div id="dis"></div>
+
+  <h2>Spread picks <span class="n" id="n-spread"></span><span class="note">click a column to sort</span></h2>
+  <div id="spread"></div>
+
+  <h2>Skipped: priced in <span class="n" id="n-skip"></span><span class="note">lower-rated home team favored by DraftKings</span></h2>
+  <div id="skip"></div>
+
+  <h2>Excluded: neutral site <span class="n" id="n-neutral"></span></h2>
+  <div id="neutral"></div>
+
+  <h2>No DraftKings line <span class="n" id="n-noline"></span><span class="note">usually already kicked off</span></h2>
+  <div id="noline"></div>
+
+  <div id="unmatched"></div>
+
+  <h2>Matchup calculator</h2>
+  <div class="controls calc">
+    <label>Away team <input list="teamlist" id="c-away" placeholder="BYU"></label>
+    <label>Home team <input list="teamlist" id="c-home" placeholder="Utah"></label>
+    <label>DK home spread <input type="number" id="c-spread" step="0.5" placeholder="-4"></label>
+    <label>DK home ML <input type="number" id="c-ml" placeholder="optional"></label>
+    <label class="inline"><input type="checkbox" id="c-neutral"> Neutral site</label>
+    <button class="primary" id="c-go">Run</button>
+  </div>
+  <datalist id="teamlist"></datalist>
+  <div id="c-out"></div>
+
+  <details id="ratings-box">
+    <summary>Sagarin ratings</summary>
+    <input id="r-filter" placeholder="Filter teams" style="margin-bottom:8px; width:220px">
+    <div id="ratings" class="scroll"></div>
+  </details>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const sgn = (x, d = 1) => x == null ? "" : (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(d).replace(/\.0+$/, "") ;
+const line = (x) => x == null ? "" : (x === 0 ? "PK" : sgn(x, 1));
+const odds = (x) => x == null ? "" : (x > 0 ? "+" + x : "−" + Math.abs(x));
+const kick = (iso) => { if (!iso) return ""; const d = new Date(iso);
+  return d.toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" }); };
+const ymd = () => $("date").value.replaceAll("-", "");
+
+let slate = null;
+let sortKey = "absEdge", sortDir = -1;
+
+function setStatus(msg, err = false) { $("status").textContent = msg; $("status").className = "status" + (err ? " err" : ""); }
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+}
+
+async function loadSlate(refresh = false) {
+  setStatus("Loading…");
+  try {
+    slate = await api(`/api/slate?date=${ymd()}&teaser=${$("teaser").value || 3}${refresh ? "&refresh=1" : ""}`);
+    $("save").hidden = !slate.can_save;
+    render();
+    setStatus(`Loaded ${new Date().toLocaleTimeString()}`);
+    if (refresh) loadTeams();
+  } catch (e) { setStatus(e.message, true); }
+}
+
+function table(cols, rows, sortable = false) {
+  if (!rows.length) return `<div class="empty">None</div>`;
+  const head = cols.map(c => {
+    const arrow = sortable && c.key === sortKey ? (sortDir < 0 ? " ↓" : " ↑") : "";
+    return `<th class="${c.num ? "num" : ""}${sortable && c.key ? " sort" : ""}" data-key="${c.key || ""}">${c.label}${arrow}</th>`;
+  }).join("");
+  const body = rows.map(r => `<tr>${cols.map(c => `<td class="${c.num ? "num" : ""}">${c.render(r)}</td>`).join("")}</tr>`).join("");
+  return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+
+const gameCol = { label: "Game", key: "game", render: g => `${esc(g.away)} <span class="muted">@</span> ${esc(g.home)}` };
+const kickCol = { label: "Kickoff", key: "kickoff", render: g => `<span class="muted">${kick(g.kickoff)}</span>` };
+const ratCol  = { label: "Ratings (A / H)", num: true, render: g => `${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}` };
+// Both shown as the HOME team's spread, sportsbook style (home favored = minus).
+const projCol = { label: "Model line (home)", key: "projected", num: true, render: g => g.projected === 0 ? "PK" : sgn(-g.projected, 2) };
+const dkCol   = { label: "DK line (home)", num: true, render: g => line(g.dk_home_spread) };
+const edgeCol = { label: "Edge", key: "absEdge", num: true,
+                  render: g => `<span class="${Math.abs(g.edge) >= 3 ? "strong" : ""}">${Math.abs(g.edge).toFixed(2)}</span>` };
+
+function render() {
+  const s = slate, minEdge = parseFloat($("minEdge").value) || 0;
+  $("meta").textContent = `Sagarin through ${s.as_of.toLowerCase()} · home advantage ${s.hfa} · DraftKings via ESPN`;
+
+  const spreadAll = s.games.filter(g => g.action === "SPREAD").map(g => ({ ...g, absEdge: Math.abs(g.edge), game: g.away + g.home }));
+  const dis = spreadAll.filter(g => g.flags.includes("DISAGREE"));
+  let spread = spreadAll.filter(g => !g.flags.includes("DISAGREE") && g.absEdge >= minEdge);
+  spread.sort((a, b) => {
+    const x = a[sortKey], y = b[sortKey];
+    return (typeof x === "string" ? x.localeCompare(y) : x - y) * sortDir;
+  });
+  const ml = s.games.filter(g => g.action === "MONEYLINE");
+  const skip = s.games.filter(g => g.action === "SKIP" && g.flags.length);
+  const neutral = s.games.filter(g => g.action === "EXCLUDED");
+
+  $("summary").innerHTML = [
+    ["Games with lines", s.games.length],
+    ["Spread picks", spreadAll.length - dis.length],
+    ["Edge ≥ 3", spreadAll.filter(g => g.absEdge >= 3 && !g.flags.includes("DISAGREE")).length],
+    ["Moneyline", ml.length], ["Caution", dis.length], ["Skipped", skip.length], ["No line", s.no_line.length],
+  ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
+
+  const pickCol = { label: "Pick", key: "side", render: g => `<span class="pick">${esc(g.side)} ${line(g.line)}</span>` };
+  const teaseCol = { label: `Teased ${s.teaser}`, render: g => `${esc(g.side)} ${line(g.teaser_line)}` };
+
+  $("n-ml").textContent = ml.length;
+  $("ml").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol,
+    { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }], ml);
+
+  $("n-dis").textContent = dis.length;
+  $("dis").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol, edgeCol, pickCol, teaseCol,
+    { label: "", render: () => `<span class="flag warn">DISAGREE</span>` }], dis);
+
+  $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
+  $("spread").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol, edgeCol, pickCol, teaseCol], spread, true);
+  $("spread").querySelectorAll("th.sort").forEach(th => th.onclick = () => {
+    const k = th.dataset.key;
+    if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = k === "absEdge" || k === "projected" ? -1 : 1; }
+    render();
+  });
+
+  $("n-skip").textContent = skip.length;
+  $("skip").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol,
+    { label: "", render: () => `<span class="flag bad">PRICED IN</span>` }], skip);
+
+  $("n-neutral").textContent = neutral.length;
+  $("neutral").innerHTML = table([kickCol, gameCol, ratCol, dkCol], neutral);
+
+  $("n-noline").textContent = s.no_line.length;
+  $("noline").innerHTML = table([kickCol, gameCol,
+    { label: "Status", render: g => `<span class="muted">${esc(g.status.replace("STATUS_", "").replace("_", " ").toLowerCase())}</span>` }], s.no_line);
+
+  $("unmatched").innerHTML = s.unmatched.length
+    ? `<h2>Unmatched team names</h2><div class="muted">Add to names.py: ${s.unmatched.map(esc).join(", ")}</div>` : "";
+}
+
+let teams = [];
+async function loadTeams() {
+  try {
+    const t = await api("/api/teams");
+    teams = t.teams;
+    $("teamlist").innerHTML = teams.map(x => `<option value="${esc(x.team)}">`).join("");
+    renderRatings();
+  } catch (e) { setStatus(e.message, true); }
+}
+
+function renderRatings() {
+  const f = $("r-filter").value.toLowerCase();
+  const rows = teams.filter(t => t.team.toLowerCase().includes(f));
+  $("ratings").innerHTML = table([
+    { label: "#", num: true, render: t => t.rank },
+    { label: "Team", render: t => esc(t.team) },
+    { label: "Div", render: t => t.division === "A" ? "FBS" : "FCS" },
+    { label: "Record", render: t => t.record },
+    { label: "Rating", num: true, render: t => t.rating.toFixed(2) },
+  ], rows);
+}
+
+async function runCalc() {
+  const p = new URLSearchParams({
+    home: $("c-home").value, away: $("c-away").value, spread: $("c-spread").value || 0,
+    teaser: $("teaser").value || 3, neutral: $("c-neutral").checked ? 1 : 0,
+  });
+  if ($("c-ml").value) p.set("ml", $("c-ml").value);
+  try {
+    const g = await api("/api/matchup?" + p);
+    let verdict;
+    if (g.action === "SPREAD") verdict = `${esc(g.side)} ${line(g.line)} <span class="muted">· teased ${esc(g.side)} ${line(g.teaser_line)}</span>`;
+    else if (g.action === "MONEYLINE") verdict = `${esc(g.side)} ML ${odds(g.odds)}`;
+    else if (g.action === "EXCLUDED") verdict = "Excluded (neutral site)";
+    else if (g.flags.includes("PRICED_IN")) verdict = "Skip: priced in";
+    else verdict = "No edge";
+    const flags = g.flags.filter(f => f === "DISAGREE").map(() => ` <span class="flag warn">DISAGREE</span>`).join("");
+    $("c-out").innerHTML = `<div class="result"><div class="big">${verdict}${flags}</div>
+      <div class="muted">${esc(g.home)} model line ${g.projected === 0 ? "PK" : sgn(-g.projected, 2)} · DK line ${line(g.dk_home_spread)} · edge ${Math.abs(g.edge).toFixed(2)}
+      · ratings ${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}</div></div>`;
+  } catch (e) { $("c-out").innerHTML = `<div class="result status err">${esc(e.message)}</div>`; }
+}
+
+$("date").value = new Date().toLocaleDateString("en-CA");
+$("load").onclick = () => loadSlate();
+$("refresh").onclick = () => loadSlate(true);
+$("teaser").onchange = () => loadSlate();
+$("date").onchange = () => loadSlate();
+$("minEdge").oninput = () => slate && render();
+$("save").onclick = async () => {
+  try { const r = await api(`/api/save?date=${ymd()}&teaser=${$("teaser").value || 3}`, { method: "POST" });
+        setStatus(`Saved ${r.rows} rows to ${r.path}`); } catch (e) { setStatus(e.message, true); }
+};
+$("c-go").onclick = runCalc;
+$("r-filter").oninput = renderRatings;
+loadSlate();
+loadTeams();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+__pycache__/
+picks/
+.claude/
+.DS_Store
