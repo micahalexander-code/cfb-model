@@ -193,7 +193,7 @@
     <span class="key"><i class="k-dead"></i>Dead <span class="tag">down more than 8</span></span>
   </div>
 
-  <h2>Home moneyline <span class="n" id="n-ml"></span><span class="note">home advantage pushes projection through 0</span></h2>
+  <h2>Home Dawgs <span class="n" id="n-ml"></span><span class="note">home advantage pushes projection through 0</span></h2>
   <div id="ml"></div>
 
   <h2>Caution: model and book disagree <span class="n" id="n-dis"></span><span class="note">higher risk</span></h2>
@@ -269,7 +269,7 @@ async function loadWeek() {
     const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>${label}</div>`;
     $("w-summary").innerHTML = `<div><b>${rows.length}</b>Games final</div>` +
       tile("Spread record", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
-      tile("Moneyline record", tally(ml, "result")) + tile("Caution record", tally(caution, "result"));
+      tile("Home Dawgs record", tally(ml, "result")) + tile("Caution record", tally(caution, "result"));
   } catch (e) { $("w-summary").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
 }
 
@@ -369,7 +369,7 @@ function render() {
     ["Final", finished],
     ["Spread picks", spreadAll.length - dis.length],
     ["Edge ≥ 3", spreadAll.filter(g => g.absEdge >= 3 && !g.flags.includes("DISAGREE")).length],
-    ["Moneyline", ml.length], ["Caution", dis.length], ["Skipped", skip.length],
+    ["Home Dawgs", ml.length], ["Caution", dis.length], ["Skipped", skip.length],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
 
   const pickCol = { label: "Pick", key: "side", render: g => `<span class="pick">${esc(g.side)} ${line(g.line)}</span>` };
@@ -484,7 +484,7 @@ function renderHistory(rows) {
   const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>${label}</div>`;
   $("h-summary").innerHTML = `<div><b>${rows.length}</b>Games recorded</div>` +
     tile("Spread", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
-    tile("Moneyline", tally(ml, "result")) + tile("Caution", tally(caution, "result")) +
+    tile("Home Dawgs", tally(ml, "result")) + tile("Caution", tally(caution, "result")) +
     `<div><b>${rows.filter(g => g.action === "SKIP" || g.action === "EXCLUDED").length}</b>Skipped / excluded</div>`;
 
   const buckets = [[0, 1], [1, 2], [2, 3], [3, Infinity]].map(([lo, hi]) => {
