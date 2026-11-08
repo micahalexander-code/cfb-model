@@ -164,7 +164,7 @@
     <p class="muted">Each finished game is recorded once, with the ratings, DraftKings closing line and pick as they
       stood at the final whistle. Recorded games never change, even after Sagarin's weekly update. Teaser points fixed at 3.</p>
     <div class="summary" id="h-summary"></div>
-    <h2>By edge size <span class="note">spread picks, excluding Vegas Knows Something games</span></h2>
+    <h2>By edge size <span class="note">The Core Model picks, excluding Vegas Knows Something games</span></h2>
     <div id="h-buckets"></div>
     <h2>Games <span class="n" id="h-n"></span><span class="note">newest first</span></h2>
     <div id="h-games"></div>
@@ -207,7 +207,7 @@
   <div class="explain" id="x-dis" hidden>Our model and Vegas have different projected winners regardless of the home advantage handicap. It's us vs the world. Be careful, and always blame the computer.</div>
   <div id="dis"></div>
 
-  <h2>Spread picks <span class="n" id="n-spread"></span><span class="note">click a column to sort</span></h2>
+  <h2>The Core Model <span class="n" id="n-spread"></span><span class="note">click a column to sort</span></h2>
   <div id="spread"></div>
 
   <h2>Stay Away <span class="n" id="n-skip"></span><button class="info" data-for="x-skip" aria-expanded="false" aria-label="What is this?">i</button></h2>
@@ -376,7 +376,7 @@ function render() {
   $("summary").innerHTML = [
     ["Games with lines", s.games.length],
     ["Final", finished],
-    ["Spread picks", spreadAll.length - dis.length],
+    ["The Core Model", spreadAll.length - dis.length],
     ["Edge ≥ 3", spreadAll.filter(g => g.absEdge >= 3 && !g.flags.includes("DISAGREE")).length],
     ["Home Dawgs", ml.length], ["Vegas Knows Something", dis.length], ["Stay Away", skip.length],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
