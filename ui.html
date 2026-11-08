@@ -78,6 +78,12 @@
   .flag { font-size: 12px; font-weight: 700; letter-spacing: .4px; padding: 2px 8px; border-radius: 999px;
           border: 1px solid currentColor; }
   .flag.warn { color: var(--warn); background: color-mix(in srgb, var(--warn) 12%, transparent); }
+  .flag.caution { color: #4a3600; background: #ffd23f; border-color: #f2b705; }
+  .info { width: 20px; height: 20px; padding: 0; border-radius: 50%; font: italic 700 12px/18px Georgia, serif;
+          color: var(--accent); background: var(--panel); border: 1.5px solid var(--accent); align-self: center; }
+  .info[aria-expanded="true"] { color: var(--accent-fg); background: var(--accent); }
+  .explain { margin: -2px 0 10px; padding: 10px 14px; font-size: 14px; background: var(--panel);
+             border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; box-shadow: var(--shadow); }
   .flag.bad { color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, transparent); }
   .muted { color: var(--muted); }
   .empty { color: var(--muted); font-style: italic; padding: 10px 12px; background: var(--panel);
@@ -158,7 +164,7 @@
     <p class="muted">Each finished game is recorded once, with the ratings, DraftKings closing line and pick as they
       stood at the final whistle. Recorded games never change, even after Sagarin's weekly update. Teaser points fixed at 3.</p>
     <div class="summary" id="h-summary"></div>
-    <h2>By edge size <span class="note">spread picks, excluding caution games</span></h2>
+    <h2>By edge size <span class="note">spread picks, excluding Vegas Knows Something games</span></h2>
     <div id="h-buckets"></div>
     <h2>Games <span class="n" id="h-n"></span><span class="note">newest first</span></h2>
     <div id="h-games"></div>
@@ -193,16 +199,19 @@
     <span class="key"><i class="k-dead"></i>Dead <span class="tag">down more than 8</span></span>
   </div>
 
-  <h2>Home Dawgs <span class="n" id="n-ml"></span><span class="note">home advantage pushes projection through 0</span></h2>
+  <h2>Home Dawgs <span class="n" id="n-ml"></span><button class="info" data-for="x-ml" aria-expanded="false" aria-label="What is this?">i</button></h2>
+  <div class="explain" id="x-ml" hidden>The home advantage handicap pushed the model line through 0, switching the projected winner. Better to take Moneyline and ride, baby.</div>
   <div id="ml"></div>
 
-  <h2>Caution: model and book disagree <span class="n" id="n-dis"></span><span class="note">higher risk</span></h2>
+  <h2>Vegas Knows Something <span class="flag caution">Caution</span> <span class="n" id="n-dis"></span><button class="info" data-for="x-dis" aria-expanded="false" aria-label="What is this?">i</button></h2>
+  <div class="explain" id="x-dis" hidden>Our model and Vegas have different projected winners regardless of the home advantage handicap. It's us vs the world. Be careful, and always blame the computer.</div>
   <div id="dis"></div>
 
   <h2>Spread picks <span class="n" id="n-spread"></span><span class="note">click a column to sort</span></h2>
   <div id="spread"></div>
 
-  <h2>Skipped: priced in <span class="n" id="n-skip"></span><span class="note">lower-rated home team favored by DraftKings</span></h2>
+  <h2>Stay Away <span class="n" id="n-skip"></span><button class="info" data-for="x-skip" aria-expanded="false" aria-label="What is this?">i</button></h2>
+  <div class="explain" id="x-skip" hidden>The home team is bad. Our model has them winning, but Vegas has them winning by more. Something's fishy. Stay Away.</div>
   <div id="skip"></div>
 
   <h2>Excluded: neutral site <span class="n" id="n-neutral"></span></h2>
@@ -269,7 +278,7 @@ async function loadWeek() {
     const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>${label}</div>`;
     $("w-summary").innerHTML = `<div><b>${rows.length}</b>Games final</div>` +
       tile("Spread record", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
-      tile("Home Dawgs record", tally(ml, "result")) + tile("Caution record", tally(caution, "result"));
+      tile("Home Dawgs record", tally(ml, "result")) + tile("Vegas Knows Something record", tally(caution, "result"));
   } catch (e) { $("w-summary").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
 }
 
@@ -369,7 +378,7 @@ function render() {
     ["Final", finished],
     ["Spread picks", spreadAll.length - dis.length],
     ["Edge ≥ 3", spreadAll.filter(g => g.absEdge >= 3 && !g.flags.includes("DISAGREE")).length],
-    ["Home Dawgs", ml.length], ["Caution", dis.length], ["Skipped", skip.length],
+    ["Home Dawgs", ml.length], ["Vegas Knows Something", dis.length], ["Stay Away", skip.length],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
 
   const pickCol = { label: "Pick", key: "side", render: g => `<span class="pick">${esc(g.side)} ${line(g.line)}</span>` };
@@ -382,7 +391,7 @@ function render() {
 
   $("n-dis").textContent = dis.length;
   $("dis").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol,
-    { label: "", render: () => `<span class="flag warn">DISAGREE</span>` }], dis, false, liveCls);
+    { label: "", render: () => `<span class="flag caution">CAUTION</span>` }], dis, false, liveCls);
 
   $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
   $("spread").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol], spread, true, liveCls);
@@ -394,7 +403,7 @@ function render() {
 
   $("n-skip").textContent = skip.length;
   $("skip").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol,
-    { label: "", render: () => `<span class="flag bad">PRICED IN</span>` }], skip);
+    { label: "", render: () => `<span class="flag bad">STAY AWAY</span>` }], skip);
 
   $("n-neutral").textContent = neutral.length;
   $("neutral").innerHTML = table([kickCol, gameCol, ratCol, dkCol], neutral);
@@ -440,9 +449,9 @@ async function runCalc() {
     if (g.action === "SPREAD") verdict = `${esc(g.side)} ${line(g.line)} <span class="muted">· teased ${esc(g.side)} ${line(g.teaser_line)}</span>`;
     else if (g.action === "MONEYLINE") verdict = `${esc(g.side)} ML ${odds(g.odds)}`;
     else if (g.action === "EXCLUDED") verdict = "Excluded (neutral site)";
-    else if (g.flags.includes("PRICED_IN")) verdict = "Skip: priced in";
+    else if (g.flags.includes("PRICED_IN")) verdict = "Stay Away";
     else verdict = "No edge";
-    const flags = g.flags.filter(f => f === "DISAGREE").map(() => ` <span class="flag warn">DISAGREE</span>`).join("");
+    const flags = g.flags.filter(f => f === "DISAGREE").map(() => ` <span class="flag caution">CAUTION</span>`).join("");
     $("c-out").innerHTML = `<div class="result"><div class="big">${verdict}${flags}</div>
       <div class="muted">${esc(g.home)} model line ${g.projected === 0 ? "PK" : sgn(-g.projected, 2)} · DK line ${line(g.dk_home_spread)} · edge ${Math.abs(g.edge).toFixed(2)}
       · ratings ${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}</div></div>`;
@@ -484,8 +493,8 @@ function renderHistory(rows) {
   const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>${label}</div>`;
   $("h-summary").innerHTML = `<div><b>${rows.length}</b>Games recorded</div>` +
     tile("Spread", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
-    tile("Home Dawgs", tally(ml, "result")) + tile("Caution", tally(caution, "result")) +
-    `<div><b>${rows.filter(g => g.action === "SKIP" || g.action === "EXCLUDED").length}</b>Skipped / excluded</div>`;
+    tile("Home Dawgs", tally(ml, "result")) + tile("Vegas Knows Something", tally(caution, "result")) +
+    `<div><b>${rows.filter(g => g.action === "SKIP" || g.action === "EXCLUDED").length}</b>Stay Away / neutral</div>`;
 
   const buckets = [[0, 1], [1, 2], [2, 3], [3, Infinity]].map(([lo, hi]) => {
     const b = spread.filter(g => Math.abs(g.edge) >= lo && Math.abs(g.edge) < hi);
@@ -510,12 +519,12 @@ function renderHistory(rows) {
         g.action === "SPREAD" ? `<span class="pick">${esc(g.side)} ${line(g.line)}</span>`
       : g.action === "MONEYLINE" ? `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>`
       : g.action === "EXCLUDED" ? `<span class="muted">Neutral, excluded</span>`
-      : g.flags.includes("PRICED_IN") ? `<span class="muted">Skip, priced in</span>` : `<span class="muted">No edge</span>` },
+      : g.flags.includes("PRICED_IN") ? `<span class="muted">Stay Away</span>` : `<span class="muted">No edge</span>` },
     { label: resPairHead, render: g => g.teaser_line == null ? res(g.result) : resPair(g) },
     { label: "Teased", render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)}` },
     { label: "Edge", num: true, render: g => g.action === "SPREAD" ? Math.abs(g.edge).toFixed(2) : "" },
     { label: "DK close (home)", num: true, render: g => line(g.dk_home_spread) },
-    { label: "", render: g => (g.flags.includes("DISAGREE") ? `<span class="flag warn">DISAGREE</span> ` : "")
+    { label: "", render: g => (g.flags.includes("DISAGREE") ? `<span class="flag caution">CAUTION</span> ` : "")
         + (g.provisional ? `<span class="tag" title="Shown from the live slate; locks in at the next scheduled snapshot">not locked yet</span>` : "") },
   ], sorted);
 }
@@ -527,6 +536,11 @@ document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
   if (b.dataset.tab === "history") loadHistory();
 });
 
+document.querySelectorAll(".info").forEach(b => b.onclick = () => {
+  const box = $(b.dataset.for), open = box.hidden;
+  box.hidden = !open;
+  b.setAttribute("aria-expanded", open);
+});
 $("c-go").onclick = runCalc;
 // While any game is live, re-pull every 2 minutes so finals get graded.
 setInterval(() => {
