@@ -84,6 +84,13 @@
   .info[aria-expanded="true"] { color: var(--accent-fg); background: var(--accent); }
   .explain { margin: -2px 0 10px; padding: 10px 14px; font-size: 14px; background: var(--panel);
              border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; box-shadow: var(--shadow); }
+  .score { display: inline-block; min-width: 46px; text-align: center; padding: 3px 8px; border-radius: 8px;
+           font: 800 17px/1.2 "Barlow Semi Condensed", Inter, sans-serif; color: #fff; }
+  .score.s1 { background: #0e9f57; box-shadow: 0 0 10px rgba(14, 159, 87, .45); }
+  .score.s2 { background: #5cc489; }
+  .score.s3 { background: #f2b705; color: #3d2c00; }
+  .score.s4 { background: #e0313f; }
+  .pts { color: var(--muted); font-size: 12px; }
   .flag.bad { color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, transparent); }
   .muted { color: var(--muted); }
   .empty { color: var(--muted); font-style: italic; padding: 10px 12px; background: var(--panel);
@@ -157,8 +164,24 @@
 
   <nav class="tabs">
     <button class="tab active" data-tab="slate">Slate</button>
+    <button class="tab" data-tab="confidence">Confidence</button>
     <button class="tab" data-tab="history">History</button>
   </nav>
+
+  <div id="tab-confidence" hidden>
+    <h2 id="cf-title">Confidence <button class="info" data-for="x-cf" aria-expanded="false" aria-label="What is this?">i</button></h2>
+    <div class="explain" id="x-cf" hidden>How much we trust each pick to cover its <b>teased</b> line, out of 100.
+      <b>Team (50):</b> the team's record on our teased line when we've picked them. Undefeated = 50, 1–1 = 25, winless = 0.
+      <b>Edge (50):</b> how often picks in the same edge range have covered the teased line (History tab, teaser column). 100% = 50.
+      No data yet counts as a coin flip (25). A game's own result never counts toward its own score.</div>
+    <div class="summary" id="cf-summary"></div>
+    <h2>Picks by confidence <span class="n" id="cf-n"></span><span class="note">The Core Model and Vegas Knows Something picks, teased 3</span></h2>
+    <div id="cf-picks"></div>
+    <h2>Edge ranges <span class="note">teaser record of The Core Model picks so far</span></h2>
+    <div id="cf-edges"></div>
+    <h2>Team records on our teased line <span class="n" id="cf-tn"></span><span class="note">only teams we've picked</span></h2>
+    <div id="cf-teams"></div>
+  </div>
 
   <div id="tab-history" hidden>
     <p class="muted">Each finished game is recorded once, with the ratings, DraftKings closing line and pick as they
@@ -529,11 +552,58 @@ function renderHistory(rows) {
   ], sorted);
 }
 
+// ---- Confidence tab ----
+const scoreCls = x => x >= 80 ? "s1" : x >= 60 ? "s2" : x >= 40 ? "s3" : "s4";
+const recTxt = r => r ? `${r.w}–${r.l}${r.p ? `–${r.p}` : ""}` : `<span class="muted">no picks yet</span>`;
+const pctTxt = r => r && r.rate != null ? `${Math.round(100 * r.rate)}%` : "—";
+
+async function loadConfidence() {
+  try {
+    const c = await api(`/api/confidence?date=${ymd()}`);
+    const dayName = new Date(ymd().replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"))
+      .toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" });
+    $("cf-title").firstChild.textContent = `Confidence · ${dayName} `;
+    const p = c.picks, done = p.filter(g => g.teaser_result);
+    const top = p.filter(g => g.confidence >= 80);
+    const rec = rows => { const w = rows.filter(g => g.teaser_result === "WIN").length, l = rows.filter(g => g.teaser_result === "LOSS").length;
+                          return w + l ? `${w}–${l}` : "—"; };
+    $("cf-summary").innerHTML = [
+      ["Picks scored", p.length], ["Score 80+", top.length],
+      ["80+ teaser record", rec(top.filter(g => g.teaser_result))],
+      ["All teaser record", rec(done)], ["Graded picks behind it", c.graded],
+    ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
+    $("cf-n").textContent = p.length;
+    $("cf-picks").innerHTML = table([
+      { label: "Score", render: g => `<span class="score ${scoreCls(g.confidence)}">${Math.round(g.confidence)}</span>` },
+      kickCol, gameCol,
+      { label: "Pick (teased)", render: g => `<span class="pick">${esc(g.side)} ${line(g.teaser_line)}</span>`
+          + (g.flags.includes("DISAGREE") ? ` <span class="flag caution">CAUTION</span>` : "") },
+      { label: "Team record", num: true, render: g => `${recTxt(g.team_record)} <span class="pts">${g.team_pts}</span>` },
+      { label: "Edge", num: true, render: g => Math.abs(g.edge).toFixed(2) },
+      { label: "Edge range", num: true, render: g => `${g.edge_range} <span class="pts">${g.edge_pts}</span>` },
+      { label: "Teaser result", render: g => res(g.teaser_result) || (g.state === "in" ? `<span class="tag">in play</span>` : "") },
+    ], p, false, g => { if (colorMode === "off") return ""; const m = colorMode; colorMode = "teaser"; const c = liveCls(g); colorMode = m; return c; });
+    $("cf-edges").innerHTML = table([
+      { label: "Edge range", render: b => b.label },
+      { label: "Teaser record", num: true, render: b => recTxt(b.w + b.l + b.p ? b : null) },
+      { label: "Win rate", num: true, render: b => pctTxt(b) },
+      { label: "Points (of 50)", num: true, render: b => `<b>${b.points}</b>` },
+    ], c.edges);
+    $("cf-tn").textContent = c.teams.length;
+    $("cf-teams").innerHTML = table([
+      { label: "Team", render: t => esc(t.team) },
+      { label: "Teaser record", num: true, render: t => recTxt(t) },
+      { label: "Win rate", num: true, render: t => pctTxt(t) },
+      { label: "Points (of 50)", num: true, render: t => `<b>${t.points}</b>` },
+    ], c.teams);
+  } catch (e) { $("cf-picks").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+}
+
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
   document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === b));
-  $("tab-slate").hidden = b.dataset.tab !== "slate";
-  $("tab-history").hidden = b.dataset.tab !== "history";
+  for (const t of ["slate", "confidence", "history"]) $("tab-" + t).hidden = b.dataset.tab !== t;
   if (b.dataset.tab === "history") loadHistory();
+  if (b.dataset.tab === "confidence") loadConfidence();
 });
 
 document.querySelectorAll(".info").forEach(b => b.onclick = () => {
@@ -547,6 +617,7 @@ setInterval(() => {
   if (slate && slate.games.some(g => g.state === "in")) {
     loadSlate();
     if (!$("tab-history").hidden) loadHistory();
+    if (!$("tab-confidence").hidden) loadConfidence();
   }
 }, 120000);
 $("r-filter").oninput = renderRatings;

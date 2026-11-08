@@ -17,6 +17,7 @@ from datetime import date, datetime, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
+import confidence
 import odds
 import run
 import sagarin
@@ -107,6 +108,27 @@ def week_json(day: str) -> dict:
             "start": days[0], "end": days[-1], "games": rows}
 
 
+def confidence_json(day: str) -> dict:
+    """Confidence scores for the day's teased picks, plus the team and edge
+    tables they come from. Each pick is scored WITHOUT its own result, so a
+    finished game's score is what it was before kickoff."""
+    hist = history_json()["games"]
+    s = run.build(day, snapshot.TEASER, ratings())
+    picks = []
+    for l, p in s.picks:
+        if p.action != "SPREAD":
+            continue
+        others = [h for h in hist if h["game_id"] != l.game_id]
+        sc = confidence.score(p.side, p.edge, confidence.team_table(others), confidence.edge_table(others))
+        picks.append(dict(pick_json(p, l), **sc))
+    picks.sort(key=lambda x: (-x["confidence"], -abs(x["edge"])))
+    teams = confidence.team_table(hist)
+    return {"date": day, "teaser": snapshot.TEASER, "picks": picks,
+            "edges": confidence.edge_table(hist),
+            "teams": [dict(v, team=k) for k, v in sorted(teams.items(), key=lambda kv: (-kv[1]["points"], kv[0]))],
+            "graded": sum(1 for h in hist if h["action"] == "SPREAD" and h.get("teaser_result"))}
+
+
 def history_json() -> dict:
     """Frozen history plus today's/yesterday's finals the scheduled snapshot
     hasn't recorded yet (marked provisional until it does)."""
@@ -147,6 +169,8 @@ class Handler(BaseHTTPRequestHandler):
                     return self._send(200, f.read(), "text/html; charset=utf-8")
             if method == "GET" and path == "/api/slate":
                 return self._send(200, slate_json(day, teaser, q.get("refresh") == "1"))
+            if method == "GET" and path == "/api/confidence":
+                return self._send(200, confidence_json(day))
             if method == "GET" and path == "/api/week":
                 return self._send(200, week_json(day))
             if method == "GET" and path == "/api/history":
