@@ -109,23 +109,39 @@ def week_json(day: str) -> dict:
 
 
 def confidence_json(day: str) -> dict:
-    """Confidence scores for the day's teased picks, plus the team and edge
-    tables they come from. Each pick is scored WITHOUT its own result, so a
-    finished game's score is what it was before kickoff."""
+    """One confidence score per team: its record against our teased line in
+    every finished game, plus the edge-range points of its game on `day`
+    (or its most recent game if it doesn't play that day)."""
     hist = history_json()["games"]
+    games = confidence.team_games(hist)
+    records = {t: confidence._record(rows) for t, rows in games.items()}
+    edges = confidence.edge_table(hist)
     s = run.build(day, snapshot.TEASER, ratings())
-    picks = []
+    today = {}
     for l, p in s.picks:
         if p.action != "SPREAD":
             continue
-        others = [h for h in hist if h["game_id"] != l.game_id]
-        sc = confidence.score(p.side, p.edge, confidence.team_table(others), confidence.edge_table(others))
-        picks.append(dict(pick_json(p, l), **sc))
-    picks.sort(key=lambda x: (-x["confidence"], -abs(x["edge"])))
-    teams = confidence.team_table(hist)
-    return {"date": day, "teaser": snapshot.TEASER, "picks": picks,
-            "edges": confidence.edge_table(hist),
-            "teams": [dict(v, team=k) for k, v in sorted(teams.items(), key=lambda kv: (-kv[1]["points"], kv[0]))],
+        g = pick_json(p, l)
+        for team in (p.game.home, p.game.away):
+            today[team] = dict(g, team_side=team, picked=(team == p.side),
+                               opponent=p.game.away if team == p.game.home else p.game.home)
+    rows = []
+    for team in sorted(set(records) | set(today)):
+        t = today.get(team)
+        last = games.get(team, [])[-1] if games.get(team) else None
+        edge = t["edge"] if t else (last["edge"] if last else None)
+        ep = confidence.edge_points(edge, edges)
+        rec = records.get(team)
+        team_pts = rec["points"] if rec else confidence.NEUTRAL
+        rows.append({
+            "team": team, "record": rec, "team_pts": team_pts,
+            "edge": edge, "edge_from": "today" if t else ("last" if last else None), **ep,
+            "confidence": round(team_pts + ep["edge_pts"], 1),
+            "game": t,
+            "last": {k: last[k] for k in ("away", "home", "date", "picked", "side", "teaser_line", "teaser_result")} if last else None,
+        })
+    rows.sort(key=lambda r: (-r["confidence"], -(r["record"]["w"] if r["record"] else 0), r["team"]))
+    return {"date": day, "teaser": snapshot.TEASER, "teams": rows, "edges": edges,
             "graded": sum(1 for h in hist if h["action"] == "SPREAD" and h.get("teaser_result"))}
 
 

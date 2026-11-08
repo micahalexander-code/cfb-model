@@ -2,9 +2,13 @@
 
 Two parts, 50 points each, both built from finished games (History):
 
-  Team score  = 50 x the team's win rate on teased lines when we picked them.
-                1-0 -> 50, 1-1 -> 25, 0-1 -> 0. Pushes don't count.
-  Edge score  = 50 x the teaser win rate of the edge range the pick falls in
+  Team score  = 50 x the team's win rate against our teased line in EVERY
+                game it played with one: when we picked the team it's our
+                teaser result; when we picked its opponent it's the reverse
+                (our teaser lost -> the team gets a W). 1-0 -> 50, 1-1 -> 25,
+                0-1 -> 0. Pushes don't count.
+  Edge score  = 50 x the teaser win rate of the edge range of the team's next
+                game (or its most recent one if it doesn't play that day)
                 (same ranges as the History tab: 0-1, 1-2, 2-3, 3+, Core Model
                 picks only). 100% -> 50.
 
@@ -52,20 +56,31 @@ def edge_table(history: List[dict]) -> List[dict]:
     return out
 
 
-def team_table(history: List[dict]) -> Dict[str, dict]:
-    """Teased-line record for every team we've picked (Core Model and Vegas
-    Knows Something picks; both have a teased line)."""
+FLIP = {"WIN": "LOSS", "LOSS": "WIN", "PUSH": "PUSH"}
+
+
+def team_games(history: List[dict]) -> Dict[str, List[dict]]:
+    """Every teased game per team, from that team's point of view."""
     by_team: Dict[str, List[dict]] = {}
     for r in history:
-        if r["action"] == "SPREAD" and r.get("teaser_result"):
-            by_team.setdefault(r["side"], []).append(r)
-    return {t: _record(rows) for t, rows in sorted(by_team.items())}
+        if r["action"] != "SPREAD" or not r.get("teaser_result"):
+            continue
+        opp = r["home"] if r["side"] == r["away"] else r["away"]
+        by_team.setdefault(r["side"], []).append(dict(r, team=r["side"], picked=True))
+        by_team.setdefault(opp, []).append(dict(r, team=opp, picked=False,
+                                                teaser_result=FLIP[r["teaser_result"]]))
+    for rows in by_team.values():
+        rows.sort(key=lambda r: (r.get("kickoff") or "", r["game_id"]))
+    return by_team
 
 
-def score(side: str, edge: float, teams: Dict[str, dict], edges: List[dict]) -> dict:
-    t = teams.get(side)
+def team_table(history: List[dict]) -> Dict[str, dict]:
+    return {t: _record(rows) for t, rows in sorted(team_games(history).items())}
+
+
+def edge_points(edge: Optional[float], edges: List[dict]) -> dict:
+    if edge is None:
+        return {"edge_range": None, "edge_pts": NEUTRAL}
     lo, hi = bucket_of(edge)
     e = next(b for b in edges if (b["lo"], b["hi"]) == (lo, hi))
-    team_pts = t["points"] if t else NEUTRAL
-    return {"team_pts": team_pts, "team_record": t, "edge_range": e["label"],
-            "edge_pts": e["points"], "confidence": round(team_pts + e["points"], 1)}
+    return {"edge_range": e["label"], "edge_pts": e["points"]}

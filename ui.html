@@ -170,17 +170,17 @@
 
   <div id="tab-confidence" hidden>
     <h2 id="cf-title">Confidence <button class="info" data-for="x-cf" aria-expanded="false" aria-label="What is this?">i</button></h2>
-    <div class="explain" id="x-cf" hidden>How much we trust each pick to cover its <b>teased</b> line, out of 100.
-      <b>Team (50):</b> the team's record on our teased line when we've picked them. Undefeated = 50, 1–1 = 25, winless = 0.
-      <b>Edge (50):</b> how often picks in the same edge range have covered the teased line (History tab, teaser column). 100% = 50.
-      No data yet counts as a coin flip (25). A game's own result never counts toward its own score.</div>
+    <div class="explain" id="x-cf" hidden>How much we trust each team to cover our <b>teased</b> line, out of 100.
+      <b>Team (50):</b> the team's record against our teased line in every game it's played. When we picked them it's our teaser result;
+      when we picked their opponent it's the reverse. Undefeated = 50, 1–1 = 25, winless = 0.
+      <b>Edge (50):</b> how often picks in the edge range of the team's game on this date have covered the teased line (History tab, teaser column);
+      teams not playing that day use their most recent game. 100% = 50. No data yet counts as a coin flip (25).</div>
     <div class="summary" id="cf-summary"></div>
-    <h2>Picks by confidence <span class="n" id="cf-n"></span><span class="note">The Core Model and Vegas Knows Something picks, teased 3</span></h2>
-    <div id="cf-picks"></div>
+    <h2>Team confidence <span class="n" id="cf-n"></span><span class="note">highest first · teased 3</span></h2>
+    <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-today"> Only teams playing on this date</label>
+    <div id="cf-teams"></div>
     <h2>Edge ranges <span class="note">teaser record of The Core Model picks so far</span></h2>
     <div id="cf-edges"></div>
-    <h2>Team records on our teased line <span class="n" id="cf-tn"></span><span class="note">only teams we've picked</span></h2>
-    <div id="cf-teams"></div>
   </div>
 
   <div id="tab-history" hidden>
@@ -554,50 +554,62 @@ function renderHistory(rows) {
 
 // ---- Confidence tab ----
 const scoreCls = x => x >= 80 ? "s1" : x >= 60 ? "s2" : x >= 40 ? "s3" : "s4";
-const recTxt = r => r ? `${r.w}–${r.l}${r.p ? `–${r.p}` : ""}` : `<span class="muted">no picks yet</span>`;
+const recTxt = r => r ? `${r.w}–${r.l}${r.p ? `–${r.p}` : ""}` : `<span class="muted">no games yet</span>`;
 const pctTxt = r => r && r.rate != null ? `${Math.round(100 * r.rate)}%` : "—";
 
+let conf = null;
 async function loadConfidence() {
   try {
-    const c = await api(`/api/confidence?date=${ymd()}`);
-    const dayName = new Date(ymd().replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"))
-      .toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" });
-    $("cf-title").firstChild.textContent = `Confidence · ${dayName} `;
-    const p = c.picks, done = p.filter(g => g.teaser_result);
-    const top = p.filter(g => g.confidence >= 80);
-    const rec = rows => { const w = rows.filter(g => g.teaser_result === "WIN").length, l = rows.filter(g => g.teaser_result === "LOSS").length;
-                          return w + l ? `${w}–${l}` : "—"; };
-    $("cf-summary").innerHTML = [
-      ["Picks scored", p.length], ["Score 80+", top.length],
-      ["80+ teaser record", rec(top.filter(g => g.teaser_result))],
-      ["All teaser record", rec(done)], ["Graded picks behind it", c.graded],
-    ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
-    $("cf-n").textContent = p.length;
-    $("cf-picks").innerHTML = table([
-      { label: "Score", render: g => `<span class="score ${scoreCls(g.confidence)}">${Math.round(g.confidence)}</span>` },
-      kickCol, gameCol,
-      { label: "Pick (teased)", render: g => `<span class="pick">${esc(g.side)} ${line(g.teaser_line)}</span>`
-          + (g.flags.includes("DISAGREE") ? ` <span class="flag caution">CAUTION</span>` : "") },
-      { label: "Team record", num: true, render: g => `${recTxt(g.team_record)} <span class="pts">${g.team_pts}</span>` },
-      { label: "Edge", num: true, render: g => Math.abs(g.edge).toFixed(2) },
-      { label: "Edge range", num: true, render: g => `${g.edge_range} <span class="pts">${g.edge_pts}</span>` },
-      { label: "Teaser result", render: g => res(g.teaser_result) || (g.state === "in" ? `<span class="tag">in play</span>` : "") },
-    ], p, false, g => { if (colorMode === "off") return ""; const m = colorMode; colorMode = "teaser"; const c = liveCls(g); colorMode = m; return c; });
-    $("cf-edges").innerHTML = table([
-      { label: "Edge range", render: b => b.label },
-      { label: "Teaser record", num: true, render: b => recTxt(b.w + b.l + b.p ? b : null) },
-      { label: "Win rate", num: true, render: b => pctTxt(b) },
-      { label: "Points (of 50)", num: true, render: b => `<b>${b.points}</b>` },
-    ], c.edges);
-    $("cf-tn").textContent = c.teams.length;
-    $("cf-teams").innerHTML = table([
-      { label: "Team", render: t => esc(t.team) },
-      { label: "Teaser record", num: true, render: t => recTxt(t) },
-      { label: "Win rate", num: true, render: t => pctTxt(t) },
-      { label: "Points (of 50)", num: true, render: t => `<b>${t.points}</b>` },
-    ], c.teams);
-  } catch (e) { $("cf-picks").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+    conf = await api(`/api/confidence?date=${ymd()}`);
+    renderConfidence();
+  } catch (e) { $("cf-teams").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
 }
+
+function renderConfidence() {
+  const c = conf;
+  const dayName = new Date(ymd().replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"))
+    .toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" });
+  $("cf-title").firstChild.textContent = `Confidence · ${dayName} `;
+  const all = c.teams;
+  const rows = $("cf-today").checked ? all.filter(t => t.game) : all;
+  $("cf-summary").innerHTML = [
+    ["Teams scored", all.length], ["Score 80+", all.filter(t => t.confidence >= 80).length],
+    ["Teams with a record", all.filter(t => t.record).length],
+    ["Playing this date", all.filter(t => t.game).length], ["Graded games behind it", c.graded],
+  ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
+  $("cf-n").textContent = rows.length;
+  const gameTxt = t => {
+    const g = t.game;
+    if (!g) return t.last ? `<span class="muted">last: ${esc(t.last.away)} @ ${esc(t.last.home)}</span>` : "";
+    const ours = g.picked ? `<span class="pick">${esc(t.team)} ${line(g.teaser_line)}</span>`
+                          : `<span class="muted">vs our pick ${esc(g.side)} ${line(g.teaser_line)}</span>`;
+    return `${t.team === g.home ? "vs" : "@"} ${esc(g.opponent)} · ${ours}`
+      + (g.flags.includes("DISAGREE") ? ` <span class="flag caution">CAUTION</span>` : "");
+  };
+  // The team's own teaser result in that game (reverse of ours when we picked against them).
+  const flip = { WIN: "LOSS", LOSS: "WIN", PUSH: "PUSH" };
+  const teamRes = t => !t.game ? "" : t.game.teaser_result
+    ? res(t.game.picked ? t.game.teaser_result : flip[t.game.teaser_result])
+    : t.game.state === "in" ? `<span class="tag">in play</span>` : "";
+  $("cf-teams").innerHTML = table([
+    { label: "Score", render: t => `<span class="score ${scoreCls(t.confidence)}">${Math.round(t.confidence)}</span>` },
+    { label: "Team", render: t => `<b>${esc(t.team)}</b>` },
+    { label: "Record vs teased line", num: true, render: t => `${recTxt(t.record)} <span class="pts">${t.team_pts}</span>` },
+    { label: "Edge range", num: true, render: t => t.edge_range == null ? `<span class="muted">—</span> <span class="pts">${t.edge_pts}</span>`
+        : `${t.edge_range} <span class="tag">${t.edge_from === "today" ? "this game" : "last game"}</span> <span class="pts">${t.edge_pts}</span>` },
+    { label: "Game on this date", render: gameTxt },
+    { label: "Kickoff / score", render: t => t.game ? kickCol.render(t.game) : "" },
+    { label: "Their teaser result", render: teamRes },
+  ], rows, false,
+     t => { if (!t.game || colorMode === "off" || !t.game.picked) return ""; const m = colorMode; colorMode = "teaser"; const k = liveCls(t.game); colorMode = m; return k; });
+  $("cf-edges").innerHTML = table([
+    { label: "Edge range", render: b => b.label },
+    { label: "Teaser record", num: true, render: b => recTxt(b.w + b.l + b.p ? b : null) },
+    { label: "Win rate", num: true, render: b => pctTxt(b) },
+    { label: "Points (of 50)", num: true, render: b => `<b>${b.points}</b>` },
+  ], c.edges);
+}
+$("cf-today").onchange = () => conf && renderConfidence();
 
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
   document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === b));
