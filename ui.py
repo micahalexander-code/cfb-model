@@ -13,6 +13,7 @@ Endpoints:
 import json
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
@@ -108,40 +109,88 @@ def week_json(day: str) -> dict:
             "start": days[0], "end": days[-1], "games": rows}
 
 
+_live_slates = {}  # day -> (built_at, Slate) for today and later; rebuilt every 2 min
+
+
+def upcoming_week(day: str):
+    """Tue..Sat of the week whose games are next: on Sunday/Monday that's the
+    coming week, otherwise the week containing `day`."""
+    d = datetime.strptime(day, "%Y%m%d").date()
+    if d.weekday() in (6, 0):  # Sunday, Monday
+        d += timedelta(days=(1 - d.weekday()) % 7)
+    return week_window(d.strftime("%Y%m%d"))
+
+
+def week_slates(days):
+    """The slate for each of `days`.
+    Past days are cached for good; today and later for 2 minutes."""
+    r = ratings()
+    today = snapshot.eastern_today().strftime("%Y%m%d")
+
+    def one(d):
+        if d < today:
+            s = _past_slates.get(d)
+            if s is None or s.ratings.as_of != r.as_of:
+                s = _past_slates[d] = run.build(d, snapshot.TEASER, r)
+            return s
+        at, s = _live_slates.get(d, (0.0, None))
+        if s is None or s.ratings.as_of != r.as_of or time.time() - at > 120:
+            s = run.build(d, snapshot.TEASER, r)
+            _live_slates[d] = (time.time(), s)
+        return s
+
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        return list(pool.map(one, days))
+
+
 def confidence_json(day: str) -> dict:
     """One confidence score per team: its record against our teased line in
-    every finished game, plus the edge-range points of its game on `day`
-    (or its most recent game if it doesn't play that day)."""
+    every finished game, plus the edge-range points of its matchup THIS WEEK
+    (Tue-Sat; on Sunday/Monday the coming week). Only a team that has already played this week,
+    or is on a bye, falls back to its most recent finished game."""
     hist = history_json()["games"]
     games = confidence.team_games(hist)
     records = {t: confidence._record(rows) for t, rows in games.items()}
     edges = confidence.edge_table(hist)
-    s = run.build(day, snapshot.TEASER, ratings())
-    today = {}
-    for l, p in s.picks:
-        if p.action != "SPREAD":
-            continue
-        g = pick_json(p, l)
-        for team in (p.game.home, p.game.away):
-            today[team] = dict(g, team_side=team, picked=(team == p.side),
-                               opponent=p.game.away if team == p.game.home else p.game.home)
+    week = {}  # team -> its Core-Model-style (SPREAD) game this week
+    days = upcoming_week(day)
+    for s in week_slates(days):
+        for l, p in s.picks:
+            if p.action != "SPREAD":
+                continue
+            g = pick_json(p, l)
+            for team in (p.game.home, p.game.away):
+                prev = week.get(team)
+                # Keep the team's next unfinished game; otherwise its latest one.
+                if prev is None or (prev["state"] == "post" and
+                                    (g["state"] != "post" or g["kickoff"] > prev["kickoff"])):
+                    week[team] = dict(g, team_side=team, picked=(team == p.side),
+                                      opponent=p.game.away if team == p.game.home else p.game.home)
     rows = []
-    for team in sorted(set(records) | set(today)):
-        t = today.get(team)
+    for team in sorted(set(records) | set(week)):
+        t = week.get(team)
         last = games.get(team, [])[-1] if games.get(team) else None
-        edge = t["edge"] if t else (last["edge"] if last else None)
+        upcoming = t is not None and t["state"] != "post"
+        if upcoming:
+            edge, edge_from = t["edge"], "week"
+        elif t is not None:  # already played this week: that game is their last
+            edge, edge_from = t["edge"], "last"
+        else:                # bye (or no line yet): most recent finished game
+            edge, edge_from = (last["edge"], "last") if last else (None, None)
         ep = confidence.edge_points(edge, edges)
         rec = records.get(team)
         team_pts = rec["points"] if rec else confidence.NEUTRAL
         rows.append({
             "team": team, "record": rec, "team_pts": team_pts,
-            "edge": edge, "edge_from": "today" if t else ("last" if last else None), **ep,
+            "edge": edge, "edge_from": edge_from, **ep,
             "confidence": round(team_pts + ep["edge_pts"], 1),
             "game": t,
             "last": {k: last[k] for k in ("away", "home", "date", "picked", "side", "teaser_line", "teaser_result")} if last else None,
         })
     rows.sort(key=lambda r: (-r["confidence"], -(r["record"]["w"] if r["record"] else 0), r["team"]))
-    return {"date": day, "teaser": snapshot.TEASER, "teams": rows, "edges": edges,
+    return {"date": day, "week": odds.week_number(days[0]) or odds.week_number(day),
+            "start": days[0], "end": days[-1], "teaser": snapshot.TEASER, "teams": rows,
+            "edges": edges,
             "graded": sum(1 for h in hist if h["action"] == "SPREAD" and h.get("teaser_result"))}
 
 

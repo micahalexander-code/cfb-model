@@ -173,11 +173,11 @@
     <div class="explain" id="x-cf" hidden>How much we trust each team to cover our <b>teased</b> line, out of 100.
       <b>Team (50):</b> the team's record against our teased line in every game it's played. When we picked them it's our teaser result;
       when we picked their opponent it's the reverse. Undefeated = 50, 1–1 = 25, winless = 0.
-      <b>Edge (50):</b> how often picks in the edge range of the team's game on this date have covered the teased line (History tab, teaser column);
-      teams not playing that day use their most recent game. 100% = 50. No data yet counts as a coin flip (25).</div>
+      <b>Edge (50):</b> how often picks in the edge range of the team's matchup this week have covered the teased line (History tab, teaser column).
+      On Sunday and Monday that's the coming week. Teams that already played this week, are on a bye, or don't have a line yet use their most recent game. 100% = 50. No data yet counts as a coin flip (25).</div>
     <div class="summary" id="cf-summary"></div>
     <h2>Team confidence <span class="n" id="cf-n"></span><span class="note">highest first · teased 3</span></h2>
-    <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-today"> Only teams playing on this date</label>
+    <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-today"> Only teams with a game left this week</label>
     <div id="cf-teams"></div>
     <h2>Edge ranges <span class="note">teaser record of The Core Model picks so far</span></h2>
     <div id="cf-edges"></div>
@@ -567,15 +567,15 @@ async function loadConfidence() {
 
 function renderConfidence() {
   const c = conf;
-  const dayName = new Date(ymd().replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"))
-    .toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" });
-  $("cf-title").firstChild.textContent = `Confidence · ${dayName} `;
+  const md = d => new Date(d.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00")).toLocaleDateString([], { month: "short", day: "numeric" });
+  $("cf-title").firstChild.textContent = `Confidence · ${c.week ? "Week " + c.week + " · " : ""}${md(c.start)}–${md(c.end)} `;
   const all = c.teams;
-  const rows = $("cf-today").checked ? all.filter(t => t.game) : all;
+  const upcoming = t => t.game && t.game.state !== "post";
+  const rows = $("cf-today").checked ? all.filter(upcoming) : all;
   $("cf-summary").innerHTML = [
     ["Teams scored", all.length], ["Score 80+", all.filter(t => t.confidence >= 80).length],
     ["Teams with a record", all.filter(t => t.record).length],
-    ["Playing this date", all.filter(t => t.game).length], ["Graded games behind it", c.graded],
+    ["Games left this week", all.filter(upcoming).length], ["Graded games behind it", c.graded],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
   $("cf-n").textContent = rows.length;
   const gameTxt = t => {
@@ -596,8 +596,8 @@ function renderConfidence() {
     { label: "Team", render: t => `<b>${esc(t.team)}</b>` },
     { label: "Record vs teased line", num: true, render: t => `${recTxt(t.record)} <span class="pts">${t.team_pts}</span>` },
     { label: "Edge range", num: true, render: t => t.edge_range == null ? `<span class="muted">—</span> <span class="pts">${t.edge_pts}</span>`
-        : `${t.edge_range} <span class="tag">${t.edge_from === "today" ? "this game" : "last game"}</span> <span class="pts">${t.edge_pts}</span>` },
-    { label: "Game on this date", render: gameTxt },
+        : `${t.edge_range} <span class="tag">${t.edge_from === "week" ? "this week" : "last game"}</span> <span class="pts">${t.edge_pts}</span>` },
+    { label: "This week's game", render: gameTxt },
     { label: "Kickoff / score", render: t => t.game ? kickCol.render(t.game) : "" },
     { label: "Their teaser result", render: teamRes },
   ], rows, false,
