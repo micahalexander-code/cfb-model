@@ -179,17 +179,21 @@ def confidence_json(day: str) -> dict:
             edge, edge_from = (last["edge"], "last") if last else (None, None)
         ep = confidence.edge_points(edge, edges)
         rec = records.get(team)
-        team_pts = rec["points"] if rec else confidence.NEUTRAL
+        played = (rec["w"] + rec["l"] + rec["p"]) if rec else 0
+        scored = played >= confidence.MIN_GAMES
+        team_pts = rec["points"] if scored else None
         rows.append({
-            "team": team, "record": rec, "team_pts": team_pts,
+            "team": team, "record": rec, "team_pts": team_pts, "games": played,
             "edge": edge, "edge_from": edge_from, **ep,
-            "confidence": round(team_pts + ep["edge_pts"], 1),
+            "confidence": round(team_pts + ep["edge_pts"], 1) if scored else None,
             "game": t,
             "last": {k: last[k] for k in ("away", "home", "date", "picked", "side", "teaser_line", "teaser_result")} if last else None,
         })
-    rows.sort(key=lambda r: (-r["confidence"], -(r["record"]["w"] if r["record"] else 0), r["team"]))
+    # Scored teams first (highest first), then teams still short of 5 games.
+    rows.sort(key=lambda r: (r["confidence"] is None, -(r["confidence"] or 0),
+                             -(r["record"]["w"] if r["record"] else 0), r["team"]))
     return {"date": day, "week": odds.week_number(days[0]) or odds.week_number(day),
-            "start": days[0], "end": days[-1], "teaser": snapshot.TEASER, "teams": rows,
+            "start": days[0], "end": days[-1], "teaser": snapshot.TEASER, "min_games": confidence.MIN_GAMES, "teams": rows,
             "edges": edges,
             "graded": sum(1 for h in hist if h["action"] == "SPREAD" and h.get("teaser_result"))}
 

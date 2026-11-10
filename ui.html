@@ -172,12 +172,14 @@
     <h2 id="cf-title">Confidence <button class="info" data-for="x-cf" aria-expanded="false" aria-label="What is this?">i</button></h2>
     <div class="explain" id="x-cf" hidden>How much we trust each team to cover our <b>teased</b> line, out of 100.
       <b>Team (50):</b> the team's record against our teased line in every game it's played. When we picked them it's our teaser result;
-      when we picked their opponent it's the reverse. Undefeated = 50, 1–1 = 25, winless = 0.
+      when we picked their opponent it's the reverse. Undefeated = 50, .500 = 25, winless = 0.
+      A team needs <b>5 games</b> against our teased line before it gets a score.
       <b>Edge (50):</b> how often picks in the edge range of the team's matchup this week have covered the teased line (History tab, teaser column).
       On Sunday and Monday that's the coming week. Teams that already played this week, are on a bye, or don't have a line yet use their most recent game. 100% = 50. No data yet counts as a coin flip (25).</div>
     <div class="summary" id="cf-summary"></div>
     <h2>Team confidence <span class="n" id="cf-n"></span><span class="note">highest first · teased 3</span></h2>
     <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-today"> Only teams with a game left this week</label>
+    <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-short"> Show teams with fewer than 5 games</label>
     <div id="cf-teams"></div>
     <h2>Edge ranges <span class="note">teaser record of The Core Model picks so far</span></h2>
     <div id="cf-edges"></div>
@@ -571,10 +573,11 @@ function renderConfidence() {
   $("cf-title").firstChild.textContent = `Confidence · ${c.week ? "Week " + c.week + " · " : ""}${md(c.start)}–${md(c.end)} `;
   const all = c.teams;
   const upcoming = t => t.game && t.game.state !== "post";
-  const rows = $("cf-today").checked ? all.filter(upcoming) : all;
+  const scored = all.filter(t => t.confidence != null);
+  const rows = ($("cf-short").checked ? all : scored).filter(t => !$("cf-today").checked || upcoming(t));
   $("cf-summary").innerHTML = [
-    ["Teams scored", all.length], ["Score 80+", all.filter(t => t.confidence >= 80).length],
-    ["Teams with a record", all.filter(t => t.record).length],
+    ["Teams scored", scored.length], ["Score 80+", scored.filter(t => t.confidence >= 80).length],
+    [`Under ${c.min_games} games`, all.length - scored.length],
     ["Games left this week", all.filter(upcoming).length], ["Graded games behind it", c.graded],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
   $("cf-n").textContent = rows.length;
@@ -592,9 +595,10 @@ function renderConfidence() {
     ? res(t.game.picked ? t.game.teaser_result : flip[t.game.teaser_result])
     : t.game.state === "in" ? `<span class="tag">in play</span>` : "";
   $("cf-teams").innerHTML = table([
-    { label: "Score", render: t => `<span class="score ${scoreCls(t.confidence)}">${Math.round(t.confidence)}</span>` },
+    { label: "Score", render: t => t.confidence == null ? `<span class="muted">${t.games}/${c.min_games}</span>`
+        : `<span class="score ${scoreCls(t.confidence)}">${Math.round(t.confidence)}</span>` },
     { label: "Team", render: t => `<b>${esc(t.team)}</b>` },
-    { label: "Record vs teased line", num: true, render: t => `${recTxt(t.record)} <span class="pts">${t.team_pts}</span>` },
+    { label: "Record vs teased line", num: true, render: t => `${recTxt(t.record)} <span class="pts">${t.team_pts ?? "—"}</span>` },
     { label: "Edge range", num: true, render: t => t.edge_range == null ? `<span class="muted">—</span> <span class="pts">${t.edge_pts}</span>`
         : `${t.edge_range} <span class="tag">${t.edge_from === "week" ? "this week" : "last game"}</span> <span class="pts">${t.edge_pts}</span>` },
     { label: "This week's game", render: gameTxt },
@@ -609,7 +613,7 @@ function renderConfidence() {
     { label: "Points (of 50)", num: true, render: b => `<b>${b.points}</b>` },
   ], c.edges);
 }
-$("cf-today").onchange = () => conf && renderConfidence();
+$("cf-today").onchange = $("cf-short").onchange = () => conf && renderConfidence();
 
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
   document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === b));

@@ -12,13 +12,15 @@ Two parts, 50 points each, both built from finished games (History):
                 (same ranges as the History tab: 0-1, 1-2, 2-3, 3+, Core Model
                 picks only). 100% -> 50.
 
-With no graded games yet (team never picked, or an empty edge range) that half
-is a neutral 25 - a coin flip - until data comes in.
+A team needs MIN_GAMES (5) games against our teased line (pushes count)
+before it gets a score at all. An edge range with no graded games counts as a
+neutral 25 - a coin flip - until data comes in.
 """
 from typing import Dict, List, Optional
 
 POINTS = 50.0
 NEUTRAL = POINTS / 2
+MIN_GAMES = 5  # a team needs this many games against our teased line to get a score
 BUCKETS = [(0, 1), (1, 2), (2, 3), (3, None)]
 
 
