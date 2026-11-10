@@ -1,0 +1,14954 @@
+[
+{
+"source": "cfb_week1.pdf",
+"as_of": "SEPTEMBER 7 MONDAY - WEEK 1",
+"through": "20260907",
+"home_advantage": 2.41,
+"teams": [
+{
+"team": "Notre Dame",
+"rank": 1,
+"division": "A",
+"rating": 98.11,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Texas",
+"rank": 2,
+"division": "A",
+"rating": 96.0,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Ohio State",
+"rank": 3,
+"division": "A",
+"rating": 94.82,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "LSU",
+"rank": 4,
+"division": "A",
+"rating": 93.46,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Indiana",
+"rank": 5,
+"division": "A",
+"rating": 93.17,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Miami-Florida",
+"rank": 6,
+"division": "A",
+"rating": 92.28,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Georgia",
+"rank": 7,
+"division": "A",
+"rating": 91.57,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Oregon",
+"rank": 8,
+"division": "A",
+"rating": 90.36,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Texas A&M",
+"rank": 9,
+"division": "A",
+"rating": 89.67,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Oklahoma",
+"rank": 10,
+"division": "A",
+"rating": 89.44,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Alabama",
+"rank": 11,
+"division": "A",
+"rating": 89.33,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Mississippi",
+"rank": 12,
+"division": "A",
+"rating": 87.62,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Florida",
+"rank": 13,
+"division": "A",
+"rating": 87.36,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Penn State",
+"rank": 14,
+"division": "A",
+"rating": 87.23,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Tennessee",
+"rank": 15,
+"division": "A",
+"rating": 84.67,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "South Carolina",
+"rank": 16,
+"division": "A",
+"rating": 84.44,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Iowa",
+"rank": 17,
+"division": "A",
+"rating": 83.33,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Utah",
+"rank": 18,
+"division": "A",
+"rating": 82.71,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Southern California",
+"rank": 19,
+"division": "A",
+"rating": 82.69,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Washington",
+"rank": 20,
+"division": "A",
+"rating": 82.67,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "UCLA",
+"rank": 21,
+"division": "A",
+"rating": 82.03,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Kansas State",
+"rank": 22,
+"division": "A",
+"rating": 81.9,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Louisville",
+"rank": 23,
+"division": "A",
+"rating": 81.75,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Auburn",
+"rank": 24,
+"division": "A",
+"rating": 81.57,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Virginia",
+"rank": 25,
+"division": "A",
+"rating": 81.26,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Pittsburgh",
+"rank": 26,
+"division": "A",
+"rating": 81.01,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Minnesota",
+"rank": 27,
+"division": "A",
+"rating": 80.74,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Virginia Tech",
+"rank": 28,
+"division": "A",
+"rating": 80.49,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "SMU",
+"rank": 29,
+"division": "A",
+"rating": 80.2,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Kentucky",
+"rank": 30,
+"division": "A",
+"rating": 79.93,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Wisconsin",
+"rank": 31,
+"division": "A",
+"rating": 79.83,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Mississippi State",
+"rank": 32,
+"division": "A",
+"rating": 79.67,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Nebraska",
+"rank": 33,
+"division": "A",
+"rating": 79.21,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Northwestern",
+"rank": 34,
+"division": "A",
+"rating": 79.13,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Arizona State",
+"rank": 35,
+"division": "A",
+"rating": 78.98,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Michigan",
+"rank": 36,
+"division": "A",
+"rating": 78.81,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Vanderbilt",
+"rank": 37,
+"division": "A",
+"rating": 78.79,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Missouri",
+"rank": 38,
+"division": "A",
+"rating": 78.66,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "BYU",
+"rank": 39,
+"division": "A",
+"rating": 78.28,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Texas Tech",
+"rank": 40,
+"division": "A",
+"rating": 77.2,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Arizona",
+"rank": 41,
+"division": "A",
+"rating": 77.15,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Illinois",
+"rank": 42,
+"division": "A",
+"rating": 76.94,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Maryland",
+"rank": 43,
+"division": "A",
+"rating": 76.3,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Houston",
+"rank": 44,
+"division": "A",
+"rating": 76.08,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Baylor",
+"rank": 45,
+"division": "A",
+"rating": 76.02,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Kansas",
+"rank": 46,
+"division": "A",
+"rating": 75.98,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Arkansas",
+"rank": 47,
+"division": "A",
+"rating": 75.88,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Central Florida(UCF)",
+"rank": 48,
+"division": "A",
+"rating": 75.54,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Clemson",
+"rank": 49,
+"division": "A",
+"rating": 75.5,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Syracuse",
+"rank": 50,
+"division": "A",
+"rating": 74.95,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Florida State",
+"rank": 51,
+"division": "A",
+"rating": 74.52,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Boise State",
+"rank": 52,
+"division": "A",
+"rating": 74.44,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "North Carolina",
+"rank": 53,
+"division": "A",
+"rating": 74.18,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "TCU",
+"rank": 54,
+"division": "A",
+"rating": 74.04,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Georgia Tech",
+"rank": 55,
+"division": "A",
+"rating": 73.96,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Duke",
+"rank": 56,
+"division": "A",
+"rating": 73.67,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Cincinnati",
+"rank": 57,
+"division": "A",
+"rating": 73.55,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Colorado",
+"rank": 58,
+"division": "A",
+"rating": 73.01,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Wake Forest",
+"rank": 59,
+"division": "A",
+"rating": 72.18,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Michigan State",
+"rank": 60,
+"division": "A",
+"rating": 71.49,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Army West Point",
+"rank": 61,
+"division": "A",
+"rating": 71.47,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "California",
+"rank": 62,
+"division": "A",
+"rating": 70.61,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "NC State",
+"rank": 63,
+"division": "A",
+"rating": 70.55,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "West Virginia",
+"rank": 64,
+"division": "A",
+"rating": 70.42,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Iowa State",
+"rank": 65,
+"division": "A",
+"rating": 70.4,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Montana State",
+"rank": 66,
+"division": "AA",
+"rating": 69.78,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "North Dakota State",
+"rank": 67,
+"division": "A",
+"rating": 69.13,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "South Dakota State",
+"rank": 68,
+"division": "AA",
+"rating": 69.1,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "San Diego State",
+"rank": 69,
+"division": "A",
+"rating": 69.0,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Purdue",
+"rank": 70,
+"division": "A",
+"rating": 68.99,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Memphis",
+"rank": 71,
+"division": "A",
+"rating": 68.33,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Western Michigan",
+"rank": 72,
+"division": "A",
+"rating": 68.07,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Oklahoma State",
+"rank": 73,
+"division": "A",
+"rating": 67.96,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "New Mexico",
+"rank": 74,
+"division": "A",
+"rating": 67.92,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "UTSA",
+"rank": 75,
+"division": "A",
+"rating": 67.31,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "UNLV",
+"rank": 76,
+"division": "A",
+"rating": 66.43,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Washington State",
+"rank": 77,
+"division": "A",
+"rating": 65.98,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Tulsa",
+"rank": 78,
+"division": "A",
+"rating": 65.46,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "James Madison",
+"rank": 79,
+"division": "A",
+"rating": 65.11,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Stanford",
+"rank": 80,
+"division": "A",
+"rating": 64.86,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Boston College",
+"rank": 81,
+"division": "A",
+"rating": 64.72,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "South Florida",
+"rank": 82,
+"division": "A",
+"rating": 64.67,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Appalachian State",
+"rank": 83,
+"division": "A",
+"rating": 64.57,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Tulane",
+"rank": 84,
+"division": "A",
+"rating": 64.5,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Louisiana-Lafayette",
+"rank": 85,
+"division": "A",
+"rating": 64.19,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Louisiana Tech",
+"rank": 86,
+"division": "A",
+"rating": 63.61,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Navy",
+"rank": 87,
+"division": "A",
+"rating": 63.23,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Connecticut",
+"rank": 88,
+"division": "A",
+"rating": 63.15,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Temple",
+"rank": 89,
+"division": "A",
+"rating": 63.14,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Air Force",
+"rank": 90,
+"division": "A",
+"rating": 63.07,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "East Carolina",
+"rank": 91,
+"division": "A",
+"rating": 62.44,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Tarleton State",
+"rank": 92,
+"division": "AA",
+"rating": 62.42,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Nevada",
+"rank": 93,
+"division": "A",
+"rating": 62.24,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Texas State",
+"rank": 94,
+"division": "A",
+"rating": 62.14,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Kennesaw State",
+"rank": 95,
+"division": "A",
+"rating": 61.89,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "North Texas",
+"rank": 96,
+"division": "A",
+"rating": 61.74,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "South Dakota",
+"rank": 97,
+"division": "AA",
+"rating": 61.55,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Rutgers",
+"rank": 98,
+"division": "A",
+"rating": 61.51,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Colorado State",
+"rank": 99,
+"division": "A",
+"rating": 61.49,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Montana",
+"rank": 100,
+"division": "AA",
+"rating": 61.1,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "North Dakota",
+"rank": 101,
+"division": "AA",
+"rating": 61.05,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Oregon State",
+"rank": 102,
+"division": "A",
+"rating": 61.04,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Stephen F. Austin",
+"rank": 103,
+"division": "AA",
+"rating": 60.97,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Toledo",
+"rank": 104,
+"division": "A",
+"rating": 60.53,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "San Jose State",
+"rank": 105,
+"division": "A",
+"rating": 60.42,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Old Dominion",
+"rank": 106,
+"division": "A",
+"rating": 60.3,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Liberty",
+"rank": 107,
+"division": "A",
+"rating": 60.27,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Illinois State",
+"rank": 108,
+"division": "AA",
+"rating": 59.29,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Hawai'i",
+"rank": 109,
+"division": "A",
+"rating": 58.99,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Jacksonville State",
+"rank": 110,
+"division": "A",
+"rating": 58.88,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Georgia Southern",
+"rank": 111,
+"division": "A",
+"rating": 58.73,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Austin Peay",
+"rank": 112,
+"division": "AA",
+"rating": 58.68,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Marshall",
+"rank": 113,
+"division": "A",
+"rating": 58.45,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Florida Atlantic",
+"rank": 114,
+"division": "A",
+"rating": 58.43,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "UC Davis",
+"rank": 115,
+"division": "AA",
+"rating": 58.4,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Southern Illinois",
+"rank": 116,
+"division": "AA",
+"rating": 58.27,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Fresno State",
+"rank": 117,
+"division": "A",
+"rating": 58.1,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Rice",
+"rank": 118,
+"division": "A",
+"rating": 57.84,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Arkansas State",
+"rank": 119,
+"division": "A",
+"rating": 57.83,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Coastal Carolina",
+"rank": 120,
+"division": "A",
+"rating": 57.61,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Delaware",
+"rank": 121,
+"division": "A",
+"rating": 57.4,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "South Alabama",
+"rank": 122,
+"division": "A",
+"rating": 57.35,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Eastern Michigan",
+"rank": 123,
+"division": "A",
+"rating": 57.05,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Troy",
+"rank": 124,
+"division": "A",
+"rating": 57.03,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Youngstown State",
+"rank": 125,
+"division": "AA",
+"rating": 56.9,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Ohio",
+"rank": 126,
+"division": "A",
+"rating": 56.8,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "New Mexico State",
+"rank": 127,
+"division": "A",
+"rating": 56.74,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Southern Miss",
+"rank": 128,
+"division": "A",
+"rating": 56.29,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Georgia State",
+"rank": 129,
+"division": "A",
+"rating": 56.03,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Miami-Ohio",
+"rank": 130,
+"division": "A",
+"rating": 56.0,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Tennessee Tech",
+"rank": 131,
+"division": "AA",
+"rating": 55.91,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Lehigh",
+"rank": 132,
+"division": "AA",
+"rating": 55.75,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Fla. International",
+"rank": 133,
+"division": "A",
+"rating": 55.65,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Bowling Green",
+"rank": 134,
+"division": "A",
+"rating": 55.34,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "UAB",
+"rank": 135,
+"division": "A",
+"rating": 55.13,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Northern Arizona",
+"rank": 136,
+"division": "AA",
+"rating": 54.75,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Mercer",
+"rank": 137,
+"division": "AA",
+"rating": 54.4,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Southern Utah",
+"rank": 138,
+"division": "AA",
+"rating": 54.26,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "North Alabama",
+"rank": 139,
+"division": "AA",
+"rating": 53.78,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Yale",
+"rank": 140,
+"division": "AA",
+"rating": 53.7,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Harvard",
+"rank": 141,
+"division": "AA",
+"rating": 53.67,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Massachusetts",
+"rank": 142,
+"division": "A",
+"rating": 53.59,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Abilene Christian",
+"rank": 143,
+"division": "AA",
+"rating": 53.52,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Western Kentucky",
+"rank": 144,
+"division": "A",
+"rating": 53.45,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Idaho State",
+"rank": 145,
+"division": "AA",
+"rating": 53.26,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Elon",
+"rank": 146,
+"division": "AA",
+"rating": 53.19,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Wyoming",
+"rank": 147,
+"division": "A",
+"rating": 53.11,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Central Michigan",
+"rank": 148,
+"division": "A",
+"rating": 52.89,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Akron",
+"rank": 149,
+"division": "A",
+"rating": 52.82,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Sacramento State",
+"rank": 150,
+"division": "A",
+"rating": 52.4,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Northern Illinois",
+"rank": 151,
+"division": "A",
+"rating": 52.38,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Rhode Island",
+"rank": 152,
+"division": "AA",
+"rating": 52.15,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Incarnate Word",
+"rank": 153,
+"division": "AA",
+"rating": 52.11,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Missouri State",
+"rank": 154,
+"division": "A",
+"rating": 52.1,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Eastern Washington",
+"rank": 155,
+"division": "AA",
+"rating": 51.98,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Idaho",
+"rank": 156,
+"division": "AA",
+"rating": 51.64,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Utah State",
+"rank": 157,
+"division": "A",
+"rating": 51.52,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Weber State",
+"rank": 158,
+"division": "AA",
+"rating": 51.34,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Buffalo",
+"rank": 159,
+"division": "A",
+"rating": 51.29,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Richmond",
+"rank": 160,
+"division": "AA",
+"rating": 51.23,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "UTEP",
+"rank": 161,
+"division": "A",
+"rating": 50.93,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Middle Tennessee",
+"rank": 162,
+"division": "A",
+"rating": 50.89,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Villanova",
+"rank": 163,
+"division": "AA",
+"rating": 50.84,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "West Florida",
+"rank": 164,
+"division": "AA",
+"rating": 50.35,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Wofford",
+"rank": 165,
+"division": "AA",
+"rating": 50.33,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Prairie View A&M",
+"rank": 166,
+"division": "AA",
+"rating": 50.1,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Sam Houston State",
+"rank": 167,
+"division": "A",
+"rating": 49.93,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Colgate",
+"rank": 168,
+"division": "AA",
+"rating": 49.88,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Ball State",
+"rank": 169,
+"division": "A",
+"rating": 49.88,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "McNeese State",
+"rank": 170,
+"division": "AA",
+"rating": 49.84,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "SC State",
+"rank": 171,
+"division": "AA",
+"rating": 49.65,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "SE Missouri State",
+"rank": 172,
+"division": "AA",
+"rating": 49.57,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Dartmouth",
+"rank": 173,
+"division": "AA",
+"rating": 49.47,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "UTRGV",
+"rank": 174,
+"division": "AA",
+"rating": 49.38,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "William & Mary",
+"rank": 175,
+"division": "AA",
+"rating": 49.32,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Lamar",
+"rank": 176,
+"division": "AA",
+"rating": 49.23,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Jackson State",
+"rank": 177,
+"division": "AA",
+"rating": 49.18,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Gardner-Webb",
+"rank": 178,
+"division": "AA",
+"rating": 49.14,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Samford",
+"rank": 179,
+"division": "AA",
+"rating": 49.05,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Northern Iowa",
+"rank": 180,
+"division": "AA",
+"rating": 48.77,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Chattanooga",
+"rank": 181,
+"division": "AA",
+"rating": 48.64,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Western Carolina",
+"rank": 182,
+"division": "AA",
+"rating": 48.56,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Alabama State",
+"rank": 183,
+"division": "AA",
+"rating": 48.46,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "LouisianaMonroe(ULM)",
+"rank": 184,
+"division": "A",
+"rating": 48.43,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Monmouth-NJ",
+"rank": 185,
+"division": "AA",
+"rating": 48.25,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Cal Poly-SLO",
+"rank": 186,
+"division": "AA",
+"rating": 47.88,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Portland State",
+"rank": 187,
+"division": "AA",
+"rating": 47.25,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Campbell",
+"rank": 188,
+"division": "AA",
+"rating": 47.13,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Kent State",
+"rank": 189,
+"division": "A",
+"rating": 46.81,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Furman",
+"rank": 190,
+"division": "AA",
+"rating": 46.74,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Pennsylvania",
+"rank": 191,
+"division": "AA",
+"rating": 46.5,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Indiana State",
+"rank": 192,
+"division": "AA",
+"rating": 46.46,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Northern Colorado",
+"rank": 193,
+"division": "AA",
+"rating": 46.17,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Central Arkansas",
+"rank": 194,
+"division": "AA",
+"rating": 46.13,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Butler",
+"rank": 195,
+"division": "AA",
+"rating": 46.11,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "SE Louisiana",
+"rank": 196,
+"division": "AA",
+"rating": 46.05,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Princeton",
+"rank": 197,
+"division": "AA",
+"rating": 46.01,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Albany-NY",
+"rank": 198,
+"division": "AA",
+"rating": 45.93,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Tennessee-Martin",
+"rank": 199,
+"division": "AA",
+"rating": 45.64,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "New Hampshire",
+"rank": 200,
+"division": "AA",
+"rating": 45.21,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Holy Cross",
+"rank": 201,
+"division": "AA",
+"rating": 45.06,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Bryant",
+"rank": 202,
+"division": "AA",
+"rating": 44.97,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Towson",
+"rank": 203,
+"division": "AA",
+"rating": 44.61,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Eastern Illinois",
+"rank": 204,
+"division": "AA",
+"rating": 44.46,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Nicholls State",
+"rank": 205,
+"division": "AA",
+"rating": 44.45,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "East Tennessee State",
+"rank": 206,
+"division": "AA",
+"rating": 43.78,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Fordham",
+"rank": 207,
+"division": "AA",
+"rating": 43.74,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Stony Brook",
+"rank": 208,
+"division": "AA",
+"rating": 43.74,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Maine",
+"rank": 209,
+"division": "AA",
+"rating": 43.71,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Howard",
+"rank": 210,
+"division": "AA",
+"rating": 43.64,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Tennessee State",
+"rank": 211,
+"division": "AA",
+"rating": 43.47,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "LIU Post",
+"rank": 212,
+"division": "AA",
+"rating": 43.21,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Eastern Kentucky",
+"rank": 213,
+"division": "AA",
+"rating": 43.14,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "West Georgia",
+"rank": 214,
+"division": "AA",
+"rating": 43.13,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Robert Morris",
+"rank": 215,
+"division": "AA",
+"rating": 43.03,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Lindenwood",
+"rank": 216,
+"division": "AA",
+"rating": 42.84,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "East Texas A&M",
+"rank": 217,
+"division": "AA",
+"rating": 42.73,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Columbia",
+"rank": 218,
+"division": "AA",
+"rating": 42.58,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Brown",
+"rank": 219,
+"division": "AA",
+"rating": 42.57,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Duquesne",
+"rank": 220,
+"division": "AA",
+"rating": 42.22,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Delaware State",
+"rank": 221,
+"division": "AA",
+"rating": 41.9,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Charlotte",
+"rank": 222,
+"division": "A",
+"rating": 41.81,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Cornell",
+"rank": 223,
+"division": "AA",
+"rating": 41.6,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Charleston Southern",
+"rank": 224,
+"division": "AA",
+"rating": 41.6,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Lafayette",
+"rank": 225,
+"division": "AA",
+"rating": 41.41,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Houston Christian",
+"rank": 226,
+"division": "AA",
+"rating": 41.28,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "The Citadel",
+"rank": 227,
+"division": "AA",
+"rating": 40.66,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Southern U.",
+"rank": 228,
+"division": "AA",
+"rating": 40.58,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Bucknell",
+"rank": 229,
+"division": "AA",
+"rating": 40.22,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "St. Thomas-Mn.",
+"rank": 230,
+"division": "AA",
+"rating": 40.04,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "NC Central",
+"rank": 231,
+"division": "AA",
+"rating": 39.95,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Sacred Heart",
+"rank": 232,
+"division": "AA",
+"rating": 39.75,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Drake",
+"rank": 233,
+"division": "AA",
+"rating": 39.59,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Utah Tech",
+"rank": 234,
+"division": "AA",
+"rating": 39.56,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Norfolk State",
+"rank": 235,
+"division": "AA",
+"rating": 39.54,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Morgan State",
+"rank": 236,
+"division": "AA",
+"rating": 39.29,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Central Connecticut",
+"rank": 237,
+"division": "AA",
+"rating": 39.21,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Grambling State",
+"rank": 238,
+"division": "AA",
+"rating": 39.11,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Alabama A&M",
+"rank": 239,
+"division": "AA",
+"rating": 38.89,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Western Illinois",
+"rank": 240,
+"division": "AA",
+"rating": 38.85,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Murray State",
+"rank": 241,
+"division": "AA",
+"rating": 38.83,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Florida A&M",
+"rank": 242,
+"division": "AA",
+"rating": 38.81,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Ark.-Pine Bluff",
+"rank": 243,
+"division": "AA",
+"rating": 38.81,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Merrimack",
+"rank": 244,
+"division": "AA",
+"rating": 38.53,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "San Diego",
+"rank": 245,
+"division": "AA",
+"rating": 37.98,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Dayton",
+"rank": 246,
+"division": "AA",
+"rating": 37.93,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Mercyhurst",
+"rank": 247,
+"division": "AA",
+"rating": 37.92,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Texas Southern",
+"rank": 248,
+"division": "AA",
+"rating": 37.33,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Stonehill College",
+"rank": 249,
+"division": "AA",
+"rating": 36.96,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "New Haven",
+"rank": 250,
+"division": "AA",
+"rating": 36.75,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Bethune-Cookman",
+"rank": 251,
+"division": "AA",
+"rating": 36.34,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "VMI",
+"rank": 252,
+"division": "AA",
+"rating": 36.3,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Georgetown",
+"rank": 253,
+"division": "AA",
+"rating": 36.23,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Hampton",
+"rank": 254,
+"division": "AA",
+"rating": 35.75,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Alcorn State",
+"rank": 255,
+"division": "AA",
+"rating": 35.45,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "NC A&T",
+"rank": 256,
+"division": "AA",
+"rating": 33.7,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Morehead State",
+"rank": 257,
+"division": "AA",
+"rating": 32.95,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Presbyterian College",
+"rank": 258,
+"division": "AA",
+"rating": 32.85,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Wagner",
+"rank": 259,
+"division": "AA",
+"rating": 32.52,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Chicago State",
+"rank": 260,
+"division": "AA",
+"rating": 31.77,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Valparaiso",
+"rank": 261,
+"division": "AA",
+"rating": 30.78,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Davidson",
+"rank": 262,
+"division": "AA",
+"rating": 30.41,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Marist",
+"rank": 263,
+"division": "AA",
+"rating": 30.27,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Miss. Valley State",
+"rank": 264,
+"division": "AA",
+"rating": 29.15,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Northwestern State",
+"rank": 265,
+"division": "AA",
+"rating": 28.1,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Stetson",
+"rank": 266,
+"division": "AA",
+"rating": 27.44,
+"wins": 1,
+"losses": 1
+}
+]
+},
+{
+"source": "cfb_week2.pdf",
+"as_of": "SEPTEMBER 12 SATURDAY - WEEK 2",
+"through": "20260912",
+"home_advantage": 2.41,
+"teams": [
+{
+"team": "Notre Dame",
+"rank": 1,
+"division": "A",
+"rating": 95.24,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Indiana",
+"rank": 2,
+"division": "A",
+"rating": 93.47,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Alabama",
+"rank": 3,
+"division": "A",
+"rating": 92.18,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "LSU",
+"rank": 4,
+"division": "A",
+"rating": 90.96,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Texas A&M",
+"rank": 5,
+"division": "A",
+"rating": 89.74,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Miami-Florida",
+"rank": 6,
+"division": "A",
+"rating": 89.12,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Florida",
+"rank": 7,
+"division": "A",
+"rating": 87.84,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Penn State",
+"rank": 8,
+"division": "A",
+"rating": 87.41,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Ohio State",
+"rank": 9,
+"division": "A",
+"rating": 87.27,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Southern California",
+"rank": 10,
+"division": "A",
+"rating": 86.03,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Texas",
+"rank": 11,
+"division": "A",
+"rating": 85.55,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Oklahoma",
+"rank": 12,
+"division": "A",
+"rating": 85.03,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Michigan",
+"rank": 13,
+"division": "A",
+"rating": 84.77,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Auburn",
+"rank": 14,
+"division": "A",
+"rating": 84.52,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Tennessee",
+"rank": 15,
+"division": "A",
+"rating": 84.48,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Mississippi State",
+"rank": 16,
+"division": "A",
+"rating": 83.8,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Virginia",
+"rank": 17,
+"division": "A",
+"rating": 83.64,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Utah",
+"rank": 18,
+"division": "A",
+"rating": 83.5,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Iowa",
+"rank": 19,
+"division": "A",
+"rating": 82.82,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "South Carolina",
+"rank": 20,
+"division": "A",
+"rating": 82.24,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Georgia",
+"rank": 21,
+"division": "A",
+"rating": 82.03,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Nebraska",
+"rank": 22,
+"division": "A",
+"rating": 81.81,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Texas Tech",
+"rank": 23,
+"division": "A",
+"rating": 81.63,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Virginia Tech",
+"rank": 24,
+"division": "A",
+"rating": 81.15,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "UCLA",
+"rank": 25,
+"division": "A",
+"rating": 80.74,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "NC State",
+"rank": 26,
+"division": "A",
+"rating": 80.41,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Pittsburgh",
+"rank": 27,
+"division": "A",
+"rating": 80.23,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Kentucky",
+"rank": 28,
+"division": "A",
+"rating": 79.93,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Houston",
+"rank": 29,
+"division": "A",
+"rating": 79.54,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "SMU",
+"rank": 30,
+"division": "A",
+"rating": 79.33,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Missouri",
+"rank": 31,
+"division": "A",
+"rating": 79.25,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "BYU",
+"rank": 32,
+"division": "A",
+"rating": 79.25,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Oregon",
+"rank": 33,
+"division": "A",
+"rating": 78.93,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Minnesota",
+"rank": 34,
+"division": "A",
+"rating": 78.67,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Vanderbilt",
+"rank": 35,
+"division": "A",
+"rating": 78.44,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Baylor",
+"rank": 36,
+"division": "A",
+"rating": 78.31,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Illinois",
+"rank": 37,
+"division": "A",
+"rating": 78.29,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Wisconsin",
+"rank": 38,
+"division": "A",
+"rating": 77.45,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Cincinnati",
+"rank": 39,
+"division": "A",
+"rating": 76.93,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Duke",
+"rank": 40,
+"division": "A",
+"rating": 76.83,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Arizona State",
+"rank": 41,
+"division": "A",
+"rating": 76.48,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Central Florida(UCF)",
+"rank": 42,
+"division": "A",
+"rating": 75.39,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Clemson",
+"rank": 43,
+"division": "A",
+"rating": 75.27,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Kansas State",
+"rank": 44,
+"division": "A",
+"rating": 74.73,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Mississippi",
+"rank": 45,
+"division": "A",
+"rating": 74.58,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Louisville",
+"rank": 46,
+"division": "A",
+"rating": 74.55,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Arizona",
+"rank": 47,
+"division": "A",
+"rating": 74.53,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Florida State",
+"rank": 48,
+"division": "A",
+"rating": 74.21,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "California",
+"rank": 49,
+"division": "A",
+"rating": 74.05,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Iowa State",
+"rank": 50,
+"division": "A",
+"rating": 73.84,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Michigan State",
+"rank": 51,
+"division": "A",
+"rating": 73.77,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "TCU",
+"rank": 52,
+"division": "A",
+"rating": 73.73,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Oklahoma State",
+"rank": 53,
+"division": "A",
+"rating": 73.55,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Northwestern",
+"rank": 54,
+"division": "A",
+"rating": 73.06,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "North Carolina",
+"rank": 55,
+"division": "A",
+"rating": 73.05,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Maryland",
+"rank": 56,
+"division": "A",
+"rating": 72.67,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "West Virginia",
+"rank": 57,
+"division": "A",
+"rating": 72.53,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Georgia Tech",
+"rank": 58,
+"division": "A",
+"rating": 72.49,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Syracuse",
+"rank": 59,
+"division": "A",
+"rating": 72.38,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Montana State",
+"rank": 60,
+"division": "AA",
+"rating": 72.2,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Boise State",
+"rank": 61,
+"division": "A",
+"rating": 72.07,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Wake Forest",
+"rank": 62,
+"division": "A",
+"rating": 71.82,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Arkansas",
+"rank": 63,
+"division": "A",
+"rating": 71.63,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Colorado",
+"rank": 64,
+"division": "A",
+"rating": 71.39,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "New Mexico",
+"rank": 65,
+"division": "A",
+"rating": 70.61,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Kansas",
+"rank": 66,
+"division": "A",
+"rating": 70.46,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "South Florida",
+"rank": 67,
+"division": "A",
+"rating": 70.32,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Washington",
+"rank": 68,
+"division": "A",
+"rating": 70.27,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Western Michigan",
+"rank": 69,
+"division": "A",
+"rating": 70.06,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Purdue",
+"rank": 70,
+"division": "A",
+"rating": 69.69,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Army West Point",
+"rank": 71,
+"division": "A",
+"rating": 69.6,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "North Dakota State",
+"rank": 72,
+"division": "A",
+"rating": 69.38,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Boston College",
+"rank": 73,
+"division": "A",
+"rating": 69.38,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "North Texas",
+"rank": 74,
+"division": "A",
+"rating": 68.4,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Rutgers",
+"rank": 75,
+"division": "A",
+"rating": 68.31,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "San Diego State",
+"rank": 76,
+"division": "A",
+"rating": 68.3,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Tulane",
+"rank": 77,
+"division": "A",
+"rating": 68.21,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "East Carolina",
+"rank": 78,
+"division": "A",
+"rating": 67.93,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Temple",
+"rank": 79,
+"division": "A",
+"rating": 67.39,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Old Dominion",
+"rank": 80,
+"division": "A",
+"rating": 67.33,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Appalachian State",
+"rank": 81,
+"division": "A",
+"rating": 67.21,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Tulsa",
+"rank": 82,
+"division": "A",
+"rating": 66.83,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Louisiana Tech",
+"rank": 83,
+"division": "A",
+"rating": 66.61,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Stanford",
+"rank": 84,
+"division": "A",
+"rating": 66.38,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Navy",
+"rank": 85,
+"division": "A",
+"rating": 66.35,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Louisiana-Lafayette",
+"rank": 86,
+"division": "A",
+"rating": 66.09,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "James Madison",
+"rank": 87,
+"division": "A",
+"rating": 66.07,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Memphis",
+"rank": 88,
+"division": "A",
+"rating": 65.99,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Fresno State",
+"rank": 89,
+"division": "A",
+"rating": 65.6,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Toledo",
+"rank": 90,
+"division": "A",
+"rating": 64.99,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Oregon State",
+"rank": 91,
+"division": "A",
+"rating": 64.81,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Delaware",
+"rank": 92,
+"division": "A",
+"rating": 64.77,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Colorado State",
+"rank": 93,
+"division": "A",
+"rating": 64.6,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "South Dakota State",
+"rank": 94,
+"division": "AA",
+"rating": 64.5,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Florida Atlantic",
+"rank": 95,
+"division": "A",
+"rating": 64.47,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Stephen F. Austin",
+"rank": 96,
+"division": "AA",
+"rating": 64.06,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Illinois State",
+"rank": 97,
+"division": "AA",
+"rating": 63.44,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "South Alabama",
+"rank": 98,
+"division": "A",
+"rating": 63.26,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "UNLV",
+"rank": 99,
+"division": "A",
+"rating": 62.89,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "South Dakota",
+"rank": 100,
+"division": "AA",
+"rating": 62.72,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "UTSA",
+"rank": 101,
+"division": "A",
+"rating": 62.5,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Air Force",
+"rank": 102,
+"division": "A",
+"rating": 62.24,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Youngstown State",
+"rank": 103,
+"division": "AA",
+"rating": 62.15,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Jacksonville State",
+"rank": 104,
+"division": "A",
+"rating": 62.07,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Tarleton State",
+"rank": 105,
+"division": "AA",
+"rating": 61.93,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Austin Peay",
+"rank": 106,
+"division": "AA",
+"rating": 61.89,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Coastal Carolina",
+"rank": 107,
+"division": "A",
+"rating": 61.84,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "North Dakota",
+"rank": 108,
+"division": "AA",
+"rating": 61.71,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Nevada",
+"rank": 109,
+"division": "A",
+"rating": 61.55,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "San Jose State",
+"rank": 110,
+"division": "A",
+"rating": 61.2,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Ohio",
+"rank": 111,
+"division": "A",
+"rating": 61.1,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Troy",
+"rank": 112,
+"division": "A",
+"rating": 61.03,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Fla. International",
+"rank": 113,
+"division": "A",
+"rating": 61.01,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Marshall",
+"rank": 114,
+"division": "A",
+"rating": 60.85,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Washington State",
+"rank": 115,
+"division": "A",
+"rating": 60.84,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Rice",
+"rank": 116,
+"division": "A",
+"rating": 60.66,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Georgia Southern",
+"rank": 117,
+"division": "A",
+"rating": 60.51,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Hawai'i",
+"rank": 118,
+"division": "A",
+"rating": 60.51,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Rhode Island",
+"rank": 119,
+"division": "AA",
+"rating": 60.34,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Miami-Ohio",
+"rank": 120,
+"division": "A",
+"rating": 60.27,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Southern Miss",
+"rank": 121,
+"division": "A",
+"rating": 60.02,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Liberty",
+"rank": 122,
+"division": "A",
+"rating": 59.73,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Southern Illinois",
+"rank": 123,
+"division": "AA",
+"rating": 59.59,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Tennessee Tech",
+"rank": 124,
+"division": "AA",
+"rating": 59.57,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "UAB",
+"rank": 125,
+"division": "A",
+"rating": 59.28,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Georgia State",
+"rank": 126,
+"division": "A",
+"rating": 59.18,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Texas State",
+"rank": 127,
+"division": "A",
+"rating": 59.06,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Montana",
+"rank": 128,
+"division": "AA",
+"rating": 59.04,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Connecticut",
+"rank": 129,
+"division": "A",
+"rating": 58.43,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Arkansas State",
+"rank": 130,
+"division": "A",
+"rating": 58.31,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Massachusetts",
+"rank": 131,
+"division": "A",
+"rating": 57.89,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Utah State",
+"rank": 132,
+"division": "A",
+"rating": 57.8,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Missouri State",
+"rank": 133,
+"division": "A",
+"rating": 57.53,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Idaho State",
+"rank": 134,
+"division": "AA",
+"rating": 57.52,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Kennesaw State",
+"rank": 135,
+"division": "A",
+"rating": 57.18,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Northern Illinois",
+"rank": 136,
+"division": "A",
+"rating": 57.12,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Lehigh",
+"rank": 137,
+"division": "AA",
+"rating": 56.9,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "LouisianaMonroe(ULM)",
+"rank": 138,
+"division": "A",
+"rating": 56.65,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "New Mexico State",
+"rank": 139,
+"division": "A",
+"rating": 56.47,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Central Michigan",
+"rank": 140,
+"division": "A",
+"rating": 56.44,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Wyoming",
+"rank": 141,
+"division": "A",
+"rating": 56.42,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "UC Davis",
+"rank": 142,
+"division": "AA",
+"rating": 56.41,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Sam Houston State",
+"rank": 143,
+"division": "A",
+"rating": 56.2,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Abilene Christian",
+"rank": 144,
+"division": "AA",
+"rating": 56.2,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Eastern Michigan",
+"rank": 145,
+"division": "A",
+"rating": 56.09,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Northern Arizona",
+"rank": 146,
+"division": "AA",
+"rating": 55.95,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Yale",
+"rank": 147,
+"division": "AA",
+"rating": 55.69,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Harvard",
+"rank": 148,
+"division": "AA",
+"rating": 55.66,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Middle Tennessee",
+"rank": 149,
+"division": "A",
+"rating": 55.6,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Buffalo",
+"rank": 150,
+"division": "A",
+"rating": 55.26,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "SC State",
+"rank": 151,
+"division": "AA",
+"rating": 55.14,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "UTEP",
+"rank": 152,
+"division": "A",
+"rating": 54.91,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Western Kentucky",
+"rank": 153,
+"division": "A",
+"rating": 54.83,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Bowling Green",
+"rank": 154,
+"division": "A",
+"rating": 54.79,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Mercer",
+"rank": 155,
+"division": "AA",
+"rating": 54.72,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Akron",
+"rank": 156,
+"division": "A",
+"rating": 54.64,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Idaho",
+"rank": 157,
+"division": "AA",
+"rating": 54.32,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Elon",
+"rank": 158,
+"division": "AA",
+"rating": 53.95,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Monmouth-NJ",
+"rank": 159,
+"division": "AA",
+"rating": 53.59,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Lamar",
+"rank": 160,
+"division": "AA",
+"rating": 53.59,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Kent State",
+"rank": 161,
+"division": "A",
+"rating": 53.51,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Campbell",
+"rank": 162,
+"division": "AA",
+"rating": 53.5,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Northern Iowa",
+"rank": 163,
+"division": "AA",
+"rating": 53.38,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Eastern Washington",
+"rank": 164,
+"division": "AA",
+"rating": 53.34,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "SE Missouri State",
+"rank": 165,
+"division": "AA",
+"rating": 52.93,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "West Florida",
+"rank": 166,
+"division": "AA",
+"rating": 52.89,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Cal Poly-SLO",
+"rank": 167,
+"division": "AA",
+"rating": 52.75,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Norfolk State",
+"rank": 168,
+"division": "AA",
+"rating": 52.74,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "McNeese State",
+"rank": 169,
+"division": "AA",
+"rating": 52.72,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Furman",
+"rank": 170,
+"division": "AA",
+"rating": 52.58,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "SE Louisiana",
+"rank": 171,
+"division": "AA",
+"rating": 52.51,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Western Carolina",
+"rank": 172,
+"division": "AA",
+"rating": 52.5,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Southern Utah",
+"rank": 173,
+"division": "AA",
+"rating": 52.33,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Ball State",
+"rank": 174,
+"division": "A",
+"rating": 52.09,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Richmond",
+"rank": 175,
+"division": "AA",
+"rating": 52.02,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Dartmouth",
+"rank": 176,
+"division": "AA",
+"rating": 51.71,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Gardner-Webb",
+"rank": 177,
+"division": "AA",
+"rating": 51.6,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "North Alabama",
+"rank": 178,
+"division": "AA",
+"rating": 51.53,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Prairie View A&M",
+"rank": 179,
+"division": "AA",
+"rating": 51.45,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Weber State",
+"rank": 180,
+"division": "AA",
+"rating": 51.24,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Towson",
+"rank": 181,
+"division": "AA",
+"rating": 51.08,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "East Tennessee State",
+"rank": 182,
+"division": "AA",
+"rating": 50.86,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Villanova",
+"rank": 183,
+"division": "AA",
+"rating": 50.83,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Albany-NY",
+"rank": 184,
+"division": "AA",
+"rating": 50.73,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Indiana State",
+"rank": 185,
+"division": "AA",
+"rating": 50.45,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Colgate",
+"rank": 186,
+"division": "AA",
+"rating": 50.39,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Alabama State",
+"rank": 187,
+"division": "AA",
+"rating": 49.9,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Incarnate Word",
+"rank": 188,
+"division": "AA",
+"rating": 49.88,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Jackson State",
+"rank": 189,
+"division": "AA",
+"rating": 49.69,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Central Arkansas",
+"rank": 190,
+"division": "AA",
+"rating": 49.59,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Wofford",
+"rank": 191,
+"division": "AA",
+"rating": 49.52,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Howard",
+"rank": 192,
+"division": "AA",
+"rating": 49.16,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Pennsylvania",
+"rank": 193,
+"division": "AA",
+"rating": 48.93,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "William & Mary",
+"rank": 194,
+"division": "AA",
+"rating": 48.74,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Merrimack",
+"rank": 195,
+"division": "AA",
+"rating": 48.54,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Butler",
+"rank": 196,
+"division": "AA",
+"rating": 48.5,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Western Illinois",
+"rank": 197,
+"division": "AA",
+"rating": 48.49,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Princeton",
+"rank": 198,
+"division": "AA",
+"rating": 48.47,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Sacred Heart",
+"rank": 199,
+"division": "AA",
+"rating": 48.38,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Sacramento State",
+"rank": 200,
+"division": "A",
+"rating": 48.26,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Chattanooga",
+"rank": 201,
+"division": "AA",
+"rating": 48.1,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Tennessee-Martin",
+"rank": 202,
+"division": "AA",
+"rating": 48.03,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Samford",
+"rank": 203,
+"division": "AA",
+"rating": 47.87,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Houston Christian",
+"rank": 204,
+"division": "AA",
+"rating": 47.69,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Northern Colorado",
+"rank": 205,
+"division": "AA",
+"rating": 47.49,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Maine",
+"rank": 206,
+"division": "AA",
+"rating": 47.48,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "UTRGV",
+"rank": 207,
+"division": "AA",
+"rating": 47.16,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Charlotte",
+"rank": 208,
+"division": "A",
+"rating": 47.02,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Eastern Kentucky",
+"rank": 209,
+"division": "AA",
+"rating": 46.82,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Alabama A&M",
+"rank": 210,
+"division": "AA",
+"rating": 46.79,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Eastern Illinois",
+"rank": 211,
+"division": "AA",
+"rating": 46.64,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "New Hampshire",
+"rank": 212,
+"division": "AA",
+"rating": 46.07,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Portland State",
+"rank": 213,
+"division": "AA",
+"rating": 45.81,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Bryant",
+"rank": 214,
+"division": "AA",
+"rating": 45.37,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Columbia",
+"rank": 215,
+"division": "AA",
+"rating": 45.31,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Brown",
+"rank": 216,
+"division": "AA",
+"rating": 45.3,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "East Texas A&M",
+"rank": 217,
+"division": "AA",
+"rating": 45.05,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Cornell",
+"rank": 218,
+"division": "AA",
+"rating": 44.41,
+"wins": 0,
+"losses": 0
+},
+{
+"team": "Charleston Southern",
+"rank": 219,
+"division": "AA",
+"rating": 44.32,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Holy Cross",
+"rank": 220,
+"division": "AA",
+"rating": 44.28,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Nicholls State",
+"rank": 221,
+"division": "AA",
+"rating": 43.96,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Florida A&M",
+"rank": 222,
+"division": "AA",
+"rating": 43.86,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "NC Central",
+"rank": 223,
+"division": "AA",
+"rating": 43.85,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Stony Brook",
+"rank": 224,
+"division": "AA",
+"rating": 43.78,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Fordham",
+"rank": 225,
+"division": "AA",
+"rating": 43.71,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Lindenwood",
+"rank": 226,
+"division": "AA",
+"rating": 43.54,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Alcorn State",
+"rank": 227,
+"division": "AA",
+"rating": 43.51,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Bucknell",
+"rank": 228,
+"division": "AA",
+"rating": 43.32,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Utah Tech",
+"rank": 229,
+"division": "AA",
+"rating": 42.71,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Murray State",
+"rank": 230,
+"division": "AA",
+"rating": 42.62,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Lafayette",
+"rank": 231,
+"division": "AA",
+"rating": 42.47,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Delaware State",
+"rank": 232,
+"division": "AA",
+"rating": 42.37,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Southern U.",
+"rank": 233,
+"division": "AA",
+"rating": 42.28,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "The Citadel",
+"rank": 234,
+"division": "AA",
+"rating": 42.25,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Duquesne",
+"rank": 235,
+"division": "AA",
+"rating": 42.02,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Ark.-Pine Bluff",
+"rank": 236,
+"division": "AA",
+"rating": 41.82,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Central Connecticut",
+"rank": 237,
+"division": "AA",
+"rating": 41.66,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "West Georgia",
+"rank": 238,
+"division": "AA",
+"rating": 41.56,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Morgan State",
+"rank": 239,
+"division": "AA",
+"rating": 41.4,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "LIU Post",
+"rank": 240,
+"division": "AA",
+"rating": 41.28,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Dayton",
+"rank": 241,
+"division": "AA",
+"rating": 41.1,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Tennessee State",
+"rank": 242,
+"division": "AA",
+"rating": 40.88,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "St. Thomas-Mn.",
+"rank": 243,
+"division": "AA",
+"rating": 40.36,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Drake",
+"rank": 244,
+"division": "AA",
+"rating": 40.17,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "San Diego",
+"rank": 245,
+"division": "AA",
+"rating": 40.14,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Bethune-Cookman",
+"rank": 246,
+"division": "AA",
+"rating": 40.11,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Mercyhurst",
+"rank": 247,
+"division": "AA",
+"rating": 39.61,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Robert Morris",
+"rank": 248,
+"division": "AA",
+"rating": 39.0,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "VMI",
+"rank": 249,
+"division": "AA",
+"rating": 38.99,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Grambling State",
+"rank": 250,
+"division": "AA",
+"rating": 38.95,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Stonehill College",
+"rank": 251,
+"division": "AA",
+"rating": 38.76,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Texas Southern",
+"rank": 252,
+"division": "AA",
+"rating": 38.64,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "New Haven",
+"rank": 253,
+"division": "AA",
+"rating": 38.15,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Hampton",
+"rank": 254,
+"division": "AA",
+"rating": 36.39,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Georgetown",
+"rank": 255,
+"division": "AA",
+"rating": 36.15,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "NC A&T",
+"rank": 256,
+"division": "AA",
+"rating": 35.54,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Valparaiso",
+"rank": 257,
+"division": "AA",
+"rating": 35.16,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Northwestern State",
+"rank": 258,
+"division": "AA",
+"rating": 34.81,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Marist",
+"rank": 259,
+"division": "AA",
+"rating": 34.42,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Wagner",
+"rank": 260,
+"division": "AA",
+"rating": 33.65,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Morehead State",
+"rank": 261,
+"division": "AA",
+"rating": 33.54,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Presbyterian College",
+"rank": 262,
+"division": "AA",
+"rating": 33.01,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Davidson",
+"rank": 263,
+"division": "AA",
+"rating": 32.76,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Chicago State",
+"rank": 264,
+"division": "AA",
+"rating": 32.09,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Miss. Valley State",
+"rank": 265,
+"division": "AA",
+"rating": 30.54,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Stetson",
+"rank": 266,
+"division": "AA",
+"rating": 29.63,
+"wins": 1,
+"losses": 2
+}
+]
+},
+{
+"source": "cfb_week3.pdf",
+"as_of": "SEPTEMBER 19 SATURDAY - WEEK 2",
+"through": "20260919",
+"home_advantage": 5.04,
+"teams": [
+{
+"team": "Notre Dame",
+"rank": 1,
+"division": "A",
+"rating": 94.43,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Ohio State",
+"rank": 2,
+"division": "A",
+"rating": 94.41,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Texas",
+"rank": 3,
+"division": "A",
+"rating": 92.6,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Oregon",
+"rank": 4,
+"division": "A",
+"rating": 90.92,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Miami-Florida",
+"rank": 5,
+"division": "A",
+"rating": 89.93,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Alabama",
+"rank": 6,
+"division": "A",
+"rating": 89.63,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Indiana",
+"rank": 7,
+"division": "A",
+"rating": 88.75,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Georgia",
+"rank": 8,
+"division": "A",
+"rating": 88.62,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "LSU",
+"rank": 9,
+"division": "A",
+"rating": 88.39,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Texas A&M",
+"rank": 10,
+"division": "A",
+"rating": 87.58,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Mississippi",
+"rank": 11,
+"division": "A",
+"rating": 87.05,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Oklahoma",
+"rank": 12,
+"division": "A",
+"rating": 86.58,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Florida",
+"rank": 13,
+"division": "A",
+"rating": 86.16,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Penn State",
+"rank": 14,
+"division": "A",
+"rating": 85.37,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Tennessee",
+"rank": 15,
+"division": "A",
+"rating": 85.06,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Michigan",
+"rank": 16,
+"division": "A",
+"rating": 84.72,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Texas Tech",
+"rank": 17,
+"division": "A",
+"rating": 83.59,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Iowa",
+"rank": 18,
+"division": "A",
+"rating": 83.42,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Southern California",
+"rank": 19,
+"division": "A",
+"rating": 82.83,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Auburn",
+"rank": 20,
+"division": "A",
+"rating": 81.87,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Mississippi State",
+"rank": 21,
+"division": "A",
+"rating": 81.83,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Utah",
+"rank": 22,
+"division": "A",
+"rating": 81.74,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Louisville",
+"rank": 23,
+"division": "A",
+"rating": 81.73,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "South Carolina",
+"rank": 24,
+"division": "A",
+"rating": 81.59,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "SMU",
+"rank": 25,
+"division": "A",
+"rating": 81.46,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "BYU",
+"rank": 26,
+"division": "A",
+"rating": 81.34,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Kentucky",
+"rank": 27,
+"division": "A",
+"rating": 80.78,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Pittsburgh",
+"rank": 28,
+"division": "A",
+"rating": 80.71,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Nebraska",
+"rank": 29,
+"division": "A",
+"rating": 80.11,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Missouri",
+"rank": 30,
+"division": "A",
+"rating": 80.01,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Wisconsin",
+"rank": 31,
+"division": "A",
+"rating": 79.79,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "UCLA",
+"rank": 32,
+"division": "A",
+"rating": 79.5,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Virginia Tech",
+"rank": 33,
+"division": "A",
+"rating": 79.47,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Houston",
+"rank": 34,
+"division": "A",
+"rating": 79.16,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Virginia",
+"rank": 35,
+"division": "A",
+"rating": 79.04,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Northwestern",
+"rank": 36,
+"division": "A",
+"rating": 78.91,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Kansas State",
+"rank": 37,
+"division": "A",
+"rating": 78.76,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Vanderbilt",
+"rank": 38,
+"division": "A",
+"rating": 78.56,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Illinois",
+"rank": 39,
+"division": "A",
+"rating": 78.55,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Washington",
+"rank": 40,
+"division": "A",
+"rating": 78.38,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Minnesota",
+"rank": 41,
+"division": "A",
+"rating": 77.82,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Florida State",
+"rank": 42,
+"division": "A",
+"rating": 77.38,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Arizona State",
+"rank": 43,
+"division": "A",
+"rating": 76.97,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Oklahoma State",
+"rank": 44,
+"division": "A",
+"rating": 76.57,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "West Virginia",
+"rank": 45,
+"division": "A",
+"rating": 76.5,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Baylor",
+"rank": 46,
+"division": "A",
+"rating": 76.46,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "NC State",
+"rank": 47,
+"division": "A",
+"rating": 76.36,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Maryland",
+"rank": 48,
+"division": "A",
+"rating": 76.07,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Clemson",
+"rank": 49,
+"division": "A",
+"rating": 76.02,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Arizona",
+"rank": 50,
+"division": "A",
+"rating": 76.01,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Duke",
+"rank": 51,
+"division": "A",
+"rating": 76.0,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Central Florida(UCF)",
+"rank": 52,
+"division": "A",
+"rating": 75.25,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "TCU",
+"rank": 53,
+"division": "A",
+"rating": 74.91,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Michigan State",
+"rank": 54,
+"division": "A",
+"rating": 74.8,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Wake Forest",
+"rank": 55,
+"division": "A",
+"rating": 74.12,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Boise State",
+"rank": 56,
+"division": "A",
+"rating": 73.62,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Iowa State",
+"rank": 57,
+"division": "A",
+"rating": 73.47,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Georgia Tech",
+"rank": 58,
+"division": "A",
+"rating": 73.28,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Cincinnati",
+"rank": 59,
+"division": "A",
+"rating": 72.61,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Syracuse",
+"rank": 60,
+"division": "A",
+"rating": 72.16,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Kansas",
+"rank": 61,
+"division": "A",
+"rating": 72.03,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "North Carolina",
+"rank": 62,
+"division": "A",
+"rating": 71.32,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "California",
+"rank": 63,
+"division": "A",
+"rating": 71.14,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Purdue",
+"rank": 64,
+"division": "A",
+"rating": 70.63,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "New Mexico",
+"rank": 65,
+"division": "A",
+"rating": 70.46,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "James Madison",
+"rank": 66,
+"division": "A",
+"rating": 70.34,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Arkansas",
+"rank": 67,
+"division": "A",
+"rating": 70.05,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "South Dakota State",
+"rank": 68,
+"division": "AA",
+"rating": 69.54,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Colorado",
+"rank": 69,
+"division": "A",
+"rating": 69.35,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "UTSA",
+"rank": 70,
+"division": "A",
+"rating": 69.12,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "North Dakota State",
+"rank": 71,
+"division": "A",
+"rating": 68.73,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "South Florida",
+"rank": 72,
+"division": "A",
+"rating": 68.42,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Army West Point",
+"rank": 73,
+"division": "A",
+"rating": 67.59,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Western Michigan",
+"rank": 74,
+"division": "A",
+"rating": 66.98,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Tulane",
+"rank": 75,
+"division": "A",
+"rating": 66.82,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Rutgers",
+"rank": 76,
+"division": "A",
+"rating": 66.73,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Montana State",
+"rank": 77,
+"division": "AA",
+"rating": 66.46,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Tulsa",
+"rank": 78,
+"division": "A",
+"rating": 66.18,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Memphis",
+"rank": 79,
+"division": "A",
+"rating": 66.09,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "San Diego State",
+"rank": 80,
+"division": "A",
+"rating": 65.67,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Fresno State",
+"rank": 81,
+"division": "A",
+"rating": 65.18,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Texas State",
+"rank": 82,
+"division": "A",
+"rating": 64.9,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Stanford",
+"rank": 83,
+"division": "A",
+"rating": 64.87,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Oregon State",
+"rank": 84,
+"division": "A",
+"rating": 64.69,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Toledo",
+"rank": 85,
+"division": "A",
+"rating": 64.62,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Washington State",
+"rank": 86,
+"division": "A",
+"rating": 63.76,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Navy",
+"rank": 87,
+"division": "A",
+"rating": 63.72,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Liberty",
+"rank": 88,
+"division": "A",
+"rating": 63.4,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "East Carolina",
+"rank": 89,
+"division": "A",
+"rating": 63.4,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Connecticut",
+"rank": 90,
+"division": "A",
+"rating": 63.27,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Louisiana Tech",
+"rank": 91,
+"division": "A",
+"rating": 63.27,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "North Texas",
+"rank": 92,
+"division": "A",
+"rating": 63.17,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Boston College",
+"rank": 93,
+"division": "A",
+"rating": 62.95,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Temple",
+"rank": 94,
+"division": "A",
+"rating": 62.86,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "South Dakota",
+"rank": 95,
+"division": "AA",
+"rating": 62.73,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Delaware",
+"rank": 96,
+"division": "A",
+"rating": 62.35,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Colorado State",
+"rank": 97,
+"division": "A",
+"rating": 62.07,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Illinois State",
+"rank": 98,
+"division": "AA",
+"rating": 61.91,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Troy",
+"rank": 99,
+"division": "A",
+"rating": 61.86,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Old Dominion",
+"rank": 100,
+"division": "A",
+"rating": 61.66,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Louisiana-Lafayette",
+"rank": 101,
+"division": "A",
+"rating": 61.64,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Appalachian State",
+"rank": 102,
+"division": "A",
+"rating": 61.61,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Miami-Ohio",
+"rank": 103,
+"division": "A",
+"rating": 61.58,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "North Dakota",
+"rank": 104,
+"division": "AA",
+"rating": 61.52,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "UNLV",
+"rank": 105,
+"division": "A",
+"rating": 61.24,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Florida Atlantic",
+"rank": 106,
+"division": "A",
+"rating": 61.23,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Air Force",
+"rank": 107,
+"division": "A",
+"rating": 61.17,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Youngstown State",
+"rank": 108,
+"division": "AA",
+"rating": 60.96,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Stephen F. Austin",
+"rank": 109,
+"division": "AA",
+"rating": 60.68,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Coastal Carolina",
+"rank": 110,
+"division": "A",
+"rating": 60.45,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "South Alabama",
+"rank": 111,
+"division": "A",
+"rating": 60.27,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Austin Peay",
+"rank": 112,
+"division": "AA",
+"rating": 60.12,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Jacksonville State",
+"rank": 113,
+"division": "A",
+"rating": 59.96,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Hawai'i",
+"rank": 114,
+"division": "A",
+"rating": 59.43,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Georgia State",
+"rank": 115,
+"division": "A",
+"rating": 59.34,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Marshall",
+"rank": 116,
+"division": "A",
+"rating": 59.05,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Utah State",
+"rank": 117,
+"division": "A",
+"rating": 58.96,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Georgia Southern",
+"rank": 118,
+"division": "A",
+"rating": 58.67,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Kennesaw State",
+"rank": 119,
+"division": "A",
+"rating": 58.25,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Harvard",
+"rank": 120,
+"division": "AA",
+"rating": 58.24,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Arkansas State",
+"rank": 121,
+"division": "A",
+"rating": 58.11,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Ohio",
+"rank": 122,
+"division": "A",
+"rating": 57.86,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Tarleton State",
+"rank": 123,
+"division": "AA",
+"rating": 57.69,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Fla. International",
+"rank": 124,
+"division": "A",
+"rating": 57.59,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Rice",
+"rank": 125,
+"division": "A",
+"rating": 57.34,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Nevada",
+"rank": 126,
+"division": "A",
+"rating": 57.2,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Sam Houston State",
+"rank": 127,
+"division": "A",
+"rating": 57.09,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Tennessee Tech",
+"rank": 128,
+"division": "AA",
+"rating": 56.76,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Idaho State",
+"rank": 129,
+"division": "AA",
+"rating": 56.36,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Central Michigan",
+"rank": 130,
+"division": "A",
+"rating": 56.09,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Montana",
+"rank": 131,
+"division": "AA",
+"rating": 56.05,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "UC Davis",
+"rank": 132,
+"division": "AA",
+"rating": 55.85,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Western Kentucky",
+"rank": 133,
+"division": "A",
+"rating": 55.6,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "San Jose State",
+"rank": 134,
+"division": "A",
+"rating": 55.47,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Lehigh",
+"rank": 135,
+"division": "AA",
+"rating": 55.36,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Yale",
+"rank": 136,
+"division": "AA",
+"rating": 55.3,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "New Mexico State",
+"rank": 137,
+"division": "A",
+"rating": 54.99,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Southern Illinois",
+"rank": 138,
+"division": "AA",
+"rating": 54.96,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "UAB",
+"rank": 139,
+"division": "A",
+"rating": 54.76,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Akron",
+"rank": 140,
+"division": "A",
+"rating": 54.39,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Northern Illinois",
+"rank": 141,
+"division": "A",
+"rating": 53.81,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Middle Tennessee",
+"rank": 142,
+"division": "A",
+"rating": 53.72,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Missouri State",
+"rank": 143,
+"division": "A",
+"rating": 53.54,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Northern Arizona",
+"rank": 144,
+"division": "AA",
+"rating": 53.18,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "UTEP",
+"rank": 145,
+"division": "A",
+"rating": 53.03,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Wyoming",
+"rank": 146,
+"division": "A",
+"rating": 52.98,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Abilene Christian",
+"rank": 147,
+"division": "AA",
+"rating": 52.36,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Eastern Michigan",
+"rank": 148,
+"division": "A",
+"rating": 52.32,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Buffalo",
+"rank": 149,
+"division": "A",
+"rating": 52.31,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Southern Miss",
+"rank": 150,
+"division": "A",
+"rating": 52.29,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Mercer",
+"rank": 151,
+"division": "AA",
+"rating": 52.05,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Massachusetts",
+"rank": 152,
+"division": "A",
+"rating": 51.55,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Incarnate Word",
+"rank": 153,
+"division": "AA",
+"rating": 51.01,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Eastern Washington",
+"rank": 154,
+"division": "AA",
+"rating": 50.82,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Northern Iowa",
+"rank": 155,
+"division": "AA",
+"rating": 50.29,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Charlotte",
+"rank": 156,
+"division": "A",
+"rating": 50.09,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Pennsylvania",
+"rank": 157,
+"division": "AA",
+"rating": 50.05,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "SE Missouri State",
+"rank": 158,
+"division": "AA",
+"rating": 49.86,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Chattanooga",
+"rank": 159,
+"division": "AA",
+"rating": 49.79,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "UTRGV",
+"rank": 160,
+"division": "AA",
+"rating": 49.74,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Dartmouth",
+"rank": 161,
+"division": "AA",
+"rating": 49.74,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Gardner-Webb",
+"rank": 162,
+"division": "AA",
+"rating": 49.73,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Monmouth-NJ",
+"rank": 163,
+"division": "AA",
+"rating": 49.64,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Villanova",
+"rank": 164,
+"division": "AA",
+"rating": 49.51,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Idaho",
+"rank": 165,
+"division": "AA",
+"rating": 49.49,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "SC State",
+"rank": 166,
+"division": "AA",
+"rating": 49.46,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Kent State",
+"rank": 167,
+"division": "A",
+"rating": 49.45,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Rhode Island",
+"rank": 168,
+"division": "AA",
+"rating": 49.44,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "LouisianaMonroe(ULM)",
+"rank": 169,
+"division": "A",
+"rating": 49.42,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Bowling Green",
+"rank": 170,
+"division": "A",
+"rating": 49.27,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Ball State",
+"rank": 171,
+"division": "A",
+"rating": 49.03,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "SE Louisiana",
+"rank": 172,
+"division": "AA",
+"rating": 48.96,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Jackson State",
+"rank": 173,
+"division": "AA",
+"rating": 48.76,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Colgate",
+"rank": 174,
+"division": "AA",
+"rating": 48.76,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Western Carolina",
+"rank": 175,
+"division": "AA",
+"rating": 48.6,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Southern Utah",
+"rank": 176,
+"division": "AA",
+"rating": 48.44,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Furman",
+"rank": 177,
+"division": "AA",
+"rating": 47.9,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Campbell",
+"rank": 178,
+"division": "AA",
+"rating": 47.87,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Elon",
+"rank": 179,
+"division": "AA",
+"rating": 47.82,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Alabama State",
+"rank": 180,
+"division": "AA",
+"rating": 47.76,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Weber State",
+"rank": 181,
+"division": "AA",
+"rating": 47.73,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Tennessee-Martin",
+"rank": 182,
+"division": "AA",
+"rating": 47.72,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Lamar",
+"rank": 183,
+"division": "AA",
+"rating": 47.47,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Sacramento State",
+"rank": 184,
+"division": "A",
+"rating": 47.41,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Western Illinois",
+"rank": 185,
+"division": "AA",
+"rating": 47.12,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "North Alabama",
+"rank": 186,
+"division": "AA",
+"rating": 46.8,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Indiana State",
+"rank": 187,
+"division": "AA",
+"rating": 46.68,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Albany-NY",
+"rank": 188,
+"division": "AA",
+"rating": 46.26,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Stony Brook",
+"rank": 189,
+"division": "AA",
+"rating": 46.1,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "East Tennessee State",
+"rank": 190,
+"division": "AA",
+"rating": 45.89,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Central Arkansas",
+"rank": 191,
+"division": "AA",
+"rating": 45.72,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Brown",
+"rank": 192,
+"division": "AA",
+"rating": 45.44,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "Prairie View A&M",
+"rank": 193,
+"division": "AA",
+"rating": 45.38,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Columbia",
+"rank": 194,
+"division": "AA",
+"rating": 45.02,
+"wins": 1,
+"losses": 0
+},
+{
+"team": "West Florida",
+"rank": 195,
+"division": "AA",
+"rating": 44.62,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "McNeese State",
+"rank": 196,
+"division": "AA",
+"rating": 44.52,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Richmond",
+"rank": 197,
+"division": "AA",
+"rating": 44.5,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Cal Poly-SLO",
+"rank": 198,
+"division": "AA",
+"rating": 44.29,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "William & Mary",
+"rank": 199,
+"division": "AA",
+"rating": 44.21,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Bryant",
+"rank": 200,
+"division": "AA",
+"rating": 44.21,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Eastern Kentucky",
+"rank": 201,
+"division": "AA",
+"rating": 44.0,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "New Hampshire",
+"rank": 202,
+"division": "AA",
+"rating": 43.76,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Towson",
+"rank": 203,
+"division": "AA",
+"rating": 43.64,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Northern Colorado",
+"rank": 204,
+"division": "AA",
+"rating": 43.55,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Fordham",
+"rank": 205,
+"division": "AA",
+"rating": 43.5,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Wofford",
+"rank": 206,
+"division": "AA",
+"rating": 43.46,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Princeton",
+"rank": 207,
+"division": "AA",
+"rating": 43.32,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Samford",
+"rank": 208,
+"division": "AA",
+"rating": 43.08,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Holy Cross",
+"rank": 209,
+"division": "AA",
+"rating": 42.95,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "St. Thomas-Mn.",
+"rank": 210,
+"division": "AA",
+"rating": 42.87,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Dayton",
+"rank": 211,
+"division": "AA",
+"rating": 42.64,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "NC Central",
+"rank": 212,
+"division": "AA",
+"rating": 42.41,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Maine",
+"rank": 213,
+"division": "AA",
+"rating": 42.33,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Lafayette",
+"rank": 214,
+"division": "AA",
+"rating": 42.3,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Central Connecticut",
+"rank": 215,
+"division": "AA",
+"rating": 42.24,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Charleston Southern",
+"rank": 216,
+"division": "AA",
+"rating": 42.17,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Lindenwood",
+"rank": 217,
+"division": "AA",
+"rating": 42.01,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Butler",
+"rank": 218,
+"division": "AA",
+"rating": 41.99,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Morgan State",
+"rank": 219,
+"division": "AA",
+"rating": 41.92,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Eastern Illinois",
+"rank": 220,
+"division": "AA",
+"rating": 41.6,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Houston Christian",
+"rank": 221,
+"division": "AA",
+"rating": 41.41,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Portland State",
+"rank": 222,
+"division": "AA",
+"rating": 41.22,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Sacred Heart",
+"rank": 223,
+"division": "AA",
+"rating": 41.14,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Howard",
+"rank": 224,
+"division": "AA",
+"rating": 41.1,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Cornell",
+"rank": 225,
+"division": "AA",
+"rating": 41.02,
+"wins": 0,
+"losses": 1
+},
+{
+"team": "Nicholls State",
+"rank": 226,
+"division": "AA",
+"rating": 41.02,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Alabama A&M",
+"rank": 227,
+"division": "AA",
+"rating": 40.82,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "West Georgia",
+"rank": 228,
+"division": "AA",
+"rating": 40.75,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "The Citadel",
+"rank": 229,
+"division": "AA",
+"rating": 40.65,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Merrimack",
+"rank": 230,
+"division": "AA",
+"rating": 40.6,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Delaware State",
+"rank": 231,
+"division": "AA",
+"rating": 40.43,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Norfolk State",
+"rank": 232,
+"division": "AA",
+"rating": 40.38,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Southern U.",
+"rank": 233,
+"division": "AA",
+"rating": 40.18,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "East Texas A&M",
+"rank": 234,
+"division": "AA",
+"rating": 40.05,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "San Diego",
+"rank": 235,
+"division": "AA",
+"rating": 39.73,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Drake",
+"rank": 236,
+"division": "AA",
+"rating": 39.55,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Duquesne",
+"rank": 237,
+"division": "AA",
+"rating": 39.51,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Bethune-Cookman",
+"rank": 238,
+"division": "AA",
+"rating": 39.44,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Utah Tech",
+"rank": 239,
+"division": "AA",
+"rating": 39.3,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Robert Morris",
+"rank": 240,
+"division": "AA",
+"rating": 39.26,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Tennessee State",
+"rank": 241,
+"division": "AA",
+"rating": 38.91,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Florida A&M",
+"rank": 242,
+"division": "AA",
+"rating": 38.78,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "LIU Post",
+"rank": 243,
+"division": "AA",
+"rating": 38.74,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Murray State",
+"rank": 244,
+"division": "AA",
+"rating": 38.25,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Bucknell",
+"rank": 245,
+"division": "AA",
+"rating": 38.0,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Stonehill College",
+"rank": 246,
+"division": "AA",
+"rating": 37.87,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Georgetown",
+"rank": 247,
+"division": "AA",
+"rating": 37.78,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "New Haven",
+"rank": 248,
+"division": "AA",
+"rating": 37.55,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Alcorn State",
+"rank": 249,
+"division": "AA",
+"rating": 37.44,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Mercyhurst",
+"rank": 250,
+"division": "AA",
+"rating": 37.1,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Grambling State",
+"rank": 251,
+"division": "AA",
+"rating": 37.05,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Texas Southern",
+"rank": 252,
+"division": "AA",
+"rating": 36.57,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Presbyterian College",
+"rank": 253,
+"division": "AA",
+"rating": 35.91,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Ark.-Pine Bluff",
+"rank": 254,
+"division": "AA",
+"rating": 35.58,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Chicago State",
+"rank": 255,
+"division": "AA",
+"rating": 35.52,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Marist",
+"rank": 256,
+"division": "AA",
+"rating": 35.02,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Hampton",
+"rank": 257,
+"division": "AA",
+"rating": 34.88,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "NC A&T",
+"rank": 258,
+"division": "AA",
+"rating": 33.93,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "VMI",
+"rank": 259,
+"division": "AA",
+"rating": 33.32,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Wagner",
+"rank": 260,
+"division": "AA",
+"rating": 33.19,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Valparaiso",
+"rank": 261,
+"division": "AA",
+"rating": 33.13,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Davidson",
+"rank": 262,
+"division": "AA",
+"rating": 32.87,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Morehead State",
+"rank": 263,
+"division": "AA",
+"rating": 32.49,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Northwestern State",
+"rank": 264,
+"division": "AA",
+"rating": 30.33,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Miss. Valley State",
+"rank": 265,
+"division": "AA",
+"rating": 30.05,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Stetson",
+"rank": 266,
+"division": "AA",
+"rating": 28.73,
+"wins": 1,
+"losses": 3
+}
+]
+},
+{
+"source": "cfb_week4.pdf",
+"as_of": "SEPTEMBER 26 SATURDAY - WEEK 4",
+"through": "20260926",
+"home_advantage": 4.33,
+"teams": [
+{
+"team": "Notre Dame",
+"rank": 1,
+"division": "A",
+"rating": 94.76,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Ohio State",
+"rank": 2,
+"division": "A",
+"rating": 93.72,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Georgia",
+"rank": 3,
+"division": "A",
+"rating": 92.28,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Texas",
+"rank": 4,
+"division": "A",
+"rating": 92.05,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Oregon",
+"rank": 5,
+"division": "A",
+"rating": 91.12,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "LSU",
+"rank": 6,
+"division": "A",
+"rating": 90.64,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Alabama",
+"rank": 7,
+"division": "A",
+"rating": 90.51,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Miami-Florida",
+"rank": 8,
+"division": "A",
+"rating": 90.17,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Florida",
+"rank": 9,
+"division": "A",
+"rating": 88.58,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Indiana",
+"rank": 10,
+"division": "A",
+"rating": 87.69,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Tennessee",
+"rank": 11,
+"division": "A",
+"rating": 85.52,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Utah",
+"rank": 12,
+"division": "A",
+"rating": 85.11,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Iowa",
+"rank": 13,
+"division": "A",
+"rating": 83.83,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "UCLA",
+"rank": 14,
+"division": "A",
+"rating": 83.7,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Texas A&M",
+"rank": 15,
+"division": "A",
+"rating": 83.09,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Nebraska",
+"rank": 16,
+"division": "A",
+"rating": 82.89,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Texas Tech",
+"rank": 17,
+"division": "A",
+"rating": 82.48,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Mississippi State",
+"rank": 18,
+"division": "A",
+"rating": 82.21,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Mississippi",
+"rank": 19,
+"division": "A",
+"rating": 81.91,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Penn State",
+"rank": 20,
+"division": "A",
+"rating": 81.68,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Pittsburgh",
+"rank": 21,
+"division": "A",
+"rating": 81.52,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Southern California",
+"rank": 22,
+"division": "A",
+"rating": 81.21,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Auburn",
+"rank": 23,
+"division": "A",
+"rating": 81.2,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Virginia",
+"rank": 24,
+"division": "A",
+"rating": 81.05,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Kentucky",
+"rank": 25,
+"division": "A",
+"rating": 80.94,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Michigan",
+"rank": 26,
+"division": "A",
+"rating": 80.77,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Northwestern",
+"rank": 27,
+"division": "A",
+"rating": 80.61,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "BYU",
+"rank": 28,
+"division": "A",
+"rating": 80.6,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Wisconsin",
+"rank": 29,
+"division": "A",
+"rating": 80.59,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Oklahoma",
+"rank": 30,
+"division": "A",
+"rating": 80.47,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Oklahoma State",
+"rank": 31,
+"division": "A",
+"rating": 79.51,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Houston",
+"rank": 32,
+"division": "A",
+"rating": 79.41,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Illinois",
+"rank": 33,
+"division": "A",
+"rating": 78.38,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Duke",
+"rank": 34,
+"division": "A",
+"rating": 77.94,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Louisville",
+"rank": 35,
+"division": "A",
+"rating": 77.78,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Central Florida(UCF)",
+"rank": 36,
+"division": "A",
+"rating": 77.52,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Boise State",
+"rank": 37,
+"division": "A",
+"rating": 77.48,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Missouri",
+"rank": 38,
+"division": "A",
+"rating": 77.47,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "South Carolina",
+"rank": 39,
+"division": "A",
+"rating": 77.36,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Clemson",
+"rank": 40,
+"division": "A",
+"rating": 76.88,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Vanderbilt",
+"rank": 41,
+"division": "A",
+"rating": 76.84,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Kansas State",
+"rank": 42,
+"division": "A",
+"rating": 76.82,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Baylor",
+"rank": 43,
+"division": "A",
+"rating": 76.61,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "TCU",
+"rank": 44,
+"division": "A",
+"rating": 76.39,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Minnesota",
+"rank": 45,
+"division": "A",
+"rating": 76.31,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Virginia Tech",
+"rank": 46,
+"division": "A",
+"rating": 76.15,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Arizona State",
+"rank": 47,
+"division": "A",
+"rating": 75.67,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "NC State",
+"rank": 48,
+"division": "A",
+"rating": 75.49,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Iowa State",
+"rank": 49,
+"division": "A",
+"rating": 75.39,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Wake Forest",
+"rank": 50,
+"division": "A",
+"rating": 75.27,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "SMU",
+"rank": 51,
+"division": "A",
+"rating": 74.76,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "West Virginia",
+"rank": 52,
+"division": "A",
+"rating": 74.6,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Michigan State",
+"rank": 53,
+"division": "A",
+"rating": 74.3,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "James Madison",
+"rank": 54,
+"division": "A",
+"rating": 74.25,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Washington",
+"rank": 55,
+"division": "A",
+"rating": 74.19,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Cincinnati",
+"rank": 56,
+"division": "A",
+"rating": 74.1,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Arizona",
+"rank": 57,
+"division": "A",
+"rating": 74.07,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Florida State",
+"rank": 58,
+"division": "A",
+"rating": 73.14,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "North Carolina",
+"rank": 59,
+"division": "A",
+"rating": 72.81,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "New Mexico",
+"rank": 60,
+"division": "A",
+"rating": 72.74,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Arkansas",
+"rank": 61,
+"division": "A",
+"rating": 72.72,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Syracuse",
+"rank": 62,
+"division": "A",
+"rating": 72.34,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "UTSA",
+"rank": 63,
+"division": "A",
+"rating": 71.58,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Kansas",
+"rank": 64,
+"division": "A",
+"rating": 70.24,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Georgia Tech",
+"rank": 65,
+"division": "A",
+"rating": 69.82,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Texas State",
+"rank": 66,
+"division": "A",
+"rating": 69.79,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Purdue",
+"rank": 67,
+"division": "A",
+"rating": 69.75,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Oregon State",
+"rank": 68,
+"division": "A",
+"rating": 69.48,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Rutgers",
+"rank": 69,
+"division": "A",
+"rating": 69.45,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Toledo",
+"rank": 70,
+"division": "A",
+"rating": 69.06,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "South Dakota State",
+"rank": 71,
+"division": "AA",
+"rating": 69.06,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Army West Point",
+"rank": 72,
+"division": "A",
+"rating": 69.02,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "California",
+"rank": 73,
+"division": "A",
+"rating": 68.93,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Maryland",
+"rank": 74,
+"division": "A",
+"rating": 68.85,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Colorado",
+"rank": 75,
+"division": "A",
+"rating": 68.59,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "North Texas",
+"rank": 76,
+"division": "A",
+"rating": 68.15,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "North Dakota State",
+"rank": 77,
+"division": "A",
+"rating": 67.99,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Memphis",
+"rank": 78,
+"division": "A",
+"rating": 67.14,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Liberty",
+"rank": 79,
+"division": "A",
+"rating": 66.89,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Fresno State",
+"rank": 80,
+"division": "A",
+"rating": 66.61,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "South Florida",
+"rank": 81,
+"division": "A",
+"rating": 66.25,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Western Michigan",
+"rank": 82,
+"division": "A",
+"rating": 66.04,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Louisiana Tech",
+"rank": 83,
+"division": "A",
+"rating": 65.41,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Louisiana-Lafayette",
+"rank": 84,
+"division": "A",
+"rating": 65.35,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Stanford",
+"rank": 85,
+"division": "A",
+"rating": 64.96,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Tulsa",
+"rank": 86,
+"division": "A",
+"rating": 64.67,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Youngstown State",
+"rank": 87,
+"division": "AA",
+"rating": 64.33,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Tulane",
+"rank": 88,
+"division": "A",
+"rating": 64.24,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Colorado State",
+"rank": 89,
+"division": "A",
+"rating": 64.03,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Montana State",
+"rank": 90,
+"division": "AA",
+"rating": 63.87,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Temple",
+"rank": 91,
+"division": "A",
+"rating": 63.86,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Georgia State",
+"rank": 92,
+"division": "A",
+"rating": 63.8,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "UNLV",
+"rank": 93,
+"division": "A",
+"rating": 63.76,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "San Diego State",
+"rank": 94,
+"division": "A",
+"rating": 63.6,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Connecticut",
+"rank": 95,
+"division": "A",
+"rating": 63.15,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Appalachian State",
+"rank": 96,
+"division": "A",
+"rating": 63.09,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Washington State",
+"rank": 97,
+"division": "A",
+"rating": 63.08,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Boston College",
+"rank": 98,
+"division": "A",
+"rating": 62.97,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Miami-Ohio",
+"rank": 99,
+"division": "A",
+"rating": 62.83,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "East Carolina",
+"rank": 100,
+"division": "A",
+"rating": 62.75,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Austin Peay",
+"rank": 101,
+"division": "AA",
+"rating": 62.49,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Florida Atlantic",
+"rank": 102,
+"division": "A",
+"rating": 62.49,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Stephen F. Austin",
+"rank": 103,
+"division": "AA",
+"rating": 61.43,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "South Alabama",
+"rank": 104,
+"division": "A",
+"rating": 61.34,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Georgia Southern",
+"rank": 105,
+"division": "A",
+"rating": 61.33,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "North Dakota",
+"rank": 106,
+"division": "AA",
+"rating": 61.15,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Utah State",
+"rank": 107,
+"division": "A",
+"rating": 61.14,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "South Dakota",
+"rank": 108,
+"division": "AA",
+"rating": 61.06,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Air Force",
+"rank": 109,
+"division": "A",
+"rating": 60.95,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Navy",
+"rank": 110,
+"division": "A",
+"rating": 60.81,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Delaware",
+"rank": 111,
+"division": "A",
+"rating": 60.41,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Jacksonville State",
+"rank": 112,
+"division": "A",
+"rating": 60.38,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Arkansas State",
+"rank": 113,
+"division": "A",
+"rating": 59.8,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Illinois State",
+"rank": 114,
+"division": "AA",
+"rating": 59.71,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Montana",
+"rank": 115,
+"division": "AA",
+"rating": 59.69,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Troy",
+"rank": 116,
+"division": "A",
+"rating": 59.32,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Kennesaw State",
+"rank": 117,
+"division": "A",
+"rating": 59.28,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Ohio",
+"rank": 118,
+"division": "A",
+"rating": 58.86,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Coastal Carolina",
+"rank": 119,
+"division": "A",
+"rating": 58.58,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Old Dominion",
+"rank": 120,
+"division": "A",
+"rating": 58.14,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Sam Houston State",
+"rank": 121,
+"division": "A",
+"rating": 57.88,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Massachusetts",
+"rank": 122,
+"division": "A",
+"rating": 57.62,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Southern Illinois",
+"rank": 123,
+"division": "AA",
+"rating": 57.21,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Tennessee Tech",
+"rank": 124,
+"division": "AA",
+"rating": 57.03,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Western Kentucky",
+"rank": 125,
+"division": "A",
+"rating": 56.93,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "UAB",
+"rank": 126,
+"division": "A",
+"rating": 56.92,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Nevada",
+"rank": 127,
+"division": "A",
+"rating": 56.73,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Rice",
+"rank": 128,
+"division": "A",
+"rating": 56.69,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Tarleton State",
+"rank": 129,
+"division": "AA",
+"rating": 56.28,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Marshall",
+"rank": 130,
+"division": "A",
+"rating": 56.07,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "San Jose State",
+"rank": 131,
+"division": "A",
+"rating": 55.88,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Missouri State",
+"rank": 132,
+"division": "A",
+"rating": 55.78,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Lehigh",
+"rank": 133,
+"division": "AA",
+"rating": 55.63,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Idaho State",
+"rank": 134,
+"division": "AA",
+"rating": 55.59,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Fla. International",
+"rank": 135,
+"division": "A",
+"rating": 55.09,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Hawai'i",
+"rank": 136,
+"division": "A",
+"rating": 55.01,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Central Michigan",
+"rank": 137,
+"division": "A",
+"rating": 54.89,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Wyoming",
+"rank": 138,
+"division": "A",
+"rating": 54.56,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Southern Miss",
+"rank": 139,
+"division": "A",
+"rating": 54.2,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Harvard",
+"rank": 140,
+"division": "AA",
+"rating": 54.16,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Middle Tennessee",
+"rank": 141,
+"division": "A",
+"rating": 53.64,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "New Mexico State",
+"rank": 142,
+"division": "A",
+"rating": 53.24,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Northern Iowa",
+"rank": 143,
+"division": "AA",
+"rating": 53.03,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Gardner-Webb",
+"rank": 144,
+"division": "AA",
+"rating": 52.63,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Mercer",
+"rank": 145,
+"division": "AA",
+"rating": 52.54,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Northern Illinois",
+"rank": 146,
+"division": "A",
+"rating": 52.49,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Eastern Michigan",
+"rank": 147,
+"division": "A",
+"rating": 52.36,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Northern Arizona",
+"rank": 148,
+"division": "AA",
+"rating": 51.27,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Akron",
+"rank": 149,
+"division": "A",
+"rating": 51.08,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Chattanooga",
+"rank": 150,
+"division": "AA",
+"rating": 50.97,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Kent State",
+"rank": 151,
+"division": "A",
+"rating": 50.94,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "UTEP",
+"rank": 152,
+"division": "A",
+"rating": 50.87,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Lamar",
+"rank": 153,
+"division": "AA",
+"rating": 50.62,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "SE Missouri State",
+"rank": 154,
+"division": "AA",
+"rating": 50.16,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Colgate",
+"rank": 155,
+"division": "AA",
+"rating": 50.15,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Campbell",
+"rank": 156,
+"division": "AA",
+"rating": 49.94,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Bowling Green",
+"rank": 157,
+"division": "A",
+"rating": 49.43,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "West Florida",
+"rank": 158,
+"division": "AA",
+"rating": 49.39,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Dartmouth",
+"rank": 159,
+"division": "AA",
+"rating": 49.23,
+"wins": 0,
+"losses": 2
+},
+{
+"team": "Princeton",
+"rank": 160,
+"division": "AA",
+"rating": 49.23,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Yale",
+"rank": 161,
+"division": "AA",
+"rating": 48.89,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Abilene Christian",
+"rank": 162,
+"division": "AA",
+"rating": 48.85,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "East Tennessee State",
+"rank": 163,
+"division": "AA",
+"rating": 48.77,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "North Alabama",
+"rank": 164,
+"division": "AA",
+"rating": 48.54,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "UTRGV",
+"rank": 165,
+"division": "AA",
+"rating": 48.51,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "SC State",
+"rank": 166,
+"division": "AA",
+"rating": 48.36,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Monmouth-NJ",
+"rank": 167,
+"division": "AA",
+"rating": 48.31,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Western Illinois",
+"rank": 168,
+"division": "AA",
+"rating": 48.29,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Southern Utah",
+"rank": 169,
+"division": "AA",
+"rating": 48.18,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Indiana State",
+"rank": 170,
+"division": "AA",
+"rating": 48.02,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Idaho",
+"rank": 171,
+"division": "AA",
+"rating": 48.02,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Eastern Washington",
+"rank": 172,
+"division": "AA",
+"rating": 48.0,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "SE Louisiana",
+"rank": 173,
+"division": "AA",
+"rating": 47.98,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Elon",
+"rank": 174,
+"division": "AA",
+"rating": 47.83,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Charlotte",
+"rank": 175,
+"division": "A",
+"rating": 47.82,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Ball State",
+"rank": 176,
+"division": "A",
+"rating": 47.74,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "UC Davis",
+"rank": 177,
+"division": "AA",
+"rating": 47.21,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Buffalo",
+"rank": 178,
+"division": "A",
+"rating": 47.15,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Stony Brook",
+"rank": 179,
+"division": "AA",
+"rating": 47.06,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Jackson State",
+"rank": 180,
+"division": "AA",
+"rating": 46.57,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Northern Colorado",
+"rank": 181,
+"division": "AA",
+"rating": 46.24,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Tennessee-Martin",
+"rank": 182,
+"division": "AA",
+"rating": 46.17,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Pennsylvania",
+"rank": 183,
+"division": "AA",
+"rating": 46.11,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Furman",
+"rank": 184,
+"division": "AA",
+"rating": 46.08,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "LouisianaMonroe(ULM)",
+"rank": 185,
+"division": "A",
+"rating": 45.68,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Central Arkansas",
+"rank": 186,
+"division": "AA",
+"rating": 45.64,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Cornell",
+"rank": 187,
+"division": "AA",
+"rating": 45.6,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Bryant",
+"rank": 188,
+"division": "AA",
+"rating": 45.47,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Samford",
+"rank": 189,
+"division": "AA",
+"rating": 45.3,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "St. Thomas-Mn.",
+"rank": 190,
+"division": "AA",
+"rating": 45.3,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Cal Poly-SLO",
+"rank": 191,
+"division": "AA",
+"rating": 45.14,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Villanova",
+"rank": 192,
+"division": "AA",
+"rating": 44.92,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Rhode Island",
+"rank": 193,
+"division": "AA",
+"rating": 44.84,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Weber State",
+"rank": 194,
+"division": "AA",
+"rating": 44.71,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Alabama A&M",
+"rank": 195,
+"division": "AA",
+"rating": 44.67,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Prairie View A&M",
+"rank": 196,
+"division": "AA",
+"rating": 44.65,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Incarnate Word",
+"rank": 197,
+"division": "AA",
+"rating": 44.6,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Brown",
+"rank": 198,
+"division": "AA",
+"rating": 44.57,
+"wins": 1,
+"losses": 1
+},
+{
+"team": "Wofford",
+"rank": 199,
+"division": "AA",
+"rating": 44.15,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Alabama State",
+"rank": 200,
+"division": "AA",
+"rating": 44.03,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Sacramento State",
+"rank": 201,
+"division": "A",
+"rating": 43.81,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Western Carolina",
+"rank": 202,
+"division": "AA",
+"rating": 43.58,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "McNeese State",
+"rank": 203,
+"division": "AA",
+"rating": 43.11,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Albany-NY",
+"rank": 204,
+"division": "AA",
+"rating": 43.08,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Richmond",
+"rank": 205,
+"division": "AA",
+"rating": 42.41,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Morgan State",
+"rank": 206,
+"division": "AA",
+"rating": 42.15,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Central Connecticut",
+"rank": 207,
+"division": "AA",
+"rating": 42.05,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Columbia",
+"rank": 208,
+"division": "AA",
+"rating": 41.87,
+"wins": 2,
+"losses": 0
+},
+{
+"team": "Sacred Heart",
+"rank": 209,
+"division": "AA",
+"rating": 41.73,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Charleston Southern",
+"rank": 210,
+"division": "AA",
+"rating": 41.58,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Butler",
+"rank": 211,
+"division": "AA",
+"rating": 41.34,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Norfolk State",
+"rank": 212,
+"division": "AA",
+"rating": 41.23,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Eastern Kentucky",
+"rank": 213,
+"division": "AA",
+"rating": 41.04,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Towson",
+"rank": 214,
+"division": "AA",
+"rating": 40.19,
+"wins": 0,
+"losses": 5
+},
+{
+"team": "Fordham",
+"rank": 215,
+"division": "AA",
+"rating": 40.11,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Portland State",
+"rank": 216,
+"division": "AA",
+"rating": 40.05,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Holy Cross",
+"rank": 217,
+"division": "AA",
+"rating": 40.02,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Robert Morris",
+"rank": 218,
+"division": "AA",
+"rating": 39.78,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "NC Central",
+"rank": 219,
+"division": "AA",
+"rating": 39.58,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Eastern Illinois",
+"rank": 220,
+"division": "AA",
+"rating": 39.56,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "William & Mary",
+"rank": 221,
+"division": "AA",
+"rating": 39.56,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Grambling State",
+"rank": 222,
+"division": "AA",
+"rating": 39.49,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "East Texas A&M",
+"rank": 223,
+"division": "AA",
+"rating": 39.42,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "New Hampshire",
+"rank": 224,
+"division": "AA",
+"rating": 39.32,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Delaware State",
+"rank": 225,
+"division": "AA",
+"rating": 39.3,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Lindenwood",
+"rank": 226,
+"division": "AA",
+"rating": 38.9,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Howard",
+"rank": 227,
+"division": "AA",
+"rating": 38.83,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "West Georgia",
+"rank": 228,
+"division": "AA",
+"rating": 38.82,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Stonehill College",
+"rank": 229,
+"division": "AA",
+"rating": 38.39,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Tennessee State",
+"rank": 230,
+"division": "AA",
+"rating": 38.38,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Maine",
+"rank": 231,
+"division": "AA",
+"rating": 38.34,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Houston Christian",
+"rank": 232,
+"division": "AA",
+"rating": 38.32,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Merrimack",
+"rank": 233,
+"division": "AA",
+"rating": 38.0,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "The Citadel",
+"rank": 234,
+"division": "AA",
+"rating": 37.87,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Dayton",
+"rank": 235,
+"division": "AA",
+"rating": 37.73,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "LIU Post",
+"rank": 236,
+"division": "AA",
+"rating": 37.72,
+"wins": 0,
+"losses": 5
+},
+{
+"team": "Lafayette",
+"rank": 237,
+"division": "AA",
+"rating": 37.7,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Bethune-Cookman",
+"rank": 238,
+"division": "AA",
+"rating": 37.56,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Drake",
+"rank": 239,
+"division": "AA",
+"rating": 37.41,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Duquesne",
+"rank": 240,
+"division": "AA",
+"rating": 36.61,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Marist",
+"rank": 241,
+"division": "AA",
+"rating": 36.45,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Ark.-Pine Bluff",
+"rank": 242,
+"division": "AA",
+"rating": 36.35,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Utah Tech",
+"rank": 243,
+"division": "AA",
+"rating": 36.26,
+"wins": 0,
+"losses": 5
+},
+{
+"team": "Georgetown",
+"rank": 244,
+"division": "AA",
+"rating": 36.26,
+"wins": 0,
+"losses": 3
+},
+{
+"team": "Southern U.",
+"rank": 245,
+"division": "AA",
+"rating": 36.1,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Bucknell",
+"rank": 246,
+"division": "AA",
+"rating": 35.84,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Florida A&M",
+"rank": 247,
+"division": "AA",
+"rating": 35.37,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "New Haven",
+"rank": 248,
+"division": "AA",
+"rating": 35.28,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "NC A&T",
+"rank": 249,
+"division": "AA",
+"rating": 35.25,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Alcorn State",
+"rank": 250,
+"division": "AA",
+"rating": 35.03,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Nicholls State",
+"rank": 251,
+"division": "AA",
+"rating": 35.0,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "San Diego",
+"rank": 252,
+"division": "AA",
+"rating": 34.06,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Murray State",
+"rank": 253,
+"division": "AA",
+"rating": 34.0,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Texas Southern",
+"rank": 254,
+"division": "AA",
+"rating": 33.28,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Valparaiso",
+"rank": 255,
+"division": "AA",
+"rating": 32.8,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Mercyhurst",
+"rank": 256,
+"division": "AA",
+"rating": 32.08,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Wagner",
+"rank": 257,
+"division": "AA",
+"rating": 31.46,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Chicago State",
+"rank": 258,
+"division": "AA",
+"rating": 31.31,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Hampton",
+"rank": 259,
+"division": "AA",
+"rating": 30.82,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Morehead State",
+"rank": 260,
+"division": "AA",
+"rating": 30.56,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Presbyterian College",
+"rank": 261,
+"division": "AA",
+"rating": 30.26,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Davidson",
+"rank": 262,
+"division": "AA",
+"rating": 28.85,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "VMI",
+"rank": 263,
+"division": "AA",
+"rating": 28.1,
+"wins": 0,
+"losses": 5
+},
+{
+"team": "Northwestern State",
+"rank": 264,
+"division": "AA",
+"rating": 26.87,
+"wins": 0,
+"losses": 5
+},
+{
+"team": "Miss. Valley State",
+"rank": 265,
+"division": "AA",
+"rating": 26.58,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Stetson",
+"rank": 266,
+"division": "AA",
+"rating": 26.27,
+"wins": 1,
+"losses": 3
+}
+]
+},
+{
+"source": "cfb_week5.pdf",
+"as_of": "OCTOBER 3 SATURDAY - WEEK 5",
+"through": "20261003",
+"home_advantage": 4.23,
+"teams": [
+{
+"team": "Alabama",
+"rank": 1,
+"division": "A",
+"rating": 95.26,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Notre Dame",
+"rank": 2,
+"division": "A",
+"rating": 94.85,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Ohio State",
+"rank": 3,
+"division": "A",
+"rating": 94.66,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Miami-Florida",
+"rank": 4,
+"division": "A",
+"rating": 93.53,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Georgia",
+"rank": 5,
+"division": "A",
+"rating": 93.02,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Texas",
+"rank": 6,
+"division": "A",
+"rating": 92.36,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Oregon",
+"rank": 7,
+"division": "A",
+"rating": 90.1,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Indiana",
+"rank": 8,
+"division": "A",
+"rating": 89.66,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "LSU",
+"rank": 9,
+"division": "A",
+"rating": 89.58,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Utah",
+"rank": 10,
+"division": "A",
+"rating": 86.1,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Tennessee",
+"rank": 11,
+"division": "A",
+"rating": 85.73,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Texas Tech",
+"rank": 12,
+"division": "A",
+"rating": 85.7,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Florida",
+"rank": 13,
+"division": "A",
+"rating": 85.49,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "UCLA",
+"rank": 14,
+"division": "A",
+"rating": 84.85,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Missouri",
+"rank": 15,
+"division": "A",
+"rating": 84.63,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Northwestern",
+"rank": 16,
+"division": "A",
+"rating": 84.28,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Texas A&M",
+"rank": 17,
+"division": "A",
+"rating": 84.08,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Nebraska",
+"rank": 18,
+"division": "A",
+"rating": 83.7,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Wisconsin",
+"rank": 19,
+"division": "A",
+"rating": 82.95,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Mississippi State",
+"rank": 20,
+"division": "A",
+"rating": 82.45,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "BYU",
+"rank": 21,
+"division": "A",
+"rating": 82.42,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Kentucky",
+"rank": 22,
+"division": "A",
+"rating": 82.13,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Iowa",
+"rank": 23,
+"division": "A",
+"rating": 81.91,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Houston",
+"rank": 24,
+"division": "A",
+"rating": 81.67,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Pittsburgh",
+"rank": 25,
+"division": "A",
+"rating": 80.95,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Baylor",
+"rank": 26,
+"division": "A",
+"rating": 80.64,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Auburn",
+"rank": 27,
+"division": "A",
+"rating": 79.94,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Wake Forest",
+"rank": 28,
+"division": "A",
+"rating": 79.69,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Mississippi",
+"rank": 29,
+"division": "A",
+"rating": 79.54,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Oklahoma State",
+"rank": 30,
+"division": "A",
+"rating": 79.52,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Penn State",
+"rank": 31,
+"division": "A",
+"rating": 79.23,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Oklahoma",
+"rank": 32,
+"division": "A",
+"rating": 79.07,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Southern California",
+"rank": 33,
+"division": "A",
+"rating": 78.58,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Florida State",
+"rank": 34,
+"division": "A",
+"rating": 78.44,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Boise State",
+"rank": 35,
+"division": "A",
+"rating": 78.33,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Arizona",
+"rank": 36,
+"division": "A",
+"rating": 77.5,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "South Carolina",
+"rank": 37,
+"division": "A",
+"rating": 77.46,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Minnesota",
+"rank": 38,
+"division": "A",
+"rating": 77.18,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Duke",
+"rank": 39,
+"division": "A",
+"rating": 77.09,
+"wins": 4,
+"losses": 0
+},
+{
+"team": "Central Florida(UCF)",
+"rank": 40,
+"division": "A",
+"rating": 77.08,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Michigan",
+"rank": 41,
+"division": "A",
+"rating": 76.76,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Louisville",
+"rank": 42,
+"division": "A",
+"rating": 76.54,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "New Mexico",
+"rank": 43,
+"division": "A",
+"rating": 76.37,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Kansas State",
+"rank": 44,
+"division": "A",
+"rating": 75.61,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Virginia Tech",
+"rank": 45,
+"division": "A",
+"rating": 75.55,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Virginia",
+"rank": 46,
+"division": "A",
+"rating": 75.49,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "James Madison",
+"rank": 47,
+"division": "A",
+"rating": 75.11,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "North Carolina",
+"rank": 48,
+"division": "A",
+"rating": 74.98,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Vanderbilt",
+"rank": 49,
+"division": "A",
+"rating": 74.87,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Clemson",
+"rank": 50,
+"division": "A",
+"rating": 74.63,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "TCU",
+"rank": 51,
+"division": "A",
+"rating": 74.57,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Iowa State",
+"rank": 52,
+"division": "A",
+"rating": 74.49,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Washington",
+"rank": 53,
+"division": "A",
+"rating": 74.27,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "NC State",
+"rank": 54,
+"division": "A",
+"rating": 73.77,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Kansas",
+"rank": 55,
+"division": "A",
+"rating": 73.72,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "SMU",
+"rank": 56,
+"division": "A",
+"rating": 73.7,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "West Virginia",
+"rank": 57,
+"division": "A",
+"rating": 73.43,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Illinois",
+"rank": 58,
+"division": "A",
+"rating": 73.42,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Oregon State",
+"rank": 59,
+"division": "A",
+"rating": 72.47,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Purdue",
+"rank": 60,
+"division": "A",
+"rating": 72.15,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Arizona State",
+"rank": 61,
+"division": "A",
+"rating": 71.44,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Michigan State",
+"rank": 62,
+"division": "A",
+"rating": 71.25,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Memphis",
+"rank": 63,
+"division": "A",
+"rating": 71.2,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "South Dakota State",
+"rank": 64,
+"division": "AA",
+"rating": 71.1,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Cincinnati",
+"rank": 65,
+"division": "A",
+"rating": 70.86,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "North Dakota State",
+"rank": 66,
+"division": "A",
+"rating": 70.19,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Fresno State",
+"rank": 67,
+"division": "A",
+"rating": 69.91,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Syracuse",
+"rank": 68,
+"division": "A",
+"rating": 69.64,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "UTSA",
+"rank": 69,
+"division": "A",
+"rating": 69.63,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Arkansas",
+"rank": 70,
+"division": "A",
+"rating": 69.46,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "North Texas",
+"rank": 71,
+"division": "A",
+"rating": 68.52,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Liberty",
+"rank": 72,
+"division": "A",
+"rating": 68.37,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Colorado",
+"rank": 73,
+"division": "A",
+"rating": 68.24,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Toledo",
+"rank": 74,
+"division": "A",
+"rating": 68.23,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Texas State",
+"rank": 75,
+"division": "A",
+"rating": 68.17,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Army West Point",
+"rank": 76,
+"division": "A",
+"rating": 68.03,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Georgia Tech",
+"rank": 77,
+"division": "A",
+"rating": 67.92,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Maryland",
+"rank": 78,
+"division": "A",
+"rating": 67.53,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Georgia State",
+"rank": 79,
+"division": "A",
+"rating": 66.84,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Louisiana Tech",
+"rank": 80,
+"division": "A",
+"rating": 66.2,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "California",
+"rank": 81,
+"division": "A",
+"rating": 65.78,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Tulsa",
+"rank": 82,
+"division": "A",
+"rating": 65.74,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "UNLV",
+"rank": 83,
+"division": "A",
+"rating": 65.64,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Youngstown State",
+"rank": 84,
+"division": "AA",
+"rating": 65.63,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "South Florida",
+"rank": 85,
+"division": "A",
+"rating": 64.81,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Rutgers",
+"rank": 86,
+"division": "A",
+"rating": 64.55,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Florida Atlantic",
+"rank": 87,
+"division": "A",
+"rating": 64.37,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Louisiana-Lafayette",
+"rank": 88,
+"division": "A",
+"rating": 64.3,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Temple",
+"rank": 89,
+"division": "A",
+"rating": 63.99,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Western Michigan",
+"rank": 90,
+"division": "A",
+"rating": 63.97,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "San Diego State",
+"rank": 91,
+"division": "A",
+"rating": 63.84,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Tulane",
+"rank": 92,
+"division": "A",
+"rating": 63.31,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "South Dakota",
+"rank": 93,
+"division": "AA",
+"rating": 62.85,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Boston College",
+"rank": 94,
+"division": "A",
+"rating": 62.64,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Connecticut",
+"rank": 95,
+"division": "A",
+"rating": 62.46,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Appalachian State",
+"rank": 96,
+"division": "A",
+"rating": 62.39,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Montana State",
+"rank": 97,
+"division": "AA",
+"rating": 62.31,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Georgia Southern",
+"rank": 98,
+"division": "A",
+"rating": 62.09,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "East Carolina",
+"rank": 99,
+"division": "A",
+"rating": 62.05,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Air Force",
+"rank": 100,
+"division": "A",
+"rating": 61.29,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Montana",
+"rank": 101,
+"division": "AA",
+"rating": 61.29,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Utah State",
+"rank": 102,
+"division": "A",
+"rating": 61.08,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "South Alabama",
+"rank": 103,
+"division": "A",
+"rating": 60.77,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Arkansas State",
+"rank": 104,
+"division": "A",
+"rating": 60.48,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Austin Peay",
+"rank": 105,
+"division": "AA",
+"rating": 60.32,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Stephen F. Austin",
+"rank": 106,
+"division": "AA",
+"rating": 60.22,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "Troy",
+"rank": 107,
+"division": "A",
+"rating": 60.12,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Washington State",
+"rank": 108,
+"division": "A",
+"rating": 59.99,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Stanford",
+"rank": 109,
+"division": "A",
+"rating": 59.88,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Jacksonville State",
+"rank": 110,
+"division": "A",
+"rating": 59.87,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Colorado State",
+"rank": 111,
+"division": "A",
+"rating": 59.74,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "North Dakota",
+"rank": 112,
+"division": "AA",
+"rating": 59.41,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Navy",
+"rank": 113,
+"division": "A",
+"rating": 59.18,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Kennesaw State",
+"rank": 114,
+"division": "A",
+"rating": 58.94,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Miami-Ohio",
+"rank": 115,
+"division": "A",
+"rating": 58.67,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Central Michigan",
+"rank": 116,
+"division": "A",
+"rating": 58.6,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Ohio",
+"rank": 117,
+"division": "A",
+"rating": 58.45,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Illinois State",
+"rank": 118,
+"division": "AA",
+"rating": 58.01,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Sam Houston State",
+"rank": 119,
+"division": "A",
+"rating": 58.0,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Lehigh",
+"rank": 120,
+"division": "AA",
+"rating": 57.85,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "San Jose State",
+"rank": 121,
+"division": "A",
+"rating": 57.84,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Rice",
+"rank": 122,
+"division": "A",
+"rating": 57.75,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "New Mexico State",
+"rank": 123,
+"division": "A",
+"rating": 57.6,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Delaware",
+"rank": 124,
+"division": "A",
+"rating": 57.21,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Eastern Michigan",
+"rank": 125,
+"division": "A",
+"rating": 56.97,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Tarleton State",
+"rank": 126,
+"division": "AA",
+"rating": 56.67,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "UAB",
+"rank": 127,
+"division": "A",
+"rating": 56.26,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Mercer",
+"rank": 128,
+"division": "AA",
+"rating": 56.13,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Coastal Carolina",
+"rank": 129,
+"division": "A",
+"rating": 55.89,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Fla. International",
+"rank": 130,
+"division": "A",
+"rating": 55.48,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Marshall",
+"rank": 131,
+"division": "A",
+"rating": 55.37,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Missouri State",
+"rank": 132,
+"division": "A",
+"rating": 55.07,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Harvard",
+"rank": 133,
+"division": "AA",
+"rating": 55.02,
+"wins": 3,
+"losses": 0
+},
+{
+"team": "Southern Illinois",
+"rank": 134,
+"division": "AA",
+"rating": 54.92,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Northern Arizona",
+"rank": 135,
+"division": "AA",
+"rating": 54.59,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Nevada",
+"rank": 136,
+"division": "A",
+"rating": 54.54,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Old Dominion",
+"rank": 137,
+"division": "A",
+"rating": 54.29,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Massachusetts",
+"rank": 138,
+"division": "A",
+"rating": 53.77,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Idaho State",
+"rank": 139,
+"division": "AA",
+"rating": 53.76,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Hawai'i",
+"rank": 140,
+"division": "A",
+"rating": 53.71,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Southern Miss",
+"rank": 141,
+"division": "A",
+"rating": 53.45,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Western Kentucky",
+"rank": 142,
+"division": "A",
+"rating": 53.11,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Wyoming",
+"rank": 143,
+"division": "A",
+"rating": 52.88,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Princeton",
+"rank": 144,
+"division": "AA",
+"rating": 52.65,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Abilene Christian",
+"rank": 145,
+"division": "AA",
+"rating": 52.53,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Northern Iowa",
+"rank": 146,
+"division": "AA",
+"rating": 52.51,
+"wins": 2,
+"losses": 2
+},
+{
+"team": "Northern Illinois",
+"rank": 147,
+"division": "A",
+"rating": 52.39,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Colgate",
+"rank": 148,
+"division": "AA",
+"rating": 52.37,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Tennessee Tech",
+"rank": 149,
+"division": "AA",
+"rating": 52.15,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Kent State",
+"rank": 150,
+"division": "A",
+"rating": 52.04,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "East Tennessee State",
+"rank": 151,
+"division": "AA",
+"rating": 51.91,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Bowling Green",
+"rank": 152,
+"division": "A",
+"rating": 51.68,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Lamar",
+"rank": 153,
+"division": "AA",
+"rating": 51.64,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Campbell",
+"rank": 154,
+"division": "AA",
+"rating": 51.44,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Gardner-Webb",
+"rank": 155,
+"division": "AA",
+"rating": 51.1,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "UC Davis",
+"rank": 156,
+"division": "AA",
+"rating": 50.18,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Western Carolina",
+"rank": 157,
+"division": "AA",
+"rating": 49.97,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Idaho",
+"rank": 158,
+"division": "AA",
+"rating": 49.88,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Middle Tennessee",
+"rank": 159,
+"division": "A",
+"rating": 49.7,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Yale",
+"rank": 160,
+"division": "AA",
+"rating": 49.53,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "Chattanooga",
+"rank": 161,
+"division": "AA",
+"rating": 49.37,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Buffalo",
+"rank": 162,
+"division": "A",
+"rating": 49.33,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Akron",
+"rank": 163,
+"division": "A",
+"rating": 49.31,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Ball State",
+"rank": 164,
+"division": "A",
+"rating": 49.1,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Cornell",
+"rank": 165,
+"division": "AA",
+"rating": 48.85,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "SE Missouri State",
+"rank": 166,
+"division": "AA",
+"rating": 48.69,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "SE Louisiana",
+"rank": 167,
+"division": "AA",
+"rating": 48.58,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "North Alabama",
+"rank": 168,
+"division": "AA",
+"rating": 47.78,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Jackson State",
+"rank": 169,
+"division": "AA",
+"rating": 47.61,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Incarnate Word",
+"rank": 170,
+"division": "AA",
+"rating": 47.58,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "UTEP",
+"rank": 171,
+"division": "A",
+"rating": 47.42,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Dartmouth",
+"rank": 172,
+"division": "AA",
+"rating": 47.32,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Stony Brook",
+"rank": 173,
+"division": "AA",
+"rating": 47.01,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Southern Utah",
+"rank": 174,
+"division": "AA",
+"rating": 46.84,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Monmouth-NJ",
+"rank": 175,
+"division": "AA",
+"rating": 46.75,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Weber State",
+"rank": 176,
+"division": "AA",
+"rating": 46.66,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Eastern Washington",
+"rank": 177,
+"division": "AA",
+"rating": 46.63,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Indiana State",
+"rank": 178,
+"division": "AA",
+"rating": 46.44,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "SC State",
+"rank": 179,
+"division": "AA",
+"rating": 46.08,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "UTRGV",
+"rank": 180,
+"division": "AA",
+"rating": 45.97,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Albany-NY",
+"rank": 181,
+"division": "AA",
+"rating": 45.96,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Western Illinois",
+"rank": 182,
+"division": "AA",
+"rating": 45.72,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "West Florida",
+"rank": 183,
+"division": "AA",
+"rating": 45.55,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Pennsylvania",
+"rank": 184,
+"division": "AA",
+"rating": 45.45,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Central Arkansas",
+"rank": 185,
+"division": "AA",
+"rating": 45.44,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Wofford",
+"rank": 186,
+"division": "AA",
+"rating": 45.38,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Northern Colorado",
+"rank": 187,
+"division": "AA",
+"rating": 45.36,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "LouisianaMonroe(ULM)",
+"rank": 188,
+"division": "A",
+"rating": 45.24,
+"wins": 0,
+"losses": 5
+},
+{
+"team": "Tennessee-Martin",
+"rank": 189,
+"division": "AA",
+"rating": 45.11,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Bryant",
+"rank": 190,
+"division": "AA",
+"rating": 45.06,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Rhode Island",
+"rank": 191,
+"division": "AA",
+"rating": 45.05,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Morgan State",
+"rank": 192,
+"division": "AA",
+"rating": 44.79,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Brown",
+"rank": 193,
+"division": "AA",
+"rating": 44.36,
+"wins": 1,
+"losses": 2
+},
+{
+"team": "Alabama A&M",
+"rank": 194,
+"division": "AA",
+"rating": 44.28,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Richmond",
+"rank": 195,
+"division": "AA",
+"rating": 44.11,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Sacramento State",
+"rank": 196,
+"division": "A",
+"rating": 44.09,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "McNeese State",
+"rank": 197,
+"division": "AA",
+"rating": 43.94,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Elon",
+"rank": 198,
+"division": "AA",
+"rating": 43.91,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Furman",
+"rank": 199,
+"division": "AA",
+"rating": 43.86,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Cal Poly-SLO",
+"rank": 200,
+"division": "AA",
+"rating": 43.85,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Ark.-Pine Bluff",
+"rank": 201,
+"division": "AA",
+"rating": 43.8,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Charleston Southern",
+"rank": 202,
+"division": "AA",
+"rating": 43.42,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Central Connecticut",
+"rank": 203,
+"division": "AA",
+"rating": 43.17,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Holy Cross",
+"rank": 204,
+"division": "AA",
+"rating": 43.1,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Villanova",
+"rank": 205,
+"division": "AA",
+"rating": 43.02,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Alabama State",
+"rank": 206,
+"division": "AA",
+"rating": 42.71,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Butler",
+"rank": 207,
+"division": "AA",
+"rating": 42.33,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Charlotte",
+"rank": 208,
+"division": "A",
+"rating": 42.32,
+"wins": 0,
+"losses": 5
+},
+{
+"team": "Samford",
+"rank": 209,
+"division": "AA",
+"rating": 42.22,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "East Texas A&M",
+"rank": 210,
+"division": "AA",
+"rating": 41.76,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Sacred Heart",
+"rank": 211,
+"division": "AA",
+"rating": 41.25,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Prairie View A&M",
+"rank": 212,
+"division": "AA",
+"rating": 41.25,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Houston Christian",
+"rank": 213,
+"division": "AA",
+"rating": 40.88,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Eastern Kentucky",
+"rank": 214,
+"division": "AA",
+"rating": 40.39,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "New Hampshire",
+"rank": 215,
+"division": "AA",
+"rating": 40.38,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Portland State",
+"rank": 216,
+"division": "AA",
+"rating": 40.21,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Norfolk State",
+"rank": 217,
+"division": "AA",
+"rating": 40.21,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Towson",
+"rank": 218,
+"division": "AA",
+"rating": 39.83,
+"wins": 0,
+"losses": 6
+},
+{
+"team": "Robert Morris",
+"rank": 219,
+"division": "AA",
+"rating": 39.76,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Eastern Illinois",
+"rank": 220,
+"division": "AA",
+"rating": 39.76,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "The Citadel",
+"rank": 221,
+"division": "AA",
+"rating": 39.53,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Lindenwood",
+"rank": 222,
+"division": "AA",
+"rating": 39.47,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "Bethune-Cookman",
+"rank": 223,
+"division": "AA",
+"rating": 38.93,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Howard",
+"rank": 224,
+"division": "AA",
+"rating": 38.91,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "NC Central",
+"rank": 225,
+"division": "AA",
+"rating": 38.8,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Marist",
+"rank": 226,
+"division": "AA",
+"rating": 38.77,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Tennessee State",
+"rank": 227,
+"division": "AA",
+"rating": 38.72,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Columbia",
+"rank": 228,
+"division": "AA",
+"rating": 38.66,
+"wins": 2,
+"losses": 1
+},
+{
+"team": "West Georgia",
+"rank": 229,
+"division": "AA",
+"rating": 38.22,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "St. Thomas-Mn.",
+"rank": 230,
+"division": "AA",
+"rating": 37.88,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Fordham",
+"rank": 231,
+"division": "AA",
+"rating": 37.74,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Dayton",
+"rank": 232,
+"division": "AA",
+"rating": 37.72,
+"wins": 3,
+"losses": 1
+},
+{
+"team": "Stonehill College",
+"rank": 233,
+"division": "AA",
+"rating": 37.69,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Drake",
+"rank": 234,
+"division": "AA",
+"rating": 37.68,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "NC A&T",
+"rank": 235,
+"division": "AA",
+"rating": 37.37,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Merrimack",
+"rank": 236,
+"division": "AA",
+"rating": 37.34,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Grambling State",
+"rank": 237,
+"division": "AA",
+"rating": 37.2,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "LIU Post",
+"rank": 238,
+"division": "AA",
+"rating": 36.77,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Delaware State",
+"rank": 239,
+"division": "AA",
+"rating": 36.54,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Lafayette",
+"rank": 240,
+"division": "AA",
+"rating": 36.09,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Maine",
+"rank": 241,
+"division": "AA",
+"rating": 35.71,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Duquesne",
+"rank": 242,
+"division": "AA",
+"rating": 35.64,
+"wins": 1,
+"losses": 3
+},
+{
+"team": "San Diego",
+"rank": 243,
+"division": "AA",
+"rating": 35.64,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "William & Mary",
+"rank": 244,
+"division": "AA",
+"rating": 35.49,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "New Haven",
+"rank": 245,
+"division": "AA",
+"rating": 35.45,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Alcorn State",
+"rank": 246,
+"division": "AA",
+"rating": 35.41,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Utah Tech",
+"rank": 247,
+"division": "AA",
+"rating": 35.12,
+"wins": 0,
+"losses": 6
+},
+{
+"team": "Nicholls State",
+"rank": 248,
+"division": "AA",
+"rating": 35.05,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Valparaiso",
+"rank": 249,
+"division": "AA",
+"rating": 34.49,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Bucknell",
+"rank": 250,
+"division": "AA",
+"rating": 34.42,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Murray State",
+"rank": 251,
+"division": "AA",
+"rating": 33.66,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Florida A&M",
+"rank": 252,
+"division": "AA",
+"rating": 33.54,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Georgetown",
+"rank": 253,
+"division": "AA",
+"rating": 33.3,
+"wins": 0,
+"losses": 4
+},
+{
+"team": "Mercyhurst",
+"rank": 254,
+"division": "AA",
+"rating": 32.99,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Presbyterian College",
+"rank": 255,
+"division": "AA",
+"rating": 32.27,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Southern U.",
+"rank": 256,
+"division": "AA",
+"rating": 31.85,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Texas Southern",
+"rank": 257,
+"division": "AA",
+"rating": 30.64,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Hampton",
+"rank": 258,
+"division": "AA",
+"rating": 28.36,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Chicago State",
+"rank": 259,
+"division": "AA",
+"rating": 28.32,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Wagner",
+"rank": 260,
+"division": "AA",
+"rating": 27.73,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Miss. Valley State",
+"rank": 261,
+"division": "AA",
+"rating": 26.56,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Northwestern State",
+"rank": 262,
+"division": "AA",
+"rating": 26.19,
+"wins": 0,
+"losses": 6
+},
+{
+"team": "Morehead State",
+"rank": 263,
+"division": "AA",
+"rating": 24.91,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "Stetson",
+"rank": 264,
+"division": "AA",
+"rating": 24.56,
+"wins": 1,
+"losses": 4
+},
+{
+"team": "VMI",
+"rank": 265,
+"division": "AA",
+"rating": 24.14,
+"wins": 0,
+"losses": 6
+},
+{
+"team": "Davidson",
+"rank": 266,
+"division": "AA",
+"rating": 24.04,
+"wins": 2,
+"losses": 4
+}
+]
+},
+{
+"source": "cfb_week7.pdf",
+"as_of": "OCTOBER 17 SATURDAY - WEEK 7",
+"through": "20261017",
+"home_advantage": 3.82,
+"teams": [
+{
+"team": "Ohio State",
+"rank": 1,
+"division": "A",
+"rating": 95.23,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Notre Dame",
+"rank": 2,
+"division": "A",
+"rating": 94.26,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Miami-Florida",
+"rank": 3,
+"division": "A",
+"rating": 93.03,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "Georgia",
+"rank": 4,
+"division": "A",
+"rating": 92.12,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Indiana",
+"rank": 5,
+"division": "A",
+"rating": 91.44,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Alabama",
+"rank": 6,
+"division": "A",
+"rating": 91.41,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "LSU",
+"rank": 7,
+"division": "A",
+"rating": 90.87,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Oregon",
+"rank": 8,
+"division": "A",
+"rating": 90.0,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Mississippi",
+"rank": 9,
+"division": "A",
+"rating": 89.03,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Texas",
+"rank": 10,
+"division": "A",
+"rating": 88.94,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Tennessee",
+"rank": 11,
+"division": "A",
+"rating": 88.19,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Texas Tech",
+"rank": 12,
+"division": "A",
+"rating": 87.62,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "UCLA",
+"rank": 13,
+"division": "A",
+"rating": 86.61,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "BYU",
+"rank": 14,
+"division": "A",
+"rating": 86.15,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "Utah",
+"rank": 15,
+"division": "A",
+"rating": 84.99,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "Florida",
+"rank": 16,
+"division": "A",
+"rating": 84.82,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Kentucky",
+"rank": 17,
+"division": "A",
+"rating": 84.42,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Iowa",
+"rank": 18,
+"division": "A",
+"rating": 84.32,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Nebraska",
+"rank": 19,
+"division": "A",
+"rating": 83.99,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Houston",
+"rank": 20,
+"division": "A",
+"rating": 83.73,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Southern California",
+"rank": 21,
+"division": "A",
+"rating": 83.53,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Missouri",
+"rank": 22,
+"division": "A",
+"rating": 83.37,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Wake Forest",
+"rank": 23,
+"division": "A",
+"rating": 83.16,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Auburn",
+"rank": 24,
+"division": "A",
+"rating": 82.36,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Oklahoma",
+"rank": 25,
+"division": "A",
+"rating": 82.04,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Northwestern",
+"rank": 26,
+"division": "A",
+"rating": 82.01,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "South Carolina",
+"rank": 27,
+"division": "A",
+"rating": 81.67,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Wisconsin",
+"rank": 28,
+"division": "A",
+"rating": 81.41,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Texas A&M",
+"rank": 29,
+"division": "A",
+"rating": 81.38,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Louisville",
+"rank": 30,
+"division": "A",
+"rating": 81.29,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Arizona",
+"rank": 31,
+"division": "A",
+"rating": 80.49,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Mississippi State",
+"rank": 32,
+"division": "A",
+"rating": 79.89,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Oklahoma State",
+"rank": 33,
+"division": "A",
+"rating": 79.26,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Michigan",
+"rank": 34,
+"division": "A",
+"rating": 78.75,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "SMU",
+"rank": 35,
+"division": "A",
+"rating": 78.08,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Penn State",
+"rank": 36,
+"division": "A",
+"rating": 77.79,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Boise State",
+"rank": 37,
+"division": "A",
+"rating": 77.33,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Baylor",
+"rank": 38,
+"division": "A",
+"rating": 77.14,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "North Carolina",
+"rank": 39,
+"division": "A",
+"rating": 77.06,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "TCU",
+"rank": 40,
+"division": "A",
+"rating": 77.04,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Washington",
+"rank": 41,
+"division": "A",
+"rating": 76.94,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Clemson",
+"rank": 42,
+"division": "A",
+"rating": 76.68,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Pittsburgh",
+"rank": 43,
+"division": "A",
+"rating": 76.5,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Florida State",
+"rank": 44,
+"division": "A",
+"rating": 76.5,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Kansas State",
+"rank": 45,
+"division": "A",
+"rating": 75.7,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Virginia Tech",
+"rank": 46,
+"division": "A",
+"rating": 74.95,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Duke",
+"rank": 47,
+"division": "A",
+"rating": 74.71,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "James Madison",
+"rank": 48,
+"division": "A",
+"rating": 74.6,
+"wins": 7,
+"losses": 0
+},
+{
+"team": "Central Florida(UCF)",
+"rank": 49,
+"division": "A",
+"rating": 74.46,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Illinois",
+"rank": 50,
+"division": "A",
+"rating": 74.44,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Minnesota",
+"rank": 51,
+"division": "A",
+"rating": 73.69,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Purdue",
+"rank": 52,
+"division": "A",
+"rating": 73.44,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Virginia",
+"rank": 53,
+"division": "A",
+"rating": 73.28,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "New Mexico",
+"rank": 54,
+"division": "A",
+"rating": 73.09,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Oregon State",
+"rank": 55,
+"division": "A",
+"rating": 72.94,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Iowa State",
+"rank": 56,
+"division": "A",
+"rating": 72.94,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Arkansas",
+"rank": 57,
+"division": "A",
+"rating": 72.75,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Cincinnati",
+"rank": 58,
+"division": "A",
+"rating": 71.99,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "West Virginia",
+"rank": 59,
+"division": "A",
+"rating": 71.3,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "NC State",
+"rank": 60,
+"division": "A",
+"rating": 71.16,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Kansas",
+"rank": 61,
+"division": "A",
+"rating": 70.9,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Michigan State",
+"rank": 62,
+"division": "A",
+"rating": 70.7,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Vanderbilt",
+"rank": 63,
+"division": "A",
+"rating": 70.48,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Georgia Tech",
+"rank": 64,
+"division": "A",
+"rating": 69.91,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Arizona State",
+"rank": 65,
+"division": "A",
+"rating": 69.72,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Colorado",
+"rank": 66,
+"division": "A",
+"rating": 69.41,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Texas State",
+"rank": 67,
+"division": "A",
+"rating": 68.92,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Memphis",
+"rank": 68,
+"division": "A",
+"rating": 68.84,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Syracuse",
+"rank": 69,
+"division": "A",
+"rating": 68.65,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Army West Point",
+"rank": 70,
+"division": "A",
+"rating": 68.51,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "North Dakota State",
+"rank": 71,
+"division": "A",
+"rating": 68.5,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "UTSA",
+"rank": 72,
+"division": "A",
+"rating": 68.42,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "North Texas",
+"rank": 73,
+"division": "A",
+"rating": 68.25,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "South Dakota State",
+"rank": 74,
+"division": "AA",
+"rating": 67.65,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Liberty",
+"rank": 75,
+"division": "A",
+"rating": 67.47,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Maryland",
+"rank": 76,
+"division": "A",
+"rating": 67.38,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "California",
+"rank": 77,
+"division": "A",
+"rating": 67.12,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Rutgers",
+"rank": 78,
+"division": "A",
+"rating": 66.77,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Tulane",
+"rank": 79,
+"division": "A",
+"rating": 66.52,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Boston College",
+"rank": 80,
+"division": "A",
+"rating": 66.4,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Montana State",
+"rank": 81,
+"division": "AA",
+"rating": 66.19,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Fresno State",
+"rank": 82,
+"division": "A",
+"rating": 65.95,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Louisiana-Lafayette",
+"rank": 83,
+"division": "A",
+"rating": 65.87,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Western Michigan",
+"rank": 84,
+"division": "A",
+"rating": 65.86,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Air Force",
+"rank": 85,
+"division": "A",
+"rating": 65.08,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "Louisiana Tech",
+"rank": 86,
+"division": "A",
+"rating": 65.03,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "South Florida",
+"rank": 87,
+"division": "A",
+"rating": 64.98,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "UNLV",
+"rank": 88,
+"division": "A",
+"rating": 64.91,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Youngstown State",
+"rank": 89,
+"division": "AA",
+"rating": 64.74,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Tulsa",
+"rank": 90,
+"division": "A",
+"rating": 64.39,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Toledo",
+"rank": 91,
+"division": "A",
+"rating": 62.82,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "South Alabama",
+"rank": 92,
+"division": "A",
+"rating": 62.13,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Navy",
+"rank": 93,
+"division": "A",
+"rating": 62.03,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Connecticut",
+"rank": 94,
+"division": "A",
+"rating": 62.0,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "South Dakota",
+"rank": 95,
+"division": "AA",
+"rating": 61.9,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Georgia Southern",
+"rank": 96,
+"division": "A",
+"rating": 61.83,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Georgia State",
+"rank": 97,
+"division": "A",
+"rating": 61.61,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Ohio",
+"rank": 98,
+"division": "A",
+"rating": 61.35,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Stanford",
+"rank": 99,
+"division": "A",
+"rating": 61.27,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Stephen F. Austin",
+"rank": 100,
+"division": "AA",
+"rating": 61.22,
+"wins": 7,
+"losses": 0
+},
+{
+"team": "San Diego State",
+"rank": 101,
+"division": "A",
+"rating": 61.03,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "North Dakota",
+"rank": 102,
+"division": "AA",
+"rating": 60.88,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Florida Atlantic",
+"rank": 103,
+"division": "A",
+"rating": 60.52,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Jacksonville State",
+"rank": 104,
+"division": "A",
+"rating": 60.18,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Washington State",
+"rank": 105,
+"division": "A",
+"rating": 59.39,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Illinois State",
+"rank": 106,
+"division": "AA",
+"rating": 58.81,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "East Carolina",
+"rank": 107,
+"division": "A",
+"rating": 58.62,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Miami-Ohio",
+"rank": 108,
+"division": "A",
+"rating": 58.34,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Arkansas State",
+"rank": 109,
+"division": "A",
+"rating": 58.33,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Tarleton State",
+"rank": 110,
+"division": "AA",
+"rating": 58.24,
+"wins": 7,
+"losses": 0
+},
+{
+"team": "Utah State",
+"rank": 111,
+"division": "A",
+"rating": 57.98,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Appalachian State",
+"rank": 112,
+"division": "A",
+"rating": 57.9,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Fla. International",
+"rank": 113,
+"division": "A",
+"rating": 57.61,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Colorado State",
+"rank": 114,
+"division": "A",
+"rating": 56.95,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Troy",
+"rank": 115,
+"division": "A",
+"rating": 56.78,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Montana",
+"rank": 116,
+"division": "AA",
+"rating": 56.68,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "UAB",
+"rank": 117,
+"division": "A",
+"rating": 56.63,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Western Kentucky",
+"rank": 118,
+"division": "A",
+"rating": 56.59,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Nevada",
+"rank": 119,
+"division": "A",
+"rating": 56.48,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Harvard",
+"rank": 120,
+"division": "AA",
+"rating": 56.22,
+"wins": 5,
+"losses": 0
+},
+{
+"team": "Temple",
+"rank": 121,
+"division": "A",
+"rating": 55.82,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "San Jose State",
+"rank": 122,
+"division": "A",
+"rating": 55.71,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Austin Peay",
+"rank": 123,
+"division": "AA",
+"rating": 55.55,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Central Michigan",
+"rank": 124,
+"division": "A",
+"rating": 55.26,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Old Dominion",
+"rank": 125,
+"division": "A",
+"rating": 55.05,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Northern Arizona",
+"rank": 126,
+"division": "AA",
+"rating": 54.99,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Wyoming",
+"rank": 127,
+"division": "A",
+"rating": 54.77,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Buffalo",
+"rank": 128,
+"division": "A",
+"rating": 54.66,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Kennesaw State",
+"rank": 129,
+"division": "A",
+"rating": 54.57,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Hawai'i",
+"rank": 130,
+"division": "A",
+"rating": 54.29,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Mercer",
+"rank": 131,
+"division": "AA",
+"rating": 54.07,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Coastal Carolina",
+"rank": 132,
+"division": "A",
+"rating": 53.98,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Delaware",
+"rank": 133,
+"division": "A",
+"rating": 53.89,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Northern Iowa",
+"rank": 134,
+"division": "AA",
+"rating": 53.7,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "New Mexico State",
+"rank": 135,
+"division": "A",
+"rating": 53.45,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Lehigh",
+"rank": 136,
+"division": "AA",
+"rating": 52.95,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Marshall",
+"rank": 137,
+"division": "A",
+"rating": 52.95,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Tennessee Tech",
+"rank": 138,
+"division": "AA",
+"rating": 52.89,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Eastern Michigan",
+"rank": 139,
+"division": "A",
+"rating": 52.86,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Rice",
+"rank": 140,
+"division": "A",
+"rating": 51.69,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "East Tennessee State",
+"rank": 141,
+"division": "AA",
+"rating": 51.64,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Missouri State",
+"rank": 142,
+"division": "A",
+"rating": 51.15,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Abilene Christian",
+"rank": 143,
+"division": "AA",
+"rating": 51.01,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Bowling Green",
+"rank": 144,
+"division": "A",
+"rating": 50.94,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Southern Illinois",
+"rank": 145,
+"division": "AA",
+"rating": 50.71,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Massachusetts",
+"rank": 146,
+"division": "A",
+"rating": 50.15,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Middle Tennessee",
+"rank": 147,
+"division": "A",
+"rating": 50.15,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Idaho",
+"rank": 148,
+"division": "AA",
+"rating": 50.12,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Idaho State",
+"rank": 149,
+"division": "AA",
+"rating": 50.02,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Princeton",
+"rank": 150,
+"division": "AA",
+"rating": 49.67,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Sam Houston State",
+"rank": 151,
+"division": "A",
+"rating": 49.47,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Weber State",
+"rank": 152,
+"division": "AA",
+"rating": 49.4,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Western Carolina",
+"rank": 153,
+"division": "AA",
+"rating": 49.38,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Incarnate Word",
+"rank": 154,
+"division": "AA",
+"rating": 49.35,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Lamar",
+"rank": 155,
+"division": "AA",
+"rating": 49.24,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Chattanooga",
+"rank": 156,
+"division": "AA",
+"rating": 48.91,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Southern Miss",
+"rank": 157,
+"division": "A",
+"rating": 48.8,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Campbell",
+"rank": 158,
+"division": "AA",
+"rating": 48.77,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Southern Utah",
+"rank": 159,
+"division": "AA",
+"rating": 48.34,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Kent State",
+"rank": 160,
+"division": "A",
+"rating": 48.31,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Ball State",
+"rank": 161,
+"division": "A",
+"rating": 48.22,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Monmouth-NJ",
+"rank": 162,
+"division": "AA",
+"rating": 47.95,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "SE Missouri State",
+"rank": 163,
+"division": "AA",
+"rating": 47.75,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "UC Davis",
+"rank": 164,
+"division": "AA",
+"rating": 47.32,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Cornell",
+"rank": 165,
+"division": "AA",
+"rating": 47.19,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Northern Illinois",
+"rank": 166,
+"division": "A",
+"rating": 46.95,
+"wins": 0,
+"losses": 6
+},
+{
+"team": "Yale",
+"rank": 167,
+"division": "AA",
+"rating": 46.86,
+"wins": 3,
+"losses": 2
+},
+{
+"team": "Albany-NY",
+"rank": 168,
+"division": "AA",
+"rating": 46.84,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Akron",
+"rank": 169,
+"division": "A",
+"rating": 46.45,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Rhode Island",
+"rank": 170,
+"division": "AA",
+"rating": 46.36,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Alabama A&M",
+"rank": 171,
+"division": "AA",
+"rating": 46.28,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "SE Louisiana",
+"rank": 172,
+"division": "AA",
+"rating": 46.16,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Colgate",
+"rank": 173,
+"division": "AA",
+"rating": 46.01,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Tennessee-Martin",
+"rank": 174,
+"division": "AA",
+"rating": 45.83,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "North Alabama",
+"rank": 175,
+"division": "AA",
+"rating": 45.69,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Charlotte",
+"rank": 176,
+"division": "A",
+"rating": 45.11,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Eastern Washington",
+"rank": 177,
+"division": "AA",
+"rating": 44.95,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Wofford",
+"rank": 178,
+"division": "AA",
+"rating": 44.86,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Jackson State",
+"rank": 179,
+"division": "AA",
+"rating": 44.72,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Brown",
+"rank": 180,
+"division": "AA",
+"rating": 44.43,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Villanova",
+"rank": 181,
+"division": "AA",
+"rating": 44.18,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "UTEP",
+"rank": 182,
+"division": "A",
+"rating": 44.12,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Central Arkansas",
+"rank": 183,
+"division": "AA",
+"rating": 43.66,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "SC State",
+"rank": 184,
+"division": "AA",
+"rating": 43.37,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Cal Poly-SLO",
+"rank": 185,
+"division": "AA",
+"rating": 43.17,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Stony Brook",
+"rank": 186,
+"division": "AA",
+"rating": 43.16,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Indiana State",
+"rank": 187,
+"division": "AA",
+"rating": 43.15,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Northern Colorado",
+"rank": 188,
+"division": "AA",
+"rating": 43.08,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "LouisianaMonroe(ULM)",
+"rank": 189,
+"division": "A",
+"rating": 43.04,
+"wins": 0,
+"losses": 6
+},
+{
+"team": "Furman",
+"rank": 190,
+"division": "AA",
+"rating": 43.03,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "UTRGV",
+"rank": 191,
+"division": "AA",
+"rating": 42.96,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Gardner-Webb",
+"rank": 192,
+"division": "AA",
+"rating": 42.69,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "West Florida",
+"rank": 193,
+"division": "AA",
+"rating": 42.55,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Dartmouth",
+"rank": 194,
+"division": "AA",
+"rating": 42.45,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Richmond",
+"rank": 195,
+"division": "AA",
+"rating": 42.44,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Charleston Southern",
+"rank": 196,
+"division": "AA",
+"rating": 42.27,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Western Illinois",
+"rank": 197,
+"division": "AA",
+"rating": 42.22,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Columbia",
+"rank": 198,
+"division": "AA",
+"rating": 41.77,
+"wins": 4,
+"losses": 1
+},
+{
+"team": "Bryant",
+"rank": 199,
+"division": "AA",
+"rating": 41.47,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Pennsylvania",
+"rank": 200,
+"division": "AA",
+"rating": 41.14,
+"wins": 2,
+"losses": 3
+},
+{
+"team": "Portland State",
+"rank": 201,
+"division": "AA",
+"rating": 40.86,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Alabama State",
+"rank": 202,
+"division": "AA",
+"rating": 40.85,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Holy Cross",
+"rank": 203,
+"division": "AA",
+"rating": 40.68,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Houston Christian",
+"rank": 204,
+"division": "AA",
+"rating": 40.46,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Central Connecticut",
+"rank": 205,
+"division": "AA",
+"rating": 40.33,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "McNeese State",
+"rank": 206,
+"division": "AA",
+"rating": 40.03,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Morgan State",
+"rank": 207,
+"division": "AA",
+"rating": 39.96,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Butler",
+"rank": 208,
+"division": "AA",
+"rating": 39.94,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Elon",
+"rank": 209,
+"division": "AA",
+"rating": 39.82,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Eastern Kentucky",
+"rank": 210,
+"division": "AA",
+"rating": 39.71,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Dayton",
+"rank": 211,
+"division": "AA",
+"rating": 39.52,
+"wins": 5,
+"losses": 1
+},
+{
+"team": "St. Thomas-Mn.",
+"rank": 212,
+"division": "AA",
+"rating": 39.52,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Samford",
+"rank": 213,
+"division": "AA",
+"rating": 39.14,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Eastern Illinois",
+"rank": 214,
+"division": "AA",
+"rating": 39.07,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Lindenwood",
+"rank": 215,
+"division": "AA",
+"rating": 38.99,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "The Citadel",
+"rank": 216,
+"division": "AA",
+"rating": 38.43,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Sacramento State",
+"rank": 217,
+"division": "A",
+"rating": 38.07,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Howard",
+"rank": 218,
+"division": "AA",
+"rating": 38.05,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Towson",
+"rank": 219,
+"division": "AA",
+"rating": 37.81,
+"wins": 0,
+"losses": 8
+},
+{
+"team": "Tennessee State",
+"rank": 220,
+"division": "AA",
+"rating": 37.32,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Norfolk State",
+"rank": 221,
+"division": "AA",
+"rating": 37.22,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Lafayette",
+"rank": 222,
+"division": "AA",
+"rating": 37.04,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "Ark.-Pine Bluff",
+"rank": 223,
+"division": "AA",
+"rating": 36.87,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Duquesne",
+"rank": 224,
+"division": "AA",
+"rating": 36.82,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "New Hampshire",
+"rank": 225,
+"division": "AA",
+"rating": 36.78,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "East Texas A&M",
+"rank": 226,
+"division": "AA",
+"rating": 36.67,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "LIU Post",
+"rank": 227,
+"division": "AA",
+"rating": 36.48,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Georgetown",
+"rank": 228,
+"division": "AA",
+"rating": 36.39,
+"wins": 2,
+"losses": 4
+},
+{
+"team": "West Georgia",
+"rank": 229,
+"division": "AA",
+"rating": 36.25,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Stonehill College",
+"rank": 230,
+"division": "AA",
+"rating": 35.99,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Prairie View A&M",
+"rank": 231,
+"division": "AA",
+"rating": 35.88,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Grambling State",
+"rank": 232,
+"division": "AA",
+"rating": 35.86,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "William & Mary",
+"rank": 233,
+"division": "AA",
+"rating": 35.84,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Merrimack",
+"rank": 234,
+"division": "AA",
+"rating": 35.83,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Delaware State",
+"rank": 235,
+"division": "AA",
+"rating": 35.66,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "New Haven",
+"rank": 236,
+"division": "AA",
+"rating": 35.2,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Sacred Heart",
+"rank": 237,
+"division": "AA",
+"rating": 35.18,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Bethune-Cookman",
+"rank": 238,
+"division": "AA",
+"rating": 35.17,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Robert Morris",
+"rank": 239,
+"division": "AA",
+"rating": 35.1,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Marist",
+"rank": 240,
+"division": "AA",
+"rating": 35.0,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Fordham",
+"rank": 241,
+"division": "AA",
+"rating": 34.83,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "NC Central",
+"rank": 242,
+"division": "AA",
+"rating": 34.48,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "San Diego",
+"rank": 243,
+"division": "AA",
+"rating": 34.45,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Florida A&M",
+"rank": 244,
+"division": "AA",
+"rating": 34.37,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Drake",
+"rank": 245,
+"division": "AA",
+"rating": 34.1,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "NC A&T",
+"rank": 246,
+"division": "AA",
+"rating": 34.05,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Southern U.",
+"rank": 247,
+"division": "AA",
+"rating": 33.73,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Maine",
+"rank": 248,
+"division": "AA",
+"rating": 33.63,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Utah Tech",
+"rank": 249,
+"division": "AA",
+"rating": 33.19,
+"wins": 0,
+"losses": 7
+},
+{
+"team": "Alcorn State",
+"rank": 250,
+"division": "AA",
+"rating": 32.98,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Nicholls State",
+"rank": 251,
+"division": "AA",
+"rating": 32.55,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Murray State",
+"rank": 252,
+"division": "AA",
+"rating": 32.54,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Presbyterian College",
+"rank": 253,
+"division": "AA",
+"rating": 32.16,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Mercyhurst",
+"rank": 254,
+"division": "AA",
+"rating": 31.6,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Bucknell",
+"rank": 255,
+"division": "AA",
+"rating": 30.04,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Valparaiso",
+"rank": 256,
+"division": "AA",
+"rating": 29.51,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Texas Southern",
+"rank": 257,
+"division": "AA",
+"rating": 27.33,
+"wins": 1,
+"losses": 5
+},
+{
+"team": "Chicago State",
+"rank": 258,
+"division": "AA",
+"rating": 26.64,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Wagner",
+"rank": 259,
+"division": "AA",
+"rating": 26.56,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Hampton",
+"rank": 260,
+"division": "AA",
+"rating": 26.34,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Northwestern State",
+"rank": 261,
+"division": "AA",
+"rating": 25.4,
+"wins": 0,
+"losses": 7
+},
+{
+"team": "Miss. Valley State",
+"rank": 262,
+"division": "AA",
+"rating": 23.83,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "VMI",
+"rank": 263,
+"division": "AA",
+"rating": 22.76,
+"wins": 0,
+"losses": 7
+},
+{
+"team": "Davidson",
+"rank": 264,
+"division": "AA",
+"rating": 21.83,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Morehead State",
+"rank": 265,
+"division": "AA",
+"rating": 21.38,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Stetson",
+"rank": 266,
+"division": "AA",
+"rating": 20.6,
+"wins": 1,
+"losses": 6
+}
+]
+},
+{
+"source": "cfb_week8.pdf",
+"as_of": "OCTOBER 24 SATURDAY - WEEK 8",
+"through": "20261024",
+"home_advantage": 3.65,
+"teams": [
+{
+"team": "Ohio State",
+"rank": 1,
+"division": "A",
+"rating": 94.78,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Notre Dame",
+"rank": 2,
+"division": "A",
+"rating": 94.02,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Miami-Florida",
+"rank": 3,
+"division": "A",
+"rating": 93.09,
+"wins": 7,
+"losses": 0
+},
+{
+"team": "LSU",
+"rank": 4,
+"division": "A",
+"rating": 92.1,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Georgia",
+"rank": 5,
+"division": "A",
+"rating": 91.72,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Alabama",
+"rank": 6,
+"division": "A",
+"rating": 91.13,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Indiana",
+"rank": 7,
+"division": "A",
+"rating": 90.8,
+"wins": 7,
+"losses": 1
+},
+{
+"team": "Texas",
+"rank": 8,
+"division": "A",
+"rating": 89.86,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Mississippi",
+"rank": 9,
+"division": "A",
+"rating": 88.35,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Oregon",
+"rank": 10,
+"division": "A",
+"rating": 86.88,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Tennessee",
+"rank": 11,
+"division": "A",
+"rating": 86.53,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "UCLA",
+"rank": 12,
+"division": "A",
+"rating": 86.09,
+"wins": 7,
+"losses": 0
+},
+{
+"team": "Florida",
+"rank": 13,
+"division": "A",
+"rating": 84.87,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Utah",
+"rank": 14,
+"division": "A",
+"rating": 84.86,
+"wins": 7,
+"losses": 0
+},
+{
+"team": "Kentucky",
+"rank": 15,
+"division": "A",
+"rating": 84.32,
+"wins": 7,
+"losses": 1
+},
+{
+"team": "Nebraska",
+"rank": 16,
+"division": "A",
+"rating": 84.08,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Oklahoma",
+"rank": 17,
+"division": "A",
+"rating": 83.69,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Wisconsin",
+"rank": 18,
+"division": "A",
+"rating": 83.64,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Texas Tech",
+"rank": 19,
+"division": "A",
+"rating": 83.58,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "BYU",
+"rank": 20,
+"division": "A",
+"rating": 83.57,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Wake Forest",
+"rank": 21,
+"division": "A",
+"rating": 83.16,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Missouri",
+"rank": 22,
+"division": "A",
+"rating": 82.83,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "South Carolina",
+"rank": 23,
+"division": "A",
+"rating": 82.83,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Northwestern",
+"rank": 24,
+"division": "A",
+"rating": 82.77,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Houston",
+"rank": 25,
+"division": "A",
+"rating": 82.65,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Arizona",
+"rank": 26,
+"division": "A",
+"rating": 82.63,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Iowa",
+"rank": 27,
+"division": "A",
+"rating": 82.21,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Texas A&M",
+"rank": 28,
+"division": "A",
+"rating": 82.16,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Louisville",
+"rank": 29,
+"division": "A",
+"rating": 82.02,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Oklahoma State",
+"rank": 30,
+"division": "A",
+"rating": 81.34,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Southern California",
+"rank": 31,
+"division": "A",
+"rating": 80.93,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Auburn",
+"rank": 32,
+"division": "A",
+"rating": 80.85,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "SMU",
+"rank": 33,
+"division": "A",
+"rating": 80.7,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Michigan",
+"rank": 34,
+"division": "A",
+"rating": 79.65,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Mississippi State",
+"rank": 35,
+"division": "A",
+"rating": 79.01,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Penn State",
+"rank": 36,
+"division": "A",
+"rating": 78.74,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Illinois",
+"rank": 37,
+"division": "A",
+"rating": 78.43,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Florida State",
+"rank": 38,
+"division": "A",
+"rating": 77.5,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Boise State",
+"rank": 39,
+"division": "A",
+"rating": 77.29,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Central Florida(UCF)",
+"rank": 40,
+"division": "A",
+"rating": 76.96,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Baylor",
+"rank": 41,
+"division": "A",
+"rating": 76.87,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Washington",
+"rank": 42,
+"division": "A",
+"rating": 76.59,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Pittsburgh",
+"rank": 43,
+"division": "A",
+"rating": 76.34,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "TCU",
+"rank": 44,
+"division": "A",
+"rating": 75.89,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "North Carolina",
+"rank": 45,
+"division": "A",
+"rating": 75.78,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Virginia Tech",
+"rank": 46,
+"division": "A",
+"rating": 75.56,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Duke",
+"rank": 47,
+"division": "A",
+"rating": 75.48,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Cincinnati",
+"rank": 48,
+"division": "A",
+"rating": 75.46,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Minnesota",
+"rank": 49,
+"division": "A",
+"rating": 75.37,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Clemson",
+"rank": 50,
+"division": "A",
+"rating": 74.77,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Purdue",
+"rank": 51,
+"division": "A",
+"rating": 74.4,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Kansas State",
+"rank": 52,
+"division": "A",
+"rating": 74.16,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "New Mexico",
+"rank": 53,
+"division": "A",
+"rating": 74.01,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Virginia",
+"rank": 54,
+"division": "A",
+"rating": 73.9,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Oregon State",
+"rank": 55,
+"division": "A",
+"rating": 73.67,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "West Virginia",
+"rank": 56,
+"division": "A",
+"rating": 73.49,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Kansas",
+"rank": 57,
+"division": "A",
+"rating": 73.12,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Arkansas",
+"rank": 58,
+"division": "A",
+"rating": 72.73,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Michigan State",
+"rank": 59,
+"division": "A",
+"rating": 72.5,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "James Madison",
+"rank": 60,
+"division": "A",
+"rating": 72.08,
+"wins": 7,
+"losses": 1
+},
+{
+"team": "Arizona State",
+"rank": 61,
+"division": "A",
+"rating": 71.93,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Syracuse",
+"rank": 62,
+"division": "A",
+"rating": 71.4,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Iowa State",
+"rank": 63,
+"division": "A",
+"rating": 71.14,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Vanderbilt",
+"rank": 64,
+"division": "A",
+"rating": 70.68,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "NC State",
+"rank": 65,
+"division": "A",
+"rating": 70.47,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "UTSA",
+"rank": 66,
+"division": "A",
+"rating": 70.2,
+"wins": 7,
+"losses": 1
+},
+{
+"team": "Boston College",
+"rank": 67,
+"division": "A",
+"rating": 70.11,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "North Texas",
+"rank": 68,
+"division": "A",
+"rating": 69.3,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Liberty",
+"rank": 69,
+"division": "A",
+"rating": 69.29,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Texas State",
+"rank": 70,
+"division": "A",
+"rating": 69.24,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Army West Point",
+"rank": 71,
+"division": "A",
+"rating": 68.78,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "North Dakota State",
+"rank": 72,
+"division": "A",
+"rating": 68.36,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Memphis",
+"rank": 73,
+"division": "A",
+"rating": 67.91,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Maryland",
+"rank": 74,
+"division": "A",
+"rating": 67.64,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Colorado",
+"rank": 75,
+"division": "A",
+"rating": 67.54,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Georgia Tech",
+"rank": 76,
+"division": "A",
+"rating": 67.33,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Rutgers",
+"rank": 77,
+"division": "A",
+"rating": 67.09,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Louisiana Tech",
+"rank": 78,
+"division": "A",
+"rating": 66.64,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "South Dakota State",
+"rank": 79,
+"division": "AA",
+"rating": 66.55,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Fresno State",
+"rank": 80,
+"division": "A",
+"rating": 65.76,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Youngstown State",
+"rank": 81,
+"division": "AA",
+"rating": 64.95,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "South Florida",
+"rank": 82,
+"division": "A",
+"rating": 64.81,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Western Michigan",
+"rank": 83,
+"division": "A",
+"rating": 64.6,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "California",
+"rank": 84,
+"division": "A",
+"rating": 64.39,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Montana State",
+"rank": 85,
+"division": "AA",
+"rating": 64.33,
+"wins": 7,
+"losses": 1
+},
+{
+"team": "Toledo",
+"rank": 86,
+"division": "A",
+"rating": 64.27,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "UNLV",
+"rank": 87,
+"division": "A",
+"rating": 64.25,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Tulsa",
+"rank": 88,
+"division": "A",
+"rating": 64.16,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Connecticut",
+"rank": 89,
+"division": "A",
+"rating": 63.77,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Louisiana-Lafayette",
+"rank": 90,
+"division": "A",
+"rating": 63.4,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Tulane",
+"rank": 91,
+"division": "A",
+"rating": 63.27,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Stanford",
+"rank": 92,
+"division": "A",
+"rating": 62.31,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "South Dakota",
+"rank": 93,
+"division": "AA",
+"rating": 62.09,
+"wins": 7,
+"losses": 2
+},
+{
+"team": "Georgia Southern",
+"rank": 94,
+"division": "A",
+"rating": 61.95,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Navy",
+"rank": 95,
+"division": "A",
+"rating": 61.75,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Air Force",
+"rank": 96,
+"division": "A",
+"rating": 61.58,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Stephen F. Austin",
+"rank": 97,
+"division": "AA",
+"rating": 61.02,
+"wins": 8,
+"losses": 0
+},
+{
+"team": "Ohio",
+"rank": 98,
+"division": "A",
+"rating": 60.34,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "North Dakota",
+"rank": 99,
+"division": "AA",
+"rating": 60.32,
+"wins": 6,
+"losses": 3
+},
+{
+"team": "Appalachian State",
+"rank": 100,
+"division": "A",
+"rating": 60.27,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Washington State",
+"rank": 101,
+"division": "A",
+"rating": 60.09,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Georgia State",
+"rank": 102,
+"division": "A",
+"rating": 59.92,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Utah State",
+"rank": 103,
+"division": "A",
+"rating": 59.87,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "East Carolina",
+"rank": 104,
+"division": "A",
+"rating": 59.73,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "South Alabama",
+"rank": 105,
+"division": "A",
+"rating": 59.6,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Florida Atlantic",
+"rank": 106,
+"division": "A",
+"rating": 59.48,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "Jacksonville State",
+"rank": 107,
+"division": "A",
+"rating": 59.38,
+"wins": 5,
+"losses": 2
+},
+{
+"team": "San Diego State",
+"rank": 108,
+"division": "A",
+"rating": 59.29,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Arkansas State",
+"rank": 109,
+"division": "A",
+"rating": 58.83,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Miami-Ohio",
+"rank": 110,
+"division": "A",
+"rating": 58.65,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Tarleton State",
+"rank": 111,
+"division": "AA",
+"rating": 58.55,
+"wins": 8,
+"losses": 0
+},
+{
+"team": "Colorado State",
+"rank": 112,
+"division": "A",
+"rating": 58.4,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Hawai'i",
+"rank": 113,
+"division": "A",
+"rating": 58.32,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Nevada",
+"rank": 114,
+"division": "A",
+"rating": 58.27,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Illinois State",
+"rank": 115,
+"division": "AA",
+"rating": 57.55,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Delaware",
+"rank": 116,
+"division": "A",
+"rating": 57.01,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "UAB",
+"rank": 117,
+"division": "A",
+"rating": 56.79,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Harvard",
+"rank": 118,
+"division": "AA",
+"rating": 56.79,
+"wins": 6,
+"losses": 0
+},
+{
+"team": "Montana",
+"rank": 119,
+"division": "AA",
+"rating": 56.77,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Wyoming",
+"rank": 120,
+"division": "A",
+"rating": 56.77,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Western Kentucky",
+"rank": 121,
+"division": "A",
+"rating": 56.71,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Temple",
+"rank": 122,
+"division": "A",
+"rating": 56.43,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Fla. International",
+"rank": 123,
+"division": "A",
+"rating": 55.79,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Coastal Carolina",
+"rank": 124,
+"division": "A",
+"rating": 55.61,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Central Michigan",
+"rank": 125,
+"division": "A",
+"rating": 54.85,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "New Mexico State",
+"rank": 126,
+"division": "A",
+"rating": 54.83,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Austin Peay",
+"rank": 127,
+"division": "AA",
+"rating": 54.58,
+"wins": 7,
+"losses": 2
+},
+{
+"team": "Northern Arizona",
+"rank": 128,
+"division": "AA",
+"rating": 54.56,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "San Jose State",
+"rank": 129,
+"division": "A",
+"rating": 54.45,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Marshall",
+"rank": 130,
+"division": "A",
+"rating": 54.2,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Buffalo",
+"rank": 131,
+"division": "A",
+"rating": 54.12,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Troy",
+"rank": 132,
+"division": "A",
+"rating": 53.75,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Old Dominion",
+"rank": 133,
+"division": "A",
+"rating": 53.33,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Eastern Michigan",
+"rank": 134,
+"division": "A",
+"rating": 53.31,
+"wins": 4,
+"losses": 5
+},
+{
+"team": "Rice",
+"rank": 135,
+"division": "A",
+"rating": 53.15,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Mercer",
+"rank": 136,
+"division": "AA",
+"rating": 53.04,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Kennesaw State",
+"rank": 137,
+"division": "A",
+"rating": 53.0,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Tennessee Tech",
+"rank": 138,
+"division": "AA",
+"rating": 52.68,
+"wins": 7,
+"losses": 1
+},
+{
+"team": "Northern Iowa",
+"rank": 139,
+"division": "AA",
+"rating": 52.46,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Middle Tennessee",
+"rank": 140,
+"division": "A",
+"rating": 52.14,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Chattanooga",
+"rank": 141,
+"division": "AA",
+"rating": 51.75,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "East Tennessee State",
+"rank": 142,
+"division": "AA",
+"rating": 51.6,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Idaho State",
+"rank": 143,
+"division": "AA",
+"rating": 51.57,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Southern Miss",
+"rank": 144,
+"division": "A",
+"rating": 51.47,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Incarnate Word",
+"rank": 145,
+"division": "AA",
+"rating": 51.38,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Southern Illinois",
+"rank": 146,
+"division": "AA",
+"rating": 51.35,
+"wins": 4,
+"losses": 5
+},
+{
+"team": "Bowling Green",
+"rank": 147,
+"division": "A",
+"rating": 50.45,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Abilene Christian",
+"rank": 148,
+"division": "AA",
+"rating": 50.44,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Lehigh",
+"rank": 149,
+"division": "AA",
+"rating": 50.43,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Idaho",
+"rank": 150,
+"division": "AA",
+"rating": 50.19,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Massachusetts",
+"rank": 151,
+"division": "A",
+"rating": 49.93,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Missouri State",
+"rank": 152,
+"division": "A",
+"rating": 49.85,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Weber State",
+"rank": 153,
+"division": "AA",
+"rating": 49.74,
+"wins": 5,
+"losses": 4
+},
+{
+"team": "Lamar",
+"rank": 154,
+"division": "AA",
+"rating": 49.68,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Sam Houston State",
+"rank": 155,
+"division": "A",
+"rating": 49.39,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Southern Utah",
+"rank": 156,
+"division": "AA",
+"rating": 49.3,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Kent State",
+"rank": 157,
+"division": "A",
+"rating": 49.26,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Ball State",
+"rank": 158,
+"division": "A",
+"rating": 49.08,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Campbell",
+"rank": 159,
+"division": "AA",
+"rating": 48.83,
+"wins": 7,
+"losses": 1
+},
+{
+"team": "UC Davis",
+"rank": 160,
+"division": "AA",
+"rating": 48.82,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Monmouth-NJ",
+"rank": 161,
+"division": "AA",
+"rating": 48.28,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Albany-NY",
+"rank": 162,
+"division": "AA",
+"rating": 48.14,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "SE Missouri State",
+"rank": 163,
+"division": "AA",
+"rating": 48.12,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Alabama A&M",
+"rank": 164,
+"division": "AA",
+"rating": 46.53,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Western Illinois",
+"rank": 165,
+"division": "AA",
+"rating": 46.39,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Western Carolina",
+"rank": 166,
+"division": "AA",
+"rating": 46.34,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "LouisianaMonroe(ULM)",
+"rank": 167,
+"division": "A",
+"rating": 46.26,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "North Alabama",
+"rank": 168,
+"division": "AA",
+"rating": 45.78,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Princeton",
+"rank": 169,
+"division": "AA",
+"rating": 45.67,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Akron",
+"rank": 170,
+"division": "A",
+"rating": 45.56,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "SE Louisiana",
+"rank": 171,
+"division": "AA",
+"rating": 45.48,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Yale",
+"rank": 172,
+"division": "AA",
+"rating": 45.41,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Cornell",
+"rank": 173,
+"division": "AA",
+"rating": 45.11,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Charlotte",
+"rank": 174,
+"division": "A",
+"rating": 44.76,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Villanova",
+"rank": 175,
+"division": "AA",
+"rating": 44.72,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "UTEP",
+"rank": 176,
+"division": "A",
+"rating": 44.47,
+"wins": 1,
+"losses": 6
+},
+{
+"team": "Wofford",
+"rank": 177,
+"division": "AA",
+"rating": 44.44,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Indiana State",
+"rank": 178,
+"division": "AA",
+"rating": 44.39,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Brown",
+"rank": 179,
+"division": "AA",
+"rating": 44.31,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Dartmouth",
+"rank": 180,
+"division": "AA",
+"rating": 44.31,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Eastern Washington",
+"rank": 181,
+"division": "AA",
+"rating": 44.2,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Northern Illinois",
+"rank": 182,
+"division": "A",
+"rating": 44.08,
+"wins": 0,
+"losses": 7
+},
+{
+"team": "Colgate",
+"rank": 183,
+"division": "AA",
+"rating": 44.02,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Rhode Island",
+"rank": 184,
+"division": "AA",
+"rating": 43.61,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "SC State",
+"rank": 185,
+"division": "AA",
+"rating": 43.52,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Gardner-Webb",
+"rank": 186,
+"division": "AA",
+"rating": 43.45,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "UTRGV",
+"rank": 187,
+"division": "AA",
+"rating": 43.41,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Charleston Southern",
+"rank": 188,
+"division": "AA",
+"rating": 43.4,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Stony Brook",
+"rank": 189,
+"division": "AA",
+"rating": 43.36,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Central Arkansas",
+"rank": 190,
+"division": "AA",
+"rating": 42.65,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Tennessee-Martin",
+"rank": 191,
+"division": "AA",
+"rating": 42.25,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Holy Cross",
+"rank": 192,
+"division": "AA",
+"rating": 41.73,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Richmond",
+"rank": 193,
+"division": "AA",
+"rating": 41.62,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Furman",
+"rank": 194,
+"division": "AA",
+"rating": 41.57,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Samford",
+"rank": 195,
+"division": "AA",
+"rating": 41.54,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Jackson State",
+"rank": 196,
+"division": "AA",
+"rating": 41.5,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "St. Thomas-Mn.",
+"rank": 197,
+"division": "AA",
+"rating": 41.36,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Pennsylvania",
+"rank": 198,
+"division": "AA",
+"rating": 41.29,
+"wins": 3,
+"losses": 3
+},
+{
+"team": "Central Connecticut",
+"rank": 199,
+"division": "AA",
+"rating": 41.28,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Northern Colorado",
+"rank": 200,
+"division": "AA",
+"rating": 41.1,
+"wins": 3,
+"losses": 6
+},
+{
+"team": "West Florida",
+"rank": 201,
+"division": "AA",
+"rating": 40.72,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Butler",
+"rank": 202,
+"division": "AA",
+"rating": 40.31,
+"wins": 6,
+"losses": 2
+},
+{
+"team": "Lindenwood",
+"rank": 203,
+"division": "AA",
+"rating": 40.15,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Alabama State",
+"rank": 204,
+"division": "AA",
+"rating": 39.94,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Cal Poly-SLO",
+"rank": 205,
+"division": "AA",
+"rating": 39.66,
+"wins": 4,
+"losses": 5
+},
+{
+"team": "Elon",
+"rank": 206,
+"division": "AA",
+"rating": 39.42,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Eastern Kentucky",
+"rank": 207,
+"division": "AA",
+"rating": 39.32,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Portland State",
+"rank": 208,
+"division": "AA",
+"rating": 38.84,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Towson",
+"rank": 209,
+"division": "AA",
+"rating": 38.69,
+"wins": 0,
+"losses": 8
+},
+{
+"team": "Howard",
+"rank": 210,
+"division": "AA",
+"rating": 38.6,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Dayton",
+"rank": 211,
+"division": "AA",
+"rating": 38.57,
+"wins": 6,
+"losses": 1
+},
+{
+"team": "Eastern Illinois",
+"rank": 212,
+"division": "AA",
+"rating": 38.44,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "The Citadel",
+"rank": 213,
+"division": "AA",
+"rating": 38.36,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Bryant",
+"rank": 214,
+"division": "AA",
+"rating": 38.06,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Houston Christian",
+"rank": 215,
+"division": "AA",
+"rating": 38.0,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "McNeese State",
+"rank": 216,
+"division": "AA",
+"rating": 37.9,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Lafayette",
+"rank": 217,
+"division": "AA",
+"rating": 37.74,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Columbia",
+"rank": 218,
+"division": "AA",
+"rating": 37.38,
+"wins": 4,
+"losses": 2
+},
+{
+"team": "Duquesne",
+"rank": 219,
+"division": "AA",
+"rating": 37.38,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Ark.-Pine Bluff",
+"rank": 220,
+"division": "AA",
+"rating": 37.35,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Sacramento State",
+"rank": 221,
+"division": "A",
+"rating": 37.34,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Morgan State",
+"rank": 222,
+"division": "AA",
+"rating": 37.25,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "Prairie View A&M",
+"rank": 223,
+"division": "AA",
+"rating": 37.04,
+"wins": 4,
+"losses": 5
+},
+{
+"team": "NC Central",
+"rank": 224,
+"division": "AA",
+"rating": 36.97,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Utah Tech",
+"rank": 225,
+"division": "AA",
+"rating": 36.28,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Stonehill College",
+"rank": 226,
+"division": "AA",
+"rating": 36.24,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Merrimack",
+"rank": 227,
+"division": "AA",
+"rating": 36.17,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "New Hampshire",
+"rank": 228,
+"division": "AA",
+"rating": 35.69,
+"wins": 2,
+"losses": 7
+},
+{
+"team": "Tennessee State",
+"rank": 229,
+"division": "AA",
+"rating": 35.61,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Norfolk State",
+"rank": 230,
+"division": "AA",
+"rating": 35.38,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Robert Morris",
+"rank": 231,
+"division": "AA",
+"rating": 35.3,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Georgetown",
+"rank": 232,
+"division": "AA",
+"rating": 35.21,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "Bethune-Cookman",
+"rank": 233,
+"division": "AA",
+"rating": 35.18,
+"wins": 5,
+"losses": 3
+},
+{
+"team": "LIU Post",
+"rank": 234,
+"division": "AA",
+"rating": 35.0,
+"wins": 3,
+"losses": 6
+},
+{
+"team": "Grambling State",
+"rank": 235,
+"division": "AA",
+"rating": 34.86,
+"wins": 4,
+"losses": 3
+},
+{
+"team": "Sacred Heart",
+"rank": 236,
+"division": "AA",
+"rating": 34.68,
+"wins": 3,
+"losses": 4
+},
+{
+"team": "William & Mary",
+"rank": 237,
+"division": "AA",
+"rating": 34.54,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "San Diego",
+"rank": 238,
+"division": "AA",
+"rating": 34.23,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "West Georgia",
+"rank": 239,
+"division": "AA",
+"rating": 34.18,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "East Texas A&M",
+"rank": 240,
+"division": "AA",
+"rating": 34.1,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Florida A&M",
+"rank": 241,
+"division": "AA",
+"rating": 33.8,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Murray State",
+"rank": 242,
+"division": "AA",
+"rating": 33.45,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "New Haven",
+"rank": 243,
+"division": "AA",
+"rating": 33.31,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "NC A&T",
+"rank": 244,
+"division": "AA",
+"rating": 33.16,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Alcorn State",
+"rank": 245,
+"division": "AA",
+"rating": 32.99,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Fordham",
+"rank": 246,
+"division": "AA",
+"rating": 32.65,
+"wins": 2,
+"losses": 7
+},
+{
+"team": "Delaware State",
+"rank": 247,
+"division": "AA",
+"rating": 32.5,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Maine",
+"rank": 248,
+"division": "AA",
+"rating": 32.46,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Drake",
+"rank": 249,
+"division": "AA",
+"rating": 32.15,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Southern U.",
+"rank": 250,
+"division": "AA",
+"rating": 31.89,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Marist",
+"rank": 251,
+"division": "AA",
+"rating": 31.71,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Valparaiso",
+"rank": 252,
+"division": "AA",
+"rating": 30.84,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Nicholls State",
+"rank": 253,
+"division": "AA",
+"rating": 30.74,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Mercyhurst",
+"rank": 254,
+"division": "AA",
+"rating": 30.45,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Bucknell",
+"rank": 255,
+"division": "AA",
+"rating": 28.65,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Presbyterian College",
+"rank": 256,
+"division": "AA",
+"rating": 28.47,
+"wins": 4,
+"losses": 4
+},
+{
+"team": "Texas Southern",
+"rank": 257,
+"division": "AA",
+"rating": 27.61,
+"wins": 2,
+"losses": 5
+},
+{
+"team": "Chicago State",
+"rank": 258,
+"division": "AA",
+"rating": 25.14,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Hampton",
+"rank": 259,
+"division": "AA",
+"rating": 25.04,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Northwestern State",
+"rank": 260,
+"division": "AA",
+"rating": 24.69,
+"wins": 0,
+"losses": 8
+},
+{
+"team": "Wagner",
+"rank": 261,
+"division": "AA",
+"rating": 24.59,
+"wins": 1,
+"losses": 7
+},
+{
+"team": "Miss. Valley State",
+"rank": 262,
+"division": "AA",
+"rating": 23.66,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "VMI",
+"rank": 263,
+"division": "AA",
+"rating": 22.06,
+"wins": 0,
+"losses": 8
+},
+{
+"team": "Morehead State",
+"rank": 264,
+"division": "AA",
+"rating": 21.71,
+"wins": 2,
+"losses": 6
+},
+{
+"team": "Davidson",
+"rank": 265,
+"division": "AA",
+"rating": 21.34,
+"wins": 3,
+"losses": 5
+},
+{
+"team": "Stetson",
+"rank": 266,
+"division": "AA",
+"rating": 19.64,
+"wins": 1,
+"losses": 7
+}
+]
+}
+]
