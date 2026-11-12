@@ -191,7 +191,7 @@ def confidence_json(day: str) -> dict:
 
 def lines_json(day: str) -> dict:
     """Every game of the coming week (Tue-Sat; on Sun/Mon the week ahead) with
-    its tracked points from lines.json: open, one per night, close, plus a live
+    its tracked points from lines.json: one per night, close, plus a live
     'now' point for games that haven't kicked off."""
     days = upcoming_week(day)
     data = linetrack.load()
@@ -201,13 +201,10 @@ def lines_json(day: str) -> dict:
         for l, p in s.picks:
             e = data.get(l.game_id) or {}
             g = pick_json(p, l)
-            open_ = e.get("open")
-            if open_ is None and l.home_spread_open is not None:
-                open_ = dict(linetrack._point(p, l.home_spread_open), at=None)
             close = e.get("close")
             if close is None and l.state != "pre":
-                close = dict(linetrack._point(p), at=None)
-            games.append(dict(g, game_id=l.game_id, date=s.day, open=open_,
+                close = dict(linetrack._point(p), at=l.kickoff)
+            games.append(dict(g, game_id=l.game_id, date=s.day,
                               points=e.get("points", []), close=close,
                               now=dict(linetrack._point(p), at=now) if l.state == "pre" else None))
     games.sort(key=lambda g: (g["kickoff"] or "", g["away"]))

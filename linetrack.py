@@ -2,23 +2,21 @@
 
 Stored in lines.json, one entry per game:
 
-  open    DraftKings' opening line (ESPN carries it), with the edge our model
-          gives it using the ratings in effect when we first saw the game.
   points  one snapshot per night (taken by the scheduled snapshot between
           10 pm and 4 am Eastern): DK spread, model line and edge as they
           stood then. Edge moves when the line moves or Sagarin updates.
   close   the line and edge when the game kicked off.
 
 Lines for the next week usually post Sunday, right after Saturday's games, so
-a game normally gets an open point plus a point every night through kickoff.
+the earliest point is Sunday night and a game gets a point every night through
+kickoff. (ESPN's "open" line is NOT used: it can be a look-ahead line posted
+weeks earlier, not the Sunday number.)
 """
-import dataclasses
 import json
 import os
-from datetime import date, datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone
 from typing import List, Optional
 
-from model import evaluate
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LINES = os.path.join(HERE, "lines.json")
@@ -77,10 +75,8 @@ def save(data: dict) -> None:
         f.write("\n")
 
 
-def _point(p, spread=None) -> dict:
-    """DK spread, model line and edge for a pick (or for the same game at another spread)."""
-    if spread is not None and spread != p.game.dk_home_spread:
-        p = evaluate(dataclasses.replace(p.game, dk_home_spread=spread))
+def _point(p) -> dict:
+    """DK spread, model line and edge for a pick."""
     return {"dk_home_spread": p.game.dk_home_spread, "projected": p.projected,
             "edge": p.edge, "action": p.action, "side": p.side}
 
@@ -107,11 +103,7 @@ def track(data: dict, slates, now: datetime, night: Optional[str]) -> bool:
                     continue  # first seen after kickoff: nothing to track
                 e = data[l.game_id] = {
                     "date": s.day, "kickoff": l.kickoff, "away": g.away, "home": g.home,
-                    "neutral": g.neutral, "open": None, "points": [], "close": None}
-                changed = True
-            if e["open"] is None and l.home_spread_open is not None:
-                e["open"] = dict(_point(p, l.home_spread_open), at=stamp,
-                                 sagarin_as_of=s.ratings.as_of, hfa=g.hfa)
+                    "neutral": g.neutral, "points": [], "close": None}
                 changed = True
             if e["kickoff"] != l.kickoff:
                 e["kickoff"], changed = l.kickoff, True
