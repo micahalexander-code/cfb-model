@@ -1,5 +1,7 @@
 # Every 30 minutes: record newly finished games into history.json and save
 # DraftKings lines for games about to start into locked.json.
+# Between 10 pm and 4 am Eastern it also takes the nightly Line Tracking
+# point for every game of the coming week (lines.json).
 # A commit only happens when something new was added; Render then redeploys
 # the site with the updated history.
 name: Snapshot results
@@ -28,13 +30,13 @@ jobs:
         run: python3 snapshot.py
       - name: Commit if history changed
         run: |
-          git add -N history.json locked.json 2>/dev/null || true
-          if git diff --quiet -- history.json locked.json; then
+          git add -N history.json locked.json lines.json 2>/dev/null || true
+          if git diff --quiet -- history.json locked.json lines.json; then
             echo "Nothing new"; exit 0
           fi
           git config user.name "cfb-model-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add history.json locked.json
-          git commit -m "History: record finished games and saved lines"
+          git add history.json locked.json lines.json
+          git commit -m "History: record finished games, saved lines and line tracking"
           git pull --rebase
           git push

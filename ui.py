@@ -6,6 +6,7 @@ Endpoints:
   GET  /                         the page (ui.html)
   GET  /api/slate?date=&teaser=  evaluate a slate
   GET  /api/teams                Sagarin ratings + HFA
+  GET  /api/lines?date=          Line Tracking: DK spread + edge over the week
   GET  /api/history              frozen results from history.json (see snapshot.py)
   GET  /api/matchup?home=&away=&spread=&neutral=&teaser=   one-off calculator
   POST /api/save?date=&teaser=   append the slate to picks/YYYYMMDD.csv
@@ -14,11 +15,12 @@ import json
 import os
 import time
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
 import confidence
+import linetrack
 import odds
 import run
 import sagarin
@@ -78,12 +80,7 @@ def slate_json(day: str, teaser: float, refresh: bool) -> dict:
 _past_slates = {}  # day -> Slate, for days before today (every game final)
 
 
-def week_window(day: str):
-    """Tuesday..Saturday of the CFB week containing `day`. Sunday/Monday belong
-    to the week that just ended."""
-    d = datetime.strptime(day, "%Y%m%d").date()
-    tue = d - timedelta(days=(d.weekday() - 1) % 7)
-    return [(tue + timedelta(days=i)).strftime("%Y%m%d") for i in range(5)]
+week_window = linetrack.week_window
 
 
 def week_json(day: str) -> dict:
@@ -112,13 +109,7 @@ def week_json(day: str) -> dict:
 _live_slates = {}  # day -> (built_at, Slate) for today and later; rebuilt every 2 min
 
 
-def upcoming_week(day: str):
-    """Tue..Sat of the week whose games are next: on Sunday/Monday that's the
-    coming week, otherwise the week containing `day`."""
-    d = datetime.strptime(day, "%Y%m%d").date()
-    if d.weekday() in (6, 0):  # Sunday, Monday
-        d += timedelta(days=(1 - d.weekday()) % 7)
-    return week_window(d.strftime("%Y%m%d"))
+upcoming_week = linetrack.upcoming_week
 
 
 def week_slates(days):
@@ -198,6 +189,32 @@ def confidence_json(day: str) -> dict:
             "graded": sum(1 for h in hist if h["action"] == "SPREAD" and h.get("teaser_result"))}
 
 
+def lines_json(day: str) -> dict:
+    """Every game of the coming week (Tue-Sat; on Sun/Mon the week ahead) with
+    its tracked points from lines.json: open, one per night, close, plus a live
+    'now' point for games that haven't kicked off."""
+    days = upcoming_week(day)
+    data = linetrack.load()
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    games = []
+    for s in week_slates(days):
+        for l, p in s.picks:
+            e = data.get(l.game_id) or {}
+            g = pick_json(p, l)
+            open_ = e.get("open")
+            if open_ is None and l.home_spread_open is not None:
+                open_ = dict(linetrack._point(p, l.home_spread_open), at=None)
+            close = e.get("close")
+            if close is None and l.state != "pre":
+                close = dict(linetrack._point(p), at=None)
+            games.append(dict(g, game_id=l.game_id, date=s.day, open=open_,
+                              points=e.get("points", []), close=close,
+                              now=dict(linetrack._point(p), at=now) if l.state == "pre" else None))
+    games.sort(key=lambda g: (g["kickoff"] or "", g["away"]))
+    return {"date": day, "week": odds.week_number(days[0]) or odds.week_number(day),
+            "start": days[0], "end": days[-1], "as_of": ratings().as_of, "games": games}
+
+
 def history_json() -> dict:
     """Frozen history plus today's/yesterday's finals the scheduled snapshot
     hasn't recorded yet (marked provisional until it does)."""
@@ -242,6 +259,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(200, confidence_json(day))
             if method == "GET" and path == "/api/week":
                 return self._send(200, week_json(day))
+            if method == "GET" and path == "/api/lines":
+                return self._send(200, lines_json(day))
             if method == "GET" and path == "/api/history":
                 return self._send(200, history_json())
             if method == "GET" and path == "/api/teams":

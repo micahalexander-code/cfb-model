@@ -153,6 +153,26 @@
   .rk { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; }
   .rk.on { background: var(--bad); box-shadow: 0 0 6px color-mix(in srgb, var(--bad) 60%, transparent); }
 
+
+  /* Line Tracking charts */
+  .lt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+  .lt-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+             box-shadow: var(--shadow); padding: 12px 12px 8px; min-width: 0; }
+  .lt-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .lt-head b { font-size: 15px; }
+  .lt-sub { font-size: 12px; color: var(--muted); margin: 2px 0 4px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .lt-card svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .lt-card svg text { font: 10px Inter, sans-serif; fill: var(--muted); }
+  .lt-card svg .axt { font-weight: 600; }
+  .lt-card svg .grid { stroke: var(--line); }
+  .lt-dk { stroke: var(--accent); fill: var(--accent); }
+  .lt-ed { stroke: #e8710a; fill: #e8710a; }
+  .lt-card svg path { fill: none; stroke-linejoin: round; }
+  .lt-card svg circle { stroke: var(--panel); stroke-width: 1.5; }
+  .lt-key { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--muted); margin-right: 12px; }
+  .lt-key i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+  .mv { color: var(--fg); font-weight: 700; }
+
   @keyframes closeglow { 0%, 100% { filter: none; } 50% { filter: brightness(1.12) saturate(1.15); } }
   @media (prefers-reduced-motion: reduce) { tr.c-close td { animation: none; } }
 </style>
@@ -165,6 +185,7 @@
   <nav class="tabs">
     <button class="tab active" data-tab="slate">Slate</button>
     <button class="tab" data-tab="confidence">Confidence</button>
+    <button class="tab" data-tab="lines">Line Tracking</button>
     <button class="tab" data-tab="history">History</button>
   </nav>
 
@@ -183,6 +204,29 @@
     <div id="cf-teams"></div>
     <h2>Edge ranges <span class="note">teaser record of The Core Model picks so far</span></h2>
     <div id="cf-edges"></div>
+  </div>
+
+  <div id="tab-lines" hidden>
+    <h2 id="lt-title">Line Tracking <button class="info" data-for="x-lt" aria-expanded="false" aria-label="What is this?">i</button></h2>
+    <div class="explain" id="x-lt" hidden>How each game's DraftKings spread and our edge move through the week.
+      <b>Open</b> is DraftKings' opening line (usually posted Sunday, right after Saturday's games).
+      Every night between 10 pm and 4 am Eastern the model saves one point per game: the line and the edge as they stood then.
+      <b>Now</b> is the live line, and <b>Close</b> is the line at kickoff. Edge moves when the line moves or Sagarin updates his ratings.
+      The DK line is the home team's spread (minus = home favored) on the left axis; edge is on the right axis.</div>
+    <div class="summary" id="lt-summary"></div>
+    <div class="controls">
+      <label>Team <input id="lt-q" placeholder="Filter teams"></label>
+      <label>Pick type <select id="lt-type">
+        <option value="all">All games</option><option value="core">The Core Model</option>
+        <option value="dis">Vegas Knows Something</option><option value="ml">Home Dawgs</option>
+        <option value="skip">Stay Away</option></select></label>
+      <label>Sort <select id="lt-sort">
+        <option value="kick">Kickoff</option><option value="move">Biggest line move</option><option value="edge">Biggest edge now</option></select></label>
+      <label class="inline"><input type="checkbox" id="lt-pre" checked> Only games not started</label>
+    </div>
+    <div style="margin:12px 0 8px"><span class="lt-key"><i style="background:var(--accent)"></i>DK spread (home)</span>
+      <span class="lt-key"><i style="background:#e8710a"></i>Edge</span></div>
+    <div id="lt-games" class="lt-grid"></div>
   </div>
 
   <div id="tab-history" hidden>
@@ -615,11 +659,100 @@ function renderConfidence() {
 }
 $("cf-today").onchange = $("cf-short").onchange = () => conf && renderConfidence();
 
+// ---- Line Tracking tab ----
+let lt = null;
+async function loadLines() {
+  try { lt = await api(`/api/lines?date=${ymd()}`); renderLines(); }
+  catch (e) { $("lt-games").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+}
+const ymdDate = d => new Date(d.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"));
+// Points on a game's chart, in order: open, each night, now (not started) or close.
+function ltSeries(g) {
+  const pts = [];
+  if (g.open) pts.push({ ...g.open, label: "Open", tip: "DraftKings open" });
+  for (const p of g.points) {
+    const d = ymdDate(p.night);
+    pts.push({ ...p, label: d.toLocaleDateString([], { weekday: "short" }) + " " + (d.getMonth() + 1) + "/" + d.getDate(),
+               tip: d.toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" }) + " night" });
+  }
+  if (g.close) pts.push({ ...g.close, label: "Close", tip: "At kickoff" });
+  else if (g.now) pts.push({ ...g.now, label: "Now", tip: "Live line right now" });
+  return pts;
+}
+function niceRange(lo, hi, minSpan) {
+  if (hi - lo < minSpan) { const m = (lo + hi) / 2; lo = m - minSpan / 2; hi = m + minSpan / 2; }
+  const step = hi - lo > 12 ? 4 : hi - lo > 6 ? 2 : 1;
+  return { lo: Math.floor(lo / step) * step, hi: Math.ceil(hi / step) * step, step };
+}
+function ltChart(g, pts) {
+  const W = 340, H = 190, L = 38, R = 36, T = 10, B = 40, w = W - L - R, h = H - T - B;
+  const sp = pts.map(p => p.dk_home_spread), ed = pts.map(p => Math.abs(p.edge));
+  const ys = niceRange(Math.min(...sp), Math.max(...sp), 4);
+  const ye = niceRange(0, Math.max(...ed, 1), 2); ye.lo = 0;
+  const x = i => L + (pts.length === 1 ? w / 2 : i * w / (pts.length - 1));
+  const yS = v => T + h - (v - ys.lo) / (ys.hi - ys.lo) * h;
+  const yE = v => T + h - (v - ye.lo) / (ye.hi - ye.lo) * h;
+  let out = "";
+  for (let v = ys.lo; v <= ys.hi + 1e-9; v += ys.step)
+    out += `<line class="grid" x1="${L}" x2="${L + w}" y1="${yS(v)}" y2="${yS(v)}"/><text x="${L - 5}" y="${yS(v) + 3}" text-anchor="end">${line(v)}</text>`;
+  const ne = Math.round((ye.hi - ye.lo) / ye.step);
+  for (let i = 0; i <= ne; i++) { const v = ye.lo + i * (ye.hi - ye.lo) / ne;
+    out += `<text x="${L + w + 5}" y="${yE(v) + 3}">${+v.toFixed(1)}</text>`; }
+  pts.forEach((p, i) => out += `<text x="${x(i)}" y="${T + h + 14}" text-anchor="middle">${esc(p.label)}</text>`);
+  out += `<text class="axt" x="${L + w / 2}" y="${H - 4}" text-anchor="middle">Snapshot</text>`;
+  out += `<text class="axt" transform="translate(9 ${T + h / 2}) rotate(-90)" text-anchor="middle">DK spread (home)</text>`;
+  out += `<text class="axt" transform="translate(${W - 4} ${T + h / 2}) rotate(90)" text-anchor="middle">Edge (pts)</text>`;
+  const path = (f, vals) => vals.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${f(v).toFixed(1)}`).join("");
+  out += `<path class="lt-dk" fill="none" stroke-width="2.2" d="${path(yS, sp)}"/>`;
+  out += `<path class="lt-ed" fill="none" stroke-width="2.2" stroke-dasharray="5 3" d="${path(yE, ed)}"/>`;
+  pts.forEach((p, i) => {
+    const pick = p.action === "SPREAD" ? `pick ${p.side}` : p.action === "MONEYLINE" ? `${p.side} ML` : p.action === "SKIP" ? "no pick" : p.action.toLowerCase();
+    const tip = `${p.tip}: DK ${g.home} ${line(p.dk_home_spread)} · edge ${Math.abs(p.edge).toFixed(2)} · ${pick}`;
+    out += `<circle class="lt-dk" cx="${x(i)}" cy="${yS(sp[i])}" r="3.5"><title>${esc(tip)}</title></circle>`;
+    out += `<circle class="lt-ed" cx="${x(i)}" cy="${yE(ed[i])}" r="3.5"><title>${esc(tip)}</title></circle>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Line movement for ${esc(g.away)} at ${esc(g.home)}">${out}</svg>`;
+}
+const ltType = g => g.action === "SPREAD" ? (g.flags.includes("DISAGREE") ? "dis" : "core")
+  : g.action === "MONEYLINE" ? "ml" : g.action === "SKIP" && g.flags.length ? "skip" : "other";
+function ltMove(g) { const pts = ltSeries(g); return pts.length < 2 ? 0 : pts[pts.length - 1].dk_home_spread - pts[0].dk_home_spread; }
+function renderLines() {
+  const c = lt, md = d => ymdDate(d).toLocaleDateString([], { month: "short", day: "numeric" });
+  $("lt-title").firstChild.textContent = `Line Tracking · ${c.week ? "Week " + c.week + " · " : ""}${md(c.start)}–${md(c.end)} `;
+  const q = $("lt-q").value.toLowerCase(), type = $("lt-type").value;
+  let rows = c.games.filter(g => (!$("lt-pre").checked || g.state === "pre")
+    && (type === "all" || ltType(g) === type)
+    && (!q || (g.away + " " + g.home).toLowerCase().includes(q)));
+  const sort = $("lt-sort").value;
+  if (sort === "move") rows.sort((a, b) => Math.abs(ltMove(b)) - Math.abs(ltMove(a)));
+  if (sort === "edge") rows.sort((a, b) => Math.abs(b.edge) - Math.abs(a.edge));
+  const moved = c.games.filter(g => Math.abs(ltMove(g)) >= 1).length;
+  const nights = new Set(c.games.flatMap(g => g.points.map(p => p.night))).size;
+  $("lt-summary").innerHTML = [["Games", c.games.length], ["Not started", c.games.filter(g => g.state === "pre").length],
+    ["Moved 1+ pt since open", moved], ["Moved 3+ pts", c.games.filter(g => Math.abs(ltMove(g)) >= 3).length],
+    ["Nights recorded", nights]].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
+  $("lt-games").innerHTML = rows.length ? rows.map(g => {
+    const pts = ltSeries(g), mv = ltMove(g);
+    const pick = g.action === "SPREAD" ? `<span class="pick">${esc(g.side)} ${line(g.line)}</span>`
+      + (g.flags.includes("DISAGREE") ? ` <span class="flag caution">CAUTION</span>` : "")
+      : g.action === "MONEYLINE" ? `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>`
+      : g.action === "EXCLUDED" ? "Neutral, excluded" : g.flags.includes("PRICED_IN") ? `<span class="flag bad">STAY AWAY</span>` : "No pick";
+    const move = pts.length < 2 ? "" : `DK ${line(pts[0].dk_home_spread)} → ${line(pts[pts.length - 1].dk_home_spread)}`
+      + (mv ? ` <span class="mv" title="${mv > 0 ? "Moved toward " + esc(g.away) : "Moved toward " + esc(g.home)}">(${sgn(mv)})</span>` : " (no move)");
+    return `<div class="lt-card"><div class="lt-head"><b>${rankDot(g)}${esc(g.away)} <span class="muted">@</span> ${esc(g.home)}</b>
+      <span class="tag">${kickCol.render(g).replace(/<span class="rk[^>]*><\/span>/, "")}</span></div>
+      <div class="lt-sub"><span>${pick}</span><span>edge ${Math.abs(g.edge).toFixed(2)}</span><span>${move}</span></div>
+      ${pts.length ? ltChart(g, pts) : `<div class="empty">No line history yet</div>`}</div>`;
+  }).join("") : `<div class="empty">No games match</div>`;
+}
+["lt-q", "lt-type", "lt-sort", "lt-pre"].forEach(id => $(id)[id === "lt-q" ? "oninput" : "onchange"] = () => lt && renderLines());
+
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
   document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === b));
-  for (const t of ["slate", "confidence", "history"]) $("tab-" + t).hidden = b.dataset.tab !== t;
+  for (const t of ["slate", "confidence", "lines", "history"]) $("tab-" + t).hidden = b.dataset.tab !== t;
   if (b.dataset.tab === "history") loadHistory();
   if (b.dataset.tab === "confidence") loadConfidence();
+  if (b.dataset.tab === "lines") loadLines();
 });
 
 document.querySelectorAll(".info").forEach(b => b.onclick = () => {
@@ -634,6 +767,7 @@ setInterval(() => {
     loadSlate();
     if (!$("tab-history").hidden) loadHistory();
     if (!$("tab-confidence").hidden) loadConfidence();
+    if (!$("tab-lines").hidden) loadLines();
   }
 }, 120000);
 $("r-filter").oninput = renderRatings;
