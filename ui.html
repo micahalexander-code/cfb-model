@@ -544,7 +544,7 @@ function tally(rows, key) {
   const n = r => rows.filter(g => g[key] === r).length;
   const w = n("WIN"), l = n("LOSS"), p = n("PUSH");
   const rec = w + l + p ? `${w}–${l}${p ? `–${p}` : ""}` : "—";
-  const pct = w + l ? `${Math.round(100 * w / (w + l))}%` : "";
+  const pct = w + l ? `${(100 * w / (w + l)).toFixed(2)}%` : "";
   return { rec, pct };
 }
 
@@ -601,7 +601,7 @@ function renderHistory(rows) {
 // ---- Confidence tab ----
 const scoreCls = x => x >= 80 ? "s1" : x >= 60 ? "s2" : x >= 40 ? "s3" : "s4";
 const recTxt = r => r ? `${r.w}–${r.l}${r.p ? `–${r.p}` : ""}` : `<span class="muted">no games yet</span>`;
-const pctTxt = r => r && r.rate != null ? `${Math.round(100 * r.rate)}%` : "—";
+const pctTxt = r => r && r.rate != null ? `${(100 * r.rate).toFixed(2)}%` : "—";
 
 let conf = null;
 async function loadConfidence() {
