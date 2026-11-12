@@ -1,7 +1,7 @@
 # Every 30 minutes: record newly finished games into history.json and save
 # DraftKings lines for games about to start into locked.json.
-# Between 10 pm and 4 am Eastern it also takes the nightly Line Tracking
-# point for every game of the coming week (lines.json).
+# It also takes the Line Tracking checks (9 am, 3 pm, 10 pm Eastern) for every
+# game of the coming week (lines.json): the first run after each check time.
 # A commit only happens when something new was added; Render then redeploys
 # the site with the updated history.
 name: Snapshot results

@@ -210,8 +210,8 @@
     <h2 id="lt-title">Line Tracking <button class="info" data-for="x-lt" aria-expanded="false" aria-label="What is this?">i</button></h2>
     <div class="explain" id="x-lt" hidden>How each game's DraftKings spread and our edge move through the week.
       The time axis runs from Sunday (when next week's lines post, right after Saturday's games) to kickoff (dashed line).
-      Every night between 10 pm and 4 am Eastern the model saves one point per game: the line and the edge as they stood then,
-      so the first dot is Sunday night at the earliest. The last dot is the live line right now, or the line at kickoff once the game starts. Edge moves when the line moves or Sagarin updates his ratings.
+      Three times a day (9 am, 3 pm and 10 pm Eastern) the model saves one point per game: the line and the edge as they stood then,
+      so the first dot is Sunday at the earliest. The last dot is the live line right now, or the line at kickoff once the game starts. Edge moves when the line moves or Sagarin updates his ratings.
       The DK line is the home team's spread (minus = home favored) on the left axis; edge is on the right axis.</div>
     <div class="summary" id="lt-summary"></div>
     <div class="controls">
@@ -668,13 +668,13 @@ async function loadLines() {
 const ymdDate = d => new Date(d.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"));
 // The Sunday (local midnight) that starts a game's betting week: lines post then.
 function ltSunday(g) { const d = ymdDate(g.date); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - d.getDay()); return d.getTime(); }
-// Points on a game's chart, by time: each night's snapshot, then Now (not started) or Close (kickoff).
+// Points on a game's chart, by time: each daily check, then Now (not started) or Close (kickoff).
 // Nothing before that week's Sunday is shown.
 function ltSeries(g) {
   const sun = ltSunday(g), pts = [];
   for (const p of g.points) {
-    const t = Date.parse(p.at), d = ymdDate(p.night);
-    if (t >= sun) pts.push({ ...p, t, tip: d.toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" }) + " night" });
+    const t = Date.parse(p.at);
+    if (t >= sun) pts.push({ ...p, t, tip: "Line check" });
   }
   if (g.close) pts.push({ ...g.close, t: Date.parse(g.kickoff), tip: "At kickoff" });
   else if (g.now) pts.push({ ...g.now, t: Date.now(), tip: "Live line right now" });
@@ -739,10 +739,10 @@ function renderLines() {
   if (sort === "move") rows.sort((a, b) => Math.abs(ltMove(b)) - Math.abs(ltMove(a)));
   if (sort === "edge") rows.sort((a, b) => Math.abs(b.edge) - Math.abs(a.edge));
   const moved = c.games.filter(g => Math.abs(ltMove(g)) >= 1).length;
-  const nights = new Set(c.games.flatMap(g => g.points.map(p => p.night))).size;
+  const checks = new Set(c.games.flatMap(g => g.points.map(p => p.check))).size;
   $("lt-summary").innerHTML = [["Games", c.games.length], ["Not started", c.games.filter(g => g.state === "pre").length],
     ["Moved 1+ pt this week", moved], ["Moved 3+ pts", c.games.filter(g => Math.abs(ltMove(g)) >= 3).length],
-    ["Nights recorded", nights]].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
+    ["Checks recorded", checks]].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
   $("lt-games").innerHTML = rows.length ? rows.map(g => {
     const pts = ltSeries(g), mv = ltMove(g);
     const pick = g.action === "SPREAD" ? `<span class="pick">${esc(g.side)} ${line(g.line)}</span>`

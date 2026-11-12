@@ -2,13 +2,14 @@
 
 Stored in lines.json, one entry per game:
 
-  points  one snapshot per night (taken by the scheduled snapshot between
-          10 pm and 4 am Eastern): DK spread, model line and edge as they
-          stood then. Edge moves when the line moves or Sagarin updates.
+  points  three checks a day (9 am, 3 pm and 10 pm Eastern), each taken by the
+          first scheduled snapshot run after that time: DK spread, model line
+          and edge as they stood then. Edge moves when the line moves or
+          Sagarin updates.
   close   the line and edge when the game kicked off.
 
 Lines for the next week usually post Sunday, right after Saturday's games, so
-the earliest point is Sunday night and a game gets a point every night through
+the earliest point is Sunday and a game gets three points a day through
 kickoff. (ESPN's "open" line is NOT used: it can be a look-ahead line posted
 weeks earlier, not the Sunday number.)
 """
@@ -20,7 +21,7 @@ from typing import List, Optional
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LINES = os.path.join(HERE, "lines.json")
-NIGHT_START, NIGHT_END = 22, 4   # Eastern hours: nightly window is 10 pm - 4 am
+CHECKS = [9, 15, 22]             # Eastern hours of the daily line checks: 9 am, 3 pm, 10 pm
 KEEP = timedelta(days=21)        # forget games this long after kickoff
 
 try:
@@ -34,14 +35,14 @@ def eastern(now: datetime) -> datetime:
     return now.astimezone(EASTERN)
 
 
-def night_of(now: datetime) -> Optional[str]:
-    """The Eastern date whose night `now` falls in (10 pm - 4 am), else None."""
+def check_of(now: datetime) -> str:
+    """The latest daily check time at or before `now`, as 'YYYYMMDD-HH' (Eastern).
+    Before 9 am that is the previous day's 10 pm check."""
     e = eastern(now)
-    if e.hour >= NIGHT_START:
-        return e.date().strftime("%Y%m%d")
-    if e.hour < NIGHT_END:
-        return (e.date() - timedelta(days=1)).strftime("%Y%m%d")
-    return None
+    past = [h for h in CHECKS if h <= e.hour]
+    if past:
+        return f"{e.date():%Y%m%d}-{past[-1]:02d}"
+    return f"{e.date() - timedelta(days=1):%Y%m%d}-{CHECKS[-1]:02d}"
 
 
 def week_window(day: str) -> List[str]:
@@ -88,9 +89,10 @@ def _kick(iso: str) -> Optional[datetime]:
         return None
 
 
-def track(data: dict, slates, now: datetime, night: Optional[str]) -> bool:
-    """Update `data` from slates. Adds the night's point for games not started
-    (when `night` is set) and the closing point for games that have kicked off.
+def track(data: dict, slates, now: datetime, check: Optional[str]) -> bool:
+    """Update `data` from slates. Adds the point for `check` (see check_of) to
+    games not started, if they don't have it yet, and the closing point for
+    games that have kicked off.
     Returns True if anything changed."""
     changed = False
     stamp = now.astimezone(timezone.utc).isoformat(timespec="seconds")
@@ -108,8 +110,8 @@ def track(data: dict, slates, now: datetime, night: Optional[str]) -> bool:
             if e["kickoff"] != l.kickoff:
                 e["kickoff"], changed = l.kickoff, True
             if l.state == "pre":
-                if night and not any(x["night"] == night for x in e["points"]):
-                    e["points"].append(dict(_point(p), night=night, at=stamp,
+                if check and not any(x.get("check") == check for x in e["points"]):
+                    e["points"].append(dict(_point(p), check=check, at=stamp,
                                             sagarin_as_of=s.ratings.as_of, hfa=g.hfa))
                     changed = True
             elif e["close"] is None:

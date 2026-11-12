@@ -8,8 +8,9 @@ closing line, pick and result as they stood when it was first seen final.
 Recorded games are never rewritten, so later Sagarin updates can't change
 them. Run on a schedule by .github/workflows/snapshot.yml.
 
-Also keeps lines.json (Line Tracking tab, see linetrack.py): a nightly point
-for each game of the coming week and its closing line at kickoff.
+Also keeps lines.json (Line Tracking tab, see linetrack.py): three checks a
+day (9 am, 3 pm, 10 pm ET) of each game of the coming week, and its closing
+line at kickoff.
 
 Guard: if Sagarin's ratings already include a game's date (e.g. a game that
 was missed until after Monday's update), it is NOT recorded, since the
@@ -124,7 +125,7 @@ def finished_rows(slate, recorded_at: str) -> List[dict]:
     return rows
 
 
-def snapshot(days: List[str], force_night: Optional[str] = None) -> int:
+def snapshot(days: List[str]) -> int:
     history = load_history()
     locked = {}
     if os.path.exists(LOCKED):
@@ -168,34 +169,27 @@ def snapshot(days: List[str], force_night: Optional[str] = None) -> int:
         with open(LOCKED, "w") as f:
             json.dump(locked, f, indent=1, sort_keys=True)
             f.write("\n")
-    track_lines(slates, now_dt, ratings, force_night)
+    track_lines(slates, now_dt, ratings)
     print(f"Added {added} finished game(s); history now has {len(history)}; "
           f"{len(locked)} saved line(s)")
     return added
 
 
-def track_lines(slates, now: datetime, ratings, force_night: Optional[str] = None) -> None:
-    """Closing lines from today's/yesterday's slates every run; during the
-    nightly window (or with --night) also a point for every game of the coming week."""
+def track_lines(slates, now: datetime, ratings) -> None:
+    """Closing lines from today's/yesterday's slates, and the current daily
+    check (9 am / 3 pm / 10 pm ET) for every game of the coming week that
+    doesn't have it yet."""
     data = linetrack.load()
-    night = force_night or linetrack.night_of(now)
-    if night:
-        have = {s.day for s in slates}
-        week = linetrack.upcoming_week(linetrack.eastern(now).date().strftime("%Y%m%d"))
-        # After midnight the night belongs to yesterday; its week is still the one to track.
-        week += [d for d in linetrack.upcoming_week(night) if d not in week]
-        slates = slates + [run.build(d, TEASER, ratings) for d in sorted(set(week) - have)]
-    changed = linetrack.track(data, slates, now, night)
+    check = linetrack.check_of(now)
+    have = {s.day for s in slates}
+    week = linetrack.upcoming_week(linetrack.eastern(now).date().strftime("%Y%m%d"))
+    slates = slates + [run.build(d, TEASER, ratings) for d in week if d not in have]
+    changed = linetrack.track(data, slates, now, check)
     if changed or not os.path.exists(linetrack.LINES):
         linetrack.save(data)
-    n = sum(1 for e in data.values() if night and any(p["night"] == night for p in e["points"]))
-    print(f"Line tracking: {len(data)} game(s)" + (f", {n} with a point for the night of {night}" if night else ""))
+    n = sum(1 for e in data.values() if any(p.get("check") == check for p in e["points"]))
+    print(f"Line tracking: {len(data)} game(s), {n} with the {check} check")
 
 
 if __name__ == "__main__":
-    args = sys.argv[1:]
-    night = None
-    if "--night" in args:  # take tonight's line-tracking point now
-        args.remove("--night")
-        night = linetrack.eastern(datetime.now(timezone.utc)).date().strftime("%Y%m%d")
-    snapshot(args or default_days(), night)
+    snapshot(sys.argv[1:] or default_days())
