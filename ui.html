@@ -151,6 +151,9 @@
   .livebar.off .key { display: none; }
 
   .rk { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; }
+  /* Team confidence on the Slate: small and quiet, next to the team name */
+  .cfs { display: inline-block; margin-left: 4px; padding: 0 4px; border-radius: 5px; font-size: 11px; font-weight: 600;
+         line-height: 15px; vertical-align: 1px; color: var(--muted); background: var(--panel2); border: 1px solid var(--line); }
   .rk.on { background: var(--bad); box-shadow: 0 0 6px color-mix(in srgb, var(--bad) 60%, transparent); }
 
 
@@ -353,6 +356,7 @@ async function loadWeek() {
 
 async function loadSlate(refresh = false) {
   loadWeek();
+  loadSlateConfidence();
   setStatus("Loading…");
   try {
     slate = await api(`/api/slate?date=${ymd()}&teaser=${$("teaser").value || 3}${refresh ? "&refresh=1" : ""}`);
@@ -374,6 +378,19 @@ function table(cols, rows, sortable = false, rowCls = null) {
 }
 
 const gameCol = { label: "Game", key: "game", render: g => `${esc(g.away)} <span class="muted">@</span> ${esc(g.home)}` };
+// Slate version: each team's confidence score (Confidence tab) in a small muted tag.
+let cfByTeam = {};
+const cfTag = team => cfByTeam[team] == null ? "" :
+  `<span class="cfs" title="${esc(team)} confidence score (Confidence tab)">${Math.round(cfByTeam[team])}</span>`;
+const slateGameCol = { label: "Game", key: "game", render: g =>
+  `${esc(g.away)}${cfTag(g.away)} <span class="muted">@</span> ${esc(g.home)}${cfTag(g.home)}` };
+async function loadSlateConfidence() {
+  try {
+    const c = await api(`/api/confidence?date=${ymd()}`);
+    cfByTeam = Object.fromEntries(c.teams.filter(t => t.confidence != null).map(t => [t.team, t.confidence]));
+    if (slate) render();
+  } catch (e) { /* the slate works without it */ }
+}
 // Kickoff time before the game, live score during it, final score after.
 const score = g => `${g.away_score}–${g.home_score}`;
 const rankDot = g => `<span class="rk${g.home_rank || g.away_rank ? " on" : ""}"${g.home_rank || g.away_rank
@@ -454,16 +471,16 @@ function render() {
   const teaseCol = { label: `Teased ${s.teaser}`, render: g => `${esc(g.side)} ${line(g.teaser_line)}` };
 
   $("n-ml").textContent = ml.length;
-  $("ml").innerHTML = table([kickCol, gameCol,
+  $("ml").innerHTML = table([kickCol, slateGameCol,
     { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, mlResultCol,
     projCol, dkCol, ratCol], ml, false, liveCls);
 
   $("n-dis").textContent = dis.length;
-  $("dis").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol,
+  $("dis").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol,
     { label: "", render: () => `<span class="flag caution">CAUTION</span>` }], dis, false, liveCls);
 
   $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
-  $("spread").innerHTML = table([kickCol, gameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol], spread, true, liveCls);
+  $("spread").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol], spread, true, liveCls);
   $("spread").querySelectorAll("th.sort").forEach(th => th.onclick = () => {
     const k = th.dataset.key;
     if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = k === "absEdge" || k === "projected" ? -1 : 1; }
@@ -471,14 +488,14 @@ function render() {
   });
 
   $("n-skip").textContent = skip.length;
-  $("skip").innerHTML = table([kickCol, gameCol, ratCol, projCol, dkCol,
+  $("skip").innerHTML = table([kickCol, slateGameCol, ratCol, projCol, dkCol,
     { label: "", render: () => `<span class="flag bad">STAY AWAY</span>` }], skip);
 
   $("n-neutral").textContent = neutral.length;
-  $("neutral").innerHTML = table([kickCol, gameCol, ratCol, dkCol], neutral);
+  $("neutral").innerHTML = table([kickCol, slateGameCol, ratCol, dkCol], neutral);
 
   $("n-noline").textContent = s.no_line.length;
-  $("noline").innerHTML = table([kickCol, gameCol], s.no_line);
+  $("noline").innerHTML = table([kickCol, slateGameCol], s.no_line);
 
   $("unmatched").innerHTML = s.unmatched.length
     ? `<h2>Unmatched team names</h2><div class="muted">Add to names.py: ${s.unmatched.map(esc).join(", ")}</div>` : "";
