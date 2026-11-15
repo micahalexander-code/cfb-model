@@ -19073,5 +19073,39 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null
+ },
+ {
+  "game_id": "401856887",
+  "date": "20261115",
+  "kickoff": "2026-11-15T18:00Z",
+  "recorded_at": "2026-11-15T21:29:43+00:00",
+  "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+  "hfa": 2.64,
+  "away": "Mississippi",
+  "home": "Oklahoma",
+  "neutral": false,
+  "away_rating": 87.36,
+  "home_rating": 83.61,
+  "dk_home_spread": -2.5,
+  "dk_home_ml": -135,
+  "dk_away_ml": 114,
+  "line_source": "closing",
+  "projected": -1.11,
+  "edge": -3.61,
+  "action": "SPREAD",
+  "side": "Mississippi",
+  "line": 2.5,
+  "odds": null,
+  "teaser_points": 3.0,
+  "teaser_line": 5.5,
+  "flags": [
+   "DISAGREE"
+  ],
+  "away_score": 17,
+  "home_score": 24,
+  "result": "LOSS",
+  "teaser_result": "LOSS",
+  "home_rank": null,
+  "away_rank": 19
  }
 ]
