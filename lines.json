@@ -17,6 +17,17 @@
     "projected": 12.83,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Vanderbilt"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -13.5,
+    "edge": -0.41,
+    "hfa": 2.61,
+    "projected": 13.09,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Vanderbilt"
    }
   ]
  },
@@ -49,6 +60,17 @@
     "projected": 3.52,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Kentucky"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -5.5,
+    "edge": -1.53,
+    "hfa": 2.61,
+    "projected": 3.97,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Kentucky"
    }
   ]
  },
@@ -70,6 +92,17 @@
     "projected": 4.81,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Texas A&M"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -7.5,
+    "edge": -0.76,
+    "hfa": 2.61,
+    "projected": 6.74,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Texas A&M"
    }
   ]
  },
@@ -90,6 +123,17 @@
     "hfa": 2.64,
     "projected": -7.6,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "South Carolina"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 16.5,
+    "edge": 3.51,
+    "hfa": 2.61,
+    "projected": -12.99,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "South Carolina"
    }
   ]
@@ -123,6 +167,17 @@
     "projected": 1.67,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Tennessee"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -1.5,
+    "edge": 1.78,
+    "hfa": 2.61,
+    "projected": 3.28,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Tennessee"
    }
   ]
  },
@@ -155,6 +210,17 @@
     "projected": 22.23,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Texas"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -21.0,
+    "edge": -2.82,
+    "hfa": 2.61,
+    "projected": 18.18,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Arkansas"
    }
   ]
  },
@@ -515,6 +581,17 @@
     "projected": -9.37,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Kansas State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 7.5,
+    "edge": -1.84,
+    "hfa": 2.61,
+    "projected": -9.34,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Arizona"
    }
   ]
  },
@@ -547,6 +624,17 @@
     "projected": -7.55,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "BYU"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 5.5,
+    "edge": -1.2,
+    "hfa": 2.61,
+    "projected": -6.7,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "BYU"
    }
   ]
  },
@@ -568,6 +656,17 @@
     "projected": 8.6,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Cincinnati"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -3.5,
+    "edge": -0.73,
+    "hfa": 2.61,
+    "projected": 2.77,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Colorado"
    }
   ]
  },
@@ -588,6 +687,17 @@
     "hfa": 2.64,
     "projected": -5.83,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "West Virginia"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 7.0,
+    "edge": 1.38,
+    "hfa": 2.61,
+    "projected": -5.62,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "West Virginia"
    }
   ]
@@ -621,6 +731,17 @@
     "projected": 4.01,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Central Florida(UCF)"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -2.5,
+    "edge": -2.9,
+    "hfa": 2.61,
+    "projected": -0.4,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Iowa State"
    }
   ]
  },
@@ -641,6 +762,17 @@
     "hfa": 2.64,
     "projected": -7.78,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Oklahoma State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 3.0,
+    "edge": -0.09,
+    "hfa": 2.61,
+    "projected": -3.09,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Oklahoma State"
    }
   ]
@@ -663,6 +795,17 @@
     "projected": 0.32,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Baylor"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 3.5,
+    "edge": 0.02,
+    "hfa": 2.61,
+    "projected": -3.48,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Baylor"
    }
   ]
  },
@@ -683,6 +826,17 @@
     "hfa": 2.64,
     "projected": -8.25,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Utah"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 6.5,
+    "edge": -1.6,
+    "hfa": 2.61,
+    "projected": -8.1,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Utah"
    }
   ]
@@ -1402,6 +1556,17 @@
     "projected": 21.4,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Miami-Florida"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -20.5,
+    "edge": 4.52,
+    "hfa": 2.61,
+    "projected": 25.02,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Miami-Florida"
    }
   ]
  },
@@ -1434,6 +1599,17 @@
     "projected": 6.17,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Clemson"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -11.5,
+    "edge": -1.02,
+    "hfa": 2.61,
+    "projected": 10.48,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Clemson"
    }
   ]
  },
@@ -1455,6 +1631,17 @@
     "projected": 9.22,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Florida State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -9.5,
+    "edge": -0.06,
+    "hfa": 2.61,
+    "projected": 9.44,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "NC State"
    }
   ]
  },
@@ -1476,6 +1663,17 @@
     "projected": -4.07,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "North Carolina"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 1.5,
+    "edge": -0.83,
+    "hfa": 2.61,
+    "projected": -2.33,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "North Carolina"
    }
   ]
  },
@@ -1496,6 +1694,17 @@
     "hfa": 2.64,
     "projected": 9.48,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Pittsburgh"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -13.5,
+    "edge": -2.01,
+    "hfa": 2.61,
+    "projected": 11.49,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Pittsburgh"
    }
   ]
@@ -1529,6 +1738,17 @@
     "projected": 15.87,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "SMU"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -21.0,
+    "edge": -1.69,
+    "hfa": 2.61,
+    "projected": 19.31,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "SMU"
    }
   ]
  },
@@ -1550,6 +1770,17 @@
     "projected": 3.34,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "California"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 2.5,
+    "edge": -0.12,
+    "hfa": 2.61,
+    "projected": -2.62,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Stanford"
    }
   ]
  },
@@ -1571,6 +1802,17 @@
     "projected": -2.96,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Boston College"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 3.0,
+    "edge": -0.69,
+    "hfa": 2.61,
+    "projected": -3.69,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Syracuse"
    }
   ]
  },
@@ -1602,6 +1844,17 @@
     "hfa": 2.64,
     "projected": -19.51,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Georgia Tech"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 21.0,
+    "edge": 2.25,
+    "hfa": 2.61,
+    "projected": -18.75,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Georgia Tech"
    }
   ]
@@ -1993,6 +2246,17 @@
     "projected": -4.62,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Illinois"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 6.5,
+    "edge": 2.03,
+    "hfa": 2.61,
+    "projected": -4.47,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Illinois"
    }
   ]
  },
@@ -2024,6 +2288,17 @@
     "hfa": 2.64,
     "projected": -7.15,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "UCLA"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 5.5,
+    "edge": -2.21,
+    "hfa": 2.61,
+    "projected": -7.71,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "UCLA"
    }
   ]
@@ -2057,6 +2332,17 @@
     "projected": -13.36,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Michigan State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 14.0,
+    "edge": -1.11,
+    "hfa": 2.61,
+    "projected": -15.11,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Oregon"
    }
   ]
  },
@@ -2078,6 +2364,17 @@
     "projected": -2.95,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Minnesota"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 3.0,
+    "edge": -2.8,
+    "hfa": 2.61,
+    "projected": -5.8,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Northwestern"
    }
   ]
  },
@@ -2110,6 +2407,17 @@
     "projected": -6.58,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Ohio State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 2.5,
+    "edge": -2.5,
+    "hfa": 2.61,
+    "projected": -5.0,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Ohio State"
    }
   ]
  },
@@ -2130,6 +2438,17 @@
     "hfa": 2.64,
     "projected": 16.77,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Rutgers"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -24.5,
+    "edge": -4.11,
+    "hfa": 2.61,
+    "projected": 20.39,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Rutgers"
    }
   ]
@@ -2152,6 +2471,17 @@
     "projected": -7.26,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Wisconsin"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 6.0,
+    "edge": 0.24,
+    "hfa": 2.61,
+    "projected": -5.76,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Purdue"
    }
   ]
  },
@@ -2173,6 +2503,17 @@
     "projected": 17.56,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Southern California"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -17.5,
+    "edge": -2.38,
+    "hfa": 2.61,
+    "projected": 15.12,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Maryland"
    }
   ]
  },
@@ -2204,6 +2545,17 @@
     "hfa": 2.64,
     "projected": -7.11,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Washington"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 7.5,
+    "edge": 0.41,
+    "hfa": 2.61,
+    "projected": -7.09,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Washington"
    }
   ]
@@ -2412,6 +2764,17 @@
     "projected": 13.79,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Colorado State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -21.0,
+    "edge": -2.02,
+    "hfa": 2.61,
+    "projected": 18.98,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Colorado State"
    }
   ]
  },
@@ -2433,6 +2796,17 @@
     "projected": 7.98,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Utah State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -9.5,
+    "edge": 1.5,
+    "hfa": 2.61,
+    "projected": 11.0,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Oregon State"
    }
   ]
  },
@@ -2454,6 +2828,17 @@
     "projected": 17.08,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Texas State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -11.5,
+    "edge": -0.37,
+    "hfa": 2.61,
+    "projected": 11.13,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Washington State"
    }
   ]
  },
@@ -2474,6 +2859,17 @@
     "hfa": 2.64,
     "projected": 21.44,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Boise State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -16.5,
+    "edge": 2.35,
+    "hfa": 2.61,
+    "projected": 18.85,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Boise State"
    }
   ]
@@ -2537,6 +2933,17 @@
     "projected": 10.72,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Old Dominion"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -13.5,
+    "edge": 1.18,
+    "hfa": 2.61,
+    "projected": 14.68,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Connecticut"
    }
   ]
  },
@@ -2793,6 +3200,17 @@
     "projected": 5.66,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Temple"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -3.5,
+    "edge": 0.15,
+    "hfa": 2.61,
+    "projected": 3.65,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Temple"
    }
   ]
  },
@@ -2813,6 +3231,17 @@
     "hfa": 2.64,
     "projected": 6.97,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Army West Point"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -4.5,
+    "edge": 4.03,
+    "hfa": 2.61,
+    "projected": 8.53,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Army West Point"
    }
   ]
@@ -2835,6 +3264,17 @@
     "projected": 25.6,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Tulsa"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -22.5,
+    "edge": 3.06,
+    "hfa": 2.61,
+    "projected": 25.56,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Tulsa"
    }
   ]
  },
@@ -2855,6 +3295,17 @@
     "hfa": 2.64,
     "projected": 2.91,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Florida Atlantic"
+   },
+   {
+    "action": "MONEYLINE",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 1.5,
+    "edge": 3.85,
+    "hfa": 2.61,
+    "projected": 2.35,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Florida Atlantic"
    }
   ]
@@ -2877,6 +3328,17 @@
     "projected": -3.5,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": null
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 3.0,
+    "edge": -1.67,
+    "hfa": 2.61,
+    "projected": -4.67,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Memphis"
    }
   ]
  },
@@ -2898,6 +3360,17 @@
     "projected": -11.14,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "North Texas"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 7.0,
+    "edge": -0.91,
+    "hfa": 2.61,
+    "projected": -7.91,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "North Texas"
    }
   ]
  },
@@ -2918,6 +3391,17 @@
     "hfa": 2.64,
     "projected": -7.59,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "UTSA"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 5.5,
+    "edge": -1.22,
+    "hfa": 2.61,
+    "projected": -6.72,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "UTSA"
    }
   ]
@@ -3167,6 +3651,17 @@
     "projected": 3.24,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Hawai'i"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -4.0,
+    "edge": 0.04,
+    "hfa": 2.61,
+    "projected": 4.04,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Nevada"
    }
   ]
  },
@@ -3187,6 +3682,17 @@
     "hfa": 2.64,
     "projected": -12.63,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "New Mexico"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 7.5,
+    "edge": -3.05,
+    "hfa": 2.61,
+    "projected": -10.55,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "New Mexico"
    }
   ]
@@ -3209,6 +3715,17 @@
     "projected": 25.87,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "North Dakota State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -25.5,
+    "edge": 1.39,
+    "hfa": 2.61,
+    "projected": 26.89,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "North Dakota State"
    }
   ]
  },
@@ -3230,6 +3747,17 @@
     "projected": -2.81,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "San Jose State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 6.0,
+    "edge": -0.15,
+    "hfa": 2.61,
+    "projected": -6.15,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "UNLV"
    }
   ]
  },
@@ -3250,6 +3778,17 @@
     "hfa": 2.64,
     "projected": 21.61,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Air Force"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -22.5,
+    "edge": 0.8,
+    "hfa": 2.61,
+    "projected": 23.3,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Air Force"
    }
   ]
@@ -3283,6 +3822,17 @@
     "projected": 13.65,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Ohio"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -10.5,
+    "edge": 2.98,
+    "hfa": 2.61,
+    "projected": 13.48,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Ohio"
    }
   ]
  },
@@ -3314,6 +3864,17 @@
     "hfa": 2.64,
     "projected": 15.71,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Western Michigan"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -14.5,
+    "edge": 2.95,
+    "hfa": 2.61,
+    "projected": 17.45,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Western Michigan"
    }
   ]
@@ -3347,6 +3908,17 @@
     "projected": -9.25,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Kent State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 8.5,
+    "edge": -3.32,
+    "hfa": 2.61,
+    "projected": -11.82,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Miami-Ohio"
    }
   ]
  },
@@ -3379,6 +3951,17 @@
     "projected": 7.26,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Massachusetts"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -3.0,
+    "edge": 4.35,
+    "hfa": 2.61,
+    "projected": 7.35,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Massachusetts"
    }
   ]
  },
@@ -3399,6 +3982,17 @@
     "hfa": 2.64,
     "projected": 14.3,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Bowling Green"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -16.5,
+    "edge": -1.43,
+    "hfa": 2.61,
+    "projected": 15.07,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Bowling Green"
    }
   ]
@@ -3431,6 +4025,17 @@
     "hfa": 2.64,
     "projected": 0.22,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": null
+   },
+   {
+    "action": "SKIP",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -2.5,
+    "edge": -0.34,
+    "hfa": 2.61,
+    "projected": 2.16,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": null
    }
   ]
@@ -3494,6 +4099,17 @@
     "projected": 12.62,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "LouisianaMonroe(ULM)"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -14.0,
+    "edge": -0.62,
+    "hfa": 2.61,
+    "projected": 13.38,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "LouisianaMonroe(ULM)"
    }
   ]
  },
@@ -3556,6 +4172,17 @@
     "projected": 15.23,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Louisiana Tech"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -14.5,
+    "edge": 2.35,
+    "hfa": 2.61,
+    "projected": 16.85,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Louisiana Tech"
    }
   ]
  },
@@ -3576,6 +4203,17 @@
     "hfa": 2.64,
     "projected": 10.46,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Louisiana-Lafayette"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -10.5,
+    "edge": 0.23,
+    "hfa": 2.61,
+    "projected": 10.73,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Louisiana-Lafayette"
    }
   ]
@@ -3639,6 +4277,17 @@
     "projected": -7.84,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Troy"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 8.5,
+    "edge": -1.13,
+    "hfa": 2.61,
+    "projected": -9.63,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Georgia Southern"
    }
   ]
  },
@@ -3659,6 +4308,17 @@
     "hfa": 2.64,
     "projected": -3.14,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Georgia State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 1.5,
+    "edge": -0.43,
+    "hfa": 2.61,
+    "projected": -1.93,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Georgia State"
    }
   ]
@@ -3916,6 +4576,17 @@
     "projected": -4.08,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Delaware"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 3.0,
+    "edge": -2.8,
+    "hfa": 2.61,
+    "projected": -5.8,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Delaware"
    }
   ]
  },
@@ -3936,6 +4607,17 @@
     "hfa": 2.64,
     "projected": 4.63,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Kennesaw State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -3.5,
+    "edge": 2.33,
+    "hfa": 2.61,
+    "projected": 5.83,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Kennesaw State"
    }
   ]
@@ -3958,6 +4640,17 @@
     "projected": 14.54,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Jacksonville State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -10.5,
+    "edge": 1.21,
+    "hfa": 2.61,
+    "projected": 11.71,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Jacksonville State"
    }
   ]
  },
@@ -3978,6 +4671,17 @@
     "hfa": 2.64,
     "projected": 21.62,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
+    "side": "Liberty"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": -16.5,
+    "edge": 0.46,
+    "hfa": 2.61,
+    "projected": 16.96,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
     "side": "Liberty"
    }
   ]
@@ -4000,6 +4704,17 @@
     "projected": -4.39,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Sam Houston State"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 6.5,
+    "edge": -1.0,
+    "hfa": 2.61,
+    "projected": -7.5,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "Middle Tennessee"
    }
   ]
  },
@@ -4103,6 +4818,17 @@
     "projected": -4.7,
     "sagarin_as_of": "NOVEMBER 7 SATURDAY - WEEK 10",
     "side": "Southern Miss"
+   },
+   {
+    "action": "SPREAD",
+    "at": "2026-11-16T08:19:33+00:00",
+    "check": "20261115-22",
+    "dk_home_spread": 4.5,
+    "edge": -2.13,
+    "hfa": 2.61,
+    "projected": -6.63,
+    "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+    "side": "South Alabama"
    }
   ]
  }
