@@ -254,8 +254,7 @@ def parlays_json(day: str, min_conf: float) -> dict:
                           "home_score": l.home_score, "away_score": l.away_score,
                           "home_rank": l.home_rank, "away_rank": l.away_rank})
     out = parlays.build(cands, asof, min_conf)
-    return {"date": day, "min_conf": min_conf, "window_min": int(parlays.WINDOW.total_seconds() // 60),
-            "teaser": snapshot.TEASER, "parlays": out}
+    return {"date": day, "min_conf": min_conf, "teaser": snapshot.TEASER, "parlays": out}
 
 
 def history_json() -> dict:

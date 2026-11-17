@@ -224,9 +224,9 @@
   <div id="tab-parlays" hidden>
     <h2>Parlays <button class="info" data-for="x-pl" aria-expanded="false" aria-label="What is this?">i</button></h2>
     <div class="explain" id="x-pl" hidden>Our teaser picks (The Core Model only, each teased 3) paired into 2-leg parlays.
-      A leg qualifies when the team we picked has a confidence score at or above the minimum <b>going into that day</b>,
-      so past parlays use only what was known before kickoff. Legs are paired when they kick off within 1 hour of each other:
-      the earliest leg plus the highest-confidence leg in its hour. Each team is used once, and a leg with no partner in its hour is left out.
+      A leg qualifies when the team we picked has a confidence score at or above the minimum <b>going into that week</b> (Tuesday),
+      so past parlays use only what was known before the week started. Kickoff times play no part: each week (Tue–Sat) the two
+      highest-confidence legs are paired, then the next two, and so on. An odd leg left over isn't used.
       A parlay wins only if every leg covers its teased line (a pushed leg drops out). DraftKings alt-line prices aren't in our data,
       so odds and units are <b>estimates</b> from the assumed price per leg.</div>
     <div class="controls">
@@ -234,7 +234,7 @@
       <label>Assumed price per leg <input type="number" id="pl-price" value="-175" step="5"></label>
     </div>
     <div class="summary" id="pl-summary"></div>
-    <h2>This week <span class="n" id="pl-n-up"></span><span class="note">not decided yet</span></h2>
+    <h2>This week <span class="n" id="pl-n-up"></span><span class="note">not decided yet · strongest pair first</span></h2>
     <div id="pl-up"></div>
     <h2>Graded parlays <span class="n" id="pl-n-done"></span><span class="note">newest first</span></h2>
     <div id="pl-done"></div>
@@ -766,18 +766,19 @@ function renderParlays() {
     + `<div><b>${up.length}</b>This week</div>`;
   const legTxt = l => `<div>${rankDot({ home_rank: l.home_rank, away_rank: l.away_rank, home: l.home_name, away: l.away_name })}`
     + `<span class="pick">${esc(l.team)} ${line(l.teased_line)}</span> <span class="muted">${l.home ? "vs" : "@"} ${esc(l.opponent)}</span>`
-    + ` <span class="cfs" title="Confidence going into the day">${Math.round(l.confidence)}</span>`
+    + ` <span class="cfs" title="Confidence going into the week">${Math.round(l.confidence)}</span>`
+    + ` <span class="tag">${kick(l.kickoff)}</span>`
     + (l.result ? ` ${res(l.result)}` : l.state === "in" ? ` <span class="live">Live ${l.away_score}–${l.home_score}</span>` : "") + `</div>`;
-  const when = p => { const d = new Date(p.kickoff);
-    return `${d.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" })}<span class="sub">${d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${p.window_min ? ` · ${p.window_min} min window` : ""}</span>`; };
+  const when = p => `Week of ${new Date(p.week_start.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00")).toLocaleDateString([], { month: "short", day: "numeric" })}`;
   const cols = [
-    { label: "Kickoff", render: when },
+    { label: "Week", render: when },
     { label: "Legs (teased 3)", render: p => p.legs.map(legTxt).join("") },
     { label: "Est. odds", num: true, render: p => odds(toAm(dec(p))) },
     { label: "Parlay", render: p => p.result ? res(p.result) : p.legs.some(l => l.state === "in") ? `<span class="tag">in play</span>` : `<span class="tag">upcoming</span>` },
   ];
   $("pl-n-up").textContent = up.length;
-  $("pl-up").innerHTML = table(cols, [...up].reverse());
+  const strength = p => p.legs.reduce((t, l) => t + l.confidence, 0);
+  $("pl-up").innerHTML = table(cols, [...up].sort((a, b) => strength(b) - strength(a)));
   $("pl-n-done").textContent = done.length;
   $("pl-done").innerHTML = table(cols, done);
 }
