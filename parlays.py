@@ -1,4 +1,4 @@
-"""Parlays: group our high-confidence teaser picks into 2-3 leg parlays.
+"""Parlays: pair our high-confidence teaser picks into 2-leg parlays.
 
 Legs: The Core Model teaser picks only (SPREAD, no DISAGREE), the picked team
 teased 3 points, where the picked team's confidence score going into that day
@@ -10,8 +10,8 @@ table from Core Model picks before that date (see confidence.py). So past
 parlays are a fair backtest, not graded with hindsight.
 
 Grouping (per day): legs sorted by kickoff; the earliest unused leg is
-grouped with up to 2 more unused legs kicking off within WINDOW of it,
-highest confidence first. A leg with no partner in its window isn't used.
+paired with the highest-confidence unused leg kicking off within WINDOW
+of it. A leg with no partner in its window isn't used.
 
 Result: any leg lost -> LOSS; all legs pushed -> PUSH; otherwise WIN (a
 pushed leg drops out, as at most books). Unfinished legs -> pending.
@@ -22,7 +22,7 @@ from typing import Dict, List, Optional
 import confidence
 
 WINDOW = timedelta(hours=1)
-MAX_LEGS = 3
+MAX_LEGS = 2  # was 3; 2-leg parlays backtested better (Nov 2026)
 
 
 def _kick(iso: str) -> Optional[datetime]:
@@ -64,7 +64,7 @@ def leg_result(legs: List[dict]) -> Optional[str]:
 
 
 def group(legs: List[dict]) -> List[List[dict]]:
-    """2-3 leg groups from one day's eligible legs (see module doc)."""
+    """Parlays of up to MAX_LEGS legs from one day's eligible legs (see module doc)."""
     legs = sorted(legs, key=lambda l: (l["kickoff"], -l["confidence"], l["team"]))
     used, out = set(), []
     for i, first in enumerate(legs):

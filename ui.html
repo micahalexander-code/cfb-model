@@ -223,10 +223,10 @@
 
   <div id="tab-parlays" hidden>
     <h2>Parlays <button class="info" data-for="x-pl" aria-expanded="false" aria-label="What is this?">i</button></h2>
-    <div class="explain" id="x-pl" hidden>Our teaser picks (The Core Model only, each teased 3) combined into 2–3 leg parlays.
+    <div class="explain" id="x-pl" hidden>Our teaser picks (The Core Model only, each teased 3) paired into 2-leg parlays.
       A leg qualifies when the team we picked has a confidence score at or above the minimum <b>going into that day</b>,
-      so past parlays use only what was known before kickoff. Legs are grouped when they kick off within 1 hour of each other:
-      the earliest leg plus up to two of the highest-confidence legs in its hour. Each team is used once, and a leg with no partner in its hour is left out.
+      so past parlays use only what was known before kickoff. Legs are paired when they kick off within 1 hour of each other:
+      the earliest leg plus the highest-confidence leg in its hour. Each team is used once, and a leg with no partner in its hour is left out.
       A parlay wins only if every leg covers its teased line (a pushed leg drops out). DraftKings alt-line prices aren't in our data,
       so odds and units are <b>estimates</b> from the assumed price per leg.</div>
     <div class="controls">
@@ -762,7 +762,7 @@ function renderParlays() {
   $("pl-summary").innerHTML = `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>Parlay record</div>`
     + `<div><b>${lt2.rec} <span class="muted" style="font-size:14px;font-weight:600">${lt2.pct}</span></b>Legs in those parlays</div>`
     + `<div><b>${units >= 0 ? "+" : "−"}${Math.abs(units).toFixed(2)}u</b>Est. units (1u each)</div>`
-    + `<div><b>${odds(toAm(Math.pow(toDec(price), 2)))} / ${odds(toAm(Math.pow(toDec(price), 3)))}</b>Est. odds, 2 / 3 legs</div>`
+    + `<div><b>${odds(toAm(Math.pow(toDec(price), 2)))}</b>Est. parlay odds</div>`
     + `<div><b>${up.length}</b>This week</div>`;
   const legTxt = l => `<div>${rankDot({ home_rank: l.home_rank, away_rank: l.away_rank, home: l.home_name, away: l.away_name })}`
     + `<span class="pick">${esc(l.team)} ${line(l.teased_line)}</span> <span class="muted">${l.home ? "vs" : "@"} ${esc(l.opponent)}</span>`
