@@ -197,6 +197,7 @@
   <nav class="tabs">
     <button class="tab active" data-tab="slate">Slate</button>
     <button class="tab" data-tab="confidence">Confidence</button>
+    <button class="tab" data-tab="parlays">Parlays</button>
     <button class="tab" data-tab="lines">Line Tracking</button>
     <button class="tab" data-tab="history">History</button>
   </nav>
@@ -218,6 +219,25 @@
     <div id="cf-teams"></div>
     <h2>Edge ranges <span class="note">teaser record of The Core Model picks so far</span></h2>
     <div id="cf-edges"></div>
+  </div>
+
+  <div id="tab-parlays" hidden>
+    <h2>Parlays <button class="info" data-for="x-pl" aria-expanded="false" aria-label="What is this?">i</button></h2>
+    <div class="explain" id="x-pl" hidden>Our teaser picks (The Core Model only, each teased 3) combined into 2–3 leg parlays.
+      A leg qualifies when the team we picked has a confidence score at or above the minimum <b>going into that day</b>,
+      so past parlays use only what was known before kickoff. Legs are grouped when they kick off within 1 hour of each other:
+      the earliest leg plus up to two of the highest-confidence legs in its hour. Each team is used once, and a leg with no partner in its hour is left out.
+      A parlay wins only if every leg covers its teased line (a pushed leg drops out). DraftKings alt-line prices aren't in our data,
+      so odds and units are <b>estimates</b> from the assumed price per leg.</div>
+    <div class="controls">
+      <label>Min confidence <input type="number" id="pl-min" value="65" step="1" min="0" max="100"></label>
+      <label>Assumed price per leg <input type="number" id="pl-price" value="-175" step="5"></label>
+    </div>
+    <div class="summary" id="pl-summary"></div>
+    <h2>This week <span class="n" id="pl-n-up"></span><span class="note">not decided yet</span></h2>
+    <div id="pl-up"></div>
+    <h2>Graded parlays <span class="n" id="pl-n-done"></span><span class="note">newest first</span></h2>
+    <div id="pl-done"></div>
   </div>
 
   <div id="tab-lines" hidden>
@@ -720,6 +740,50 @@ function renderConfidence() {
 }
 $("cf-today").onchange = $("cf-short").onchange = () => conf && renderConfidence();
 
+// ---- Parlays tab ----
+let pl = null;
+async function loadParlays() {
+  try { pl = await api(`/api/parlays?date=${ymd()}&min=${$("pl-min").value || 65}`); renderParlays(); }
+  catch (e) { $("pl-done").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+}
+const toDec = a => a < 0 ? 1 + 100 / -a : 1 + a / 100;
+const toAm = d => d >= 2 ? Math.round((d - 1) * 100) : -Math.round(100 / (d - 1));
+function renderParlays() {
+  const price = parseFloat($("pl-price").value) || -175;
+  const keep = p => showFCS || p.legs.every(l => isFBS(l.home_name) && isFBS(l.away_name));
+  const all = pl.parlays.filter(keep);
+  const done = all.filter(p => p.result), up = all.filter(p => !p.result);
+  const legsLive = p => p.legs.filter(l => l.result !== "PUSH").length;
+  const dec = p => Math.pow(toDec(price), legsLive(p));
+  const units = done.reduce((u, p) => u + (p.result === "WIN" ? dec(p) - 1 : p.result === "LOSS" ? -1 : 0), 0);
+  const t = tally(done, "result");
+  const legs = done.flatMap(p => p.legs);
+  const lt2 = tally(legs, "result");
+  $("pl-summary").innerHTML = `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>Parlay record</div>`
+    + `<div><b>${lt2.rec} <span class="muted" style="font-size:14px;font-weight:600">${lt2.pct}</span></b>Legs in those parlays</div>`
+    + `<div><b>${units >= 0 ? "+" : "−"}${Math.abs(units).toFixed(2)}u</b>Est. units (1u each)</div>`
+    + `<div><b>${odds(toAm(Math.pow(toDec(price), 2)))} / ${odds(toAm(Math.pow(toDec(price), 3)))}</b>Est. odds, 2 / 3 legs</div>`
+    + `<div><b>${up.length}</b>This week</div>`;
+  const legTxt = l => `<div>${rankDot({ home_rank: l.home_rank, away_rank: l.away_rank, home: l.home_name, away: l.away_name })}`
+    + `<span class="pick">${esc(l.team)} ${line(l.teased_line)}</span> <span class="muted">${l.home ? "vs" : "@"} ${esc(l.opponent)}</span>`
+    + ` <span class="cfs" title="Confidence going into the day">${Math.round(l.confidence)}</span>`
+    + (l.result ? ` ${res(l.result)}` : l.state === "in" ? ` <span class="live">Live ${l.away_score}–${l.home_score}</span>` : "") + `</div>`;
+  const when = p => { const d = new Date(p.kickoff);
+    return `${d.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" })}<span class="sub">${d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}${p.window_min ? ` · ${p.window_min} min window` : ""}</span>`; };
+  const cols = [
+    { label: "Kickoff", render: when },
+    { label: "Legs (teased 3)", render: p => p.legs.map(legTxt).join("") },
+    { label: "Est. odds", num: true, render: p => odds(toAm(dec(p))) },
+    { label: "Parlay", render: p => p.result ? res(p.result) : p.legs.some(l => l.state === "in") ? `<span class="tag">in play</span>` : `<span class="tag">upcoming</span>` },
+  ];
+  $("pl-n-up").textContent = up.length;
+  $("pl-up").innerHTML = table(cols, [...up].reverse());
+  $("pl-n-done").textContent = done.length;
+  $("pl-done").innerHTML = table(cols, done);
+}
+$("pl-min").onchange = () => loadParlays();
+$("pl-price").oninput = () => pl && renderParlays();
+
 // ---- Line Tracking tab ----
 let lt = null;
 async function loadLines() {
@@ -824,10 +888,11 @@ function renderLines() {
 
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
   document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === b));
-  for (const t of ["slate", "confidence", "lines", "history"]) $("tab-" + t).hidden = b.dataset.tab !== t;
+  for (const t of ["slate", "confidence", "parlays", "lines", "history"]) $("tab-" + t).hidden = b.dataset.tab !== t;
   if (b.dataset.tab === "history") loadHistory();
   if (b.dataset.tab === "confidence") loadConfidence();
   if (b.dataset.tab === "lines") loadLines();
+  if (b.dataset.tab === "parlays") loadParlays();
 });
 
 document.querySelectorAll(".info").forEach(b => b.onclick = () => {
@@ -843,6 +908,7 @@ setInterval(() => {
     if (!$("tab-history").hidden) loadHistory();
     if (!$("tab-confidence").hidden) loadConfidence();
     if (!$("tab-lines").hidden) loadLines();
+    if (!$("tab-parlays").hidden) loadParlays();
   }
 }, 120000);
 $("r-filter").oninput = renderRatings;
@@ -853,6 +919,7 @@ function rerenderAll() {
   if (lastHist) renderHistory(lastHist);
   if (conf) renderConfidence();
   if (lt) renderLines();
+  if (pl) renderParlays();
   if (teams.length) renderRatings();
 }
 $("showFCS").checked = showFCS;

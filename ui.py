@@ -7,6 +7,7 @@ Endpoints:
   GET  /api/slate?date=&teaser=  evaluate a slate
   GET  /api/teams                Sagarin ratings + HFA
   GET  /api/lines?date=          Line Tracking: DK spread + edge over the week
+  GET  /api/parlays?min=        Parlays: 2-3 leg groups of high-confidence teaser picks
   GET  /api/history              frozen results from history.json (see snapshot.py)
   GET  /api/matchup?home=&away=&spread=&neutral=&teaser=   one-off calculator
   POST /api/save?date=&teaser=   append the slate to picks/YYYYMMDD.csv
@@ -22,6 +23,7 @@ from urllib.parse import parse_qs, urlparse
 import confidence
 import linetrack
 import odds
+import parlays
 import run
 import sagarin
 import snapshot
@@ -222,6 +224,40 @@ def lines_json(day: str) -> dict:
             "start": days[0], "end": days[-1], "as_of": ratings().as_of, "games": games}
 
 
+def parlays_json(day: str, min_conf: float) -> dict:
+    """Every parlay this season (backtest with as-of confidence) plus this
+    week's upcoming ones. See parlays.py."""
+    hist = history_json()["games"]
+    asof = parlays.AsOf(hist, team_lines.load())
+    core = lambda r: r["action"] == "SPREAD" and "DISAGREE" not in (r.get("flags") or [])
+    cands, seen = [], set()
+    for r in hist:
+        if core(r) and r.get("teaser_result"):
+            seen.add(r["game_id"])
+            cands.append({"game_id": r["game_id"], "date": r["date"], "kickoff": r["kickoff"],
+                          "team": r["side"], "opponent": r["away"] if r["side"] == r["home"] else r["home"],
+                          "home": r["side"] == r["home"], "teased_line": r["teaser_line"], "edge": r["edge"],
+                          "result": r["teaser_result"], "state": "post",
+                          "home_name": r["home"], "away_name": r["away"],
+                          "home_score": r["home_score"], "away_score": r["away_score"],
+                          "home_rank": r.get("home_rank"), "away_rank": r.get("away_rank")})
+    for s in week_slates(upcoming_week(day)):
+        for l, p in s.picks:
+            r = pick_json(p, l)
+            if not core(r) or l.game_id in seen:
+                continue
+            cands.append({"game_id": l.game_id, "date": s.day, "kickoff": l.kickoff,
+                          "team": p.side, "opponent": p.game.away if p.side == p.game.home else p.game.home,
+                          "home": p.side == p.game.home, "teased_line": p.teaser_line, "edge": p.edge,
+                          "result": p.teaser_result if l.completed else None, "state": l.state,
+                          "home_name": p.game.home, "away_name": p.game.away,
+                          "home_score": l.home_score, "away_score": l.away_score,
+                          "home_rank": l.home_rank, "away_rank": l.away_rank})
+    out = parlays.build(cands, asof, min_conf)
+    return {"date": day, "min_conf": min_conf, "window_min": int(parlays.WINDOW.total_seconds() // 60),
+            "teaser": snapshot.TEASER, "parlays": out}
+
+
 def history_json() -> dict:
     """Frozen history plus today's/yesterday's finals the scheduled snapshot
     hasn't recorded yet (marked provisional until it does)."""
@@ -268,6 +304,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(200, week_json(day))
             if method == "GET" and path == "/api/lines":
                 return self._send(200, lines_json(day))
+            if method == "GET" and path == "/api/parlays":
+                return self._send(200, parlays_json(day, float(q.get("min") or 65)))
             if method == "GET" and path == "/api/history":
                 return self._send(200, history_json())
             if method == "GET" and path == "/api/teams":
