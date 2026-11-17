@@ -154,6 +154,7 @@
   /* Team confidence on the Slate: small and quiet, next to the team name */
   .cfs { display: inline-block; margin-left: 4px; padding: 0 4px; border-radius: 5px; font-size: 11px; font-weight: 600;
          line-height: 15px; vertical-align: 1px; color: var(--muted); background: var(--panel2); border: 1px solid var(--line); }
+  .fcs-toggle { margin: 10px 0 0 6px; font-size: 13px; }
   .rk.on { background: var(--bad); box-shadow: 0 0 6px color-mix(in srgb, var(--bad) 60%, transparent); }
 
 
@@ -191,6 +192,8 @@
     <button class="tab" data-tab="lines">Line Tracking</button>
     <button class="tab" data-tab="history">History</button>
   </nav>
+  <label class="inline fcs-toggle"><input type="checkbox" id="showFCS"> Include FCS games
+    <span class="muted" id="fcs-note"></span></label>
 
   <div id="tab-confidence" hidden>
     <h2 id="cf-title">Confidence <button class="info" data-for="x-cf" aria-expanded="false" aria-label="What is this?">i</button></h2>
@@ -201,7 +204,7 @@
       <b>Edge (50):</b> how often picks in the edge range of the team's matchup this week have covered the teased line (History tab, teaser column).
       On Sunday and Monday that's the coming week. Teams that already played this week, are on a bye, or don't have a line yet use their most recent game. 100% = 50. No data yet counts as a coin flip (25).</div>
     <div class="summary" id="cf-summary"></div>
-    <h2>Team confidence <span class="n" id="cf-n"></span><span class="note">highest first · teased 3</span></h2>
+    <h2>Team confidence <span class="n" id="cf-n"></span><span class="note">highest first · teased 3</span><span class="note" id="cf-fcs"></span></h2>
     <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-today"> Only teams with a game left this week</label>
     <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-short"> Show teams with fewer than 5 games</label>
     <div id="cf-teams"></div>
@@ -217,6 +220,7 @@
       so the first dot is Sunday at the earliest. The last dot is the live line right now, or the line at kickoff once the game starts. Edge moves when the line moves or Sagarin updates his ratings.
       The DK line is the home team's spread (minus = home favored) on the left axis; edge is on the right axis.</div>
     <div class="summary" id="lt-summary"></div>
+    <div class="status" id="lt-fcs"></div>
     <div class="controls">
       <label>Team <input id="lt-q" placeholder="Filter teams"></label>
       <label>Pick type <select id="lt-type">
@@ -238,7 +242,7 @@
     <div class="summary" id="h-summary"></div>
     <h2>By edge size <span class="note">The Core Model picks, excluding Vegas Knows Something games</span></h2>
     <div id="h-buckets"></div>
-    <h2>Games <span class="n" id="h-n"></span><span class="note">newest first</span></h2>
+    <h2>Games <span class="n" id="h-n"></span><span class="note">newest first</span><span class="note" id="h-n-note"></span></h2>
     <div id="h-games"></div>
   </div>
 
@@ -325,6 +329,20 @@ const kick = (iso) => { if (!iso) return ""; const d = new Date(iso);
 const ymd = () => $("date").value.replaceAll("-", "");
 
 let slate = null;
+
+// ---- FBS first: FCS games/teams are hidden unless "Include FCS games" is on ----
+// A game is FBS when both teams are FBS (Sagarin division "A"). Names Sagarin
+// doesn't list (e.g. ESPN names on games with no line) count as FBS.
+let divOf = {};
+let showFCS = false;
+try { showFCS = localStorage.getItem("showFCS") === "1"; } catch (e) {}
+const isFBS = team => (divOf[team] ?? "A") === "A";
+const fbsGame = g => isFBS(g.home) && isFBS(g.away);
+const keepGame = g => showFCS || fbsGame(g);
+const keepTeam = t => showFCS || isFBS(t);
+function fcsNote(n, what = "games") {
+  return !showFCS && n ? `${n} FCS ${what} hidden` : "";
+}
 let sortKey = "absEdge", sortDir = -1;
 
 function setStatus(msg, err = false) { $("status").textContent = msg; $("status").className = "status" + (err ? " err" : ""); }
@@ -337,21 +355,25 @@ async function api(path, opts) {
 }
 
 // Week totals: every finished game Tuesday-Saturday of the selected date's week.
+let lastWeek = null;
 async function loadWeek() {
-  try {
-    const w = await api(`/api/week?date=${ymd()}`);
-    const md = d => new Date(d.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"))
-      .toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
-    $("w-title").innerHTML = `Week ${w.week ?? "?"} Aggregates <span class="note">${md(w.start)} – ${md(w.end)} · finished games only · teaser 3</span>`;
-    const rows = w.games;
-    const spread = rows.filter(g => g.action === "SPREAD" && !g.flags.includes("DISAGREE"));
-    const caution = rows.filter(g => g.action === "SPREAD" && g.flags.includes("DISAGREE"));
-    const ml = rows.filter(g => g.action === "MONEYLINE");
-    const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>${label}</div>`;
-    $("w-summary").innerHTML = `<div><b>${rows.length}</b>Games final</div>` +
-      tile("Spread record", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
-      tile("Home Dawgs record", tally(ml, "result")) + tile("Vegas Knows Something record", tally(caution, "result"));
-  } catch (e) { $("w-summary").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+  try { renderWeek(await api(`/api/week?date=${ymd()}`)); }
+  catch (e) { $("w-summary").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
+}
+function renderWeek(w) {
+  lastWeek = w;
+  const md = d => new Date(d.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00"))
+    .toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
+  const rows = w.games.filter(keepGame);
+  const hid = fcsNote(w.games.length - rows.length);
+  $("w-title").innerHTML = `Week ${w.week ?? "?"} Aggregates <span class="note">${md(w.start)} – ${md(w.end)} · finished games only · teaser 3${hid ? " · " + hid : ""}</span>`;
+  const spread = rows.filter(g => g.action === "SPREAD" && !g.flags.includes("DISAGREE"));
+  const caution = rows.filter(g => g.action === "SPREAD" && g.flags.includes("DISAGREE"));
+  const ml = rows.filter(g => g.action === "MONEYLINE");
+  const tile = (label, t) => `<div><b>${t.rec} <span class="muted" style="font-size:14px;font-weight:600">${t.pct}</span></b>${label}</div>`;
+  $("w-summary").innerHTML = `<div><b>${rows.length}</b>Games final</div>` +
+    tile("Spread record", tally(spread, "result")) + tile("Teaser legs", tally(spread, "teaser_result")) +
+    tile("Home Dawgs record", tally(ml, "result")) + tile("Vegas Knows Something record", tally(caution, "result"));
 }
 
 async function loadSlate(refresh = false) {
@@ -442,7 +464,8 @@ function setColorMode(m) {
 }
 
 function render() {
-  const s = slate, minEdge = parseFloat($("minEdge").value) || 0;
+  const s = { ...slate, games: slate.games.filter(keepGame), no_line: slate.no_line.filter(keepGame) },
+        minEdge = parseFloat($("minEdge").value) || 0;
   $("meta").textContent = `Sagarin through ${s.as_of.toLowerCase()} · home advantage ${s.hfa} · DraftKings via ESPN`;
 
   const spreadAll = s.games.filter(g => g.action === "SPREAD").map(g => ({ ...g, absEdge: Math.abs(g.edge), game: g.away + g.home }));
@@ -458,7 +481,8 @@ function render() {
 
   const finished = s.games.filter(g => g.state === "post").length;
   const dayName = new Date(ymd().replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00")).toLocaleDateString([], { weekday: "long", month: "short", day: "numeric" });
-  $("d-title").innerHTML = `${esc(dayName)} slate`;
+  const hid = slate.games.length - s.games.length;
+  $("d-title").innerHTML = `${esc(dayName)} slate` + (hid ? ` <span class="note">${fcsNote(hid)}</span>` : "");
   $("summary").innerHTML = [
     ["Games with lines", s.games.length],
     ["Final", finished],
@@ -506,6 +530,8 @@ async function loadTeams() {
   try {
     const t = await api("/api/teams");
     teams = t.teams;
+    divOf = Object.fromEntries(teams.map(x => [x.team, x.division]));
+    rerenderAll();
     $("teamlist").innerHTML = teams.map(x => `<option value="${esc(x.team)}">`).join("");
     renderRatings();
   } catch (e) { setStatus(e.message, true); }
@@ -513,7 +539,7 @@ async function loadTeams() {
 
 function renderRatings() {
   const f = $("r-filter").value.toLowerCase();
-  const rows = teams.filter(t => t.team.toLowerCase().includes(f));
+  const rows = teams.filter(t => t.team.toLowerCase().includes(f) && keepTeam(t.team));
   $("ratings").innerHTML = table([
     { label: "#", num: true, render: t => t.rank },
     { label: "Team", render: t => esc(t.team) },
@@ -572,7 +598,11 @@ async function loadHistory() {
   } catch (e) { $("h-games").innerHTML = `<div class="status err">${esc(e.message)}</div>`; }
 }
 
-function renderHistory(rows) {
+let lastHist = null;
+function renderHistory(all) {
+  lastHist = all;
+  const rows = all.filter(keepGame);
+  $("h-n-note") && ($("h-n-note").textContent = fcsNote(all.length - rows.length));
   const spread = rows.filter(g => g.action === "SPREAD" && !g.flags.includes("DISAGREE"));
   const caution = rows.filter(g => g.action === "SPREAD" && g.flags.includes("DISAGREE"));
   const ml = rows.filter(g => g.action === "MONEYLINE");
@@ -632,7 +662,7 @@ function renderConfidence() {
   const c = conf;
   const md = d => new Date(d.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00")).toLocaleDateString([], { month: "short", day: "numeric" });
   $("cf-title").firstChild.textContent = `Confidence · ${c.week ? "Week " + c.week + " · " : ""}${md(c.start)}–${md(c.end)} `;
-  const all = c.teams;
+  const all = c.teams.filter(t => keepTeam(t.team));
   const upcoming = t => t.game && t.game.state !== "post";
   const scored = all.filter(t => t.confidence != null);
   const rows = ($("cf-short").checked ? all : scored).filter(t => !$("cf-today").checked || upcoming(t));
@@ -642,6 +672,7 @@ function renderConfidence() {
     ["Games left this week", all.filter(upcoming).length], ["Graded games behind it", c.graded],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
   $("cf-n").textContent = rows.length;
+  $("cf-fcs").textContent = fcsNote(c.teams.length - all.length, "teams");
   const gameTxt = t => {
     const g = t.game;
     if (!g) return t.last ? `<span class="muted">last: ${esc(t.last.away)} @ ${esc(t.last.home)}</span>` : "";
@@ -749,16 +780,18 @@ function renderLines() {
   const c = lt, md = d => ymdDate(d).toLocaleDateString([], { month: "short", day: "numeric" });
   $("lt-title").firstChild.textContent = `Line Tracking · ${c.week ? "Week " + c.week + " · " : ""}${md(c.start)}–${md(c.end)} `;
   const q = $("lt-q").value.toLowerCase(), type = $("lt-type").value;
-  let rows = c.games.filter(g => (!$("lt-pre").checked || g.state === "pre")
+  const games = c.games.filter(keepGame);
+  $("lt-fcs").textContent = fcsNote(c.games.length - games.length);
+  let rows = games.filter(g => (!$("lt-pre").checked || g.state === "pre")
     && (type === "all" || ltType(g) === type)
     && (!q || (g.away + " " + g.home).toLowerCase().includes(q)));
   const sort = $("lt-sort").value;
   if (sort === "move") rows.sort((a, b) => Math.abs(ltMove(b)) - Math.abs(ltMove(a)));
   if (sort === "edge") rows.sort((a, b) => Math.abs(b.edge) - Math.abs(a.edge));
-  const moved = c.games.filter(g => Math.abs(ltMove(g)) >= 1).length;
-  const checks = new Set(c.games.flatMap(g => g.points.map(p => p.check))).size;
-  $("lt-summary").innerHTML = [["Games", c.games.length], ["Not started", c.games.filter(g => g.state === "pre").length],
-    ["Moved 1+ pt this week", moved], ["Moved 3+ pts", c.games.filter(g => Math.abs(ltMove(g)) >= 3).length],
+  const moved = games.filter(g => Math.abs(ltMove(g)) >= 1).length;
+  const checks = new Set(games.flatMap(g => g.points.map(p => p.check))).size;
+  $("lt-summary").innerHTML = [["Games", games.length], ["Not started", games.filter(g => g.state === "pre").length],
+    ["Moved 1+ pt this week", moved], ["Moved 3+ pts", games.filter(g => Math.abs(ltMove(g)) >= 3).length],
     ["Checks recorded", checks]].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
   $("lt-games").innerHTML = rows.length ? rows.map(g => {
     const pts = ltSeries(g), mv = ltMove(g);
@@ -800,6 +833,21 @@ setInterval(() => {
   }
 }, 120000);
 $("r-filter").oninput = renderRatings;
+// Re-draw every view from the data already loaded (FBS/FCS switch, team list arriving).
+function rerenderAll() {
+  if (slate) render();
+  if (lastWeek) renderWeek(lastWeek);
+  if (lastHist) renderHistory(lastHist);
+  if (conf) renderConfidence();
+  if (lt) renderLines();
+  if (teams.length) renderRatings();
+}
+$("showFCS").checked = showFCS;
+$("showFCS").onchange = () => {
+  showFCS = $("showFCS").checked;
+  try { localStorage.setItem("showFCS", showFCS ? "1" : "0"); } catch (e) {}
+  rerenderAll();
+};
 loadSlate();
 loadTeams();
 </script>
