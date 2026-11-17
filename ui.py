@@ -25,6 +25,7 @@ import odds
 import run
 import sagarin
 import snapshot
+import team_lines
 from model import TEASER_POINTS, Game, evaluate
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -135,58 +136,67 @@ def week_slates(days):
 
 
 def confidence_json(day: str) -> dict:
-    """One confidence score per team: its record against our teased line in
-    every finished game, plus the edge-range points of its matchup THIS WEEK
-    (Tue-Sat; on Sunday/Monday the coming week). Only a team that has already played this week,
-    or is on a bye, falls back to its most recent finished game."""
+    """One confidence score per team (see confidence.py):
+    team half = record against its own DK spread teased 3, every finished game
+    this season (History + archive/extra_games.json); edge half = edge range of
+    its game THIS WEEK (Tue-Sat; on Sun/Mon the coming week), any pick type.
+    A team that already played this week or is on a bye uses its most recent
+    game with an edge."""
     hist = history_json()["games"]
-    games = confidence.team_games(hist)
+    games = confidence.team_games(hist + team_lines.load())
     records = {t: confidence._record(rows) for t, rows in games.items()}
     edges = confidence.edge_table(hist)
-    week = {}  # team -> its Core-Model-style (SPREAD) game this week
+    divs = {t.team: t.division for t in ratings().teams.values()}
+    week = {}  # team -> its game this week (next unfinished, else the latest)
     days = upcoming_week(day)
     for s in week_slates(days):
         for l, p in s.picks:
-            if p.action != "SPREAD":
-                continue
             g = pick_json(p, l)
             for team in (p.game.home, p.game.away):
+                home = team == p.game.home
+                own = g["dk_home_spread"] if home else -g["dk_home_spread"]
+                mine = dict(g, team_side=team, opponent=p.game.away if home else p.game.home, is_home=home,
+                            own_line=own, own_teased=own + confidence.TEASER,
+                            own_result=(confidence.own_result((g["home_score"] - g["away_score"]) * (1 if home else -1), own)
+                                        if g["state"] == "post" and g["home_score"] is not None else None))
                 prev = week.get(team)
-                # Keep the team's next unfinished game; otherwise its latest one.
                 if prev is None or (prev["state"] == "post" and
                                     (g["state"] != "post" or g["kickoff"] > prev["kickoff"])):
-                    week[team] = dict(g, team_side=team, picked=(team == p.side),
-                                      opponent=p.game.away if team == p.game.home else p.game.home)
+                    week[team] = mine
     rows = []
     for team in sorted(set(records) | set(week)):
         t = week.get(team)
-        last = games.get(team, [])[-1] if games.get(team) else None
-        upcoming = t is not None and t["state"] != "post"
-        if upcoming:
+        past = games.get(team, [])
+        last_edge = next((r for r in reversed(past) if r.get("edge") is not None), None)
+        if t is not None and t["state"] != "post":
             edge, edge_from = t["edge"], "week"
-        elif t is not None:  # already played this week: that game is their last
+        elif t is not None:      # already played this week: that game
             edge, edge_from = t["edge"], "last"
-        else:                # bye (or no line yet): most recent finished game
-            edge, edge_from = (last["edge"], "last") if last else (None, None)
+        elif last_edge:          # bye or no line yet: most recent game with an edge
+            edge, edge_from = last_edge["edge"], "last"
+        else:
+            edge, edge_from = None, None
         ep = confidence.edge_points(edge, edges)
         rec = records.get(team)
         played = (rec["w"] + rec["l"] + rec["p"]) if rec else 0
         scored = played >= confidence.MIN_GAMES
         team_pts = rec["points"] if scored else None
+        last = past[-1] if past else None
         rows.append({
-            "team": team, "record": rec, "team_pts": team_pts, "games": played,
+            "team": team, "division": divs.get(team), "record": rec, "team_pts": team_pts, "games": played,
             "edge": edge, "edge_from": edge_from, **ep,
             "confidence": round(team_pts + ep["edge_pts"], 1) if scored else None,
             "game": t,
-            "last": {k: last[k] for k in ("away", "home", "date", "picked", "side", "teaser_line", "teaser_result")} if last else None,
+            "recent": [r["teaser_result"] for r in past[-5:]],
+            "last": {k: last[k] for k in ("opponent", "home", "date", "line", "teased_line", "teaser_result")} if last else None,
         })
-    # Scored teams first (highest first), then teams still short of 5 games.
+    # Scored teams first (highest first), then teams still short of the minimum.
     rows.sort(key=lambda r: (r["confidence"] is None, -(r["confidence"] or 0),
                              -(r["record"]["w"] if r["record"] else 0), r["team"]))
     return {"date": day, "week": odds.week_number(days[0]) or odds.week_number(day),
-            "start": days[0], "end": days[-1], "teaser": snapshot.TEASER, "min_games": confidence.MIN_GAMES, "teams": rows,
-            "edges": edges,
-            "graded": sum(1 for h in hist if h["action"] == "SPREAD" and h.get("teaser_result"))}
+            "start": days[0], "end": days[-1], "teaser": snapshot.TEASER, "min_games": confidence.MIN_GAMES,
+            "teams": rows, "edges": edges,
+            "graded": sum(len(v) for v in games.values()) // 2}
 
 
 def lines_json(day: str) -> dict:

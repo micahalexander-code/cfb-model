@@ -2,18 +2,17 @@
 
 Two parts, 50 points each, both built from finished games (History):
 
-  Team score  = 50 x the team's win rate against our teased line in EVERY
-                game it played with one: when we picked the team it's our
-                teaser result; when we picked its opponent it's the reverse
-                (our teaser lost -> the team gets a W). 1-0 -> 50, 1-1 -> 25,
-                0-1 -> 0. Pushes don't count.
-  Edge score  = 50 x the teaser win rate of the edge range of the team's next
-                game (or its most recent one if it doesn't play that day)
-                (same ranges as the History tab: 0-1, 1-2, 2-3, 3+, Core Model
-                picks only). 100% -> 50.
+  Team score  = 50 x the team's win rate against its OWN DraftKings closing
+                spread teased 3 points, in EVERY finished game this season
+                with a line (any pick type, neutral sites too; History plus
+                archive/extra_games.json for weeks we have no ratings for).
+                1-0 -> 50, 1-1 -> 25, 0-1 -> 0. Pushes don't count.
+  Edge score  = 50 x the teaser win rate of the edge range of the team's
+                game this week (or its most recent one if it already played
+                or is on a bye) (same ranges as the History tab: 0-1, 1-2,
+                2-3, 3+, Core Model picks only). 100% -> 50.
 
-A team needs MIN_GAMES (5) games against our teased line (pushes count)
-before it gets a score at all. An edge range with no graded games counts as a
+A team needs MIN_GAMES (5) graded games (pushes count) before it gets a score. An edge range with no graded games counts as a
 neutral 25 - a coin flip - until data comes in.
 """
 from typing import Dict, List, Optional
@@ -58,21 +57,36 @@ def edge_table(history: List[dict]) -> List[dict]:
     return out
 
 
-FLIP = {"WIN": "LOSS", "LOSS": "WIN", "PUSH": "PUSH"}
+TEASER = 3.0
 
 
-def team_games(history: List[dict]) -> Dict[str, List[dict]]:
-    """Every teased game per team, from that team's point of view."""
+def own_result(margin: int, line: float) -> str:
+    """A team's result against its own spread teased TEASER points."""
+    v = margin + line + TEASER
+    return "WIN" if v > 0 else "LOSS" if v < 0 else "PUSH"
+
+
+def team_games(games: List[dict]) -> Dict[str, List[dict]]:
+    """Every finished game with a DK line, per team, graded against that
+    team's own spread teased TEASER points. `games` rows need home, away,
+    dk_home_spread, home_score, away_score (History rows or extra games)."""
     by_team: Dict[str, List[dict]] = {}
-    for r in history:
-        if r["action"] != "SPREAD" or not r.get("teaser_result"):
+    seen = set()
+    for r in games:
+        if (r.get("home_score") is None or r.get("away_score") is None
+                or r.get("dk_home_spread") is None or r["game_id"] in seen):
             continue
-        opp = r["home"] if r["side"] == r["away"] else r["away"]
-        by_team.setdefault(r["side"], []).append(dict(r, team=r["side"], picked=True))
-        by_team.setdefault(opp, []).append(dict(r, team=opp, picked=False,
-                                                teaser_result=FLIP[r["teaser_result"]]))
+        seen.add(r["game_id"])
+        m = r["home_score"] - r["away_score"]
+        for team, opp, margin, line in ((r["home"], r["away"], m, r["dk_home_spread"]),
+                                        (r["away"], r["home"], -m, -r["dk_home_spread"])):
+            by_team.setdefault(team, []).append({
+                "game_id": r["game_id"], "date": r["date"], "kickoff": r.get("kickoff") or "",
+                "team": team, "opponent": opp, "home": team == r["home"],
+                "line": line, "teased_line": line + TEASER, "margin": margin,
+                "teaser_result": own_result(margin, line), "edge": r.get("edge")})
     for rows in by_team.values():
-        rows.sort(key=lambda r: (r.get("kickoff") or "", r["game_id"]))
+        rows.sort(key=lambda x: (x["kickoff"], x["game_id"]))
     return by_team
 
 

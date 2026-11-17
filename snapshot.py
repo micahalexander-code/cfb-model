@@ -27,6 +27,7 @@ from typing import List, Optional
 import linetrack
 import run
 import sagarin
+import team_lines
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 HISTORY = os.path.join(HERE, "history.json")
@@ -150,7 +151,9 @@ def snapshot(days: List[str]) -> int:
               f"{len(slate.no_line)} without a line, sources "
               f"{sorted({str(l.line_source) for l, _ in slate.picks})}")
         if not dates_ok(slate):
-            print(f"{day}: skipped, Sagarin ratings ({ratings.as_of}) already include this date")
+            n = team_lines.add_slate(slate, seen)
+            print(f"{day}: skipped, Sagarin ratings ({ratings.as_of}) already include this date"
+                  + (f"; {n} game(s) kept for Confidence (archive/extra_games.json)" if n else ""))
             continue
         for row in finished_rows(slate, now):
             if row["game_id"] not in seen:

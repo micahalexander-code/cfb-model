@@ -155,6 +155,14 @@
   .cfs { display: inline-block; margin-left: 4px; padding: 0 4px; border-radius: 5px; font-size: 11px; font-weight: 600;
          line-height: 15px; vertical-align: 1px; color: var(--muted); background: var(--panel2); border: 1px solid var(--line); }
   .fcs-toggle { margin: 10px 0 0 6px; font-size: 13px; }
+  .cf-bar { display: inline-flex; width: 70px; height: 6px; border-radius: 3px; overflow: hidden; background: var(--line); vertical-align: middle; }
+  .cf-bar i { display: block; height: 100%; }
+  .cf-k { display: inline-block; width: 10px; height: 6px; border-radius: 2px; vertical-align: middle; }
+  .cf-kt, .cf-bar i.t { background: var(--accent); } .cf-ke, .cf-bar i.e { background: #5cc489; }
+  .form { display: inline-flex; gap: 2px; margin-left: 6px; vertical-align: 1px; }
+  .form i { width: 6px; height: 6px; border-radius: 2px; background: var(--line); }
+  .form i.WIN { background: var(--pos); } .form i.LOSS { background: var(--bad); } .form i.PUSH { background: var(--muted); }
+  .sub { display: block; font-size: 12px; color: var(--muted); }
   .rk.on { background: var(--bad); box-shadow: 0 0 6px color-mix(in srgb, var(--bad) 60%, transparent); }
 
 
@@ -197,14 +205,14 @@
 
   <div id="tab-confidence" hidden>
     <h2 id="cf-title">Confidence <button class="info" data-for="x-cf" aria-expanded="false" aria-label="What is this?">i</button></h2>
-    <div class="explain" id="x-cf" hidden>How much we trust each team to cover our <b>teased</b> line, out of 100.
-      <b>Team (50):</b> the team's record against our teased line in every game it's played. When we picked them it's our teaser result;
-      when we picked their opponent it's the reverse. Undefeated = 50, .500 = 25, winless = 0.
-      A team needs <b>5 games</b> against our teased line before it gets a score.
-      <b>Edge (50):</b> how often picks in the edge range of the team's matchup this week have covered the teased line (History tab, teaser column).
-      On Sunday and Monday that's the coming week. Teams that already played this week, are on a bye, or don't have a line yet use their most recent game. 100% = 50. No data yet counts as a coin flip (25).</div>
+    <div class="explain" id="x-cf" hidden>How much we trust each team to cover a <b>3-point teaser</b>, out of 100. Two halves, 50 points each:
+      <br><b>Team (50):</b> the team's record against its own DraftKings closing spread teased 3 points, in every game it has played this season
+      (any pick type, all weeks). 100% = 50, .500 = 25. A team needs <b>5 graded games</b> to get a score.
+      <br><b>Edge (50):</b> how often our Core Model picks in the edge range of the team's game this week have covered the teased line (table at the bottom).
+      On Sunday and Monday that's the coming week. A team that already played this week or is on a bye uses its most recent game.
+      <br>The bar shows the two halves: <span class="cf-k cf-kt"></span> team, <span class="cf-k cf-ke"></span> edge.</div>
     <div class="summary" id="cf-summary"></div>
-    <h2>Team confidence <span class="n" id="cf-n"></span><span class="note">highest first · teased 3</span><span class="note" id="cf-fcs"></span></h2>
+    <h2>Team confidence <span class="n" id="cf-n"></span><span class="note">highest first · each team's own line teased 3</span><span class="note" id="cf-fcs"></span></h2>
     <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-today"> Only teams with a game left this week</label>
     <label class="inline" style="margin-bottom:8px"><input type="checkbox" id="cf-short"> Show teams with fewer than 5 games</label>
     <div id="cf-teams"></div>
@@ -667,37 +675,42 @@ function renderConfidence() {
   const scored = all.filter(t => t.confidence != null);
   const rows = ($("cf-short").checked ? all : scored).filter(t => !$("cf-today").checked || upcoming(t));
   $("cf-summary").innerHTML = [
-    ["Teams scored", scored.length], ["Score 80+", scored.filter(t => t.confidence >= 80).length],
+    ["Teams scored", scored.length], ["Score 70+", scored.filter(t => t.confidence >= 70).length],
     [`Under ${c.min_games} games`, all.length - scored.length],
-    ["Games left this week", all.filter(upcoming).length], ["Graded games behind it", c.graded],
+    ["Games left this week", all.filter(upcoming).length], ["Graded team-games", c.graded],
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
   $("cf-n").textContent = rows.length;
   $("cf-fcs").textContent = fcsNote(c.teams.length - all.length, "teams");
-  const gameTxt = t => {
+
+  const bar = t => `<span class="cf-bar" title="Team ${t.team_pts} + Edge ${t.edge_pts}"><i class="t" style="width:${t.team_pts}%"></i><i class="e" style="width:${t.edge_pts}%"></i></span>`;
+  const form = t => t.recent.length ? `<span class="form" title="Last ${t.recent.length}, oldest first">${t.recent.map(r => `<i class="${r}"></i>`).join("")}</span>` : "";
+  const weekTxt = t => {
     const g = t.game;
-    if (!g) return t.last ? `<span class="muted">last: ${esc(t.last.away)} @ ${esc(t.last.home)}</span>` : "";
-    const ours = g.picked ? `<span class="pick">${esc(t.team)} ${line(g.teaser_line)}</span>`
-                          : `<span class="muted">vs our pick ${esc(g.side)} ${line(g.teaser_line)}</span>`;
-    return `${t.team === g.home ? "vs" : "@"} ${esc(g.opponent)} · ${ours}`
-      + (g.flags.includes("DISAGREE") ? ` <span class="flag caution">CAUTION</span>` : "");
+    if (!g) return t.last ? `<span class="muted">Bye · last: ${t.last.home ? "vs" : "@"} ${esc(t.last.opponent)}</span>` : `<span class="muted">—</span>`;
+    const when = g.state === "post" ? `Final ${g.away_score}–${g.home_score}` : g.state === "in" ? `<span class="live">Live ${g.away_score}–${g.home_score}</span>` : kick(g.kickoff);
+    const pick = g.action === "SPREAD" ? `our pick ${esc(g.side)} ${line(g.line)}` + (g.flags.includes("DISAGREE") ? ` <span class="flag caution">CAUTION</span>` : "")
+      : g.action === "MONEYLINE" ? `our pick ${esc(g.side)} ML` : g.action === "EXCLUDED" ? "neutral, no pick" : g.flags.includes("PRICED_IN") ? "Stay Away" : "no pick";
+    return `${g.is_home ? "vs" : "@"} ${esc(g.opponent)} <span class="muted">· ${when}</span>
+      <span class="sub">their line ${line(g.own_line)} → teased ${line(g.own_teased)} · ${pick}</span>`;
   };
-  // The team's own teaser result in that game (reverse of ours when we picked against them).
-  const flip = { WIN: "LOSS", LOSS: "WIN", PUSH: "PUSH" };
-  const teamRes = t => !t.game ? "" : t.game.teaser_result
-    ? res(t.game.picked ? t.game.teaser_result : flip[t.game.teaser_result])
-    : t.game.state === "in" ? `<span class="tag">in play</span>` : "";
+  // Live: is the team covering its own teased line right now?
+  const ownCls = t => {
+    const g = t.game;
+    if (colorMode === "off" || !g || g.state !== "in" || g.home_score == null) return "";
+    const m = (g.is_home ? g.home_score - g.away_score : g.away_score - g.home_score) + g.own_teased;
+    return m >= 14 ? "c-nosweat" : m > 0 ? "c-cover" : m >= -8 ? "c-close" : "c-dead";
+  };
   $("cf-teams").innerHTML = table([
-    { label: "Score", render: t => t.confidence == null ? `<span class="muted">${t.games}/${c.min_games}</span>`
+    { label: "Score", render: t => t.confidence == null ? `<span class="muted">${t.games}/${c.min_games} games</span>`
         : `<span class="score ${scoreCls(t.confidence)}">${Math.round(t.confidence)}</span>` },
-    { label: "Team", render: t => `<b>${esc(t.team)}</b>` },
-    { label: "Record vs teased line", num: true, render: t => `${recTxt(t.record)} <span class="pts">${t.team_pts ?? "—"}</span>` },
-    { label: "Edge range", num: true, render: t => t.edge_range == null ? `<span class="muted">—</span> <span class="pts">${t.edge_pts}</span>`
-        : `${t.edge_range} <span class="tag">${t.edge_from === "week" ? "this week" : "last game"}</span> <span class="pts">${t.edge_pts}</span>` },
-    { label: "This week's game", render: gameTxt },
-    { label: "Kickoff / score", render: t => t.game ? kickCol.render(t.game) : "" },
-    { label: "Their teaser result", render: teamRes },
-  ], rows, false,
-     t => { if (!t.game || colorMode === "off" || !t.game.picked) return ""; const m = colorMode; colorMode = "teaser"; const k = liveCls(t.game); colorMode = m; return k; });
+    { label: "Team + Edge", render: t => t.confidence == null ? "" : `${bar(t)} <span class="pts">${t.team_pts} + ${t.edge_pts}</span>` },
+    { label: "Team", render: t => `<b>${esc(t.team)}</b>${t.division && t.division !== "A" ? ` <span class="tag">FCS</span>` : ""}` },
+    { label: "Teased record", render: t => `${recTxt(t.record)} <span class="muted">${pctTxt(t.record)}</span>${form(t)}` },
+    { label: "Edge range", render: t => t.edge_range == null ? `<span class="muted">—</span>`
+        : `${t.edge_range} <span class="tag">${t.edge_from === "week" ? "this week" : "last game"}</span>` },
+    { label: "This week", render: weekTxt },
+    { label: "Their teaser", render: t => t.game && t.game.own_result ? res(t.game.own_result) : t.game && t.game.state === "in" ? `<span class="tag">in play</span>` : "" },
+  ], rows, false, ownCls);
   $("cf-edges").innerHTML = table([
     { label: "Edge range", render: b => b.label },
     { label: "Teaser record", num: true, render: b => recTxt(b.w + b.l + b.p ? b : null) },
