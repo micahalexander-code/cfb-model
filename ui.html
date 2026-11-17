@@ -705,7 +705,7 @@ function renderConfidence() {
         : `<span class="score ${scoreCls(t.confidence)}">${Math.round(t.confidence)}</span>` },
     { label: "Team + Edge", render: t => t.confidence == null ? "" : `${bar(t)} <span class="pts">${t.team_pts} + ${t.edge_pts}</span>` },
     { label: "Team", render: t => `<b>${esc(t.team)}</b>${t.division && t.division !== "A" ? ` <span class="tag">FCS</span>` : ""}` },
-    { label: "Teased record", render: t => `${recTxt(t.record)} <span class="muted">${pctTxt(t.record)}</span>${form(t)}` },
+    { label: "Teased record", render: t => `${recTxt(t.record)}${form(t)}` },
     { label: "Edge range", render: t => t.edge_range == null ? `<span class="muted">—</span>`
         : `${t.edge_range} <span class="tag">${t.edge_from === "week" ? "this week" : "last game"}</span>` },
     { label: "This week", render: weekTxt },
