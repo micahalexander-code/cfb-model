@@ -1,0 +1,44 @@
+# Line Tracking checks: 9 am, 3 pm and 10 pm Eastern (see linetrack.py).
+# GitHub's schedule is best effort and often drops runs, so each check gets
+# four tries (:05, :20, :35, :50). The first try that runs takes the check;
+# the rest find it already taken and change nothing. Hours cover both EDT and
+# EST: 9 am = 13/14 UTC, 3 pm = 19/20 UTC, 10 pm = 2/3 UTC. A try before the
+# check time (e.g. 13:05 UTC in winter = 8:05 am) is a harmless no-op.
+# Only this workflow writes lines.json, so it never conflicts with the
+# 30-minute snapshot job.
+name: Line checks
+
+on:
+  schedule:
+    - cron: "5,20,35,50 2,3,13,14,19,20 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: linecheck
+  cancel-in-progress: false
+
+jobs:
+  linecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Take the line check
+        run: python3 snapshot.py --lines
+      - name: Commit if lines changed
+        run: |
+          git add -N lines.json 2>/dev/null || true
+          if git diff --quiet -- lines.json; then
+            echo "Nothing new"; exit 0
+          fi
+          git config user.name "cfb-model-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lines.json
+          git commit -m "Line tracking check"
+          git pull --rebase
+          git push

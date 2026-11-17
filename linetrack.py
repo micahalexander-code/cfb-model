@@ -3,7 +3,7 @@
 Stored in lines.json, one entry per game:
 
   points  three checks a day (9 am, 3 pm and 10 pm Eastern), each taken by the
-          first scheduled snapshot run after that time: DK spread, model line
+          line-check workflow (linecheck.yml) shortly after that time: DK spread, model line
           and edge as they stood then. Edge moves when the line moves or
           Sagarin updates.
   close   the line and edge when the game kicked off.

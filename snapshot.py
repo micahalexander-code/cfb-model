@@ -8,9 +8,10 @@ closing line, pick and result as they stood when it was first seen final.
 Recorded games are never rewritten, so later Sagarin updates can't change
 them. Run on a schedule by .github/workflows/snapshot.yml.
 
-Also keeps lines.json (Line Tracking tab, see linetrack.py): three checks a
-day (9 am, 3 pm, 10 pm ET) of each game of the coming week, and its closing
-line at kickoff.
+  python3 snapshot.py --lines        # Line Tracking check only (lines.json)
+
+The --lines mode is run by .github/workflows/linecheck.yml at 9 am, 3 pm and
+10 pm ET (see linetrack.py); the regular snapshot doesn't touch lines.json.
 
 Guard: if Sagarin's ratings already include a game's date (e.g. a game that
 was missed until after Monday's update), it is NOT recorded, since the
@@ -25,6 +26,7 @@ from typing import List, Optional
 
 import linetrack
 import run
+import sagarin
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 HISTORY = os.path.join(HERE, "history.json")
@@ -169,7 +171,6 @@ def snapshot(days: List[str]) -> int:
         with open(LOCKED, "w") as f:
             json.dump(locked, f, indent=1, sort_keys=True)
             f.write("\n")
-    track_lines(slates, now_dt, ratings)
     print(f"Added {added} finished game(s); history now has {len(history)}; "
           f"{len(locked)} saved line(s)")
     return added
@@ -191,5 +192,28 @@ def track_lines(slates, now: datetime, ratings) -> None:
     print(f"Line tracking: {len(data)} game(s), {n} with the {check} check")
 
 
+def line_check(tries: int = 3) -> int:
+    """Line Tracking only (the dedicated line-check workflow): take the current
+    daily check for every game of the coming week and closing lines for games
+    that kicked off. If ESPN comes back with no lines at all, retry; still
+    nothing -> exit code 1 so the run shows as failed on GitHub."""
+    import time
+    now = datetime.now(timezone.utc)
+    week = linetrack.upcoming_week(linetrack.eastern(now).date().strftime("%Y%m%d"))
+    for attempt in range(1, tries + 1):
+        ratings = sagarin.load()
+        slates = [run.build(d, TEASER, ratings) for d in week]
+        n = sum(len(s.picks) for s in slates)
+        print(f"Try {attempt}: {n} games with lines for {week[0]}-{week[-1]}")
+        if n:
+            track_lines(slates, now, ratings)
+            return 0
+        time.sleep(30)
+    print("ESPN returned no lines for the whole week; check not taken")
+    return 1
+
+
 if __name__ == "__main__":
+    if sys.argv[1:] == ["--lines"]:
+        sys.exit(line_check())
     snapshot(sys.argv[1:] or default_days())
