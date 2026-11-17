@@ -90,7 +90,8 @@ def lock_lines(slate, locked: dict, now: datetime) -> bool:
         if l.state == "pre" and (not k or k - now > LOCK_WINDOW):
             continue
         entry = {"date": slate.day, "kickoff": l.kickoff, "away": p.game.away, "home": p.game.home,
-                 "dk_home_spread": l.home_spread, "dk_home_ml": l.home_ml, "dk_away_ml": l.away_ml}
+                 "dk_home_spread": l.home_spread, "dk_home_ml": l.home_ml, "dk_away_ml": l.away_ml,
+                 "dk_total": l.total}
         if locked.get(l.game_id) != entry:
             locked[l.game_id] = entry
             changed = True
@@ -117,7 +118,7 @@ def finished_rows(slate, recorded_at: str) -> List[dict]:
             "away": g.away, "home": g.home, "neutral": g.neutral,
             "away_rating": g.away_rating, "home_rating": g.home_rating,
             "dk_home_spread": g.dk_home_spread, "dk_home_ml": g.dk_home_ml,
-            "dk_away_ml": g.dk_away_ml, "line_source": l.line_source,
+            "dk_away_ml": g.dk_away_ml, "dk_total": l.total, "line_source": l.line_source,
             "projected": p.projected, "edge": p.edge, "action": p.action,
             "side": p.side, "line": p.line, "odds": p.odds,
             "teaser_points": TEASER, "teaser_line": p.teaser_line, "flags": p.flags,

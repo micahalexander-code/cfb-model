@@ -461,6 +461,7 @@ const ratCol  = { label: "Ratings (A / H)", num: true, render: g => `${g.away_ra
 const projCol = { label: "Model line (home)", key: "projected", num: true, render: g => g.projected === 0 ? "PK" : sgn(-g.projected, 2) };
 const dkCol   = { label: "DK line (home)", num: true, render: g =>
   line(g.dk_home_spread) + (g.line_source === "closing" ? ` <span class="tag">close</span>` : "") };
+const totCol  = { label: "Total", key: "dk_total", num: true, render: g => g.dk_total == null ? "" : `<span class="muted">${g.dk_total}</span>` };
 const edgeCol = { label: "Edge", key: "absEdge", num: true,
                   render: g => `<span class="${Math.abs(g.edge) >= 3 ? "strong" : ""}">${Math.abs(g.edge).toFixed(2)}</span>` };
 
@@ -525,14 +526,14 @@ function render() {
   $("n-ml").textContent = ml.length;
   $("ml").innerHTML = table([kickCol, slateGameCol,
     { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, mlResultCol,
-    projCol, dkCol, ratCol], ml, false, liveCls);
+    projCol, dkCol, totCol, ratCol], ml, false, liveCls);
 
   $("n-dis").textContent = dis.length;
-  $("dis").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol,
+  $("dis").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, totCol, ratCol,
     { label: "", render: () => `<span class="flag caution">CAUTION</span>` }], dis, false, liveCls);
 
   $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
-  $("spread").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, ratCol], spread, true, liveCls);
+  $("spread").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, totCol, ratCol], spread, true, liveCls);
   $("spread").querySelectorAll("th.sort").forEach(th => th.onclick = () => {
     const k = th.dataset.key;
     if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = k === "absEdge" || k === "projected" ? -1 : 1; }
@@ -540,7 +541,7 @@ function render() {
   });
 
   $("n-skip").textContent = skip.length;
-  $("skip").innerHTML = table([kickCol, slateGameCol, ratCol, projCol, dkCol,
+  $("skip").innerHTML = table([kickCol, slateGameCol, ratCol, projCol, dkCol, totCol,
     { label: "", render: () => `<span class="flag bad">STAY AWAY</span>` }], skip);
 
   $("n-neutral").textContent = neutral.length;
@@ -668,6 +669,7 @@ function renderHistory(all) {
     { label: "Teased", render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)}` },
     { label: "Edge", num: true, render: g => g.action === "SPREAD" ? Math.abs(g.edge).toFixed(2) : "" },
     { label: "DK close (home)", num: true, render: g => line(g.dk_home_spread) },
+    totCol,
     { label: "", render: g => (g.flags.includes("DISAGREE") ? `<span class="flag caution">CAUTION</span> ` : "")
         + (g.provisional ? `<span class="tag" title="Shown from the live slate; locks in at the next scheduled snapshot">not locked yet</span>` : "") },
   ], sorted);
@@ -767,7 +769,7 @@ function renderParlays() {
   const legTxt = l => `<div>${rankDot({ home_rank: l.home_rank, away_rank: l.away_rank, home: l.home_name, away: l.away_name })}`
     + `<span class="pick">${esc(l.team)} ${line(l.teased_line)}</span> <span class="muted">${l.home ? "vs" : "@"} ${esc(l.opponent)}</span>`
     + ` <span class="cfs" title="Confidence going into the week">${Math.round(l.confidence)}</span>`
-    + ` <span class="tag">${kick(l.kickoff)}</span>`
+    + ` <span class="tag">${kick(l.kickoff)}${l.dk_total != null ? ` · O/U ${l.dk_total}` : ""}</span>`
     + (l.result ? ` ${res(l.result)}` : l.state === "in" ? ` <span class="live">Live ${l.away_score}–${l.home_score}</span>` : "") + `</div>`;
   const when = p => `Week of ${new Date(p.week_start.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00")).toLocaleDateString([], { month: "short", day: "numeric" })}`;
   const cols = [

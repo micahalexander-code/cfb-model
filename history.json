@@ -30,7 +30,8 @@
   "teaser_result": "LOSS",
   "home_rank": 7,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 66.5
  },
  {
   "game_id": "401858215",
@@ -63,7 +64,8 @@
   "teaser_result": "LOSS",
   "home_rank": 24,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858220",
@@ -96,7 +98,8 @@
   "teaser_result": "LOSS",
   "home_rank": 25,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858222",
@@ -129,7 +132,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858214",
@@ -162,7 +166,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856678",
@@ -195,7 +200,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 23,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856679",
@@ -228,7 +234,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 11,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401856683",
@@ -261,7 +268,8 @@
   "teaser_result": "LOSS",
   "home_rank": 10,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856781",
@@ -294,7 +302,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858218",
@@ -327,7 +336,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858221",
@@ -360,7 +370,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401858224",
@@ -393,7 +404,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858439",
@@ -426,7 +438,8 @@
   "teaser_result": "WIN",
   "home_rank": 5,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 67.5
  },
  {
   "game_id": "401858442",
@@ -459,7 +472,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 16,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401862702",
@@ -492,7 +506,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401864571",
@@ -527,7 +542,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401866416",
@@ -562,7 +578,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401867929",
@@ -595,7 +612,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401868187",
@@ -628,7 +646,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856673",
@@ -661,7 +680,8 @@
   "teaser_result": "WIN",
   "home_rank": 2,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856791",
@@ -694,7 +714,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401866415",
@@ -727,7 +748,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401866417",
@@ -760,7 +782,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401856782",
@@ -793,7 +816,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 6,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401866413",
@@ -826,7 +850,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856674",
@@ -859,7 +884,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 12,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401856677",
@@ -894,7 +920,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856785",
@@ -927,7 +954,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856790",
@@ -960,7 +988,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856810",
@@ -993,7 +1022,8 @@
   "teaser_result": "LOSS",
   "home_rank": 15,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858216",
@@ -1026,7 +1056,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858217",
@@ -1059,7 +1090,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858440",
@@ -1092,7 +1124,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858444",
@@ -1125,7 +1158,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401858446",
@@ -1158,7 +1192,8 @@
   "teaser_result": "LOSS",
   "home_rank": 19,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401859184",
@@ -1191,7 +1226,8 @@
   "teaser_result": "LOSS",
   "home_rank": 3,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401860884",
@@ -1226,7 +1262,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 65.5
  },
  {
   "game_id": "401862708",
@@ -1259,7 +1296,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401866412",
@@ -1292,7 +1330,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401866419",
@@ -1325,7 +1364,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401866420",
@@ -1358,7 +1398,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401862705",
@@ -1391,7 +1432,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858223",
@@ -1424,7 +1466,8 @@
   "teaser_result": "LOSS",
   "home_rank": 17,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401864506",
@@ -1457,7 +1500,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401865252",
@@ -1490,7 +1534,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401868326",
@@ -1523,7 +1568,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856684",
@@ -1556,7 +1602,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856672",
@@ -1589,7 +1636,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 66.5
  },
  {
   "game_id": "401860881",
@@ -1622,7 +1670,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401866414",
@@ -1655,7 +1704,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401866418",
@@ -1690,7 +1740,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401866421",
@@ -1723,7 +1774,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856680",
@@ -1756,7 +1808,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856681",
@@ -1789,7 +1842,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 18,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856786",
@@ -1822,7 +1876,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 61.5
  },
  {
   "game_id": "401856787",
@@ -1855,7 +1910,8 @@
   "teaser_result": "LOSS",
   "home_rank": 22,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 61.5
  },
  {
   "game_id": "401858441",
@@ -1888,7 +1944,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401860882",
@@ -1921,7 +1978,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401862707",
@@ -1954,7 +2012,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401864503",
@@ -1987,7 +2046,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401864575",
@@ -2020,7 +2080,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401868241",
@@ -2053,7 +2114,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401869955",
@@ -2086,7 +2148,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401871045",
@@ -2119,7 +2182,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401871046",
@@ -2152,7 +2216,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858443",
@@ -2185,7 +2250,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858447",
@@ -2218,7 +2284,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856682",
@@ -2251,7 +2318,8 @@
   "teaser_result": "WIN",
   "home_rank": 4,
   "away_rank": 1,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856783",
@@ -2284,7 +2352,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 13,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856788",
@@ -2317,7 +2386,8 @@
   "teaser_result": "LOSS",
   "home_rank": 21,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 42.5
  },
  {
   "game_id": "401862703",
@@ -2350,7 +2420,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401867796",
@@ -2383,7 +2454,8 @@
   "teaser_result": "WIN",
   "home_rank": 8,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401868008",
@@ -2416,7 +2488,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856676",
@@ -2449,7 +2522,8 @@
   "teaser_result": "LOSS",
   "home_rank": 9,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401856789",
@@ -2482,7 +2556,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401856784",
@@ -2515,7 +2590,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856671",
@@ -2548,7 +2624,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401864504",
@@ -2581,7 +2658,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401864505",
@@ -2614,7 +2692,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858219",
@@ -2647,7 +2726,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401864502",
@@ -2680,7 +2760,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856670",
@@ -2713,7 +2794,8 @@
   "teaser_result": "LOSS",
   "home_rank": 20,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401860883",
@@ -2746,7 +2828,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401864500",
@@ -2779,7 +2862,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858445",
@@ -2812,7 +2896,8 @@
   "teaser_result": "WIN",
   "home_rank": 14,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401864578",
@@ -2845,7 +2930,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858225",
@@ -2878,7 +2964,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858226",
@@ -2911,7 +2998,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 5,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856811",
@@ -2944,7 +3032,8 @@
   "teaser_result": "WIN",
   "home_rank": 13,
   "away_rank": 22,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401858455",
@@ -2977,7 +3066,8 @@
   "teaser_result": "LOSS",
   "home_rank": 21,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 71.5
  },
  {
   "game_id": "401869940",
@@ -3010,7 +3100,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401856686",
@@ -3043,7 +3134,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 2,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856792",
@@ -3076,7 +3168,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401856798",
@@ -3109,7 +3202,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401856812",
@@ -3144,7 +3238,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858228",
@@ -3177,7 +3272,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858229",
@@ -3210,7 +3306,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401858451",
@@ -3243,7 +3340,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858454",
@@ -3276,7 +3374,8 @@
   "teaser_result": "LOSS",
   "home_rank": 6,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858456",
@@ -3309,7 +3408,8 @@
   "teaser_result": "WIN",
   "home_rank": 14,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401860889",
@@ -3344,7 +3444,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 62.5
  },
  {
   "game_id": "401858460",
@@ -3377,7 +3478,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401856695",
@@ -3412,7 +3514,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401864508",
@@ -3447,7 +3550,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 39.5
  },
  {
   "game_id": "401858227",
@@ -3480,7 +3584,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858448",
@@ -3513,7 +3618,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401862774",
@@ -3548,7 +3654,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856797",
@@ -3581,7 +3688,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856801",
@@ -3614,7 +3722,8 @@
   "teaser_result": "WIN",
   "home_rank": 17,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858230",
@@ -3649,7 +3758,8 @@
   "teaser_result": "LOSS",
   "home_rank": 23,
   "away_rank": 16,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401858233",
@@ -3682,7 +3792,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 65.5
  },
  {
   "game_id": "401858450",
@@ -3715,7 +3826,8 @@
   "teaser_result": "WIN",
   "home_rank": 19,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858457",
@@ -3748,7 +3860,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 12,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401860890",
@@ -3781,7 +3894,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401866424",
@@ -3814,7 +3928,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856694",
@@ -3847,7 +3962,8 @@
   "teaser_result": "WIN",
   "home_rank": 9,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858231",
@@ -3880,7 +3996,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858449",
@@ -3913,7 +4030,8 @@
   "teaser_result": "WIN",
   "home_rank": 4,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401858471",
@@ -3946,7 +4064,8 @@
   "teaser_result": "LOSS",
   "home_rank": 18,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401866422",
@@ -3979,7 +4098,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401867804",
@@ -4012,7 +4132,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401868317",
@@ -4045,7 +4166,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856685",
@@ -4078,7 +4200,8 @@
   "teaser_result": "LOSS",
   "home_rank": 10,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856691",
@@ -4113,7 +4236,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401862710",
@@ -4148,7 +4272,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401862771",
@@ -4181,7 +4306,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 62.5
  },
  {
   "game_id": "401871047",
@@ -4214,7 +4340,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856687",
@@ -4247,7 +4374,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856689",
@@ -4280,7 +4408,8 @@
   "teaser_result": "WIN",
   "home_rank": 20,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401856800",
@@ -4313,7 +4442,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856803",
@@ -4346,7 +4476,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 70.5
  },
  {
   "game_id": "401861963",
@@ -4381,7 +4512,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401862772",
@@ -4414,7 +4546,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401862773",
@@ -4447,7 +4580,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401862777",
@@ -4480,7 +4614,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401864443",
@@ -4513,7 +4648,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401866423",
@@ -4546,7 +4682,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401869948",
@@ -4579,7 +4716,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401870764",
@@ -4612,7 +4750,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858452",
@@ -4645,7 +4784,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858459",
@@ -4678,7 +4818,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401856688",
@@ -4711,7 +4852,8 @@
   "teaser_result": "LOSS",
   "home_rank": 8,
   "away_rank": 7,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401856690",
@@ -4744,7 +4886,8 @@
   "teaser_result": "WIN",
   "home_rank": 24,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401856796",
@@ -4777,7 +4920,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401856802",
@@ -4812,7 +4956,8 @@
   "teaser_result": null,
   "home_rank": 25,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858232",
@@ -4845,7 +4990,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858453",
@@ -4878,7 +5024,8 @@
   "teaser_result": "WIN",
   "home_rank": 3,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856692",
@@ -4911,7 +5058,8 @@
   "teaser_result": "WIN",
   "home_rank": 15,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401856693",
@@ -4944,7 +5092,8 @@
   "teaser_result": "WIN",
   "home_rank": 1,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401856799",
@@ -4977,7 +5126,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401862775",
@@ -5010,7 +5160,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401862776",
@@ -5043,7 +5194,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856795",
@@ -5076,7 +5228,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 11,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401864574",
@@ -5109,7 +5262,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401860885",
@@ -5142,7 +5296,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 61.5
  },
  {
   "game_id": "401860887",
@@ -5175,7 +5330,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401856793",
@@ -5208,7 +5364,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401864507",
@@ -5241,7 +5398,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858458",
@@ -5274,7 +5432,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401860886",
@@ -5307,7 +5466,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401860888",
@@ -5340,7 +5500,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401869941",
@@ -5373,7 +5534,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401862779",
@@ -5406,7 +5568,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858468",
@@ -5439,7 +5602,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401862778",
@@ -5472,7 +5636,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858461",
@@ -5505,7 +5670,8 @@
   "teaser_result": "WIN",
   "home_rank": 5,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858234",
@@ -5538,7 +5704,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856704",
@@ -5571,7 +5738,8 @@
   "teaser_result": "WIN",
   "home_rank": 14,
   "away_rank": 1,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856805",
@@ -5604,7 +5772,8 @@
   "teaser_result": "WIN",
   "home_rank": 11,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856813",
@@ -5637,7 +5806,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858236",
@@ -5670,7 +5840,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 63.5
  },
  {
   "game_id": "401858242",
@@ -5703,7 +5874,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401858243",
@@ -5736,7 +5908,8 @@
   "teaser_result": "LOSS",
   "home_rank": 16,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401858465",
@@ -5769,7 +5942,8 @@
   "teaser_result": "WIN",
   "home_rank": 7,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401860893",
@@ -5804,7 +5978,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401860896",
@@ -5837,7 +6012,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401864512",
@@ -5870,7 +6046,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401866425",
@@ -5903,7 +6080,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401864576",
@@ -5936,7 +6114,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401866427",
@@ -5969,7 +6148,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858462",
@@ -6002,7 +6182,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858467",
@@ -6035,7 +6216,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 3,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401864511",
@@ -6068,7 +6250,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858237",
@@ -6101,7 +6284,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 62.5
  },
  {
   "game_id": "401864510",
@@ -6134,7 +6318,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401856699",
@@ -6169,7 +6354,8 @@
   "teaser_result": null,
   "home_rank": 21,
   "away_rank": 4,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401856700",
@@ -6202,7 +6388,8 @@
   "teaser_result": "LOSS",
   "home_rank": 2,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401856815",
@@ -6237,7 +6424,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856816",
@@ -6270,7 +6458,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 15,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401858244",
@@ -6303,7 +6492,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 61.5
  },
  {
   "game_id": "401858463",
@@ -6336,7 +6526,8 @@
   "teaser_result": "LOSS",
   "home_rank": 18,
   "away_rank": 17,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 39.5
  },
  {
   "game_id": "401860897",
@@ -6369,7 +6560,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401861970",
@@ -6404,7 +6596,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401864579",
@@ -6437,7 +6630,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401866426",
@@ -6470,7 +6664,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401866428",
@@ -6503,7 +6698,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401868188",
@@ -6536,7 +6732,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401856806",
@@ -6569,7 +6766,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 25,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401862781",
@@ -6602,7 +6800,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401856698",
@@ -6635,7 +6834,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858464",
@@ -6668,7 +6868,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858466",
@@ -6701,7 +6902,8 @@
   "teaser_result": "LOSS",
   "home_rank": 13,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401862785",
@@ -6734,7 +6936,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858239",
@@ -6767,7 +6970,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401860892",
@@ -6800,7 +7004,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 66.5
  },
  {
   "game_id": "401867909",
@@ -6833,7 +7038,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401869961",
@@ -6866,7 +7072,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401858238",
@@ -6899,7 +7106,8 @@
   "teaser_result": "LOSS",
   "home_rank": 6,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401862780",
@@ -6932,7 +7140,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401856814",
@@ -6965,7 +7174,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856881",
@@ -7000,7 +7210,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401862784",
@@ -7033,7 +7244,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401869931",
@@ -7068,7 +7280,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401870745",
@@ -7101,7 +7314,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401871048",
@@ -7134,7 +7348,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856696",
@@ -7167,7 +7382,8 @@
   "teaser_result": "WIN",
   "home_rank": 8,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856702",
@@ -7200,7 +7416,8 @@
   "teaser_result": "LOSS",
   "home_rank": 10,
   "away_rank": 23,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856804",
@@ -7233,7 +7450,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401858469",
@@ -7266,7 +7484,8 @@
   "teaser_result": "LOSS",
   "home_rank": 12,
   "away_rank": 20,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401860894",
@@ -7301,7 +7520,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401862783",
@@ -7334,7 +7554,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401864572",
@@ -7367,7 +7588,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401856703",
@@ -7400,7 +7622,8 @@
   "teaser_result": "WIN",
   "home_rank": 24,
   "away_rank": 19,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401856697",
@@ -7433,7 +7656,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401862782",
@@ -7466,7 +7690,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858241",
@@ -7499,7 +7724,8 @@
   "teaser_result": "LOSS",
   "home_rank": 22,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401860895",
@@ -7532,7 +7758,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401866429",
@@ -7565,7 +7792,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401860891",
@@ -7598,7 +7826,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401858240",
@@ -7631,7 +7860,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401864509",
@@ -7664,7 +7894,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858470",
@@ -7697,7 +7928,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401871049",
@@ -7732,7 +7964,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401862786",
@@ -7765,7 +7998,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858245",
@@ -7800,7 +8034,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401871050",
@@ -7833,7 +8068,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858476",
@@ -7866,7 +8102,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401862787",
@@ -7899,7 +8136,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856707",
@@ -7932,7 +8170,8 @@
   "teaser_result": "LOSS",
   "home_rank": 16,
   "away_rank": 7,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 62.5
  },
  {
   "game_id": "401856807",
@@ -7965,7 +8204,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856819",
@@ -7998,7 +8238,8 @@
   "teaser_result": "WIN",
   "home_rank": 20,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856822",
@@ -8031,7 +8272,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858246",
@@ -8064,7 +8306,8 @@
   "teaser_result": "WIN",
   "home_rank": 21,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858250",
@@ -8097,7 +8340,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 3,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401858251",
@@ -8130,7 +8374,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858252",
@@ -8163,7 +8408,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858474",
@@ -8196,7 +8442,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 41.5
  },
  {
   "game_id": "401862791",
@@ -8229,7 +8476,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401858479",
@@ -8262,7 +8510,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401856705",
@@ -8295,7 +8544,8 @@
   "teaser_result": "WIN",
   "home_rank": 2,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401866432",
@@ -8328,7 +8578,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401866431",
@@ -8361,7 +8612,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856710",
@@ -8394,7 +8646,8 @@
   "teaser_result": "WIN",
   "home_rank": 17,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858247",
@@ -8429,7 +8682,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858248",
@@ -8462,7 +8716,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858253",
@@ -8495,7 +8750,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858473",
@@ -8528,7 +8784,8 @@
   "teaser_result": "WIN",
   "home_rank": 14,
   "away_rank": 5,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401862793",
@@ -8561,7 +8818,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401864515",
@@ -8594,7 +8852,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401866430",
@@ -8627,7 +8886,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401866433",
@@ -8660,7 +8920,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401866434",
@@ -8693,7 +8954,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401866477",
@@ -8726,7 +8988,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 41.5
  },
  {
   "game_id": "401869956",
@@ -8759,7 +9022,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401869962",
@@ -8792,7 +9056,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856708",
@@ -8825,7 +9090,8 @@
   "teaser_result": "LOSS",
   "home_rank": 25,
   "away_rank": 8,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401858475",
@@ -8858,7 +9124,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401864514",
@@ -8891,7 +9158,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401856709",
@@ -8926,7 +9194,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": 24,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401858472",
@@ -8959,7 +9228,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 62.5
  },
  {
   "game_id": "401860899",
@@ -8992,7 +9262,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401862790",
@@ -9025,7 +9296,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 62.5
  },
  {
   "game_id": "401856711",
@@ -9058,7 +9330,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856818",
@@ -9091,7 +9364,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": 10,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401862788",
@@ -9124,7 +9398,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401869942",
@@ -9157,7 +9432,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401871089",
@@ -9190,7 +9466,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856821",
@@ -9223,7 +9500,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 12,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858249",
@@ -9256,7 +9534,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 4,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858478",
@@ -9289,7 +9568,8 @@
   "teaser_result": "LOSS",
   "home_rank": 18,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401860898",
@@ -9322,7 +9602,8 @@
   "teaser_result": "WIN",
   "home_rank": 22,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401862792",
@@ -9355,7 +9636,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401869842",
@@ -9390,7 +9672,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401856706",
@@ -9423,7 +9706,8 @@
   "teaser_result": "WIN",
   "home_rank": 11,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 62.5
  },
  {
   "game_id": "401858477",
@@ -9456,7 +9740,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 6,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401869932",
@@ -9489,7 +9774,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401860921",
@@ -9524,7 +9810,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401856817",
@@ -9559,7 +9846,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401860900",
@@ -9592,7 +9880,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856820",
@@ -9627,7 +9916,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401864513",
@@ -9662,7 +9952,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401871090",
@@ -9695,7 +9986,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401871051",
@@ -9728,7 +10020,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401871066",
@@ -9763,7 +10056,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401870766",
@@ -9796,7 +10090,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401871052",
@@ -9829,7 +10124,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401862794",
@@ -9862,7 +10158,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401869933",
@@ -9897,7 +10194,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401858254",
@@ -9932,7 +10230,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401858487",
@@ -9967,7 +10266,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 20,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 41.5
  },
  {
   "game_id": "401860922",
@@ -10000,7 +10300,8 @@
   "teaser_result": "PUSH",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401864519",
@@ -10033,7 +10334,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 42.5
  },
  {
   "game_id": "401856826",
@@ -10066,7 +10368,8 @@
   "teaser_result": "WIN",
   "home_rank": 8,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401856716",
@@ -10099,7 +10402,8 @@
   "teaser_result": "WIN",
   "home_rank": 14,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856823",
@@ -10132,7 +10436,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 61.5
  },
  {
   "game_id": "401856824",
@@ -10165,7 +10470,8 @@
   "teaser_result": "LOSS",
   "home_rank": 18,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858256",
@@ -10198,7 +10504,8 @@
   "teaser_result": "LOSS",
   "home_rank": 25,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401858260",
@@ -10231,7 +10538,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858481",
@@ -10264,7 +10572,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 7,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401862795",
@@ -10297,7 +10606,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401866436",
@@ -10330,7 +10640,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401858482",
@@ -10363,7 +10674,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856714",
@@ -10396,7 +10708,8 @@
   "teaser_result": "LOSS",
   "home_rank": 16,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401862797",
@@ -10429,7 +10742,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401869843",
@@ -10462,7 +10776,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401866440",
@@ -10495,7 +10810,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401856717",
@@ -10530,7 +10846,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": 1,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 40.5
  },
  {
   "game_id": "401856718",
@@ -10563,7 +10880,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 9,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856825",
@@ -10598,7 +10916,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 22,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858255",
@@ -10631,7 +10950,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401858257",
@@ -10664,7 +10984,8 @@
   "teaser_result": "LOSS",
   "home_rank": 3,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858259",
@@ -10697,7 +11018,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858480",
@@ -10730,7 +11052,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858484",
@@ -10763,7 +11086,8 @@
   "teaser_result": "WIN",
   "home_rank": 13,
   "away_rank": 21,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401862796",
@@ -10796,7 +11120,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401862799",
@@ -10831,7 +11156,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401866435",
@@ -10864,7 +11190,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401866437",
@@ -10897,7 +11224,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401866438",
@@ -10932,7 +11260,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401866439",
@@ -10965,7 +11294,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401861964",
@@ -10998,7 +11328,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856713",
@@ -11031,7 +11362,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 15,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858483",
@@ -11064,7 +11396,8 @@
   "teaser_result": "WIN",
   "home_rank": 5,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401860902",
@@ -11097,7 +11430,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856715",
@@ -11130,7 +11464,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 10,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401862798",
@@ -11163,7 +11498,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401864517",
@@ -11196,7 +11532,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401864518",
@@ -11229,7 +11566,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401869943",
@@ -11264,7 +11602,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856712",
@@ -11297,7 +11636,8 @@
   "teaser_result": "LOSS",
   "home_rank": 6,
   "away_rank": 2,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858258",
@@ -11330,7 +11670,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858485",
@@ -11365,7 +11706,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 19,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401864516",
@@ -11398,7 +11740,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401869965",
@@ -11431,7 +11774,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856827",
@@ -11464,7 +11808,8 @@
   "teaser_result": "WIN",
   "home_rank": 12,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858486",
@@ -11497,7 +11842,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401869949",
@@ -11530,7 +11876,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856808",
@@ -11563,7 +11910,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401860901",
@@ -11596,7 +11944,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 23,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401871055",
@@ -11629,7 +11978,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401871069",
@@ -11662,7 +12012,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401871092",
@@ -11695,7 +12046,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 66.5
  },
  {
   "game_id": "401871070",
@@ -11728,7 +12080,8 @@
   "teaser_result": "PUSH",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401869845",
@@ -11761,7 +12114,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401871056",
@@ -11794,7 +12148,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401862807",
@@ -11827,7 +12182,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858271",
@@ -11862,7 +12218,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401861965",
@@ -11895,7 +12252,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401862808",
@@ -11928,7 +12286,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401864525",
@@ -11961,7 +12320,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401858272",
@@ -11994,7 +12354,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856728",
@@ -12027,7 +12388,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 18,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856840",
@@ -12060,7 +12422,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 8,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856841",
@@ -12093,7 +12456,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858270",
@@ -12126,7 +12490,8 @@
   "teaser_result": "LOSS",
   "home_rank": 23,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858274",
@@ -12159,7 +12524,8 @@
   "teaser_result": "LOSS",
   "home_rank": 1,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858496",
@@ -12192,7 +12558,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 6,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401858498",
@@ -12225,7 +12592,8 @@
   "teaser_result": "WIN",
   "home_rank": 24,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401862809",
@@ -12258,7 +12626,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401866450",
@@ -12293,7 +12662,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856834",
@@ -12328,7 +12698,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401866446",
@@ -12361,7 +12732,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401866476",
@@ -12394,7 +12766,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 41.5
  },
  {
   "game_id": "401858495",
@@ -12427,7 +12800,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401856727",
@@ -12460,7 +12834,8 @@
   "teaser_result": "WIN",
   "home_rank": 13,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401856730",
@@ -12493,7 +12868,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401856731",
@@ -12528,7 +12904,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 11,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856835",
@@ -12561,7 +12938,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 2,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401858273",
@@ -12594,7 +12972,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858497",
@@ -12627,7 +13006,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 15,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 40.5
  },
  {
   "game_id": "401858499",
@@ -12660,7 +13040,8 @@
   "teaser_result": "WIN",
   "home_rank": 9,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401862810",
@@ -12693,7 +13074,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 60.5
  },
  {
   "game_id": "401864526",
@@ -12726,7 +13108,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401866447",
@@ -12759,7 +13142,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401866448",
@@ -12792,7 +13176,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401856839",
@@ -12825,7 +13210,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401866449",
@@ -12858,7 +13244,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401871094",
@@ -12891,7 +13278,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401864528",
@@ -12924,7 +13312,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401869967",
@@ -12957,7 +13346,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401871093",
@@ -12990,7 +13380,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401860907",
@@ -13023,7 +13414,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 21,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401860905",
@@ -13056,7 +13448,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856836",
@@ -13089,7 +13482,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858276",
@@ -13122,7 +13516,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401869935",
@@ -13155,7 +13550,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401856729",
@@ -13188,7 +13584,8 @@
   "teaser_result": "WIN",
   "home_rank": 12,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856732",
@@ -13223,7 +13620,8 @@
   "teaser_result": null,
   "home_rank": 19,
   "away_rank": 7,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856838",
@@ -13256,7 +13654,8 @@
   "teaser_result": "LOSS",
   "home_rank": 25,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858275",
@@ -13289,7 +13688,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858500",
@@ -13322,7 +13722,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": 16,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401860906",
@@ -13355,7 +13756,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401862811",
@@ -13388,7 +13790,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856837",
@@ -13421,7 +13824,8 @@
   "teaser_result": "WIN",
   "home_rank": 10,
   "away_rank": 14,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401864527",
@@ -13454,7 +13858,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 39.5
  },
  {
   "game_id": "401871071",
@@ -13489,7 +13894,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401871072",
@@ -13522,7 +13928,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401871058",
@@ -13555,7 +13962,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401871057",
@@ -13588,7 +13996,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401862812",
@@ -13621,7 +14030,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 78.5
  },
  {
   "game_id": "401869963",
@@ -13654,7 +14064,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401862813",
@@ -13687,7 +14098,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401856844",
@@ -13722,7 +14134,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401866451",
@@ -13755,7 +14168,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401856842",
@@ -13788,7 +14202,8 @@
   "teaser_result": "WIN",
   "home_rank": 13,
   "away_rank": 22,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858277",
@@ -13821,7 +14236,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858278",
@@ -13854,7 +14270,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 19,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858279",
@@ -13887,7 +14304,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858502",
@@ -13922,7 +14340,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": 25,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 36.5
  },
  {
   "game_id": "401858503",
@@ -13955,7 +14374,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401859185",
@@ -13990,7 +14410,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": 5,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401862816",
@@ -14023,7 +14444,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401866452",
@@ -14056,7 +14478,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401858507",
@@ -14089,7 +14512,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401856735",
@@ -14122,7 +14546,8 @@
   "teaser_result": "WIN",
   "home_rank": 12,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401871096",
@@ -14155,7 +14580,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401856846",
@@ -14190,7 +14616,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401869944",
@@ -14223,7 +14650,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401861966",
@@ -14258,7 +14686,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 53.5
  },
  {
   "game_id": "401862815",
@@ -14291,7 +14720,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 51.5
  },
  {
   "game_id": "401871097",
@@ -14324,7 +14754,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401858283",
@@ -14357,7 +14788,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401856734",
@@ -14392,7 +14824,8 @@
   "teaser_result": null,
   "home_rank": 3,
   "away_rank": 17,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401856843",
@@ -14425,7 +14858,8 @@
   "teaser_result": "WIN",
   "home_rank": 8,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 46.5
  },
  {
   "game_id": "401856845",
@@ -14458,7 +14892,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401858501",
@@ -14491,7 +14926,8 @@
   "teaser_result": "WIN",
   "home_rank": 4,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 40.5
  },
  {
   "game_id": "401858505",
@@ -14524,7 +14960,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 20,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401860910",
@@ -14557,7 +14994,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401864531",
@@ -14590,7 +15028,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401871059",
@@ -14623,7 +15062,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 45.5
  },
  {
   "game_id": "401871095",
@@ -14656,7 +15096,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856848",
@@ -14689,7 +15130,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 6,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858284",
@@ -14722,7 +15164,8 @@
   "teaser_result": "LOSS",
   "home_rank": 14,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401864529",
@@ -14755,7 +15198,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401856736",
@@ -14788,7 +15232,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 44.5
  },
  {
   "game_id": "401858506",
@@ -14821,7 +15266,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858508",
@@ -14854,7 +15300,8 @@
   "teaser_result": "WIN",
   "home_rank": 7,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 43.5
  },
  {
   "game_id": "401869846",
@@ -14887,7 +15334,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856847",
@@ -14920,7 +15368,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": 24,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858280",
@@ -14953,7 +15402,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401860909",
@@ -14988,7 +15438,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 47.5
  },
  {
   "game_id": "401856737",
@@ -15021,7 +15472,8 @@
   "teaser_result": "LOSS",
   "home_rank": 11,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858281",
@@ -15054,7 +15506,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858282",
@@ -15087,7 +15540,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 1,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 52.5
  },
  {
   "game_id": "401858509",
@@ -15120,7 +15574,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 2,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 50.5
  },
  {
   "game_id": "401856733",
@@ -15153,7 +15608,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": 23,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858504",
@@ -15186,7 +15642,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 49.5
  },
  {
   "game_id": "401862814",
@@ -15221,7 +15678,8 @@
   "teaser_result": null,
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 59.5
  },
  {
   "game_id": "401860908",
@@ -15254,7 +15712,8 @@
   "teaser_result": "LOSS",
   "home_rank": 20,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 63.5
  },
  {
   "game_id": "401864530",
@@ -15287,7 +15746,8 @@
   "teaser_result": "LOSS",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 55.5
  },
  {
   "game_id": "401860924",
@@ -15320,7 +15780,8 @@
   "teaser_result": "WIN",
   "home_rank": null,
   "away_rank": null,
-  "backfill": true
+  "backfill": true,
+  "dk_total": 57.5
  },
  {
   "game_id": "401866453",
@@ -15352,7 +15813,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401866454",
@@ -15384,7 +15846,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 45.5
  },
  {
   "game_id": "401866455",
@@ -15416,7 +15879,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 48.5
  },
  {
   "game_id": "401866457",
@@ -15448,7 +15912,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401866456",
@@ -15482,7 +15947,8 @@
   "result": null,
   "teaser_result": null,
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 44.5
  },
  {
   "game_id": "401862817",
@@ -15514,7 +15980,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 72.5
  },
  {
   "game_id": "401869964",
@@ -15546,7 +16013,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 58.5
  },
  {
   "game_id": "401858288",
@@ -15576,7 +16044,8 @@
   "away_score": 28,
   "home_score": 51,
   "result": "WIN",
-  "teaser_result": "WIN"
+  "teaser_result": "WIN",
+  "dk_total": 57.5
  },
  {
   "game_id": "401862818",
@@ -15608,7 +16077,8 @@
   "away_score": 17,
   "home_score": 20,
   "result": "LOSS",
-  "teaser_result": "WIN"
+  "teaser_result": "WIN",
+  "dk_total": 39.5
  },
  {
   "game_id": "401858510",
@@ -15638,7 +16108,8 @@
   "away_score": 13,
   "home_score": 24,
   "result": "WIN",
-  "teaser_result": "WIN"
+  "teaser_result": "WIN",
+  "dk_total": 52.5
  },
  {
   "game_id": "401864533",
@@ -15668,7 +16139,8 @@
   "away_score": 31,
   "home_score": 3,
   "result": "WIN",
-  "teaser_result": "WIN"
+  "teaser_result": "WIN",
+  "dk_total": 39.5
  },
  {
   "game_id": "401856855",
@@ -15698,7 +16170,8 @@
   "away_score": 28,
   "home_score": 29,
   "result": "LOSS",
-  "teaser_result": "LOSS"
+  "teaser_result": "LOSS",
+  "dk_total": 46.5
  },
  {
   "game_id": "401856743",
@@ -15730,7 +16203,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 18,
-  "away_rank": 7
+  "away_rank": 7,
+  "dk_total": 44.5
  },
  {
   "game_id": "401856849",
@@ -15762,7 +16236,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 3,
-  "away_rank": 9
+  "away_rank": 9,
+  "dk_total": 49.5
  },
  {
   "game_id": "401856853",
@@ -15794,7 +16269,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858285",
@@ -15826,7 +16302,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858289",
@@ -15858,7 +16335,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858292",
@@ -15890,7 +16368,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858512",
@@ -15922,7 +16401,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": 8
+  "away_rank": 8,
+  "dk_total": 37.5
  },
  {
   "game_id": "401862822",
@@ -15954,7 +16434,8 @@
   "result": "LOSS",
   "teaser_result": null,
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 50.5
  },
  {
   "game_id": "401858286",
@@ -15986,7 +16467,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 53.5
  },
  {
   "game_id": "401858515",
@@ -16018,7 +16500,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 56.5
  },
  {
   "game_id": "401856738",
@@ -16050,7 +16533,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856854",
@@ -16082,7 +16566,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 64.5
  },
  {
   "game_id": "401869945",
@@ -16114,7 +16599,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 43.5
  },
  {
   "game_id": "401869927",
@@ -16146,7 +16632,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856744",
@@ -16178,7 +16665,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": 21,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401869936",
@@ -16210,7 +16698,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401871073",
@@ -16242,7 +16731,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 57.5
  },
  {
   "game_id": "401856740",
@@ -16274,7 +16764,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 14,
-  "away_rank": 5
+  "away_rank": 5,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856851",
@@ -16306,7 +16797,8 @@
   "result": "LOSS",
   "teaser_result": "PUSH",
   "home_rank": 17,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 61.5
  },
  {
   "game_id": "401858290",
@@ -16338,7 +16830,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 16,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858514",
@@ -16370,7 +16863,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": 12,
-  "away_rank": 23
+  "away_rank": 23,
+  "dk_total": 44.5
  },
  {
   "game_id": "401858516",
@@ -16402,7 +16896,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 46.5
  },
  {
   "game_id": "401862819",
@@ -16434,7 +16929,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 47.5
  },
  {
   "game_id": "401862820",
@@ -16466,7 +16962,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 55.5
  },
  {
   "game_id": "401869951",
@@ -16498,7 +16995,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 54.5
  },
  {
   "game_id": "401871076",
@@ -16530,7 +17028,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856850",
@@ -16564,7 +17063,8 @@
   "result": null,
   "teaser_result": null,
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 47.5
  },
  {
   "game_id": "401862821",
@@ -16596,7 +17096,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 65.5
  },
  {
   "game_id": "401864534",
@@ -16628,7 +17129,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401871074",
@@ -16660,7 +17162,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 50.5
  },
  {
   "game_id": "401871098",
@@ -16692,7 +17195,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856742",
@@ -16724,7 +17228,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858517",
@@ -16756,7 +17261,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 45.5
  },
  {
   "game_id": "401869968",
@@ -16788,7 +17294,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 57.5
  },
  {
   "game_id": "401860911",
@@ -16820,7 +17327,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": 25
+  "away_rank": 25,
+  "dk_total": 69.5
  },
  {
   "game_id": "401856745",
@@ -16852,7 +17360,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": 13,
-  "away_rank": 6
+  "away_rank": 6,
+  "dk_total": 49.5
  },
  {
   "game_id": "401871075",
@@ -16884,7 +17393,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 45.5
  },
  {
   "game_id": "401856741",
@@ -16916,7 +17426,8 @@
   "result": "LOSS",
   "teaser_result": null,
   "home_rank": 10,
-  "away_rank": 2
+  "away_rank": 2,
+  "dk_total": 56.5
  },
  {
   "game_id": "401856852",
@@ -16948,7 +17459,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 45.5
  },
  {
   "game_id": "401858287",
@@ -16980,7 +17492,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 62.5
  },
  {
   "game_id": "401858291",
@@ -17012,7 +17525,8 @@
   "result": "PUSH",
   "teaser_result": "WIN",
   "home_rank": 11,
-  "away_rank": 1
+  "away_rank": 1,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858511",
@@ -17044,7 +17558,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 39.5
  },
  {
   "game_id": "401858513",
@@ -17076,7 +17591,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": 19
+  "away_rank": 19,
+  "dk_total": 42.5
  },
  {
   "game_id": "401862823",
@@ -17108,7 +17624,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 43.5
  },
  {
   "game_id": "401866461",
@@ -17140,7 +17657,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401866462",
@@ -17172,7 +17690,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 41.5
  },
  {
   "game_id": "401866463",
@@ -17204,7 +17723,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401858293",
@@ -17236,7 +17756,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401858526",
@@ -17268,7 +17789,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 4,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 48.5
  },
  {
   "game_id": "401856860",
@@ -17300,7 +17822,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": 14
+  "away_rank": 14,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856859",
@@ -17334,7 +17857,8 @@
   "result": null,
   "teaser_result": null,
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 57.5
  },
  {
   "game_id": "401858296",
@@ -17366,7 +17890,8 @@
   "result": null,
   "teaser_result": null,
   "home_rank": 7,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 55.5
  },
  {
   "game_id": "401858300",
@@ -17398,7 +17923,8 @@
   "result": "PUSH",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 54.5
  },
  {
   "game_id": "401858301",
@@ -17432,7 +17958,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": 13
+  "away_rank": 13,
+  "dk_total": 60.5
  },
  {
   "game_id": "401858520",
@@ -17464,7 +17991,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 40.5
  },
  {
   "game_id": "401858522",
@@ -17496,7 +18024,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 20,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 45.5
  },
  {
   "game_id": "401861967",
@@ -17528,7 +18057,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 56.5
  },
  {
   "game_id": "401858297",
@@ -17560,7 +18090,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 47.5
  },
  {
   "game_id": "401858525",
@@ -17592,7 +18123,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 51.5
  },
  {
   "game_id": "401856889",
@@ -17624,7 +18156,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": 3
+  "away_rank": 3,
+  "dk_total": 48.5
  },
  {
   "game_id": "401862825",
@@ -17656,7 +18189,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 46.5
  },
  {
   "game_id": "401862829",
@@ -17690,7 +18224,8 @@
   "result": null,
   "teaser_result": null,
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 48.5
  },
  {
   "game_id": "401869937",
@@ -17722,7 +18257,8 @@
   "result": "WIN",
   "teaser_result": null,
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 53.5
  },
  {
   "game_id": "401856862",
@@ -17754,7 +18290,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 44.5
  },
  {
   "game_id": "401870769",
@@ -17786,7 +18323,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 44.5
  },
  {
   "game_id": "401856888",
@@ -17818,7 +18356,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": 8
+  "away_rank": 8,
+  "dk_total": 44.5
  },
  {
   "game_id": "401870796",
@@ -17850,7 +18389,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 49.5
  },
  {
   "game_id": "401871060",
@@ -17882,7 +18422,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856861",
@@ -17914,7 +18455,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 68.5
  },
  {
   "game_id": "401856883",
@@ -17946,7 +18488,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": 1,
-  "away_rank": 22
+  "away_rank": 22,
+  "dk_total": 48.5
  },
  {
   "game_id": "401858294",
@@ -17978,7 +18521,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 5,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858295",
@@ -18010,7 +18554,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 46.5
  },
  {
   "game_id": "401858518",
@@ -18042,7 +18587,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": 9,
-  "away_rank": 18
+  "away_rank": 18,
+  "dk_total": 51.5
  },
  {
   "game_id": "401858523",
@@ -18074,7 +18620,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 16,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 39.5
  },
  {
   "game_id": "401864536",
@@ -18106,7 +18653,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 48.5
  },
  {
   "game_id": "401869952",
@@ -18138,7 +18686,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 55.5
  },
  {
   "game_id": "401870752",
@@ -18170,7 +18719,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 54.5
  },
  {
   "game_id": "401871061",
@@ -18202,7 +18752,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 53.5
  },
  {
   "game_id": "401860916",
@@ -18234,7 +18785,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 60.5
  },
  {
   "game_id": "401856886",
@@ -18266,7 +18818,8 @@
   "result": "LOSS",
   "teaser_result": null,
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 51.5
  },
  {
   "game_id": "401862828",
@@ -18300,7 +18853,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 49.5
  },
  {
   "game_id": "401871099",
@@ -18332,7 +18886,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 55.5
  },
  {
   "game_id": "401856857",
@@ -18364,7 +18919,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 46.5
  },
  {
   "game_id": "401858521",
@@ -18396,7 +18952,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 43.5
  },
  {
   "game_id": "401860914",
@@ -18428,7 +18985,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 24,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 65.5
  },
  {
   "game_id": "401869928",
@@ -18462,7 +19020,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 54.5
  },
  {
   "game_id": "401856884",
@@ -18494,7 +19053,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": 11,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 52.5
  },
  {
   "game_id": "401856858",
@@ -18526,7 +19086,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": 10,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 49.5
  },
  {
   "game_id": "401858298",
@@ -18558,7 +19119,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 57.5
  },
  {
   "game_id": "401858524",
@@ -18590,7 +19152,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 42.5
  },
  {
   "game_id": "401864538",
@@ -18622,7 +19185,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 50.5
  },
  {
   "game_id": "401871100",
@@ -18654,7 +19218,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 55.5
  },
  {
   "game_id": "401862826",
@@ -18686,7 +19251,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 72.5
  },
  {
   "game_id": "401856885",
@@ -18720,7 +19286,8 @@
   "result": null,
   "teaser_result": null,
   "home_rank": 21,
-  "away_rank": 6
+  "away_rank": 6,
+  "dk_total": 47.5
  },
  {
   "game_id": "401858299",
@@ -18752,7 +19319,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 57.5
  },
  {
   "game_id": "401858519",
@@ -18784,7 +19352,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": 15,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 47.5
  },
  {
   "game_id": "401864539",
@@ -18816,7 +19385,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 46.5
  },
  {
   "game_id": "401856882",
@@ -18848,7 +19418,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": 17
+  "away_rank": 17,
+  "dk_total": 51.5
  },
  {
   "game_id": "401862827",
@@ -18880,7 +19451,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 76.5
  },
  {
   "game_id": "401856863",
@@ -18912,7 +19484,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": 25,
-  "away_rank": 12
+  "away_rank": 12,
+  "dk_total": 74.5
  },
  {
   "game_id": "401860915",
@@ -18944,7 +19517,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 43.5
  },
  {
   "game_id": "401864540",
@@ -18976,7 +19550,8 @@
   "result": "WIN",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 40.5
  },
  {
   "game_id": "401856864",
@@ -19008,7 +19583,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": 23,
-  "away_rank": 2
+  "away_rank": 2,
+  "dk_total": 56.5
  },
  {
   "game_id": "401860917",
@@ -19040,7 +19616,8 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 64.5
  },
  {
   "game_id": "401864537",
@@ -19072,7 +19649,8 @@
   "result": "LOSS",
   "teaser_result": "WIN",
   "home_rank": null,
-  "away_rank": null
+  "away_rank": null,
+  "dk_total": 39.5
  },
  {
   "game_id": "401856887",
@@ -19106,6 +19684,7 @@
   "result": "LOSS",
   "teaser_result": "LOSS",
   "home_rank": null,
-  "away_rank": 19
+  "away_rank": 19,
+  "dk_total": 48.5
  }
 ]

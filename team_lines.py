@@ -50,7 +50,8 @@ def add_slate(slate, history_ids) -> int:
         if l.completed and l.home_score is not None and l.game_id not in seen:
             new.append({"game_id": l.game_id, "date": slate.day, "kickoff": l.kickoff,
                         "home": p.game.home, "away": p.game.away, "neutral": l.neutral,
-                        "dk_home_spread": l.home_spread, "home_score": l.home_score, "away_score": l.away_score})
+                        "dk_home_spread": l.home_spread, "dk_total": l.total,
+                        "home_score": l.home_score, "away_score": l.away_score})
     if new:
         save(extra + new)
     return len(new)
@@ -66,7 +67,7 @@ def rows_for(day: str, ratings) -> list:
         if not h or not a:
             continue
         rows.append({"game_id": l.game_id, "date": day, "kickoff": l.kickoff, "home": h, "away": a,
-                     "neutral": l.neutral, "dk_home_spread": l.home_spread,
+                     "neutral": l.neutral, "dk_home_spread": l.home_spread, "dk_total": l.total,
                      "home_score": l.home_score, "away_score": l.away_score})
     return rows
 

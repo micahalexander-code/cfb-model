@@ -50,7 +50,7 @@ def _read(path):
 def saved_lines() -> dict:
     out = dict(_read(LOCKED) or {})
     for h in _read(HISTORY) or []:
-        out[h["game_id"]] = {k: h.get(k) for k in ("dk_home_spread", "dk_home_ml", "dk_away_ml")}
+        out[h["game_id"]] = {k: h.get(k) for k in ("dk_home_spread", "dk_home_ml", "dk_away_ml", "dk_total")}
     return out
 
 
@@ -64,6 +64,7 @@ def fill_saved_lines(lines: List[odds.Line]) -> None:
         if s and s.get("dk_home_spread") is not None:
             l.home_spread = s["dk_home_spread"]
             l.home_ml, l.away_ml = s.get("dk_home_ml"), s.get("dk_away_ml")
+            l.total = l.total if l.total is not None else s.get("dk_total")
             l.line_source = odds.LINE_SAVED
 
 

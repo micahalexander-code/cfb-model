@@ -61,7 +61,7 @@ def pick_json(p, line=None) -> dict:
     if line is not None:
         d.update(kickoff=line.kickoff, status=line.status, state=line.state,
                  completed=line.completed, home_score=line.home_score,
-                 away_score=line.away_score, line_source=line.line_source,
+                 away_score=line.away_score, line_source=line.line_source, dk_total=line.total,
                  home_rank=line.home_rank, away_rank=line.away_rank)
     return d
 
@@ -240,7 +240,8 @@ def parlays_json(day: str, min_conf: float) -> dict:
                           "result": r["teaser_result"], "state": "post",
                           "home_name": r["home"], "away_name": r["away"],
                           "home_score": r["home_score"], "away_score": r["away_score"],
-                          "home_rank": r.get("home_rank"), "away_rank": r.get("away_rank")})
+                          "home_rank": r.get("home_rank"), "away_rank": r.get("away_rank"),
+                          "dk_total": r.get("dk_total")})
     for s in week_slates(upcoming_week(day)):
         for l, p in s.picks:
             r = pick_json(p, l)
@@ -252,7 +253,7 @@ def parlays_json(day: str, min_conf: float) -> dict:
                           "result": p.teaser_result if l.completed else None, "state": l.state,
                           "home_name": p.game.home, "away_name": p.game.away,
                           "home_score": l.home_score, "away_score": l.away_score,
-                          "home_rank": l.home_rank, "away_rank": l.away_rank})
+                          "home_rank": l.home_rank, "away_rank": l.away_rank, "dk_total": l.total})
     out = parlays.build(cands, asof, min_conf)
     return {"date": day, "min_conf": min_conf, "teaser": snapshot.TEASER, "parlays": out}
 

@@ -49,6 +49,7 @@ class Line:
     line_source: Optional[str] = None
     home_rank: Optional[int] = None  # AP Top 25 rank (ESPN curatedRank), None if unranked
     away_rank: Optional[int] = None
+    total: Optional[float] = None    # DraftKings game total (over/under)
 
 
 def _int(v) -> Optional[int]:
@@ -102,6 +103,9 @@ def _apply_odds(l: Line, dk: dict, source: str) -> None:
     l.home_spread = _float(ps.get("home", {}).get("close", {}).get("line"))
     if l.home_spread is None:
         l.home_spread = _float(dk.get("spread"))
+    l.total = _float(dk.get("overUnder"))
+    if l.total is None:
+        l.total = _float(str(((dk.get("total") or {}).get("over") or {}).get("close", {}).get("line", "")).lstrip("ou"))
     l.home_spread_odds = _int(ps.get("home", {}).get("close", {}).get("odds"))
     l.away_spread_odds = _int(ps.get("away", {}).get("close", {}).get("odds"))
     l.home_ml = _int(ml.get("home", {}).get("close", {}).get("odds"))
