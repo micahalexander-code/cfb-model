@@ -166,6 +166,30 @@
   .rk.on { background: var(--bad); box-shadow: 0 0 6px color-mix(in srgb, var(--bad) 60%, transparent); }
 
 
+  /* Slate game dropdowns */
+  tr.gx { cursor: pointer; }
+  tr.gx.open td { background: var(--panel2); }
+  tr.gd:hover td { background: none; }
+  tr.gd > td { white-space: normal; padding: 4px 10px 16px; }
+  .gd-wrap { position: sticky; left: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+  .gd-game, .gd-team { background: var(--panel2); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; min-width: 0; }
+  .gd-th { margin-bottom: 8px; font-size: 15px; }
+  .gd-conf { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .gd-kv { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; margin-bottom: 10px; font-size: 13px; }
+  .gd-kv div { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dashed var(--line); padding: 2px 0; }
+  .gd-kv span { color: var(--muted); } .gd-kv b { font-weight: 600; text-align: right; }
+  .gd-game .gd-kv { grid-template-columns: 1fr; }
+  table.gd-l5 { width: 100%; font-size: 13px; }
+  @media (min-width: 1100px) { .gd-wrap { grid-template-columns: minmax(250px, .75fr) minmax(0, 1.1fr) minmax(0, 1.1fr); } }
+  .gd-kv.one { grid-template-columns: 1fr; }
+  table.gd-l5 td:nth-child(2) { white-space: normal; }
+  table.gd-l5 th, table.gd-l5 td { padding: 3px 5px 3px 0; border: none; background: none !important; border-radius: 0; }
+  table.gd-l5 th { font-size: 11px; }
+  .gd-game svg { max-width: 460px; }
+  .lg { display: inline-block; width: 14px; height: 0; border-top: 2.5px solid; vertical-align: middle; margin-right: 4px; }
+  .lg.dk { border-color: var(--accent); } .lg.ed { border-color: #e8710a; border-top-style: dashed; }
+  @media (max-width: 600px) { .gd-kv { grid-template-columns: 1fr; } }
+
   /* Line Tracking charts */
   .lt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
   .lt-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
@@ -173,14 +197,15 @@
   .lt-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
   .lt-head b { font-size: 15px; }
   .lt-sub { font-size: 12px; color: var(--muted); margin: 2px 0 4px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
-  .lt-card svg { width: 100%; height: auto; display: block; overflow: visible; }
-  .lt-card svg text { font: 10px Inter, sans-serif; fill: var(--muted); }
-  .lt-card svg .axt { font-weight: 600; }
-  .lt-card svg .grid { stroke: var(--line); }
+  .lt-card svg, .gd-game svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .lt-card svg text, .gd-game svg text { font: 10px Inter, sans-serif; fill: var(--muted); }
+  .lt-card svg .axt, .gd-game svg .axt { font-weight: 600; }
+  .lt-card svg .grid, .gd-game svg .grid { stroke: var(--line); }
   .lt-dk { stroke: var(--accent); fill: var(--accent); }
   .lt-ed { stroke: #e8710a; fill: #e8710a; }
-  .lt-card svg path { fill: none; stroke-linejoin: round; }
+  .lt-card svg path, .gd-game svg path { fill: none; stroke-linejoin: round; }
   .lt-card svg circle { stroke: var(--panel); stroke-width: 1.5; }
+  .gd-game svg circle { stroke: var(--panel2); stroke-width: 1.5; }
   .lt-key { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--muted); margin-right: 12px; }
   .lt-key i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
   .mv { color: var(--fg); font-weight: 700; }
@@ -417,19 +442,24 @@ async function loadSlate(refresh = false) {
   } catch (e) { setStatus(e.message, true); }
 }
 
-function table(cols, rows, sortable = false, rowCls = null) {
+function table(cols, rows, sortable = false, rowCls = null, detail = null) {
   if (!rows.length) return `<div class="empty">None</div>`;
   const head = cols.map(c => {
     const arrow = sortable && c.key === sortKey ? (sortDir < 0 ? " ↓" : " ↑") : "";
     return `<th class="${c.num ? "num" : ""}${sortable && c.key ? " sort" : ""}" data-key="${c.key || ""}">${c.label}${arrow}</th>`;
   }).join("");
-  const body = rows.map(r => `<tr class="${rowCls ? rowCls(r) : ""}">${cols.map(c => `<td class="${c.num ? "num" : ""}">${c.render(r)}</td>`).join("")}</tr>`).join("");
+  const body = rows.map(r => {
+    const k = detail ? gameKey(r) : null, open = k && openGames.has(k);
+    const tr = `<tr class="${rowCls ? rowCls(r) : ""}${detail ? " gx" + (open ? " open" : "") : ""}"${k ? ` data-gk="${esc(k)}"` : ""}>`
+      + cols.map(c => `<td class="${c.num ? "num" : ""}">${c.render(r)}</td>`).join("") + `</tr>`;
+    return open ? tr + `<tr class="gd"><td colspan="${cols.length}">${detail(r)}</td></tr>` : tr;
+  }).join("");
   return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
 }
 
 const gameCol = { label: "Game", key: "game", render: g => `${esc(g.away)} <span class="muted">@</span> ${esc(g.home)}` };
 // Slate version: each team's confidence score (Confidence tab) in a small muted tag.
-let cfByTeam = {};
+let cfByTeam = {}, cfTeam = {};
 const cfTag = team => cfByTeam[team] == null ? "" :
   `<span class="cfs" title="${esc(team)} confidence score (Confidence tab)">${Math.round(cfByTeam[team])}</span>`;
 const slateGameCol = { label: "Game", key: "game", render: g =>
@@ -438,6 +468,7 @@ async function loadSlateConfidence() {
   try {
     const c = await api(`/api/confidence?date=${ymd()}`);
     cfByTeam = Object.fromEntries(c.teams.filter(t => t.confidence != null).map(t => [t.team, t.confidence]));
+    cfTeam = Object.fromEntries(c.teams.map(t => [t.team, t]));
     if (slate) render();
   } catch (e) { /* the slate works without it */ }
 }
@@ -464,6 +495,101 @@ const dkCol   = { label: "DK line (home)", num: true, render: g =>
 const totCol  = { label: "Total", key: "dk_total", num: true, render: g => g.dk_total == null ? "" : `<span class="muted">${g.dk_total}</span>` };
 const edgeCol = { label: "Edge", key: "absEdge", num: true,
                   render: g => `<span class="${Math.abs(g.edge) >= 3 ? "strong" : ""}">${Math.abs(g.edge).toFixed(2)}</span>` };
+
+// ---- Game dropdowns (Slate): click a row for line movement, both teams' confidence,
+// season records and last 5 games. Rows stay closed until clicked; open ones stay
+// open through refreshes.
+const openGames = new Set();
+const gameKey = g => g.game_id || `${g.away}@${g.home}`;
+let ltByGame = null, ltLoading = false;
+async function loadSlateLines() {
+  if (ltLoading) return;
+  ltLoading = true;
+  try {
+    const c = await api(`/api/lines?date=${ymd()}`);
+    ltByGame = Object.fromEntries(c.games.map(g => [g.game_id, g]));
+  } catch (e) { ltByGame = {}; }
+  ltLoading = false;
+  if (slate && openGames.size) render();
+}
+// The dropdown spans the visible part of the table, even when the table scrolls sideways.
+function fitDetails() {
+  document.querySelectorAll("#tab-slate tr.gd .gd-wrap").forEach(w => {
+    const sc = w.closest(".scroll");
+    if (sc) w.style.width = (sc.clientWidth - 22) + "px";
+  });
+}
+window.addEventListener("resize", fitDetails);
+function toggleGame(k) {
+  if (openGames.has(k)) openGames.delete(k); else openGames.add(k);
+  if (!ltByGame) loadSlateLines();
+  render();
+}
+document.addEventListener("click", e => {
+  const tr = e.target.closest("#tab-slate tr.gx");
+  if (tr && !e.target.closest("a, button, input")) toggleGame(tr.dataset.gk);
+});
+const wlp = r => r ? `${r.w}–${r.l}${r.p ? `–${r.p}` : ""}` : "—";
+const mdShort = d => ymdDate(d).toLocaleDateString([], { month: "numeric", day: "numeric" });
+function teamPanel(team, rank, rating, g) {
+  const t = cfTeam[team];
+  const head = `<div class="gd-th"><b>${rank ? `<span class="muted">#${rank}</span> ` : ""}${esc(team)}</b>`
+    + (isFBS(team) ? "" : ` <span class="tag">FCS</span>`)
+    + (rating != null ? ` <span class="muted">Sagarin ${rating.toFixed(2)}</span>` : "") + `</div>`;
+  if (!t) return `<div class="gd-team">${head}<div class="muted">${Object.keys(cfTeam).length ? "No graded games this season" : "Loading…"}</div></div>`;
+  const conf = t.confidence == null
+    ? `<span class="muted">No score yet · ${t.games}/${conf_min()} games</span>`
+    : `<span class="score ${scoreCls(t.confidence)}">${Math.round(t.confidence)}</span>`
+      + ` <span class="cf-bar" title="Team ${t.team_pts} + Edge ${t.edge_pts}"><i class="t" style="width:${t.team_pts}%"></i><i class="e" style="width:${t.edge_pts}%"></i></span>`
+      + ` <span class="pts">team ${t.team_pts} + edge ${t.edge_pts}</span>`;
+  const s = t.season, p = t.picks;
+  const kv = (k, v) => `<div><span>${k}</span><b>${v}</b></div>`;
+  const stats = s ? `<div class="gd-kv">`
+      + kv("Straight up", wlp(s.su)) + kv("Vs own spread", wlp(s.ats)) + kv("Teased +3", wlp(s.teased))
+      + kv("Avg score", `${s.avg_pf}–${s.avg_pa}`) + kv("Avg margin", sgn(s.avg_margin, 1))
+      + kv("Avg vs spread", sgn(s.avg_cover, 1)) + kv("Edge range", t.edge_range || "—")
+      + `</div>` : "";
+  const picks = p ? `<div class="gd-kv one">`
+      + kv("Core picks on them", `${wlp(p.core)} <span class="muted">· teased ${wlp(p.core_teased)}</span>`)
+      + kv("Core picks against", `<span class="muted">teased</span> ${wlp(p.against_teased)}`)
+      + (p.caution.w + p.caution.l + p.caution.p ? kv("Vegas Knows Something", wlp(p.caution)) : "")
+      + (p.ml.w + p.ml.l + p.ml.p ? kv("Home Dawg ML", wlp(p.ml)) : "")
+      + `</div>` : "";
+  const last = t.last5 && t.last5.length ? `<table class="gd-l5"><thead><tr><th>Last ${t.last5.length}</th><th></th><th class="num">Line</th><th class="num">Score</th><th class="num">O/U</th><th>ATS</th><th>Teased</th></tr></thead><tbody>`
+      + t.last5.map(r => `<tr><td class="muted">${mdShort(r.date)}</td><td>${r.home ? "vs" : "@"} ${esc(r.opponent)}</td>`
+        + `<td class="num">${line(r.line)}</td><td class="num">${r.margin > 0 ? "W" : r.margin < 0 ? "L" : "T"} ${r.pf}–${r.pa}</td>`
+        + `<td class="num muted">${r.dk_total ?? ""}</td><td>${res(r.ats)}</td><td>${res(r.teaser_result)}</td></tr>`).join("")
+      + `</tbody></table>` : `<div class="muted">No finished games with a line yet</div>`;
+  return `<div class="gd-team">${head}<div class="gd-conf">${conf}</div>${stats}${picks}${last}</div>`;
+}
+const conf_min = () => (conf && conf.min_games) || 5;
+function gameDetail(g) {
+  let chart;
+  if (!g.game_id) chart = `<div class="empty">No DraftKings line for this game</div>`;
+  else if (!ltByGame) chart = `<div class="empty">Loading line movement…</div>`;
+  else {
+    const lg = ltByGame[g.game_id], pts = lg ? ltSeries(lg) : [];
+    const mv = pts.length < 2 ? null : pts[pts.length - 1].dk_home_spread - pts[0].dk_home_spread;
+    chart = pts.length ? `<div class="lt-sub">${mv == null ? "One line check so far"
+        : `DK ${line(pts[0].dk_home_spread)} → ${line(pts[pts.length - 1].dk_home_spread)} ${mv ? `<span class="mv">(${sgn(mv)})</span>` : "(no move)"}`}
+        <span><i class="lg dk"></i>DK spread</span><span><i class="lg ed"></i>Edge</span></div>${ltChart(lg, pts)}`
+      : `<div class="empty">No line history for this game</div>`;
+  }
+  const pick = g.action === "SPREAD" ? `<span class="pick">${esc(g.side)} ${line(g.line)}</span> <span class="muted">teased ${line(g.teaser_line)}</span>`
+      + (g.flags.includes("DISAGREE") ? ` <span class="flag caution">CAUTION</span>` : "")
+    : g.action === "MONEYLINE" ? `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>`
+    : g.action === "EXCLUDED" ? "Neutral site, no pick" : g.flags && g.flags.includes("PRICED_IN") ? `<span class="flag bad">STAY AWAY</span>`
+    : g.action ? "No pick" : "—";
+  const kv = (k, v) => `<div><span>${k}</span><b>${v}</b></div>`;
+  const facts = g.game_id ? `<div class="gd-kv">` + kv("Pick", pick)
+      + kv("Model line (home)", g.projected === 0 ? "PK" : sgn(-g.projected, 2))
+      + kv("DK line (home)", line(g.dk_home_spread)) + kv("Edge", Math.abs(g.edge).toFixed(2))
+      + kv("Total", g.dk_total ?? "—")
+      + (g.dk_home_ml != null ? kv("Moneyline", `${esc(g.away)} ${odds(g.dk_away_ml)} · ${esc(g.home)} ${odds(g.dk_home_ml)}`) : "")
+      + `</div>` : "";
+  return `<div class="gd-wrap"><div class="gd-game"><div class="gd-th"><b>Line movement</b></div>${facts}${chart}</div>`
+    + teamPanel(g.away, g.away_rank, g.away_rating, g) + teamPanel(g.home, g.home_rank, g.home_rating, g) + `</div>`;
+}
 
 // ---- Live cover colors ----
 // How far our pick is past the number right now: positive = covering.
@@ -526,14 +652,14 @@ function render() {
   $("n-ml").textContent = ml.length;
   $("ml").innerHTML = table([kickCol, slateGameCol,
     { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, mlResultCol,
-    projCol, dkCol, totCol, ratCol], ml, false, liveCls);
+    projCol, dkCol, totCol, ratCol], ml, false, liveCls, gameDetail);
 
   $("n-dis").textContent = dis.length;
   $("dis").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, totCol, ratCol,
-    { label: "", render: () => `<span class="flag caution">CAUTION</span>` }], dis, false, liveCls);
+    { label: "", render: () => `<span class="flag caution">CAUTION</span>` }], dis, false, liveCls, gameDetail);
 
   $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
-  $("spread").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, totCol, ratCol], spread, true, liveCls);
+  $("spread").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, totCol, ratCol], spread, true, liveCls, gameDetail);
   $("spread").querySelectorAll("th.sort").forEach(th => th.onclick = () => {
     const k = th.dataset.key;
     if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = k === "absEdge" || k === "projected" ? -1 : 1; }
@@ -542,14 +668,15 @@ function render() {
 
   $("n-skip").textContent = skip.length;
   $("skip").innerHTML = table([kickCol, slateGameCol, ratCol, projCol, dkCol, totCol,
-    { label: "", render: () => `<span class="flag bad">STAY AWAY</span>` }], skip);
+    { label: "", render: () => `<span class="flag bad">STAY AWAY</span>` }], skip, false, null, gameDetail);
 
   $("n-neutral").textContent = neutral.length;
-  $("neutral").innerHTML = table([kickCol, slateGameCol, ratCol, dkCol], neutral);
+  $("neutral").innerHTML = table([kickCol, slateGameCol, ratCol, dkCol], neutral, false, null, gameDetail);
 
   $("n-noline").textContent = s.no_line.length;
-  $("noline").innerHTML = table([kickCol, slateGameCol], s.no_line);
+  $("noline").innerHTML = table([kickCol, slateGameCol], s.no_line, false, null, gameDetail);
 
+  fitDetails();
   $("unmatched").innerHTML = s.unmatched.length
     ? `<h2>Unmatched team names</h2><div class="muted">Add to names.py: ${s.unmatched.map(esc).join(", ")}</div>` : "";
 }

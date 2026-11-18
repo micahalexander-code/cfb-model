@@ -70,7 +70,7 @@ def slate_json(day: str, teaser: float, refresh: bool) -> dict:
     s = run.build(day, teaser, ratings(force=refresh))
     return {
         "date": day, "as_of": s.ratings.as_of, "hfa": s.ratings.home_advantage, "teaser": teaser,
-        "games": [pick_json(p, l) for l, p in s.picks],
+        "games": [dict(pick_json(p, l), game_id=l.game_id) for l, p in s.picks],
         "no_line": [{"home": l.home, "away": l.away, "kickoff": l.kickoff, "status": l.status,
                      "state": l.state, "home_score": l.home_score, "away_score": l.away_score,
                      "home_rank": l.home_rank, "away_rank": l.away_rank}
@@ -137,6 +137,43 @@ def week_slates(days):
         return list(pool.map(one, days))
 
 
+def _ats(margin, line):
+    v = margin + line
+    return "WIN" if v > 0 else "LOSS" if v < 0 else "PUSH"
+
+
+def _wlp(results):
+    return {"w": results.count("WIN"), "l": results.count("LOSS"), "p": results.count("PUSH")}
+
+
+def season_summary(rows: list) -> dict:
+    """Straight-up, against own spread, and teased records plus averages,
+    for a team's finished games with a DK line."""
+    if not rows:
+        return None
+    n = len(rows)
+    return {"su": _wlp(["WIN" if r["margin"] > 0 else "LOSS" if r["margin"] < 0 else "PUSH" for r in rows]),
+            "ats": _wlp([_ats(r["margin"], r["line"]) for r in rows]),
+            "teased": _wlp([r["teaser_result"] for r in rows]),
+            "avg_margin": round(sum(r["margin"] for r in rows) / n, 1),
+            "avg_cover": round(sum(r["margin"] + r["line"] for r in rows) / n, 1),
+            "avg_pf": round(sum(r["pf"] for r in rows) / n, 1),
+            "avg_pa": round(sum(r["pa"] for r in rows) / n, 1)}
+
+
+def our_picks(hist: list, team: str) -> dict:
+    """How the model's own picks on this team have done (History)."""
+    core = [h for h in hist if h["side"] == team and h["action"] == "SPREAD" and h.get("result")]
+    ok = [h for h in core if "DISAGREE" not in (h.get("flags") or [])]
+    dis = [h for h in core if "DISAGREE" in (h.get("flags") or [])]
+    ml = [h for h in hist if h["side"] == team and h["action"] == "MONEYLINE" and h.get("result")]
+    against = [h for h in hist if team in (h["home"], h["away"]) and h["side"] and h["side"] != team
+               and h["action"] == "SPREAD" and "DISAGREE" not in (h.get("flags") or []) and h.get("result")]
+    return {"core": _wlp([h["result"] for h in ok]), "core_teased": _wlp([h["teaser_result"] for h in ok]),
+            "caution": _wlp([h["result"] for h in dis]), "ml": _wlp([h["result"] for h in ml]),
+            "against_teased": _wlp([h["teaser_result"] for h in against])}
+
+
 def confidence_json(day: str) -> dict:
     """One confidence score per team (see confidence.py):
     team half = record against its own DK spread teased 3, every finished game
@@ -190,6 +227,11 @@ def confidence_json(day: str) -> dict:
             "confidence": round(team_pts + ep["edge_pts"], 1) if scored else None,
             "game": t,
             "recent": [r["teaser_result"] for r in past[-5:]],
+            "season": season_summary(past),
+            "last5": [dict({k: r[k] for k in ("date", "opponent", "home", "line", "teased_line", "margin",
+                                              "pf", "pa", "dk_total", "teaser_result")},
+                           ats=_ats(r["margin"], r["line"])) for r in past[-5:]][::-1],
+            "picks": our_picks(hist, team),
             "last": {k: last[k] for k in ("opponent", "home", "date", "line", "teased_line", "teaser_result")} if last else None,
         })
     # Scored teams first (highest first), then teams still short of the minimum.

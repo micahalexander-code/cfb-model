@@ -84,7 +84,10 @@ def team_games(games: List[dict]) -> Dict[str, List[dict]]:
                 "game_id": r["game_id"], "date": r["date"], "kickoff": r.get("kickoff") or "",
                 "team": team, "opponent": opp, "home": team == r["home"],
                 "line": line, "teased_line": line + TEASER, "margin": margin,
-                "teaser_result": own_result(margin, line), "edge": r.get("edge")})
+                "teaser_result": own_result(margin, line), "edge": r.get("edge"),
+                "pf": r["home_score"] if team == r["home"] else r["away_score"],
+                "pa": r["away_score"] if team == r["home"] else r["home_score"],
+                "dk_total": r.get("dk_total")})
     for rows in by_team.values():
         rows.sort(key=lambda x: (x["kickoff"], x["game_id"]))
     return by_team
