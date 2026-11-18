@@ -212,6 +212,32 @@
 
   @keyframes closeglow { 0%, 100% { filter: none; } 50% { filter: brightness(1.12) saturate(1.15); } }
   @media (prefers-reduced-motion: reduce) { tr.c-close td { animation: none; } }
+
+  /* Phones only: nothing here changes the desktop layout. */
+  @media (max-width: 600px) {
+    main { padding: 16px 12px 48px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 16px; }
+    .tabs { display: flex; max-width: 100%; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab { padding: 6px 12px; font-size: 14px; white-space: nowrap; flex: none; }
+    .summary { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .summary div { padding: 8px 9px; font-size: 11px; }
+    .summary div b { font-size: 19px; }
+    .summary div b .muted { font-size: 11px !important; }
+    th, td { padding: 7px 8px 7px 0; font-size: 13px; }
+    th { font-size: 11px; }
+    td:first-child, th:first-child { padding-left: 8px; }
+    .hs { display: none; }
+    td.wr { white-space: normal; }
+    td.wr .wrc { width: 230px; }
+    .gm-h { display: block; }
+    .rpair { grid-template-columns: 36px 36px; }
+    .lt-grid { grid-template-columns: minmax(0, 1fr); }
+    tr.gd > td { padding: 4px 4px 12px; }
+    .gd-wrap { left: 4px; gap: 8px; }
+    .gd-game, .gd-team { padding: 10px; }
+  }
 </style>
 </head>
 <body>
@@ -446,24 +472,24 @@ function table(cols, rows, sortable = false, rowCls = null, detail = null) {
   if (!rows.length) return `<div class="empty">None</div>`;
   const head = cols.map(c => {
     const arrow = sortable && c.key === sortKey ? (sortDir < 0 ? " ↓" : " ↑") : "";
-    return `<th class="${c.num ? "num" : ""}${sortable && c.key ? " sort" : ""}" data-key="${c.key || ""}">${c.label}${arrow}</th>`;
+    return `<th class="${c.num ? "num" : ""}${sortable && c.key ? " sort" : ""}${c.sm ? " hs" : ""}" data-key="${c.key || ""}">${c.label}${arrow}</th>`;
   }).join("");
   const body = rows.map(r => {
     const k = detail ? gameKey(r) : null, open = k && openGames.has(k);
     const tr = `<tr class="${rowCls ? rowCls(r) : ""}${detail ? " gx" + (open ? " open" : "") : ""}"${k ? ` data-gk="${esc(k)}"` : ""}>`
-      + cols.map(c => `<td class="${c.num ? "num" : ""}">${c.render(r)}</td>`).join("") + `</tr>`;
+      + cols.map(c => `<td class="${c.num ? "num" : ""}${c.sm ? " hs" : ""}${c.wrap ? " wr" : ""}">${c.wrap ? `<div class="wrc">${c.render(r)}</div>` : c.render(r)}</td>`).join("") + `</tr>`;
     return open ? tr + `<tr class="gd"><td colspan="${cols.length}">${detail(r)}</td></tr>` : tr;
   }).join("");
   return `<div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
 }
 
-const gameCol = { label: "Game", key: "game", render: g => `${esc(g.away)} <span class="muted">@</span> ${esc(g.home)}` };
+const gameCol = { label: "Game", key: "game", render: g => `${esc(g.away)} <span class="gm-h"><span class="muted">@</span> ${esc(g.home)}</span>` };
 // Slate version: each team's confidence score (Confidence tab) in a small muted tag.
 let cfByTeam = {}, cfTeam = {};
 const cfTag = team => cfByTeam[team] == null ? "" :
   `<span class="cfs" title="${esc(team)} confidence score (Confidence tab)">${Math.round(cfByTeam[team])}</span>`;
 const slateGameCol = { label: "Game", key: "game", render: g =>
-  `${esc(g.away)}${cfTag(g.away)} <span class="muted">@</span> ${esc(g.home)}${cfTag(g.home)}` };
+  `${esc(g.away)}${cfTag(g.away)} <span class="gm-h"><span class="muted">@</span> ${esc(g.home)}${cfTag(g.home)}</span>` };
 async function loadSlateConfidence() {
   try {
     const c = await api(`/api/confidence?date=${ymd()}`);
@@ -487,12 +513,12 @@ const resPairHead = `<span class="rpair"><span>Spread</span><span>Teaser</span><
 const resultCol = { label: resPairHead, key: "result", render: g =>
   g.state === "in" ? `<span class="tag">in play</span>` : resPair(g) };
 const mlResultCol = { label: "Result", key: "result", render: g => res(g.result) || (g.state === "in" ? `<span class="tag">in play</span>` : "") };
-const ratCol  = { label: "Ratings (A / H)", num: true, render: g => `${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}` };
+const ratCol  = { label: "Ratings (A / H)", num: true, sm: true, render: g => `${g.away_rating.toFixed(2)} / ${g.home_rating.toFixed(2)}` };
 // Both shown as the HOME team's spread, sportsbook style (home favored = minus).
-const projCol = { label: "Model line (home)", key: "projected", num: true, render: g => g.projected === 0 ? "PK" : sgn(-g.projected, 2) };
+const projCol = { label: "Model line (home)", key: "projected", num: true, sm: true, render: g => g.projected === 0 ? "PK" : sgn(-g.projected, 2) };
 const dkCol   = { label: "DK line (home)", num: true, render: g =>
   line(g.dk_home_spread) + (g.line_source === "closing" ? ` <span class="tag">close</span>` : "") };
-const totCol  = { label: "Total", key: "dk_total", num: true, render: g => g.dk_total == null ? "" : `<span class="muted">${g.dk_total}</span>` };
+const totCol  = { label: "Total", key: "dk_total", num: true, sm: true, render: g => g.dk_total == null ? "" : `<span class="muted">${g.dk_total}</span>` };
 const edgeCol = { label: "Edge", key: "absEdge", num: true,
                   render: g => `<span class="${Math.abs(g.edge) >= 3 ? "strong" : ""}">${Math.abs(g.edge).toFixed(2)}</span>` };
 
@@ -516,7 +542,7 @@ async function loadSlateLines() {
 function fitDetails() {
   document.querySelectorAll("#tab-slate tr.gd .gd-wrap").forEach(w => {
     const sc = w.closest(".scroll");
-    if (sc) w.style.width = (sc.clientWidth - 22) + "px";
+    if (sc) w.style.width = (sc.clientWidth - (innerWidth <= 600 ? 10 : 22)) + "px";
   });
 }
 window.addEventListener("resize", fitDetails);
@@ -647,19 +673,19 @@ function render() {
   ].map(([k, v]) => `<div><b>${v}</b>${k}</div>`).join("");
 
   const pickCol = { label: "Pick", key: "side", render: g => `<span class="pick">${esc(g.side)} ${line(g.line)}</span>` };
-  const teaseCol = { label: `Teased ${s.teaser}`, render: g => `${esc(g.side)} ${line(g.teaser_line)}` };
+  const teaseCol = { label: `Teased ${s.teaser}`, sm: true, render: g => `${esc(g.side)} ${line(g.teaser_line)}` };
 
   $("n-ml").textContent = ml.length;
   $("ml").innerHTML = table([kickCol, slateGameCol,
     { label: "Pick", render: g => `<span class="pick">${esc(g.side)} ML ${odds(g.odds)}</span>` }, mlResultCol,
-    projCol, dkCol, totCol, ratCol], ml, false, liveCls, gameDetail);
+    projCol, { ...dkCol, sm: true }, totCol, ratCol], ml, false, liveCls, gameDetail);
 
   $("n-dis").textContent = dis.length;
-  $("dis").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, totCol, ratCol,
+  $("dis").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, { ...dkCol, sm: true }, totCol, ratCol,
     { label: "", render: () => `<span class="flag caution">CAUTION</span>` }], dis, false, liveCls, gameDetail);
 
   $("n-spread").textContent = spread.length + (minEdge ? ` of ${spreadAll.length - dis.length}` : "");
-  $("spread").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, dkCol, totCol, ratCol], spread, true, liveCls, gameDetail);
+  $("spread").innerHTML = table([kickCol, slateGameCol, pickCol, resultCol, teaseCol, edgeCol, projCol, { ...dkCol, sm: true }, totCol, ratCol], spread, true, liveCls, gameDetail);
   $("spread").querySelectorAll("th.sort").forEach(th => th.onclick = () => {
     const k = th.dataset.key;
     if (k === sortKey) sortDir *= -1; else { sortKey = k; sortDir = k === "absEdge" || k === "projected" ? -1 : 1; }
@@ -793,9 +819,9 @@ function renderHistory(all) {
       : g.action === "EXCLUDED" ? `<span class="muted">Neutral, excluded</span>`
       : g.flags.includes("PRICED_IN") ? `<span class="muted">Stay Away</span>` : `<span class="muted">No edge</span>` },
     { label: resPairHead, render: g => g.teaser_line == null ? res(g.result) : resPair(g) },
-    { label: "Teased", render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)}` },
+    { label: "Teased", sm: true, render: g => g.teaser_line == null ? "" : `${esc(g.side)} ${line(g.teaser_line)}` },
     { label: "Edge", num: true, render: g => g.action === "SPREAD" ? Math.abs(g.edge).toFixed(2) : "" },
-    { label: "DK close (home)", num: true, render: g => line(g.dk_home_spread) },
+    { label: "DK close (home)", num: true, sm: true, render: g => line(g.dk_home_spread) },
     totCol,
     { label: "", render: g => (g.flags.includes("DISAGREE") ? `<span class="flag caution">CAUTION</span> ` : "")
         + (g.provisional ? `<span class="tag" title="Shown from the live slate; locks in at the next scheduled snapshot">not locked yet</span>` : "") },
@@ -852,12 +878,12 @@ function renderConfidence() {
   $("cf-teams").innerHTML = table([
     { label: "Score", render: t => t.confidence == null ? `<span class="muted">${t.games}/${c.min_games} games</span>`
         : `<span class="score ${scoreCls(t.confidence)}">${Math.round(t.confidence)}</span>` },
-    { label: "Team + Edge", render: t => t.confidence == null ? "" : `${bar(t)} <span class="pts">${t.team_pts} + ${t.edge_pts}</span>` },
+    { label: "Team + Edge", sm: true, render: t => t.confidence == null ? "" : `${bar(t)} <span class="pts">${t.team_pts} + ${t.edge_pts}</span>` },
     { label: "Team", render: t => `<b>${esc(t.team)}</b>${t.division && t.division !== "A" ? ` <span class="tag">FCS</span>` : ""}` },
     { label: "Teased record", render: t => `${recTxt(t.record)}${form(t)}` },
-    { label: "Edge range", render: t => t.edge_range == null ? `<span class="muted">—</span>`
+    { label: "Edge range", sm: true, render: t => t.edge_range == null ? `<span class="muted">—</span>`
         : `${t.edge_range} <span class="tag">${t.edge_from === "week" ? "this week" : "last game"}</span>` },
-    { label: "This week", render: weekTxt },
+    { label: "This week", wrap: true, render: weekTxt },
     { label: "Their teaser", render: t => t.game && t.game.own_result ? res(t.game.own_result) : t.game && t.game.state === "in" ? `<span class="tag">in play</span>` : "" },
   ], rows, false, ownCls);
   $("cf-edges").innerHTML = table([
@@ -900,8 +926,8 @@ function renderParlays() {
     + (l.result ? ` ${res(l.result)}` : l.state === "in" ? ` <span class="live">Live ${l.away_score}–${l.home_score}</span>` : "") + `</div>`;
   const when = p => `Week of ${new Date(p.week_start.replace(/(\d{4})(\d\d)(\d\d)/, "$1-$2-$3T12:00")).toLocaleDateString([], { month: "short", day: "numeric" })}`;
   const cols = [
-    { label: "Week", render: when },
-    { label: "Legs (teased 3)", render: p => p.legs.map(legTxt).join("") },
+    { label: "Week", sm: true, render: when },
+    { label: "Legs (teased 3)", wrap: true, render: p => p.legs.map(legTxt).join("") },
     { label: "Est. odds", num: true, render: p => odds(toAm(dec(p))) },
     { label: "Parlay", render: p => p.result ? res(p.result) : p.legs.some(l => l.state === "in") ? `<span class="tag">in play</span>` : `<span class="tag">upcoming</span>` },
   ];
