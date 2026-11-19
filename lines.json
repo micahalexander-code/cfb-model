@@ -5029,7 +5029,16 @@
  },
  "401866467": {
   "away": "Akron",
-  "close": null,
+  "close": {
+   "action": "SPREAD",
+   "at": "2026-11-19T10:04:07+00:00",
+   "dk_home_spread": -3.0,
+   "edge": 4.35,
+   "hfa": 2.61,
+   "projected": 7.35,
+   "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+   "side": "Massachusetts"
+  },
   "date": "20261118",
   "home": "Massachusetts",
   "kickoff": "2026-11-19T00:00Z",
@@ -5148,7 +5157,16 @@
  },
  "401866469": {
   "away": "Central Michigan",
-  "close": null,
+  "close": {
+   "action": "SKIP",
+   "at": "2026-11-19T10:04:07+00:00",
+   "dk_home_spread": -2.5,
+   "edge": -0.34,
+   "hfa": 2.61,
+   "projected": 2.16,
+   "sagarin_as_of": "NOVEMBER 15 SUNDAY - WEEK 11",
+   "side": null
+  },
   "date": "20261118",
   "home": "Buffalo",
   "kickoff": "2026-11-19T00:30Z",
