@@ -161,6 +161,26 @@
   "home": "UTEP",
   "kickoff": "2026-11-15T03:00Z"
  },
+ "401866467": {
+  "away": "Akron",
+  "date": "20261118",
+  "dk_away_ml": 130,
+  "dk_home_ml": -155,
+  "dk_home_spread": -3.0,
+  "dk_total": 46.5,
+  "home": "Massachusetts",
+  "kickoff": "2026-11-19T00:00Z"
+ },
+ "401866469": {
+  "away": "Central Michigan",
+  "date": "20261118",
+  "dk_away_ml": 120,
+  "dk_home_ml": -142,
+  "dk_home_spread": -2.5,
+  "dk_total": 47.5,
+  "home": "Buffalo",
+  "kickoff": "2026-11-19T00:30Z"
+ },
  "401871100": {
   "away": "Troy",
   "date": "20261114",
