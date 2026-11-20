@@ -26,6 +26,16 @@
   "home": "Arizona",
   "kickoff": "2026-11-15T03:30Z"
  },
+ "401856869": {
+  "away": "Iowa State",
+  "date": "20261120",
+  "dk_away_ml": -115,
+  "dk_home_ml": -105,
+  "dk_home_spread": 1.5,
+  "dk_total": 50.5,
+  "home": "Central Florida(UCF)",
+  "kickoff": "2026-11-20T23:00Z"
+ },
  "401856882": {
   "away": "South Carolina",
   "date": "20261114",
@@ -71,6 +81,16 @@
   "home": "Virginia Tech",
   "kickoff": "2026-11-15T00:30Z"
  },
+ "401858303": {
+  "away": "Clemson",
+  "date": "20261120",
+  "dk_away_ml": 390,
+  "dk_home_ml": -520,
+  "dk_home_spread": -11.5,
+  "dk_total": 41.5,
+  "home": "Duke",
+  "kickoff": "2026-11-21T00:30Z"
+ },
  "401858519": {
   "away": "Purdue",
   "date": "20261114",
@@ -88,6 +108,16 @@
   "dk_home_spread": -12.5,
   "home": "Penn State",
   "kickoff": "2026-11-15T00:00Z"
+ },
+ "401858529": {
+  "away": "Oregon",
+  "date": "20261120",
+  "dk_away_ml": -1200,
+  "dk_home_ml": 750,
+  "dk_home_spread": 17.5,
+  "dk_total": 42.5,
+  "home": "Michigan State",
+  "kickoff": "2026-11-21T01:00Z"
  },
  "401860914": {
   "away": "Oregon State",
@@ -171,6 +201,16 @@
   "home": "UTEP",
   "kickoff": "2026-11-15T03:00Z"
  },
+ "401864545": {
+  "away": "UTEP",
+  "date": "20261120",
+  "dk_away_ml": 1100,
+  "dk_home_ml": -2100,
+  "dk_home_spread": -22.5,
+  "dk_total": 48.5,
+  "home": "Air Force",
+  "kickoff": "2026-11-21T01:00Z"
+ },
  "401866467": {
   "away": "Akron",
   "date": "20261118",
@@ -180,6 +220,16 @@
   "dk_total": 46.5,
   "home": "Massachusetts",
   "kickoff": "2026-11-19T00:00Z"
+ },
+ "401866468": {
+  "away": "Bowling Green",
+  "date": "20261120",
+  "dk_away_ml": 550,
+  "dk_home_ml": -800,
+  "dk_home_spread": -16.5,
+  "dk_total": 45.5,
+  "home": "Toledo",
+  "kickoff": "2026-11-21T00:30Z"
  },
  "401866469": {
   "away": "Central Michigan",
