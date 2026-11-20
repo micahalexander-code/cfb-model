@@ -134,6 +134,16 @@
   "home": "UTSA",
   "kickoff": "2026-11-15T02:00Z"
  },
+ "401862830": {
+  "away": "Rice",
+  "date": "20261119",
+  "dk_away_ml": 114,
+  "dk_home_ml": -135,
+  "dk_home_spread": -2.5,
+  "dk_total": 52.5,
+  "home": "Temple",
+  "kickoff": "2026-11-20T00:30Z"
+ },
  "401864538": {
   "away": "San Jose State",
   "date": "20261114",
