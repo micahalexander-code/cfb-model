@@ -8546,7 +8546,16 @@
  },
  "401866470": {
   "away": "Kent State",
-  "close": null,
+  "close": {
+   "action": "SPREAD",
+   "at": "2026-11-25T11:02:09+00:00",
+   "dk_home_spread": -7.0,
+   "edge": 2.24,
+   "hfa": 2.52,
+   "projected": 9.24,
+   "sagarin_as_of": "NOVEMBER 21 SATURDAY - WEEK 12",
+   "side": "Eastern Michigan"
+  },
   "date": "20261124",
   "home": "Eastern Michigan",
   "kickoff": "2026-11-25T00:00Z",
@@ -8567,7 +8576,16 @@
  },
  "401866471": {
   "away": "Miami-Ohio",
-  "close": null,
+  "close": {
+   "action": "SPREAD",
+   "at": "2026-11-25T11:02:09+00:00",
+   "dk_home_spread": -4.0,
+   "edge": 2.88,
+   "hfa": 2.52,
+   "projected": 6.88,
+   "sagarin_as_of": "NOVEMBER 21 SATURDAY - WEEK 12",
+   "side": "Western Michigan"
+  },
   "date": "20261124",
   "home": "Western Michigan",
   "kickoff": "2026-11-25T00:00Z",
