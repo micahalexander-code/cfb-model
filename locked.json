@@ -1,13 +1,4 @@
 {
- "401856864": {
-  "away": "Utah",
-  "date": "20261114",
-  "dk_away_ml": -130,
-  "dk_home_ml": 110,
-  "dk_home_spread": 1.5,
-  "home": "Arizona",
-  "kickoff": "2026-11-15T03:30Z"
- },
  "401856869": {
   "away": "Iowa State",
   "date": "20261120",
@@ -38,15 +29,6 @@
   "home": "Michigan State",
   "kickoff": "2026-11-21T01:00Z"
  },
- "401860917": {
-  "away": "Colorado State",
-  "date": "20261114",
-  "dk_away_ml": 250,
-  "dk_home_ml": -310,
-  "dk_home_spread": -8.5,
-  "home": "Washington State",
-  "kickoff": "2026-11-15T03:45Z"
- },
  "401862830": {
   "away": "Rice",
   "date": "20261119",
@@ -56,15 +38,6 @@
   "dk_total": 52.5,
   "home": "Temple",
   "kickoff": "2026-11-20T00:30Z"
- },
- "401864540": {
-  "away": "Wyoming",
-  "date": "20261114",
-  "dk_away_ml": -285,
-  "dk_home_ml": 230,
-  "dk_home_spread": 7.0,
-  "home": "UTEP",
-  "kickoff": "2026-11-15T03:00Z"
  },
  "401864545": {
   "away": "UTEP",
